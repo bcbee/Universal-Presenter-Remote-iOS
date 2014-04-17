@@ -7,7 +7,6 @@
 //
 
 #import "DBZ_ServerCommunication.h"
-#import "DBZ_SlideControl.h"
 
 @implementation DBZ_ServerCommunication
 
@@ -28,13 +27,6 @@ static NSTimer *activeTimer;
 +(int)token { return  token; }
 +(bool)serverAvailable { return  serverAvailable; }
 +(bool)enabled { return  enabled; }
-
-+(void)setEnabled:(bool)changeto {
-    if (enabled != changeto && changeto) {
-        [DBZ_ServerCommunication getResponse:@"ActiveSession" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
-    }
-    enabled = changeto;
-}
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor {
     __block NSString *result;
@@ -68,7 +60,7 @@ static NSTimer *activeTimer;
 
 +(void)processResponse:(NSMutableArray*)webResponse {
     // The one we want to switch on
-    NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession", @"ActiveSession"];
+    NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession"];
     NSInteger item = [items indexOfObject:[webResponse objectAtIndex:0]];
     switch (item) {
         case 0:
@@ -82,14 +74,6 @@ static NSTimer *activeTimer;
         case 2:
             // TempSession
             [self checkTokenCallback:[webResponse objectAtIndex:1]];
-            break;
-        case 3:
-            // JoinSession
-            [self joinSessionCallback:[webResponse objectAtIndex:1]];
-            break;
-        case 4:
-            // ActiveSession
-            [self activeSessionCallback:[webResponse objectAtIndex:1]];
             break;
         default:
             break;
@@ -157,44 +141,6 @@ static NSTimer *activeTimer;
 +(void)updateInterface {
     NSNotification* notification = [NSNotification notificationWithName:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
-}
-
-+(void)joinSession:(int)sendtoken {
-    token = sendtoken;
-    [self getResponse:@"JoinSession" withToken:sendtoken withHoldfor:NO];
-}
-
-+(void)joinSessionCallback:(NSString *)response {
-    if ([response integerValue] > 0) {
-        NSNotification* notification = [NSNotification notificationWithName:@"JoinSession" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        uid = [response intValue];
-    } else {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:@"The token you entered was invalid, please try again"];
-        [alert runModal];
-    }
-}
-
-+(void)activeSessionCallback:(NSString *)response {
-    if ([response integerValue] > 0) {
-        NSNotification* notification = [NSNotification notificationWithName:@"ChangeSlide" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        [DBZ_SlideControl setSlide:[response intValue]];
-        if (enabled) {
-            activeTimer = [NSTimer scheduledTimerWithTimeInterval:0.75 target:self selector:@selector(checkSlide:) userInfo:nil repeats:NO];
-        } else {
-            [activeTimer invalidate];
-        }
-    } else {
-        NSAlert *alert = [[NSAlert alloc] init];
-        [alert setMessageText:@"Server error! Please restart your application and check your internet connection"];
-        [alert runModal];
-    }
-}
-
-+(void)checkSlide:(NSTimer *)timer {
-    [DBZ_ServerCommunication getResponse:@"ActiveSession" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
 }
 
 +(void)connectSetup {

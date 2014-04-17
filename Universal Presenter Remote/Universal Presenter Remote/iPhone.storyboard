@@ -81,7 +81,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
                                 <rect key="frame" x="0.0" y="376" width="320" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
@@ -106,7 +106,7 @@
                             <constraint firstItem="92W-ca-sh0" firstAttribute="leading" secondItem="c3M-RI-GmL" secondAttribute="leading" id="2T0-Fp-Vh4"/>
                             <constraint firstItem="92W-ca-sh0" firstAttribute="trailing" secondItem="paq-Rf-Cab" secondAttribute="trailing" id="Cyl-AE-ANz"/>
                             <constraint firstItem="paq-Rf-Cab" firstAttribute="leading" secondItem="92W-ca-sh0" secondAttribute="leading" id="Hgc-iy-B2U"/>
-                            <constraint firstItem="Jfb-Bx-y9j" firstAttribute="top" secondItem="c3M-RI-GmL" secondAttribute="bottom" constant="99" id="MKq-fJ-MRV"/>
+                            <constraint firstItem="Jfb-Bx-y9j" firstAttribute="top" secondItem="c3M-RI-GmL" secondAttribute="bottom" constant="121" id="MKq-fJ-MRV"/>
                             <constraint firstItem="92W-ca-sh0" firstAttribute="leading" secondItem="laW-fv-KKB" secondAttribute="leading" id="ShQ-5D-NsC"/>
                             <constraint firstItem="c3M-RI-GmL" firstAttribute="top" secondItem="92W-ca-sh0" secondAttribute="bottom" constant="62" id="bjd-Yy-YR6"/>
                             <constraint firstItem="92W-ca-sh0" firstAttribute="top" secondItem="paq-Rf-Cab" secondAttribute="bottom" constant="51" id="r1T-EV-cTd"/>

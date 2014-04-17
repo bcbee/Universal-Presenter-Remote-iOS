@@ -7,12 +7,14 @@
 //
 
 #import "DBZ_AppDelegate.h"
+#import "DBZ_ServerCommunication.h"
 
 @implementation DBZ_AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(incomingNotification:) name:@"ServerResponse" object:nil];
     return YES;
 }
 
@@ -41,6 +43,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) incomingNotification:(NSNotification *)notification {
+    NSMutableArray *incoming = [notification object];
+    [DBZ_ServerCommunication processResponse:incoming];
 }
 
 @end

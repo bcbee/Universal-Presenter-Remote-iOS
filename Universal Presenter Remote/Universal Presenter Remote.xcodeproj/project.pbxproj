@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED28232E190067E80030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28232B190067E80030B9C4 /* DBZ_ServerCommunication.m */; };
-		ED28232F190067E80030B9C4 /* DBZ_SlideControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28232D190067E80030B9C4 /* DBZ_SlideControl.m */; };
 		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
+		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
 		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
 		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
@@ -38,12 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED28232A190067E80030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
-		ED28232B190067E80030B9C4 /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
-		ED28232C190067E80030B9C4 /* DBZ_SlideControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SlideControl.h; sourceTree = "<group>"; };
-		ED28232D190067E80030B9C4 /* DBZ_SlideControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SlideControl.m; sourceTree = "<group>"; };
 		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
+		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
+		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
 		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,10 +90,8 @@
 		ED282329190067AB0030B9C4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				ED28232A190067E80030B9C4 /* DBZ_ServerCommunication.h */,
-				ED28232B190067E80030B9C4 /* DBZ_ServerCommunication.m */,
-				ED28232C190067E80030B9C4 /* DBZ_SlideControl.h */,
-				ED28232D190067E80030B9C4 /* DBZ_SlideControl.m */,
+				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
+				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -292,12 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED28232E190067E80030B9C4 /* DBZ_ServerCommunication.m in Sources */,
 				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
-				ED28232F190067E80030B9C4 /* DBZ_SlideControl.m in Sources */,
 				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
+				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

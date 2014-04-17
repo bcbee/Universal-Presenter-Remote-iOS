@@ -10,4 +10,6 @@
 
 @interface DBZ_LoginView : UIViewController
 
+- (void)updateInterface:(NSNotification*)notification;
+
 @end

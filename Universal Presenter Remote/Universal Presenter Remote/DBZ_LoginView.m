@@ -7,7 +7,7 @@
 //
 
 #import "DBZ_LoginView.h"
-#import "DBZ_ServerCommunication.m"
+#import "DBZ_ServerCommunication.h"
 
 @interface DBZ_LoginView ()
 
@@ -28,12 +28,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
+    [DBZ_ServerCommunication setupUid];
+    [DBZ_ServerCommunication checkStatus];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateInterface:(NSNotification *)notification {
+    
 }
 
 /*
