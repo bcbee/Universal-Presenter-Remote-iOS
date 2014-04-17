@@ -1,19 +1,18 @@
 //
-//  DBZ_LoginView.m
+//  DBZ_ControlView.m
 //  Universal Presenter Remote
 //
-//  Created by Brendan Boyle on 4/16/14.
+//  Created by Brendan Boyle on 4/17/14.
 //  Copyright (c) 2014 DBZ Technology. All rights reserved.
 //
 
-#import "DBZ_LoginView.h"
-#import "DBZ_ServerCommunication.m"
+#import "DBZ_ControlView.h"
 
-@interface DBZ_LoginView ()
+@interface DBZ_ControlView ()
 
 @end
 
-@implementation DBZ_LoginView
+@implementation DBZ_ControlView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
