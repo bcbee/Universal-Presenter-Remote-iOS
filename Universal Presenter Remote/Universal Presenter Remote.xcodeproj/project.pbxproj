@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
+		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
+		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
+		ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */; };
+		ED70D5F618FF17E0007B4C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F518FF17E0007B4C18 /* main.m */; };
+		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */; };
+		ED70D5FC18FF17E1007B4C18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
+		ED70D60318FF17E1007B4C18 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D60218FF17E1007B4C18 /* XCTest.framework */; };
+		ED70D60418FF17E1007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
+		ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
+		ED70D60D18FF17E1007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */; };
+		ED70D60F18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */; };
+		ED70D61918FF180E007B4C18 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED70D61818FF180E007B4C18 /* iPhone.storyboard */; };
+		ED70D61B18FF1826007B4C18 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED70D61A18FF1826007B4C18 /* iPad.storyboard */; };
+		ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED70D60618FF17E1007B4C18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED70D5E518FF17E0007B4C18;
+			remoteInfo = "Universal Presenter Remote";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ED70D5ED18FF17E0007B4C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universal Presenter Remote-Info.plist"; sourceTree = "<group>"; };
+		ED70D5F318FF17E0007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED70D5F518FF17E0007B4C18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universal Presenter Remote-Prefix.pch"; sourceTree = "<group>"; };
+		ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBZ_AppDelegate.h; sourceTree = "<group>"; };
+		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBZ_AppDelegate.m; sourceTree = "<group>"; };
+		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Universal Presenter RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED70D60218FF17E1007B4C18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ED70D60A18FF17E1007B4C18 /* Universal Presenter RemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universal Presenter RemoteTests-Info.plist"; sourceTree = "<group>"; };
+		ED70D60C18FF17E1007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universal_Presenter_RemoteTests.m; sourceTree = "<group>"; };
+		ED70D61818FF180E007B4C18 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		ED70D61A18FF1826007B4C18 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
+		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED70D5E318FF17E0007B4C18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
+				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
+				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED70D5FE18FF17E1007B4C18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D60318FF17E1007B4C18 /* XCTest.framework in Frameworks */,
+				ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */,
+				ED70D60418FF17E1007B4C18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED70D5DD18FF17E0007B4C18 = {
+			isa = PBXGroup;
+			children = (
+				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
+				ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */,
+				ED70D5E818FF17E0007B4C18 /* Frameworks */,
+				ED70D5E718FF17E0007B4C18 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED70D5E718FF17E0007B4C18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */,
+				ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
+				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
+				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
+				ED70D60218FF17E1007B4C18 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */,
+				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */,
+				ED70D61F18FF192E007B4C18 /* View Controllers */,
+				ED70D61C18FF182F007B4C18 /* Interface */,
+				ED70D5FB18FF17E0007B4C18 /* Images.xcassets */,
+				ED70D5F018FF17E0007B4C18 /* Supporting Files */,
+			);
+			path = "Universal Presenter Remote";
+			sourceTree = "<group>";
+		};
+		ED70D5F018FF17E0007B4C18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */,
+				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
+				ED70D5F518FF17E0007B4C18 /* main.m */,
+				ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */,
+				ED70D60918FF17E1007B4C18 /* Supporting Files */,
+			);
+			path = "Universal Presenter RemoteTests";
+			sourceTree = "<group>";
+		};
+		ED70D60918FF17E1007B4C18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D60A18FF17E1007B4C18 /* Universal Presenter RemoteTests-Info.plist */,
+				ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED70D61C18FF182F007B4C18 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D61818FF180E007B4C18 /* iPhone.storyboard */,
+				ED70D61A18FF1826007B4C18 /* iPad.storyboard */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		ED70D61F18FF192E007B4C18 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */,
+				ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
+			buildPhases = (
+				ED70D5E218FF17E0007B4C18 /* Sources */,
+				ED70D5E318FF17E0007B4C18 /* Frameworks */,
+				ED70D5E418FF17E0007B4C18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Universal Presenter Remote";
+			productName = "Universal Presenter Remote";
+			productReference = ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED70D60018FF17E1007B4C18 /* Universal Presenter RemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */;
+			buildPhases = (
+				ED70D5FD18FF17E1007B4C18 /* Sources */,
+				ED70D5FE18FF17E1007B4C18 /* Frameworks */,
+				ED70D5FF18FF17E1007B4C18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED70D60718FF17E1007B4C18 /* PBXTargetDependency */,
+			);
+			name = "Universal Presenter RemoteTests";
+			productName = "Universal Presenter RemoteTests";
+			productReference = ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED70D5DE18FF17E0007B4C18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DBZ_;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "DBZ Technology";
+				TargetAttributes = {
+					ED70D60018FF17E1007B4C18 = {
+						TestTargetID = ED70D5E518FF17E0007B4C18;
+					};
+				};
+			};
+			buildConfigurationList = ED70D5E118FF17E0007B4C18 /* Build configuration list for PBXProject "Universal Presenter Remote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ED70D5DD18FF17E0007B4C18;
+			productRefGroup = ED70D5E718FF17E0007B4C18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */,
+				ED70D60018FF17E1007B4C18 /* Universal Presenter RemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED70D5E418FF17E0007B4C18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D61B18FF1826007B4C18 /* iPad.storyboard in Resources */,
+				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
+				ED70D61918FF180E007B4C18 /* iPhone.storyboard in Resources */,
+				ED70D5FC18FF17E1007B4C18 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED70D5FF18FF17E1007B4C18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D60D18FF17E1007B4C18 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED70D5E218FF17E0007B4C18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
+				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
+				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED70D5FD18FF17E1007B4C18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70D60F18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED70D60718FF17E1007B4C18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */;
+			targetProxy = ED70D60618FF17E1007B4C18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED70D5F318FF17E0007B4C18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED70D60C18FF17E1007B4C18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED70D61018FF17E1007B4C18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED70D61118FF17E1007B4C18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED70D61318FF17E1007B4C18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ED70D61418FF17E1007B4C18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ED70D61618FF17E1007B4C18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ED70D61718FF17E1007B4C18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED70D5E118FF17E0007B4C18 /* Build configuration list for PBXProject "Universal Presenter Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED70D61018FF17E1007B4C18 /* Debug */,
+				ED70D61118FF17E1007B4C18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED70D61318FF17E1007B4C18 /* Debug */,
+				ED70D61418FF17E1007B4C18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED70D61618FF17E1007B4C18 /* Debug */,
+				ED70D61718FF17E1007B4C18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED70D5DE18FF17E0007B4C18 /* Project object */;
+}
