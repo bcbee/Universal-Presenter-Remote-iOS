@@ -41,18 +41,34 @@
 }
 
 - (void)updateInterface:(NSNotification *)notification {
-    
+    int inttoken = [DBZ_ServerCommunication temptoken];
+    if (inttoken > 10) {
+        [_tokenLabel setText:[NSString stringWithFormat:@"%d",inttoken]];
+    }
+    switch ([DBZ_ServerCommunication controlmode]) {
+        case 0:
+            [_connectButton setEnabled:NO];
+            [_connectButton setTitle:@"Connecting..." forState:UIControlStateDisabled];
+            break;
+        case 1:
+            [_connectButton setEnabled:NO];
+            [_connectButton setTitle:@"Waiting..." forState:UIControlStateDisabled];
+            break;
+        case 2:
+            [_connectButton setEnabled:YES];
+            [_connectButton setTitle:@"Connect" forState:UIControlStateNormal];
+            break;
+            
+        default:
+            break;
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    [DBZ_ServerCommunication connectSetup];
 }
-*/
 
 @end

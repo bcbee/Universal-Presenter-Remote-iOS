@@ -11,5 +11,7 @@
 @interface DBZ_LoginView : UIViewController
 
 - (void)updateInterface:(NSNotification*)notification;
+@property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
+@property (weak, nonatomic) IBOutlet UIButton *connectButton;
 
 @end

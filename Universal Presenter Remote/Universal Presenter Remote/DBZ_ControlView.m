@@ -7,6 +7,7 @@
 //
 
 #import "DBZ_ControlView.h"
+#import "DBZ_ServerCommunication.h"
 
 @interface DBZ_ControlView ()
 
@@ -45,5 +46,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)mediaButton:(id)sender {
+    [DBZ_ServerCommunication getResponse:@"PlayMedia" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
+}
+
+- (IBAction)nextButton:(id)sender {
+    [DBZ_ServerCommunication getResponse:@"SlideUp" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
+}
+
+- (IBAction)previousButton:(id)sender {
+    [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
+}
 
 @end

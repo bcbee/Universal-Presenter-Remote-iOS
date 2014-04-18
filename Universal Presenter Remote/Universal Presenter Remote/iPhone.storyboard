@@ -53,6 +53,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Universal Presenter Remote" id="7hJ-qm-Mwj"/>
+                    <connections>
+                        <outlet property="connectButton" destination="gXE-8E-WY2" id="YWj-MW-5WF"/>
+                        <outlet property="tokenLabel" destination="5NT-Ch-4dm" id="cJX-iH-dIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLH-dO-olY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,6 +84,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="DvD-sS-Utk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
                                 <rect key="frame" x="0.0" y="376" width="320" height="71"/>
@@ -88,6 +95,9 @@
                                 <state key="normal" title="Previous">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="previousButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="n8o-wA-Ocv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Rf-Cab">
                                 <rect key="frame" x="0.0" y="121" width="320" height="71"/>
@@ -99,6 +109,9 @@
                                 <state key="normal" title="Media">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mediaButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="tmL-dp-zLY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
