@@ -36,17 +36,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)mediaButton:(id)sender {
     [DBZ_ServerCommunication getResponse:@"PlayMedia" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
 }
@@ -57,6 +46,16 @@
 
 - (IBAction)previousButton:(id)sender {
     [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+        // back button was pressed.  We know this is true because self is no longer
+        // in the navigation stack.
+        [DBZ_ServerCommunication setupUid];
+        [DBZ_ServerCommunication checkStatus];
+    }
+    [super viewWillDisappear:animated];
 }
 
 @end

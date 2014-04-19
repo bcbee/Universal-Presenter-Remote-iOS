@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
 		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
+		ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED35B95D1901BC830074B424 /* iAd.framework */; };
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
 		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
 		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
@@ -41,6 +42,7 @@
 		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
 		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
 		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
+		ED35B95D1901BC830074B424 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */,
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
@@ -118,6 +121,7 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ED35B95D1901BC830074B424 /* iAd.framework */,
 				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
 				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
 				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
@@ -237,6 +241,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "DBZ Technology";
 				TargetAttributes = {
+					ED70D5E518FF17E0007B4C18 = {
+						DevelopmentTeam = 93C4626635;
+					};
 					ED70D60018FF17E1007B4C18 = {
 						TestTargetID = ED70D5E518FF17E0007B4C18;
 					};
@@ -410,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
@@ -424,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
