@@ -8,6 +8,7 @@
 
 #import "DBZ_ControlView.h"
 #import "DBZ_ServerCommunication.h"
+#import <iAd/iAd.h>
 
 @interface DBZ_ControlView ()
 
@@ -28,6 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.canDisplayBannerAds = YES;
 }
 
 - (void)didReceiveMemoryWarning

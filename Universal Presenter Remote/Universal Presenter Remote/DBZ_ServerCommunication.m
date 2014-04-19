@@ -99,6 +99,7 @@ static NSTimer *activeTimer;
         NSLog(@"Dead :(");
         serverAvailable = NO;
         controlmode = 0;
+        [self checkStatus];
     }
 }
 

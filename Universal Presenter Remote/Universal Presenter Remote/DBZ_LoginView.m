@@ -8,6 +8,7 @@
 
 #import "DBZ_LoginView.h"
 #import "DBZ_ServerCommunication.h"
+#import <iAd/iAd.h>
 
 @interface DBZ_LoginView ()
 
@@ -28,7 +29,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [DBZ_ServerCommunication setupUid];
     [DBZ_ServerCommunication checkStatus];
