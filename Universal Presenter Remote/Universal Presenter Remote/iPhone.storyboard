@@ -46,7 +46,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Universal Presenter Remote" id="7hJ-qm-Mwj"/>
+                    <navigationItem key="navigationItem" title="Universal Presenter Remote" id="7hJ-qm-Mwj">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NX3-Ma-oL9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="afa-g2-Ugl">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OJs-8U-SFR" kind="modal" id="g8q-i1-QA6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="connectButton" destination="gXE-8E-WY2" id="YWj-MW-5WF"/>
                         <outlet property="tokenLabel" destination="5NT-Ch-4dm" id="cJX-iH-dIe"/>
@@ -55,6 +69,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLH-dO-olY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1188" y="68"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="Nmq-bQ-mS7">
+            <objects>
+                <viewController id="Fut-l7-veM" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mbr-II-QEd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bru-Dx-kO6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a6P-L4-a7w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="fpA-cJ-Gdh">
+                                <rect key="frame" x="85" y="74" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="57G-h3-nou"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUH-8m-WSN">
+                                <rect key="frame" x="20" y="232" width="280" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fpA-cJ-Gdh" firstAttribute="leading" secondItem="a6P-L4-a7w" secondAttribute="leading" constant="85" id="4dg-PB-6ON"/>
+                            <constraint firstItem="YUH-8m-WSN" firstAttribute="centerX" secondItem="fpA-cJ-Gdh" secondAttribute="centerX" id="5bx-2Y-6aa"/>
+                            <constraint firstItem="fpA-cJ-Gdh" firstAttribute="top" secondItem="Mbr-II-QEd" secondAttribute="bottom" constant="10" id="XQ8-2V-f5F"/>
+                            <constraint firstItem="YUH-8m-WSN" firstAttribute="leading" secondItem="a6P-L4-a7w" secondAttribute="leading" constant="20" symbolic="YES" id="cEP-Id-hs2"/>
+                            <constraint firstItem="Bru-Dx-kO6" firstAttribute="top" secondItem="YUH-8m-WSN" secondAttribute="bottom" constant="33" id="cfc-CU-O41"/>
+                            <constraint firstItem="YUH-8m-WSN" firstAttribute="top" secondItem="fpA-cJ-Gdh" secondAttribute="bottom" constant="8" symbolic="YES" id="f73-1A-dii"/>
+                            <constraint firstAttribute="trailing" secondItem="YUH-8m-WSN" secondAttribute="trailing" constant="20" symbolic="YES" id="g1P-Nn-Pih"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instructions" id="c95-vA-yVL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="iQb-l0-xBg">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="close:" destination="Fut-l7-veM" id="MUr-Zb-FOB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVF-2L-pHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2189" y="-631"/>
         </scene>
         <!--Control View - Control-->
         <scene sceneID="8df-mK-REb">
@@ -132,6 +199,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1j-h2-9ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="68"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a2r-Fl-M5J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OJs-8U-SFR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lck-aY-HVP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fut-l7-veM" kind="relationship" relationship="rootViewController" id="rHz-Tx-qQh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2o-mu-uGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="-631"/>
         </scene>
     </scenes>
     <resources>
