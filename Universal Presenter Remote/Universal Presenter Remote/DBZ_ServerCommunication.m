@@ -56,10 +56,12 @@ static NSTimer *activeTimer;
          
          
      }];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
 +(void)processResponse:(NSMutableArray*)webResponse {
     // The one we want to switch on
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession"];
     NSInteger item = [items indexOfObject:[webResponse objectAtIndex:0]];
     switch (item) {
