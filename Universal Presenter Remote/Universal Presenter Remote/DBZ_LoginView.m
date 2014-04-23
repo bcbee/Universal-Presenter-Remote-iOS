@@ -57,7 +57,7 @@
             break;
         case 2:
             [_connectButton setEnabled:YES];
-            [_connectButton setTitle:@"Connect" forState:UIControlStateNormal];
+            [_connectButton setTitle:@"Begin" forState:UIControlStateNormal];
             break;
             
         default:
