@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D45a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--Login View - Universal Presenter Remote-->
@@ -18,13 +18,11 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter token on presenting device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khf-Ma-HQh">
                                 <rect key="frame" x="0.0" y="360" width="320" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXE-8E-WY2">
                                 <rect key="frame" x="0.0" y="396" width="320" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Connecting...">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -34,14 +32,12 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NT-Ch-4dm">
                                 <rect key="frame" x="0.0" y="312" width="320" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="Y7n-yY-4Ty">
                                 <rect key="frame" x="48" y="79" width="225" height="225"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -70,61 +66,6 @@
             </objects>
             <point key="canvasLocation" x="1188" y="68"/>
         </scene>
-        <!--Info View - Instructions-->
-        <scene sceneID="Nmq-bQ-mS7">
-            <objects>
-                <viewController id="Fut-l7-veM" customClass="DBZ_InfoView" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Mbr-II-QEd"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bru-Dx-kO6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a6P-L4-a7w">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="fpA-cJ-Gdh">
-                                <rect key="frame" x="85" y="74" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="57G-h3-nou"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUH-8m-WSN">
-                                <rect key="frame" x="20" y="232" width="280" height="303"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Welcome and thank you for choosing Universal Presenter Remote! Setup is a snap and you will be presenting in no time. All you need to do is download this Universal Presenter Remote application on the presenting computer and controlling device. Instructions for downloading can be found on http://upr.dbztech.com.
-
-Once both applications have been downloaded, open both and find the unique token on the device that will be used as the remote. Enter this token on the computer that will be running the presentation and click the button labeled "Begin". This will allow you to click the begin button the remote. All you need to do now is click connect on the computer, open the presentation and start presenting. You can now control your presentation from another device!</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="fpA-cJ-Gdh" firstAttribute="leading" secondItem="a6P-L4-a7w" secondAttribute="leading" constant="85" id="4dg-PB-6ON"/>
-                            <constraint firstItem="YUH-8m-WSN" firstAttribute="centerX" secondItem="fpA-cJ-Gdh" secondAttribute="centerX" id="5bx-2Y-6aa"/>
-                            <constraint firstItem="fpA-cJ-Gdh" firstAttribute="top" secondItem="Mbr-II-QEd" secondAttribute="bottom" constant="10" id="XQ8-2V-f5F"/>
-                            <constraint firstItem="YUH-8m-WSN" firstAttribute="leading" secondItem="a6P-L4-a7w" secondAttribute="leading" constant="20" symbolic="YES" id="cEP-Id-hs2"/>
-                            <constraint firstItem="Bru-Dx-kO6" firstAttribute="top" secondItem="YUH-8m-WSN" secondAttribute="bottom" constant="33" id="cfc-CU-O41"/>
-                            <constraint firstItem="YUH-8m-WSN" firstAttribute="top" secondItem="fpA-cJ-Gdh" secondAttribute="bottom" constant="8" symbolic="YES" id="f73-1A-dii"/>
-                            <constraint firstAttribute="trailing" secondItem="YUH-8m-WSN" secondAttribute="trailing" constant="20" symbolic="YES" id="g1P-Nn-Pih"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Instructions" id="c95-vA-yVL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="iQb-l0-xBg">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="close:" destination="Fut-l7-veM" id="MUr-Zb-FOB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CVF-2L-pHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2189" y="-631"/>
-        </scene>
         <!--Control View - Control-->
         <scene sceneID="8df-mK-REb">
             <objects>
@@ -139,7 +80,6 @@ Once both applications have been downloaded, open both and find the unique token
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
                                 <rect key="frame" x="0.0" y="373" width="320" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Previous">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +90,6 @@ Once both applications have been downloaded, open both and find the unique token
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Rf-Cab">
                                 <rect key="frame" x="0.0" y="139" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Media">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -161,7 +100,6 @@ Once both applications have been downloaded, open both and find the unique token
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="one-ur-MDS">
                                 <rect key="frame" x="0.0" y="261" width="320" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -210,6 +148,7 @@ Once both applications have been downloaded, open both and find the unique token
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lck-aY-HVP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -217,21 +156,225 @@ Once both applications have been downloaded, open both and find the unique token
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Fut-l7-veM" kind="relationship" relationship="rootViewController" id="rHz-Tx-qQh"/>
+                        <segue destination="EYW-TL-k4e" kind="relationship" relationship="rootViewController" id="VIU-aQ-1jd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2o-mu-uGg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="-631"/>
+            <point key="canvasLocation" x="1663" y="-639"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="DEe-gB-qru">
+            <objects>
+                <viewController id="EYW-TL-k4e" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K5a-Nd-uEk"/>
+                        <viewControllerLayoutGuide type="bottom" id="vSU-BZ-JLv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dRL-YU-WyG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="BHc-Lg-pZL">
+                                <rect key="frame" x="0.0" y="64" width="320" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="bQ4-wW-hDi"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Download the Universal Presenter Remote App on the presenting computer. This can be found at http://upr.dbztech.com." translatesAutoresizingMaskIntoConstraints="NO" id="E6Z-it-bhq">
+                                <rect key="frame" x="20" y="255" width="280" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsw-7D-6X5">
+                                <rect key="frame" x="137" y="477" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="rSk-cr-AQ4"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Eql-0A-Dd0" kind="push" id="LzK-FC-fvu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jsw-7D-6X5" firstAttribute="top" secondItem="E6Z-it-bhq" secondAttribute="bottom" constant="8" symbolic="YES" id="0Lu-S7-B8x"/>
+                            <constraint firstItem="E6Z-it-bhq" firstAttribute="top" secondItem="BHc-Lg-pZL" secondAttribute="bottom" constant="8" symbolic="YES" id="1Kl-L5-Zpx"/>
+                            <constraint firstItem="BHc-Lg-pZL" firstAttribute="top" secondItem="K5a-Nd-uEk" secondAttribute="bottom" id="3gi-N6-qhy"/>
+                            <constraint firstItem="BHc-Lg-pZL" firstAttribute="leading" secondItem="dRL-YU-WyG" secondAttribute="leading" id="8QZ-gM-65V"/>
+                            <constraint firstItem="E6Z-it-bhq" firstAttribute="leading" secondItem="dRL-YU-WyG" secondAttribute="leading" constant="20" symbolic="YES" id="HNJ-tZ-GIu"/>
+                            <constraint firstItem="vSU-BZ-JLv" firstAttribute="top" secondItem="jsw-7D-6X5" secondAttribute="bottom" constant="17" id="c0n-D3-DTo"/>
+                            <constraint firstItem="E6Z-it-bhq" firstAttribute="centerX" secondItem="jsw-7D-6X5" secondAttribute="centerX" id="qfb-mO-jHl"/>
+                            <constraint firstItem="BHc-Lg-pZL" firstAttribute="centerX" secondItem="E6Z-it-bhq" secondAttribute="centerX" id="ySq-0Y-LXG"/>
+                            <constraint firstAttribute="trailing" secondItem="E6Z-it-bhq" secondAttribute="trailing" constant="20" symbolic="YES" id="zNy-9t-pm7"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="YKp-rA-eTI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="asO-uk-Z47"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="GDn-GR-MMF">
+                            <connections>
+                                <action selector="close:" destination="EYW-TL-k4e" id="aMk-ZT-CL8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6f-4e-1Xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2069" y="-633"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="3iE-tE-gsu">
+            <objects>
+                <viewController id="Eql-0A-Dd0" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aof-ky-ZND"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Cv-jB-MH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uz5-YV-szF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="hLn-ei-NOP">
+                                <rect key="frame" x="0.0" y="64" width="320" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="QiB-nv-Kot"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-Wc-adZ">
+                                <rect key="frame" x="20" y="255" width="280" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Enter the token generated by this App into the presenting computer and click connect. Another window will open, you can now get your presentation ready.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL0-Dr-rIg">
+                                <rect key="frame" x="137" y="477" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="gyo-Dg-muh"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ADs-GX-Zi1" kind="push" id="jY9-kc-Fjz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yio-Wc-adZ" firstAttribute="centerX" secondItem="lL0-Dr-rIg" secondAttribute="centerX" id="7XJ-gc-RCr"/>
+                            <constraint firstItem="Yio-Wc-adZ" firstAttribute="top" secondItem="hLn-ei-NOP" secondAttribute="bottom" constant="8" symbolic="YES" id="9iA-QU-uhQ"/>
+                            <constraint firstItem="Yio-Wc-adZ" firstAttribute="leading" secondItem="Uz5-YV-szF" secondAttribute="leading" constant="20" symbolic="YES" id="JLd-8f-G5G"/>
+                            <constraint firstItem="lL0-Dr-rIg" firstAttribute="top" secondItem="Yio-Wc-adZ" secondAttribute="bottom" constant="8" symbolic="YES" id="KOq-p0-XsY"/>
+                            <constraint firstItem="2Cv-jB-MH3" firstAttribute="top" secondItem="lL0-Dr-rIg" secondAttribute="bottom" constant="17" id="LAL-L7-mrm"/>
+                            <constraint firstItem="hLn-ei-NOP" firstAttribute="top" secondItem="Aof-ky-ZND" secondAttribute="bottom" id="Lk0-bh-Fgr"/>
+                            <constraint firstItem="hLn-ei-NOP" firstAttribute="centerX" secondItem="Yio-Wc-adZ" secondAttribute="centerX" id="k5c-jS-1u1"/>
+                            <constraint firstAttribute="trailing" secondItem="Yio-Wc-adZ" secondAttribute="trailing" constant="20" symbolic="YES" id="m1m-T5-qD8"/>
+                            <constraint firstItem="hLn-ei-NOP" firstAttribute="leading" secondItem="Uz5-YV-szF" secondAttribute="leading" id="pYe-c3-cW0"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="6b3-Zu-aFJ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="M4T-B0-8Rf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="mro-Ps-VDh">
+                            <connections>
+                                <action selector="close:" destination="Eql-0A-Dd0" id="AKN-xO-jHZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgS-ae-Tip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="-633"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="spN-83-T0Z">
+            <objects>
+                <viewController id="ADs-GX-Zi1" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAz-1D-Iqt"/>
+                        <viewControllerLayoutGuide type="bottom" id="xpc-sA-47l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="meC-XO-yjO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-vD-7JZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="ZXP-RA-fYa"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-r8-Zob">
+                                <rect key="frame" x="20" y="255" width="280" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Right before you begin start your slideshow, click Begin on the UPR computer application, this enables remote control. You can now click begin on your phone and press the Previous, Next, and Media buttons to control your presentation.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82W-2Q-L2p">
+                                <rect key="frame" x="137" y="477" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="OTm-qI-3Hd"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="ADs-GX-Zi1" eventType="touchUpInside" id="Kqq-24-c8V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xpc-sA-47l" firstAttribute="top" secondItem="82W-2Q-L2p" secondAttribute="bottom" constant="17" id="2U7-LJ-We3"/>
+                            <constraint firstAttribute="trailing" secondItem="1pI-r8-Zob" secondAttribute="trailing" constant="20" symbolic="YES" id="D0p-2A-nTC"/>
+                            <constraint firstItem="1pI-r8-Zob" firstAttribute="centerX" secondItem="82W-2Q-L2p" secondAttribute="centerX" id="DAS-Gw-rvM"/>
+                            <constraint firstItem="pfH-vD-7JZ" firstAttribute="leading" secondItem="meC-XO-yjO" secondAttribute="leading" id="ZoC-fh-aV7"/>
+                            <constraint firstItem="pfH-vD-7JZ" firstAttribute="top" secondItem="DAz-1D-Iqt" secondAttribute="bottom" id="e98-Ls-k1m"/>
+                            <constraint firstItem="pfH-vD-7JZ" firstAttribute="centerX" secondItem="1pI-r8-Zob" secondAttribute="centerX" id="kLG-UT-ERB"/>
+                            <constraint firstItem="1pI-r8-Zob" firstAttribute="top" secondItem="pfH-vD-7JZ" secondAttribute="bottom" constant="8" symbolic="YES" id="siY-SK-7ca"/>
+                            <constraint firstItem="1pI-r8-Zob" firstAttribute="leading" secondItem="meC-XO-yjO" secondAttribute="leading" constant="20" symbolic="YES" id="tGe-HE-McA"/>
+                            <constraint firstItem="82W-2Q-L2p" firstAttribute="top" secondItem="1pI-r8-Zob" secondAttribute="bottom" constant="8" symbolic="YES" id="zjG-uh-c9U"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="3G9-GX-EiM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="73C-Lu-6yO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="Khd-sW-DWB">
+                            <connections>
+                                <action selector="close:" destination="ADs-GX-Zi1" id="FZi-0O-CLY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zh8-CF-AaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="-633"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="1000" height="1000"/>
+        <image name="2" width="1000" height="1000"/>
+        <image name="3" width="1000" height="1000"/>
         <image name="UPR" width="2000" height="2000"/>
     </resources>
-    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

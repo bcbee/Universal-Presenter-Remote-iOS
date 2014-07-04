@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D45a" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="q24-Vw-MsV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="q24-Vw-MsV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--Login View - Universal Presenter Remote-->
@@ -18,7 +19,6 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter token on presenting device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-ch-z1E">
                                 <rect key="frame" x="224" y="878" width="320" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="FV5-Ye-Ft4"/>
                                 </constraints>
@@ -27,7 +27,6 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-hc-91I">
                                 <rect key="frame" x="224" y="914" width="320" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="1w6-Eb-98p"/>
                                 </constraints>
@@ -40,7 +39,6 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-Ei-OQh">
                                 <rect key="frame" x="224" y="830" width="320" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="7kt-SY-Edk"/>
                                     <constraint firstAttribute="height" constant="40" id="Jpt-U9-18Z"/>
@@ -51,7 +49,6 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="F8e-Nx-Z4u">
                                 <rect key="frame" x="207" y="124" width="355" height="355"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="355" id="Cyl-BJ-Bfp"/>
                                     <constraint firstAttribute="width" constant="355" id="rgm-Lp-fzk"/>
@@ -109,9 +106,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIL-f3-kuQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIL-f3-kuQ">
                                 <rect key="frame" x="0.0" y="731" width="768" height="141"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="rAD-Tr-tit"/>
                                 </constraints>
@@ -123,9 +119,8 @@
                                     <action selector="previousButton:" destination="7ud-G5-so0" eventType="touchUpInside" id="a3g-bJ-FGj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a8-Hv-6Ol">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a8-Hv-6Ol">
                                 <rect key="frame" x="0.0" y="121" width="768" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="PSu-Fb-QAf"/>
                                 </constraints>
@@ -137,9 +132,8 @@
                                     <action selector="mediaButton:" destination="7ud-G5-so0" eventType="touchUpInside" id="bgk-lf-ta6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjV-Vr-1dY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjV-Vr-1dY">
                                 <rect key="frame" x="-9" y="433" width="768" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="158" id="7Ol-Sr-1aP"/>
                                 </constraints>
@@ -196,61 +190,6 @@
             </objects>
             <point key="canvasLocation" x="-346" y="4"/>
         </scene>
-        <!--Info View - Instructions-->
-        <scene sceneID="7IR-ic-aMy">
-            <objects>
-                <viewController id="H0R-6P-80u" customClass="DBZ_InfoView" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dxZ-lL-8Gi"/>
-                        <viewControllerLayoutGuide type="bottom" id="XcH-0D-pMT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f6n-71-Zhk">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="EdB-v2-biT">
-                                <rect key="frame" x="184" y="74" width="400" height="400"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="RYI-IE-nRj"/>
-                                    <constraint firstAttribute="width" constant="400" id="WWt-NS-Ov8"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7A-6n-Vdj">
-                                <rect key="frame" x="20" y="502" width="728" height="439"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">Welcome and thank you for choosing Universal Presenter Remote! Setup is a snap and you will be presenting in no time. All you need to do is download this Universal Presenter Remote application on the presenting computer and controlling device. Instructions for downloading can be found on http://upr.dbztech.com.
-
-Once both applications have been downloaded, open both and find the unique token on the device that will be used as the remote. Enter this token on the computer that will be running the presentation and click the button labeled "Begin". This will allow you to click the begin button the remote. All you need to do now is click connect on the computer, open the presentation and start presenting. You can now control your presentation from another device!</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="s7A-6n-Vdj" firstAttribute="top" secondItem="EdB-v2-biT" secondAttribute="bottom" constant="28" id="I1y-ds-JWM"/>
-                            <constraint firstAttribute="trailing" secondItem="s7A-6n-Vdj" secondAttribute="trailing" constant="20" symbolic="YES" id="LjV-xg-fke"/>
-                            <constraint firstItem="s7A-6n-Vdj" firstAttribute="leading" secondItem="f6n-71-Zhk" secondAttribute="leading" constant="20" symbolic="YES" id="QUM-S7-d8y"/>
-                            <constraint firstItem="EdB-v2-biT" firstAttribute="top" secondItem="dxZ-lL-8Gi" secondAttribute="bottom" constant="10" id="TP5-w7-eQy"/>
-                            <constraint firstItem="EdB-v2-biT" firstAttribute="centerX" secondItem="s7A-6n-Vdj" secondAttribute="centerX" id="Xde-ol-xvn"/>
-                            <constraint firstItem="XcH-0D-pMT" firstAttribute="top" secondItem="s7A-6n-Vdj" secondAttribute="bottom" constant="83" id="oKV-6S-o7U"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Instructions" id="tTO-KL-CpV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="HEr-dr-B4S">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="close:" destination="H0R-6P-80u" id="wkH-uq-r8N"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lJZ-01-agu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1617" y="-1151"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcE-Di-fBP">
             <objects>
@@ -259,6 +198,7 @@ Once both applications have been downloaded, open both and find the unique token
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bBf-Oy-2U8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,21 +206,225 @@ Once both applications have been downloaded, open both and find the unique token
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="H0R-6P-80u" kind="relationship" relationship="rootViewController" id="kyP-Z3-Ieo"/>
+                        <segue destination="Loh-gP-1RS" kind="relationship" relationship="rootViewController" id="833-ty-hWa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y45-er-bY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="636" y="-1151"/>
         </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="GB0-FN-pCy">
+            <objects>
+                <viewController id="Loh-gP-1RS" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUW-7P-gxs"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCB-ZL-F7i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LT9-Go-wY5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-MO-NO3">
+                                <rect key="frame" x="0.0" y="64" width="768" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="yhx-pG-Fg0"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Download the Universal Presenter Remote App on the presenting computer. This can be found at http://upr.dbztech.com." translatesAutoresizingMaskIntoConstraints="NO" id="VqO-eV-G01">
+                                <rect key="frame" x="20" y="255" width="728" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHr-6w-G2W">
+                                <rect key="frame" x="361" y="933" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Cyg-fL-Kca"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="LI5-0s-7SA" kind="push" id="XZj-AY-yOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QEF-MO-NO3" firstAttribute="centerX" secondItem="VqO-eV-G01" secondAttribute="centerX" id="0ah-G1-hpm"/>
+                            <constraint firstAttribute="trailing" secondItem="VqO-eV-G01" secondAttribute="trailing" constant="20" symbolic="YES" id="12J-PJ-Tbi"/>
+                            <constraint firstItem="VqO-eV-G01" firstAttribute="top" secondItem="QEF-MO-NO3" secondAttribute="bottom" constant="8" symbolic="YES" id="Dsk-fy-3Od"/>
+                            <constraint firstItem="VqO-eV-G01" firstAttribute="centerX" secondItem="lHr-6w-G2W" secondAttribute="centerX" id="FKq-v5-udD"/>
+                            <constraint firstItem="QEF-MO-NO3" firstAttribute="top" secondItem="AUW-7P-gxs" secondAttribute="bottom" id="MLE-4U-0tm"/>
+                            <constraint firstItem="lHr-6w-G2W" firstAttribute="top" secondItem="VqO-eV-G01" secondAttribute="bottom" constant="8" symbolic="YES" id="QYI-Jh-tHZ"/>
+                            <constraint firstItem="vCB-ZL-F7i" firstAttribute="top" secondItem="lHr-6w-G2W" secondAttribute="bottom" constant="17" id="aTs-WD-4Sc"/>
+                            <constraint firstItem="VqO-eV-G01" firstAttribute="leading" secondItem="LT9-Go-wY5" secondAttribute="leading" constant="20" symbolic="YES" id="mCh-rs-FsI"/>
+                            <constraint firstItem="QEF-MO-NO3" firstAttribute="leading" secondItem="LT9-Go-wY5" secondAttribute="leading" id="ynv-Hp-kMn"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="WRL-pt-oIA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="X73-Xt-n4Z"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="fm6-ZA-cIf">
+                            <connections>
+                                <action selector="close:" destination="Loh-gP-1RS" id="taT-By-lou"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Neh-xD-bpQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="-1151"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="p8U-1P-31e">
+            <objects>
+                <viewController id="LI5-0s-7SA" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wV2-W7-D3r"/>
+                        <viewControllerLayoutGuide type="bottom" id="5YA-bX-eBb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckJ-sm-T87">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-ge-ZeV">
+                                <rect key="frame" x="0.0" y="64" width="768" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="xcD-y6-ZqL"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPp-2O-1HP">
+                                <rect key="frame" x="20" y="255" width="728" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Enter the token generated by this App into the presenting computer and click connect. Another window will open, you can now get your presentation ready.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oS-Z0-4Ft">
+                                <rect key="frame" x="361" y="933" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="giv-TI-Jel"/>
+                                </constraints>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="arB-a9-j7w" kind="push" id="D1E-a2-rDW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bPp-2O-1HP" firstAttribute="top" secondItem="rWV-ge-ZeV" secondAttribute="bottom" constant="8" symbolic="YES" id="Cw5-j2-A0u"/>
+                            <constraint firstItem="rWV-ge-ZeV" firstAttribute="top" secondItem="wV2-W7-D3r" secondAttribute="bottom" id="IG1-ie-SAv"/>
+                            <constraint firstAttribute="trailing" secondItem="bPp-2O-1HP" secondAttribute="trailing" constant="20" symbolic="YES" id="Jla-gP-Arp"/>
+                            <constraint firstItem="8oS-Z0-4Ft" firstAttribute="top" secondItem="bPp-2O-1HP" secondAttribute="bottom" constant="8" symbolic="YES" id="L1z-z9-ONw"/>
+                            <constraint firstItem="bPp-2O-1HP" firstAttribute="centerX" secondItem="8oS-Z0-4Ft" secondAttribute="centerX" id="LC5-BZ-H5U"/>
+                            <constraint firstItem="5YA-bX-eBb" firstAttribute="top" secondItem="8oS-Z0-4Ft" secondAttribute="bottom" constant="17" id="P9G-xJ-16a"/>
+                            <constraint firstItem="rWV-ge-ZeV" firstAttribute="leading" secondItem="ckJ-sm-T87" secondAttribute="leading" id="Vep-3g-AEr"/>
+                            <constraint firstItem="bPp-2O-1HP" firstAttribute="leading" secondItem="ckJ-sm-T87" secondAttribute="leading" constant="20" symbolic="YES" id="YCC-yY-DDb"/>
+                            <constraint firstItem="rWV-ge-ZeV" firstAttribute="centerX" secondItem="bPp-2O-1HP" secondAttribute="centerX" id="e9f-xK-lIq"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="M9q-t2-5Lr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QgG-Ad-Up3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="d17-fd-woM">
+                            <connections>
+                                <action selector="close:" destination="LI5-0s-7SA" id="Rqy-8N-lqq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJg-je-tQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2603" y="-1151"/>
+        </scene>
+        <!--Info View - Instructions-->
+        <scene sceneID="5Cl-lR-dma">
+            <objects>
+                <viewController id="arB-a9-j7w" customClass="DBZ_InfoView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wh3-t9-9mu"/>
+                        <viewControllerLayoutGuide type="bottom" id="myO-qm-7nP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Sc-uZ-gxC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-s6-UZE">
+                                <rect key="frame" x="0.0" y="64" width="768" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="UzS-JU-zaW"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-AZ-DJi">
+                                <rect key="frame" x="20" y="255" width="728" height="214"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Right before you begin start your slideshow, click Begin on the UPR computer application, this enables remote control. You can now click begin on your phone and press the Previous, Next, and Media buttons to control your presentation.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiD-yR-DES">
+                                <rect key="frame" x="361" y="933" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="mze-nH-KGr"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="arB-a9-j7w" eventType="touchUpInside" id="sEv-3y-VFi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4a8-AZ-DJi" firstAttribute="top" secondItem="Qaa-s6-UZE" secondAttribute="bottom" constant="8" symbolic="YES" id="5Uh-Hl-u7G"/>
+                            <constraint firstItem="Qaa-s6-UZE" firstAttribute="centerX" secondItem="4a8-AZ-DJi" secondAttribute="centerX" id="96T-Wf-VMD"/>
+                            <constraint firstItem="fiD-yR-DES" firstAttribute="top" secondItem="4a8-AZ-DJi" secondAttribute="bottom" constant="8" symbolic="YES" id="ARf-ku-ZgE"/>
+                            <constraint firstItem="4a8-AZ-DJi" firstAttribute="leading" secondItem="3Sc-uZ-gxC" secondAttribute="leading" constant="20" symbolic="YES" id="GSm-Ub-NGu"/>
+                            <constraint firstItem="myO-qm-7nP" firstAttribute="top" secondItem="fiD-yR-DES" secondAttribute="bottom" constant="17" id="jY9-eA-5Mr"/>
+                            <constraint firstItem="Qaa-s6-UZE" firstAttribute="leading" secondItem="3Sc-uZ-gxC" secondAttribute="leading" id="nCy-vw-OcE"/>
+                            <constraint firstItem="4a8-AZ-DJi" firstAttribute="centerX" secondItem="fiD-yR-DES" secondAttribute="centerX" id="p2h-DS-h7X"/>
+                            <constraint firstAttribute="trailing" secondItem="4a8-AZ-DJi" secondAttribute="trailing" constant="20" symbolic="YES" id="rYq-P8-T6T"/>
+                            <constraint firstItem="Qaa-s6-UZE" firstAttribute="top" secondItem="wh3-t9-9mu" secondAttribute="bottom" id="wm0-XU-nVf"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Instructions" id="a8s-lK-XnD">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="i82-Qb-SNf"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="KXq-U3-tbt">
+                            <connections>
+                                <action selector="close:" destination="arB-a9-j7w" id="zGg-mz-mUR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9e-gX-aUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3687" y="-1151"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="1" width="1000" height="1000"/>
+        <image name="2" width="1000" height="1000"/>
+        <image name="3" width="1000" height="1000"/>
         <image name="UPR" width="2000" height="2000"/>
     </resources>
-    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

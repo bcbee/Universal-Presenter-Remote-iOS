@@ -31,6 +31,7 @@
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [DBZ_ServerCommunication setupUid];
     [DBZ_ServerCommunication checkStatus];
 }
@@ -63,6 +64,10 @@
         default:
             break;
     }
+}
+
+- (void)refreshInterface:(NSNotification *)notification {
+    [DBZ_ServerCommunication checkToken];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
