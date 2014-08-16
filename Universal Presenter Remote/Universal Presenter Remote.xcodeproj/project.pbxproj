@@ -435,7 +435,7 @@
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "82fb5ccd-c986-4d93-bd37-a20151a47fb5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -452,7 +452,7 @@
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "82fb5ccd-c986-4d93-bd37-a20151a47fb5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

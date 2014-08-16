@@ -79,18 +79,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
-                                <rect key="frame" x="0.0" y="373" width="320" height="54"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
-                                <state key="normal" title="Previous">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="previousButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="n8o-wA-Ocv"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Rf-Cab">
-                                <rect key="frame" x="0.0" y="139" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Media">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,13 +90,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="one-ur-MDS">
-                                <rect key="frame" x="0.0" y="261" width="320" height="45"/>
+                                <rect key="frame" x="0.0" y="234" width="320" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="nextButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="ZwT-iH-IaF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3M-RI-GmL">
+                                <rect key="frame" x="0.0" y="393" width="320" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="n8o-wA-Ocv"/>
                                 </connections>
                             </button>
                         </subviews>
