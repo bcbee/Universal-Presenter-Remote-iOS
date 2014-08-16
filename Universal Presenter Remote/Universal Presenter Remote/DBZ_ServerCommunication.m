@@ -99,7 +99,7 @@ static NSString *apns = @"";
     if ([response isEqualToString:@"Ready"]) {
         NSLog(@"Alive!");
         serverAvailable = YES;
-        [self checkToken];
+        //[self checkToken];
         
     } else {
         NSLog(@"Dead :(");
@@ -147,7 +147,7 @@ static NSString *apns = @"";
 +(void)setupApns:(NSString *)deviceToken {
     NSString *token = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@">" withString:@""]stringByReplacingOccurrencesOfString: @" " withString: @""];
     apns = token;
-    [DBZ_ServerCommunication checkToken];
+    //[DBZ_ServerCommunication checkToken];
 }
 
 @end
