@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Login View - Universal Presenter Remote-->
+        <!--Universal Presenter Remote-->
         <scene sceneID="rSY-Sj-0MM">
             <objects>
                 <viewController id="pPs-1n-dsX" customClass="DBZ_LoginView" sceneMemberID="viewController">
@@ -66,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="1188" y="68"/>
         </scene>
-        <!--Control View - Control-->
+        <!--Control-->
         <scene sceneID="8df-mK-REb">
             <objects>
                 <viewController id="s4E-HJ-fSD" customClass="DBZ_ControlView" sceneMemberID="viewController">
@@ -163,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="1663" y="-639"/>
         </scene>
-        <!--Info View - Instructions-->
+        <!--Instructions-->
         <scene sceneID="DEe-gB-qru">
             <objects>
                 <viewController id="EYW-TL-k4e" customClass="DBZ_InfoView" sceneMemberID="viewController">
@@ -203,6 +204,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jsw-7D-6X5" firstAttribute="top" secondItem="E6Z-it-bhq" secondAttribute="bottom" constant="8" symbolic="YES" id="0Lu-S7-B8x"/>
                             <constraint firstItem="E6Z-it-bhq" firstAttribute="top" secondItem="BHc-Lg-pZL" secondAttribute="bottom" constant="8" symbolic="YES" id="1Kl-L5-Zpx"/>
@@ -214,6 +216,10 @@
                             <constraint firstItem="BHc-Lg-pZL" firstAttribute="centerX" secondItem="E6Z-it-bhq" secondAttribute="centerX" id="ySq-0Y-LXG"/>
                             <constraint firstAttribute="trailing" secondItem="E6Z-it-bhq" secondAttribute="trailing" constant="20" symbolic="YES" id="zNy-9t-pm7"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="J95-At-g1g" appends="YES" id="45n-8l-EFI"/>
+                            <outletCollection property="gestureRecognizers" destination="GT2-Rv-Kf6" appends="YES" id="7Dx-OW-Gc8"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instructions" id="YKp-rA-eTI">
@@ -227,10 +233,20 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6f-4e-1Xy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="J95-At-g1g" userLabel="Next Swipe">
+                    <connections>
+                        <segue destination="Eql-0A-Dd0" kind="push" id="rPb-6J-sS0"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="GT2-Rv-Kf6" userLabel="Close Swipe">
+                    <connections>
+                        <action selector="close:" destination="EYW-TL-k4e" id="LIz-bQ-fLS"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2069" y="-633"/>
         </scene>
-        <!--Info View - Instructions-->
+        <!--Instructions-->
         <scene sceneID="3iE-tE-gsu">
             <objects>
                 <viewController id="Eql-0A-Dd0" customClass="DBZ_InfoView" sceneMemberID="viewController">
@@ -249,7 +265,7 @@
                                     <constraint firstAttribute="height" constant="183" id="QiB-nv-Kot"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-Wc-adZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yio-Wc-adZ">
                                 <rect key="frame" x="20" y="255" width="280" height="214"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Enter the token generated by this App into the presenting computer and click connect. Another window will open, you can now get your presentation ready.</string>
@@ -270,6 +286,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Yio-Wc-adZ" firstAttribute="centerX" secondItem="lL0-Dr-rIg" secondAttribute="centerX" id="7XJ-gc-RCr"/>
                             <constraint firstItem="Yio-Wc-adZ" firstAttribute="top" secondItem="hLn-ei-NOP" secondAttribute="bottom" constant="8" symbolic="YES" id="9iA-QU-uhQ"/>
@@ -281,6 +298,11 @@
                             <constraint firstAttribute="trailing" secondItem="Yio-Wc-adZ" secondAttribute="trailing" constant="20" symbolic="YES" id="m1m-T5-qD8"/>
                             <constraint firstItem="hLn-ei-NOP" firstAttribute="leading" secondItem="Uz5-YV-szF" secondAttribute="leading" id="pYe-c3-cW0"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="9pp-qr-rLJ" appends="YES" id="lXz-6E-fih"/>
+                            <outletCollection property="gestureRecognizers" destination="sRK-a9-FLt" appends="YES" id="UaY-sC-DME"/>
+                            <outletCollection property="gestureRecognizers" destination="Fon-fy-3Gv" appends="YES" id="AjG-sw-peT"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instructions" id="6b3-Zu-aFJ">
@@ -294,10 +316,25 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgS-ae-Tip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="9pp-qr-rLJ" userLabel="Next Swipe">
+                    <connections>
+                        <segue destination="ADs-GX-Zi1" kind="push" id="Rdp-9E-nW6"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="sRK-a9-FLt" userLabel="Back Swipe">
+                    <connections>
+                        <action selector="back:" destination="Eql-0A-Dd0" id="VMh-VU-LDD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Fon-fy-3Gv" userLabel="Close Swipe">
+                    <connections>
+                        <action selector="close:" destination="Eql-0A-Dd0" id="IJP-jP-Ye4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2459" y="-633"/>
         </scene>
-        <!--Info View - Instructions-->
+        <!--Instructions-->
         <scene sceneID="spN-83-T0Z">
             <objects>
                 <viewController id="ADs-GX-Zi1" customClass="DBZ_InfoView" sceneMemberID="viewController">
@@ -309,14 +346,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-vD-7JZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-vD-7JZ">
                                 <rect key="frame" x="0.0" y="64" width="320" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="183" id="ZXP-RA-fYa"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-r8-Zob">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-r8-Zob">
                                 <rect key="frame" x="20" y="255" width="280" height="214"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Right before you begin start your slideshow, click Begin on the UPR computer application, this enables remote control. You can now click begin on your phone and press the Previous, Next, and Media buttons to control your presentation.</string>
@@ -336,7 +373,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xpc-sA-47l" firstAttribute="top" secondItem="82W-2Q-L2p" secondAttribute="bottom" constant="17" id="2U7-LJ-We3"/>
                             <constraint firstAttribute="trailing" secondItem="1pI-r8-Zob" secondAttribute="trailing" constant="20" symbolic="YES" id="D0p-2A-nTC"/>
@@ -348,6 +386,10 @@
                             <constraint firstItem="1pI-r8-Zob" firstAttribute="leading" secondItem="meC-XO-yjO" secondAttribute="leading" constant="20" symbolic="YES" id="tGe-HE-McA"/>
                             <constraint firstItem="82W-2Q-L2p" firstAttribute="top" secondItem="1pI-r8-Zob" secondAttribute="bottom" constant="8" symbolic="YES" id="zjG-uh-c9U"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BgH-Rw-BUo" appends="YES" id="kn5-v3-txf"/>
+                            <outletCollection property="gestureRecognizers" destination="8nW-0C-5KY" appends="YES" id="f5h-bt-P1m"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instructions" id="3G9-GX-EiM">
@@ -361,6 +403,16 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zh8-CF-AaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="BgH-Rw-BUo" userLabel="Close Swipe">
+                    <connections>
+                        <action selector="close:" destination="ADs-GX-Zi1" id="Ujb-7N-2xw"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="8nW-0C-5KY" userLabel="Back Swipe">
+                    <connections>
+                        <action selector="back:" destination="ADs-GX-Zi1" id="NDu-Di-bAv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2831" y="-633"/>
         </scene>
@@ -374,7 +426,14 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jY9-kc-Fjz"/>
+        <segue reference="rPb-6J-sS0"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

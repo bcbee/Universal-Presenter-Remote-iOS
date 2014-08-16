@@ -11,5 +11,6 @@
 @interface DBZ_InfoView : UIViewController
 
 - (IBAction)close:(id)sender;
+- (IBAction)back:(id)sender;
 
 @end
