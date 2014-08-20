@@ -77,4 +77,8 @@
     [DBZ_ServerCommunication connectSetup];
 }
 
+- (IBAction)refresh:(id)sender {
+    [DBZ_ServerCommunication setupUid];
+    [DBZ_ServerCommunication checkToken];
+}
 @end
