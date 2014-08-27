@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329f" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="q24-Vw-MsV">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--Universal Presenter Remote-->
+        <!--Login View-->
         <scene sceneID="GGF-8Q-ckI">
             <objects>
                 <viewController id="v4o-8f-naK" customClass="DBZ_LoginView" sceneMemberID="viewController">
@@ -24,18 +25,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-hc-91I">
-                                <rect key="frame" x="224" y="914" width="320" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="1w6-Eb-98p"/>
-                                </constraints>
-                                <state key="normal" title="Connecting...">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7ud-G5-so0" kind="push" id="CCb-os-92N"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-Ei-OQh">
                                 <rect key="frame" x="224" y="830" width="320" height="40"/>
                                 <constraints>
@@ -53,6 +42,19 @@
                                     <constraint firstAttribute="width" constant="355" id="rgm-Lp-fzk"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nI-hc-91I">
+                                <rect key="frame" x="224" y="914" width="320" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="1w6-Eb-98p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Connecting...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7ud-G5-so0" kind="push" id="CCb-os-92N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -61,14 +63,14 @@
                             <constraint firstItem="F8e-Nx-Z4u" firstAttribute="centerX" secondItem="vM1-Ei-OQh" secondAttribute="centerX" id="Gan-V9-2ls"/>
                             <constraint firstItem="8nI-hc-91I" firstAttribute="top" secondItem="Jqu-ch-z1E" secondAttribute="bottom" constant="8" symbolic="YES" id="UgL-cq-9VA"/>
                             <constraint firstItem="Jqu-ch-z1E" firstAttribute="top" secondItem="vM1-Ei-OQh" secondAttribute="bottom" constant="8" symbolic="YES" id="ety-1r-Yrh"/>
-                            <constraint firstItem="NxD-3W-efn" firstAttribute="top" secondItem="8nI-hc-91I" secondAttribute="bottom" constant="90" id="rKj-u7-2YE"/>
+                            <constraint firstItem="NxD-3W-efn" firstAttribute="top" secondItem="8nI-hc-91I" secondAttribute="bottom" constant="71" id="rKj-u7-2YE"/>
                             <constraint firstItem="Jqu-ch-z1E" firstAttribute="trailing" secondItem="vM1-Ei-OQh" secondAttribute="trailing" id="rNu-oX-aRy"/>
                             <constraint firstItem="vM1-Ei-OQh" firstAttribute="leading" secondItem="Jqu-ch-z1E" secondAttribute="leading" id="tl1-EH-MNv"/>
                             <constraint firstItem="8nI-hc-91I" firstAttribute="trailing" secondItem="Jqu-ch-z1E" secondAttribute="trailing" id="w3D-l5-Hur"/>
                             <constraint firstItem="Jqu-ch-z1E" firstAttribute="centerX" secondItem="5fa-Qe-Cgl" secondAttribute="centerX" id="xhh-WQ-xcc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Universal Presenter Remote" id="QTf-x7-dy6">
+                    <navigationItem key="navigationItem" id="QTf-x7-dy6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IZ7-3d-wIB"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="A6e-2O-tgj">
                             <connections>
