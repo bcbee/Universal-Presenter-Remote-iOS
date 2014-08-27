@@ -55,8 +55,9 @@
         // back button was pressed.  We know this is true because self is no longer
         // in the navigation stack.
         [DBZ_ServerCommunication setupUid];
-        [DBZ_ServerCommunication checkStatus];
+        [DBZ_ServerCommunication checkToken];
     }
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [super viewWillDisappear:animated];
 }
 

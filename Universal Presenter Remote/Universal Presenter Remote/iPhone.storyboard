@@ -94,6 +94,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="UPR" id="7hJ-qm-Mwj">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="D8s-cb-W1s"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="jSb-s7-VIC">
                             <connections>
                                 <action selector="refresh:" destination="pPs-1n-dsX" id="k1o-Ga-FJg"/>
