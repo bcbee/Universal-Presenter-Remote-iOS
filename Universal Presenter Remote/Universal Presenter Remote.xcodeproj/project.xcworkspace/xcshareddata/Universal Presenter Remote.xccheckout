@@ -10,6 +10,8 @@
 	<string>Universal Presenter Remote</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>9D1F74FCDAD81773F10325CDF26BD75DFAE859F9</key>
+		<string>https://github.com/brendancboyle/Universal-Presenter-Remote-Mac.git</string>
 		<key>C4BA9D79DF6C18E2790C68C5DF6967D20B864908</key>
 		<string>https://github.com/brendancboyle/Universal-Presenter-Remote-iOS.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>Universal Presenter Remote/Universal Presenter Remote.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>9D1F74FCDAD81773F10325CDF26BD75DFAE859F9</key>
+		<string>../../../../Universal-Presenter-Remote-Mac</string>
 		<key>C4BA9D79DF6C18E2790C68C5DF6967D20B864908</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>C4BA9D79DF6C18E2790C68C5DF6967D20B864908</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Universal-Presenter-Remote-iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9D1F74FCDAD81773F10325CDF26BD75DFAE859F9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Universal-Presenter-Remote-Mac</string>
 		</dict>
 	</array>
 </dict>
