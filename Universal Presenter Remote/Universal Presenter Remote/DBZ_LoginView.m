@@ -33,7 +33,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [DBZ_ServerCommunication setupUid];
-    [DBZ_ServerCommunication checkStatus];
+    //[DBZ_ServerCommunication checkStatus];
 }
 
 - (void)didReceiveMemoryWarning
