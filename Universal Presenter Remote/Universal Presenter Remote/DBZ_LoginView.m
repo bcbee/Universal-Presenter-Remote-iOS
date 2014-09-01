@@ -10,6 +10,10 @@
 #import "DBZ_ServerCommunication.h"
 #import <iAd/iAd.h>
 
+#import "GAI.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
+
 @interface DBZ_LoginView ()
 
 @end
@@ -86,4 +90,22 @@
     [DBZ_ServerCommunication setupUid];
     [DBZ_ServerCommunication checkToken];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // returns the same tracker you created in your app delegate
+    // defaultTracker originally declared in AppDelegate.m
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // This screen name value will remain set on the tracker and sent with
+    // hits until it is set to a new value or to nil.
+    [tracker set:kGAIScreenName
+           value:@"Login"];
+    
+    // manual screen tracking
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+}
+
 @end
