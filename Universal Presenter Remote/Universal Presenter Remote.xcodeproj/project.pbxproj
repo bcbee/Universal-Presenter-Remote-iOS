@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
 		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
-		B3257AC719B41EA700CC471C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC619B41EA700CC471C /* libz.dylib */; };
+		B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC619B41EA700CC471C /* libz.dylib */; };
+		B3257AD119B4251900CC471C /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257ACF19B4251900CC471C /* libAdIdAccess.a */; };
+		B3257AD219B4251900CC471C /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AD019B4251900CC471C /* libGoogleAnalyticsServices.a */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
@@ -56,6 +58,9 @@
 		B3257AC219B41E8D00CC471C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B3257AC619B41EA700CC471C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B3257ACF19B4251900CC471C /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAdIdAccess.a; path = ../../../../Desktop/GoogleAnalyticsServicesiOS_3.09/libAdIdAccess.a; sourceTree = "<group>"; };
+		B3257AD019B4251900CC471C /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Desktop/GoogleAnalyticsServicesiOS_3.09/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		B34E227219AD5B4F0001127D /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
@@ -92,7 +97,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3257AC719B41EA700CC471C /* libz.dylib in Frameworks */,
+				B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */,
+				B3257AD119B4251900CC471C /* libAdIdAccess.a in Frameworks */,
+				B3257AD219B4251900CC471C /* libGoogleAnalyticsServices.a in Frameworks */,
 				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
 				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
 				ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */,
@@ -118,6 +125,8 @@
 		B3257AB719B41E3F00CC471C /* Google Analytics */ = {
 			isa = PBXGroup;
 			children = (
+				B3257ACF19B4251900CC471C /* libAdIdAccess.a */,
+				B3257AD019B4251900CC471C /* libGoogleAnalyticsServices.a */,
 				B3257AB819B41E5900CC471C /* GAI.h */,
 				B3257AB919B41E5900CC471C /* GAIDictionaryBuilder.h */,
 				B3257ABA19B41E5900CC471C /* GAIEcommerceFields.h */,
@@ -163,6 +172,7 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */,
 				B3257AC619B41EA700CC471C /* libz.dylib */,
 				B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */,
 				B3257AC219B41E8D00CC471C /* CoreData.framework */,
@@ -483,6 +493,10 @@
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/brendancboyle/Desktop/GoogleAnalyticsServicesiOS_3.09,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "93d17d6f-63e3-46a1-834c-980c7e8dd1ee";
 				WRAPPER_EXTENSION = app;
@@ -500,6 +514,10 @@
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/brendancboyle/Desktop/GoogleAnalyticsServicesiOS_3.09,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "1ab6d280-39cf-43c4-89f6-d3c0c5297ed2";
 				WRAPPER_EXTENSION = app;
