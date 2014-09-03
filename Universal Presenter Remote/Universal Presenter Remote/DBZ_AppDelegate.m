@@ -14,6 +14,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+    //Google Analytics
+    
     // Add registration for remote notifications
     //-- Set Notification
     // Optional: automatically send uncaught exceptions to Google Analytics.
@@ -27,6 +31,49 @@
     
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-50792115-1"];
+    
+    //End Google Aanlytics
+    
+    
+    /////////////////////////
+    
+    
+    //iCloud
+    
+    // Register the preference defaults early.
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Instructions"]) {
+        
+        NSDictionary *appDefaults = [NSDictionary
+                                     dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"Instructions"];
+        [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+        
+        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+        
+        [defaults setBool:YES forKey:@"Instructions"];
+        
+    } else {
+        NSLog(@"Located Store");
+    }
+    
+    
+    
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateKVStoreItems:)
+                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
+                                               object:store];
+    [store synchronize];
+    
+    
+    //End iCloud
+    
+    
+    /////////////////////////
+    
+    
+    //Push Notifications
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {
@@ -42,6 +89,8 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(incomingNotification:) name:@"ServerResponse" object:nil];
     return YES;
+    
+    //End Push Notifications
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -112,5 +161,37 @@
     NSLog(@"Fail to register for remote notifications: %@", error);
 }
 
+- (void)updateKVStoreItems:(NSNotification*)notification {
+    // Get the list of keys that changed.
+    NSDictionary* userInfo = [notification userInfo];
+    NSNumber* reasonForChange = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
+    NSInteger reason = -1;
+    
+    // If a reason could not be determined, do not update anything.
+    if (!reasonForChange)
+        return;
+    
+    // Update only for changes from the server.
+    reason = [reasonForChange integerValue];
+    if ((reason == NSUbiquitousKeyValueStoreServerChange) ||
+        (reason == NSUbiquitousKeyValueStoreInitialSyncChange)) {
+        // If something is changing externally, get the changes
+        // and update the corresponding keys locally.
+        NSArray* changedKeys = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+        NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+        NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        // This loop assumes you are using the same key names in both
+        // the user defaults database and the iCloud key-value store
+        for (NSString* key in changedKeys) {
+            id value = [store objectForKey:key];
+            [userDefaults setObject:value forKey:key];
+        }
+    }
+}
+
+- (void)updatePreferences {
+    
+}
 
 @end

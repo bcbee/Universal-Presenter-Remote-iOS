@@ -37,7 +37,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [DBZ_ServerCommunication setupUid];
-    //[DBZ_ServerCommunication checkStatus];
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    BOOL *firsttime = [defaults boolForKey:@"Instructions"];
+    
+    if (firsttime) {
+        NSLog(@"First Time");
+    } else {
+        NSLog(@"Returning");
+    }
 }
 
 - (void)didReceiveMemoryWarning
