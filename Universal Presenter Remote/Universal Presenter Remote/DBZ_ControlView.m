@@ -34,6 +34,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
