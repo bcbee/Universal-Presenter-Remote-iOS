@@ -19,10 +19,15 @@
 
 @implementation DBZ_SettingsView
 
+NSDictionary *oldpreferences = nil;
+NSDictionary *newpreferences = nil;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"PreferenceUpdate" object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +36,48 @@
 }
 
 - (IBAction)close:(id)sender {
+    //[self updatePreferences:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)updatePreferences:(id)sender {
+    NSString *firsttime = @"Enabled";
+    NSString *swipe = @"Disabled";
+    
+    if ([self.instructionControl selectedSegmentIndex] == 0) {
+        firsttime = @"Enabled";
+    } else {
+        firsttime = @"Disabled";
+    }
+    
+    if ([self.swipeControl isOn]) {
+        swipe = @"Enabled";
+    } else {
+        swipe = @"Disabled";
+    }
+    
+    newpreferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
+    [self savePreferences];
+}
+
+- (void)savePreferences {
+    // Save Local Copy
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:newpreferences forKey:@"preferences"];
+    [ud synchronize];
+    
+    // Save To iCloud
+    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+    
+    if (store != nil) {
+        [store setObject:newpreferences forKey:@"preferences"];
+        [store synchronize];
+        NSLog(@"iCloud Saved");
+        NSDictionary *clouddict = [store dictionaryRepresentation];
+        for(NSString *key in [clouddict allKeys]) {
+            NSLog(@"iCloud: %@",[clouddict objectForKey:key]);
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -49,6 +95,37 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    
+    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+    
+    
+    
+    
+    NSDictionary *clouddict = [store dictionaryRepresentation];
+    for(NSString *key in [clouddict allKeys]) {
+        NSLog(@"iCloud: %@",[clouddict objectForKey:key]);
+    }
+    
+    [self updateInterface:nil];
+}
+
+- (void)updateInterface:(NSNotification*)notification {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    oldpreferences = [ud objectForKey:@"preferences"];
+    
+    if ([[oldpreferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"]) {
+        self.instructionControl.selectedSegmentIndex = 0;
+    } else {
+        self.instructionControl.selectedSegmentIndex = 1;
+    }
+    
+    if ([[oldpreferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
+        [_swipeControl setOn:YES];
+    } else {
+        [_swipeControl setOn:NO];
+    }
+    NSLog(@"Local: %@",oldpreferences);
 }
 
 /*

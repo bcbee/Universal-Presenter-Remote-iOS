@@ -47,15 +47,22 @@ NSDictionary *preferences = nil;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateKVStoreItems:) name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification object:store];
     [store synchronize];
     
+    //[store removeObjectForKey:@"Instructions"];
+    //[store removeObjectForKey:@"Test"];
+    //[store synchronize];
+    
+    //[self resetDefaults];
+    
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
     
     if ([ud objectForKey:@"preferences"] != nil) {
         NSLog(@"Preferences Loaded");
         preferences = [ud objectForKey:@"preferences"];
+        //[self savePreferences];
     } else {
         NSLog(@"New Preferences Generated");
-        NSString *firsttime = @"Display";
+        NSString *firsttime = @"Enabled";
         NSString *swipe = @"Disabled";
         
         preferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
@@ -63,8 +70,12 @@ NSDictionary *preferences = nil;
         
     }
     
-    if (![[preferences objectForKey:@"Instructions"] isEqualToString:@"Dismissed"]) {
+    if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"]) {
         NSLog(@"Display Instructions");
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to UPR" message:@"Click the I in the navigation bar for instructions" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        // optional - add more buttons:
+        [alert show];
+        
     } else {
         NSLog(@"Instructions Dismissed");
     }
@@ -155,6 +166,7 @@ NSDictionary *preferences = nil;
 }
 
 - (void)updateKVStoreItems:(NSNotification*)notification {
+    NSLog(@"iCloud Sync!");
     // Get the list of keys that changed.
     NSDictionary* userInfo = [notification userInfo];
     NSNumber* reasonForChange = [userInfo objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
@@ -180,11 +192,15 @@ NSDictionary *preferences = nil;
         // This loop assumes you are using the same key names in both
         // the user defaults database and the iCloud key-value store
         for (NSString* key in changedKeys) {
+            NSLog(@"Value for key %@ changed", key);
             id value = [store objectForKey:key];
             [userDefaults setObject:value forKey:key];
         }
         
         preferences = [userDefaults objectForKey:@"preferences"];
+        
+        NSNotification* notification = [NSNotification notificationWithName:@"PreferenceUpdate" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
     }
 }
 
@@ -192,6 +208,7 @@ NSDictionary *preferences = nil;
     // Save Local Copy
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:preferences forKey:@"preferences"];
+    [ud synchronize];
     
     // Save To iCloud
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
