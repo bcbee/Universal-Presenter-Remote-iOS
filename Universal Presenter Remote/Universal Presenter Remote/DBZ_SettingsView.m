@@ -64,14 +64,14 @@ NSDictionary *newpreferences = nil;
     // Save Local Copy
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:newpreferences forKey:@"preferences"];
-    [ud synchronize];
+    //[ud synchronize];
     
     // Save To iCloud
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
     
     if (store != nil) {
         [store setObject:newpreferences forKey:@"preferences"];
-        [store synchronize];
+        //[store synchronize];
         NSLog(@"iCloud Saved");
         NSDictionary *clouddict = [store dictionaryRepresentation];
         for(NSString *key in [clouddict allKeys]) {

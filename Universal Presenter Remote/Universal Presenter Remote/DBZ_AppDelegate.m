@@ -208,14 +208,14 @@ NSDictionary *preferences = nil;
     // Save Local Copy
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:preferences forKey:@"preferences"];
-    [ud synchronize];
+    //[ud synchronize];
     
     // Save To iCloud
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
     
     if (store != nil) {
         [store setObject:preferences forKey:@"preferences"];
-        [store synchronize];
+        //[store synchronize];
     }
 }
 
