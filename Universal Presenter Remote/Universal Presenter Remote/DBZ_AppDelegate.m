@@ -12,6 +12,8 @@
 
 @implementation DBZ_AppDelegate
 
+NSDictionary *preferences = nil;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
@@ -27,7 +29,7 @@
     [GAI sharedInstance].dispatchInterval = 20;
     
     // Optional: set Logger to VERBOSE for debug information.
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    //[[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-50792115-1"];
@@ -41,30 +43,33 @@
     //iCloud
     
     // Register the preference defaults early.
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateKVStoreItems:) name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification object:store];
+    [store synchronize];
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Instructions"]) {
-        
-        NSDictionary *appDefaults = [NSDictionary
-                                     dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"Instructions"];
-        [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
-        
-        NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-        
-        [defaults setBool:YES forKey:@"Instructions"];
-        
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
+    
+    if ([ud objectForKey:@"preferences"] != nil) {
+        NSLog(@"Preferences Loaded");
+        preferences = [ud objectForKey:@"preferences"];
     } else {
-        NSLog(@"Located Store");
+        NSLog(@"New Preferences Generated");
+        NSString *firsttime = @"Display";
+        NSString *swipe = @"Disabled";
+        
+        preferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
+        [self savePreferences];
+        
+    }
+    
+    if (![[preferences objectForKey:@"Instructions"] isEqualToString:@"Dismissed"]) {
+        NSLog(@"Display Instructions");
+    } else {
+        NSLog(@"Instructions Dismissed");
     }
     
     
-    
-    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(updateKVStoreItems:)
-                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-                                               object:store];
-    [store synchronize];
     
     
     //End iCloud
@@ -110,13 +115,15 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-    //[DBZ_ServerCommunication checkToken];
+    [DBZ_ServerCommunication checkToken];
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    [store synchronize];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    [DBZ_ServerCommunication checkToken];
+    //[DBZ_ServerCommunication checkToken];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -135,20 +142,6 @@
     NSNotification* notification = [NSNotification notificationWithName:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     completionHandler(UIBackgroundFetchResultNewData);
-    // We can determine whether an application is launched as a result of the user tapping the action
-    // button or whether the notification was delivered to the already-running application by examining
-    // the application state.
-    /*
-    if (application.applicationState == UIApplicationStateActive) {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Did receive a Remote Notification"
-                                                            message:[NSString stringWithFormat:@"The application received this remote notification while it was running:\n%@",
-                                                                     [[userInfo objectForKey:@"aps"] objectForKey:@"alert"]]
-                                                           delegate:self
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }
-     */
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -181,17 +174,41 @@
         NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
         NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
         
+        NSString *message = [store objectForKey:@"Test"];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"iCloud Value" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
         // This loop assumes you are using the same key names in both
         // the user defaults database and the iCloud key-value store
         for (NSString* key in changedKeys) {
             id value = [store objectForKey:key];
             [userDefaults setObject:value forKey:key];
         }
+        
+        preferences = [userDefaults objectForKey:@"preferences"];
     }
 }
 
-- (void)updatePreferences {
+- (void)savePreferences {
+    // Save Local Copy
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:preferences forKey:@"preferences"];
     
+    // Save To iCloud
+    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
+    
+    if (store != nil) {
+        [store setObject:preferences forKey:@"preferences"];
+        [store synchronize];
+    }
+}
+
+- (void)resetDefaults {
+    NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = [defs dictionaryRepresentation];
+    for (id key in dict) {
+        [defs removeObjectForKey:key];
+    }
+    [defs synchronize];
 }
 
 @end

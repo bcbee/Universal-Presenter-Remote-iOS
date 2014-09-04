@@ -15,6 +15,8 @@
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
+		B39FCC5719B7F2260052BF8D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B39FCC5619B7F2260052BF8D /* CloudKit.framework */; };
+		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
 		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
 		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
 		ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED35B95D1901BC830074B424 /* iAd.framework */; };
@@ -65,6 +67,9 @@
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
+		B39FCC5619B7F2260052BF8D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
+		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
 		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
 		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 				B3257AD219B4251900CC471C /* libGoogleAnalyticsServices.a in Frameworks */,
 				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
 				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
+				B39FCC5719B7F2260052BF8D /* CloudKit.framework in Frameworks */,
 				ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */,
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
@@ -172,6 +178,7 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B39FCC5619B7F2260052BF8D /* CloudKit.framework */,
 				B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */,
 				B3257AC619B41EA700CC471C /* libz.dylib */,
 				B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */,
@@ -249,6 +256,8 @@
 				ED282331190068010030B9C4 /* DBZ_ControlView.m */,
 				B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */,
 				B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */,
+				B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */,
+				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -371,6 +380,7 @@
 				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
+				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
 				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,7 +512,7 @@
 					/Users/brendancboyle/Desktop/GoogleAnalyticsServicesiOS_3.09,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b9d5dd32-4fba-4f04-b436-9b6a5a7c2c48";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -524,7 +534,7 @@
 					/Users/brendancboyle/Desktop/GoogleAnalyticsServicesiOS_3.09,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4ec604bc-49b9-4414-b876-a26eb1c9424e";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

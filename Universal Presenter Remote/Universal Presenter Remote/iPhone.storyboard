@@ -168,11 +168,84 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Control" id="tOR-DJ-GCO"/>
+                    <navigationItem key="navigationItem" title="Control" id="tOR-DJ-GCO">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YBp-lB-O7z"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="uaz-iG-pcg">
+                            <connections>
+                                <segue destination="3ug-Bn-Cnh" kind="modal" id="uoP-ob-4sK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIA-7M-4tl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1663" y="68"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="nnd-Wd-oI9">
+            <objects>
+                <viewController id="Dth-SW-Sot" customClass="DBZ_SettingsView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8oJ-XH-7kW"/>
+                        <viewControllerLayoutGuide type="bottom" id="bKJ-yL-p7A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="61R-LV-LJp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b8V-A8-4gF">
+                                <rect key="frame" x="37" y="133" width="247" height="29"/>
+                                <segments>
+                                    <segment title="Show Instructions"/>
+                                    <segment title="Hide Instructions"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTG-CD-AkS">
+                                <rect key="frame" x="91" y="104" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5Pa-7u-tDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-T2-ECT">
+                                <rect key="frame" x="136" y="231" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-ey-nUn">
+                                <rect key="frame" x="77" y="187" width="166" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dZh-Q9-rdR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rTG-CD-AkS" firstAttribute="top" secondItem="8oJ-XH-7kW" secondAttribute="bottom" constant="40" id="9LC-a4-W8V"/>
+                            <constraint firstItem="qSq-T2-ECT" firstAttribute="top" secondItem="Ouc-ey-nUn" secondAttribute="bottom" constant="23" id="Ic7-Ow-82d"/>
+                            <constraint firstItem="rTG-CD-AkS" firstAttribute="centerX" secondItem="8oJ-XH-7kW" secondAttribute="centerX" id="RbG-Ep-Nf7"/>
+                            <constraint firstItem="b8V-A8-4gF" firstAttribute="centerX" secondItem="Ouc-ey-nUn" secondAttribute="centerX" id="bPb-ow-xaP"/>
+                            <constraint firstItem="qSq-T2-ECT" firstAttribute="centerX" secondItem="Ouc-ey-nUn" secondAttribute="centerX" id="bYB-C8-11d"/>
+                            <constraint firstItem="b8V-A8-4gF" firstAttribute="top" secondItem="rTG-CD-AkS" secondAttribute="bottom" constant="8" symbolic="YES" id="bvP-34-OE4"/>
+                            <constraint firstItem="b8V-A8-4gF" firstAttribute="centerX" secondItem="rTG-CD-AkS" secondAttribute="centerX" id="iD7-fy-69M"/>
+                            <constraint firstItem="Ouc-ey-nUn" firstAttribute="top" secondItem="b8V-A8-4gF" secondAttribute="bottom" constant="26" id="uZJ-eM-abF"/>
+                            <constraint firstItem="Ouc-ey-nUn" firstAttribute="leading" secondItem="61R-LV-LJp" secondAttribute="leadingMargin" constant="61" id="zXo-05-y9N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="MyH-rc-F99">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="stop" id="m1a-bF-Cjh">
+                            <connections>
+                                <action selector="close:" destination="Dth-SW-Sot" id="qVR-Jf-onn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwj-2H-QUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="753"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wlZ-LQ-0MQ">
@@ -280,6 +353,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instructions" id="YKp-rA-eTI">
                         <barButtonItem key="backBarButtonItem" title="Back" id="asO-uk-Z47"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="xX5-qA-6a8">
+                            <connections>
+                                <segue destination="3ug-Bn-Cnh" kind="modal" id="XyR-oX-E5u"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="GDn-GR-MMF">
                             <connections>
                                 <action selector="close:" destination="EYW-TL-k4e" id="aMk-ZT-CL8"/>
@@ -472,6 +550,29 @@
             </objects>
             <point key="canvasLocation" x="2831" y="-633"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3di-Ai-S1g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3ug-Bn-Cnh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5jt-Iz-5Pq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dth-SW-Sot" kind="relationship" relationship="rootViewController" id="s01-x7-yul"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlN-na-QnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="753"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="1000" height="1000"/>
@@ -489,8 +590,9 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jY9-kc-Fjz"/>
+        <segue reference="uoP-ob-4sK"/>
         <segue reference="rPb-6J-sS0"/>
+        <segue reference="jY9-kc-Fjz"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>

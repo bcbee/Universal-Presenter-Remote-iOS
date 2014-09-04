@@ -75,6 +75,16 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+    
+    /*
+    NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
+    NSString *message = [store objectForKey:@"Test"];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"iCloud Value" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    // optional - add more buttons:
+    [alert show];
+     */
 }
 
 @end
