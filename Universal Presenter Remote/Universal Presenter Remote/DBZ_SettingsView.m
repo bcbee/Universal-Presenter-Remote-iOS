@@ -27,6 +27,7 @@ NSDictionary *newpreferences = nil;
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"PreferenceUpdate" object:nil];
+    [self updateInterface:nil];
     
 }
 
@@ -92,11 +93,6 @@ NSDictionary *newpreferences = nil;
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-    
-    
-    NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
-    
-    [self updateInterface:nil];
 }
 
 - (void)updateInterface:(NSNotification*)notification {

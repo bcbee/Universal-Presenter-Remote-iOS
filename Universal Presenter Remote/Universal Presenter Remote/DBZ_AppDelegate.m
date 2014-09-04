@@ -65,8 +65,9 @@ NSDictionary *preferences = nil;
     
     if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"]) {
         NSLog(@"Display Instructions");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to UPR" message:@"Click the I in the navigation bar for instructions" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:nil];
         // optional - add more buttons:
+        [alert addButtonWithTitle:@"No"];
         [alert show];
         
     } else {
@@ -176,9 +177,6 @@ NSDictionary *preferences = nil;
         NSUbiquitousKeyValueStore* store = [NSUbiquitousKeyValueStore defaultStore];
         NSUserDefaults* userDefaults = [NSUserDefaults standardUserDefaults];
         
-        NSString *message = [store objectForKey:@"Test"];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"iCloud Value" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        
         // This loop assumes you are using the same key names in both
         // the user defaults database and the iCloud key-value store
         for (NSString* key in changedKeys) {
@@ -214,6 +212,13 @@ NSDictionary *preferences = nil;
         [defs removeObjectForKey:key];
     }
     [defs synchronize];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSNotification* notification = [NSNotification notificationWithName:@"OpenInstructions" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+    }
 }
 
 @end

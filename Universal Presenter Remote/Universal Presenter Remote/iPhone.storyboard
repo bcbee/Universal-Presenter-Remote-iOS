@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
@@ -64,7 +63,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="s4E-HJ-fSD" kind="push" identifier="ConnectSegue" id="pv8-nh-STf"/>
+                                    <action selector="connectSession:" destination="pPs-1n-dsX" eventType="touchUpInside" id="rub-02-iHW"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="DHR-qw-bTe">
@@ -115,7 +114,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="OJs-8U-SFR" kind="modal" id="g8q-i1-QA6"/>
+                                    <segue destination="OJs-8U-SFR" kind="modal" identifier="InstructionSegue" id="g8q-i1-QA6"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -123,6 +122,8 @@
                     <connections>
                         <outlet property="connectButton" destination="gXE-8E-WY2" id="YWj-MW-5WF"/>
                         <outlet property="tokenLabel" destination="5NT-Ch-4dm" id="cJX-iH-dIe"/>
+                        <segue destination="s4E-HJ-fSD" kind="push" identifier="ControlSegue" id="G4Z-mW-EHo"/>
+                        <segue destination="6Nl-1b-Q1y" kind="push" identifier="SwipeControlSegue" id="nYC-kN-cZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLH-dO-olY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,16 +142,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Rf-Cab">
-                                <rect key="frame" x="0.0" y="72" width="320" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
-                                <state key="normal" title="Media">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="mediaButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="tmL-dp-zLY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="one-ur-MDS">
                                 <rect key="frame" x="0.0" y="234" width="320" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
@@ -171,6 +162,16 @@
                                     <action selector="previousButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="n8o-wA-Ocv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paq-Rf-Cab">
+                                <rect key="frame" x="0.0" y="72" width="320" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Media">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mediaButton:" destination="s4E-HJ-fSD" eventType="touchUpInside" id="tmL-dp-zLY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -178,7 +179,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="YBp-lB-O7z"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="uaz-iG-pcg">
                             <connections>
-                                <segue destination="3ug-Bn-Cnh" kind="modal" id="uoP-ob-4sK"/>
+                                <segue destination="3ug-Bn-Cnh" kind="modal" identifier="SettingsSegue" id="uoP-ob-4sK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -200,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="b8V-A8-4gF">
-                                <rect key="frame" x="37" y="133" width="247" height="29"/>
+                                <rect key="frame" x="37" y="110" width="247" height="29"/>
                                 <segments>
                                     <segment title="Show Instructions"/>
                                     <segment title="Hide Instructions"/>
@@ -210,25 +211,19 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTG-CD-AkS">
-                                <rect key="frame" x="91" y="104" width="139" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5Pa-7u-tDi"/>
-                                </constraints>
+                                <rect key="frame" x="91" y="81" width="139" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-T2-ECT">
-                                <rect key="frame" x="136" y="231" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-T2-ECT">
+                                <rect key="frame" x="136" y="193" width="51" height="31"/>
                                 <connections>
                                     <action selector="updatePreferences:" destination="Dth-SW-Sot" eventType="valueChanged" id="463-vk-PJr"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouc-ey-nUn">
-                                <rect key="frame" x="77" y="187" width="166" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="dZh-Q9-rdR"/>
-                                </constraints>
+                                <rect key="frame" x="77" y="164" width="166" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -236,15 +231,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rTG-CD-AkS" firstAttribute="top" secondItem="8oJ-XH-7kW" secondAttribute="bottom" constant="40" id="9LC-a4-W8V"/>
-                            <constraint firstItem="qSq-T2-ECT" firstAttribute="top" secondItem="Ouc-ey-nUn" secondAttribute="bottom" constant="23" id="Ic7-Ow-82d"/>
-                            <constraint firstItem="rTG-CD-AkS" firstAttribute="centerX" secondItem="8oJ-XH-7kW" secondAttribute="centerX" id="RbG-Ep-Nf7"/>
-                            <constraint firstItem="b8V-A8-4gF" firstAttribute="centerX" secondItem="Ouc-ey-nUn" secondAttribute="centerX" id="bPb-ow-xaP"/>
-                            <constraint firstItem="qSq-T2-ECT" firstAttribute="centerX" secondItem="Ouc-ey-nUn" secondAttribute="centerX" id="bYB-C8-11d"/>
-                            <constraint firstItem="b8V-A8-4gF" firstAttribute="top" secondItem="rTG-CD-AkS" secondAttribute="bottom" constant="8" symbolic="YES" id="bvP-34-OE4"/>
-                            <constraint firstItem="b8V-A8-4gF" firstAttribute="centerX" secondItem="rTG-CD-AkS" secondAttribute="centerX" id="iD7-fy-69M"/>
-                            <constraint firstItem="Ouc-ey-nUn" firstAttribute="top" secondItem="b8V-A8-4gF" secondAttribute="bottom" constant="26" id="uZJ-eM-abF"/>
-                            <constraint firstItem="Ouc-ey-nUn" firstAttribute="leading" secondItem="61R-LV-LJp" secondAttribute="leadingMargin" constant="61" id="zXo-05-y9N"/>
+                            <constraint firstAttribute="centerX" secondItem="rTG-CD-AkS" secondAttribute="centerX" id="2nw-CK-dBo"/>
+                            <constraint firstItem="Ouc-ey-nUn" firstAttribute="top" secondItem="b8V-A8-4gF" secondAttribute="bottom" constant="26" id="38a-gY-BFT"/>
+                            <constraint firstItem="qSq-T2-ECT" firstAttribute="top" secondItem="Ouc-ey-nUn" secondAttribute="bottom" constant="8" id="EGv-92-xoO"/>
+                            <constraint firstAttribute="centerX" secondItem="qSq-T2-ECT" secondAttribute="centerX" id="StS-MP-rFw"/>
+                            <constraint firstItem="rTG-CD-AkS" firstAttribute="top" secondItem="8oJ-XH-7kW" secondAttribute="bottom" constant="17" id="cy9-hh-snk"/>
+                            <constraint firstItem="b8V-A8-4gF" firstAttribute="top" secondItem="rTG-CD-AkS" secondAttribute="bottom" constant="8" id="gTC-WX-3zH"/>
+                            <constraint firstAttribute="centerX" secondItem="b8V-A8-4gF" secondAttribute="centerX" id="mD4-cm-x4q"/>
+                            <constraint firstAttribute="centerX" secondItem="Ouc-ey-nUn" secondAttribute="centerX" id="zBJ-9F-GHb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="MyH-rc-F99">
@@ -261,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwj-2H-QUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="753"/>
+            <point key="canvasLocation" x="2461" y="399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wlZ-LQ-0MQ">
@@ -394,7 +388,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2069" y="-633"/>
+            <point key="canvasLocation" x="2066" y="-639"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="3iE-tE-gsu">
@@ -482,7 +476,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2459" y="-633"/>
+            <point key="canvasLocation" x="2461" y="-639"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="spN-83-T0Z">
@@ -564,7 +558,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2831" y="-633"/>
+            <point key="canvasLocation" x="2859" y="-639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3di-Ai-S1g">
@@ -587,7 +581,45 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XlN-na-QnX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="753"/>
+            <point key="canvasLocation" x="2066" y="399"/>
+        </scene>
+        <!--Swipe Control-->
+        <scene sceneID="Ads-3q-7iP">
+            <objects>
+                <viewController id="6Nl-1b-Q1y" customClass="DBZ_ControlView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Odd-pf-rDt"/>
+                        <viewControllerLayoutGuide type="bottom" id="KKJ-gL-VbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sqa-sI-eaW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-7O-4u8">
+                                <rect key="frame" x="0.0" y="234" width="320" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="6Nl-1b-Q1y" eventType="touchUpInside" id="a0x-Hp-AAT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swipe Control" id="xkC-qv-Pay">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ff7-sP-eQ4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="S8Z-fy-C0H">
+                            <connections>
+                                <segue destination="3ug-Bn-Cnh" kind="modal" identifier="SwipeSettingsSegue" id="sel-dk-VFX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t2-Qa-mrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="744"/>
         </scene>
     </scenes>
     <resources>
@@ -606,7 +638,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="uoP-ob-4sK"/>
+        <segue reference="sel-dk-VFX"/>
         <segue reference="rPb-6J-sS0"/>
         <segue reference="jY9-kc-Fjz"/>
     </inferredMetricsTieBreakers>

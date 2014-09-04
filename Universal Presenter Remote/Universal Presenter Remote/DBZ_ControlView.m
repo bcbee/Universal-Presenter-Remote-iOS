@@ -61,8 +61,17 @@
         [DBZ_ServerCommunication setupUid];
         [DBZ_ServerCommunication checkToken];
     }
-    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [super viewWillDisappear:animated];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if (![[segue identifier] isEqualToString:@"SettingsSegue"] && ![[segue identifier] isEqualToString:@"SwipeSettingsSegue"])
+    {
+        [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

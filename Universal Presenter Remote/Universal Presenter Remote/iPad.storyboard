@@ -106,7 +106,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BeW-cF-f9t" kind="modal" id="Bo7-rC-vOz"/>
+                                    <segue destination="BeW-cF-f9t" kind="modal" identifier="InstructionSegue" id="Bo7-rC-vOz"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -187,6 +187,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Control" id="B4A-sT-p50">
                         <barButtonItem key="backBarButtonItem" title="Back" id="d69-aa-P7I"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="KuN-Je-3qQ">
+                            <connections>
+                                <segue destination="vLu-YL-9nW" kind="modal" id="XLz-Ky-0LB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTr-In-nxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -299,6 +304,11 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Instructions" id="WRL-pt-oIA">
                         <barButtonItem key="backBarButtonItem" title="Back" id="X73-Xt-n4Z"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="qsw-6u-Abo">
+                            <connections>
+                                <segue destination="vLu-YL-9nW" kind="modal" id="KxH-4i-FcU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="fm6-ZA-cIf">
                             <connections>
                                 <action selector="close:" destination="Loh-gP-1RS" id="taT-By-lou"/>
@@ -491,6 +501,98 @@
             </objects>
             <point key="canvasLocation" x="3687" y="-1151"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="KjU-tF-cx6">
+            <objects>
+                <viewController id="g3i-UY-jVs" customClass="DBZ_SettingsView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTz-PG-P8C"/>
+                        <viewControllerLayoutGuide type="bottom" id="9H5-rK-GXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1UL-Td-YXF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jQv-w2-6Bj">
+                                <rect key="frame" x="261" y="133" width="247" height="29"/>
+                                <segments>
+                                    <segment title="Show Instructions"/>
+                                    <segment title="Hide Instructions"/>
+                                </segments>
+                                <connections>
+                                    <action selector="updatePreferences:" destination="g3i-UY-jVs" eventType="valueChanged" id="fWS-UI-mU8"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RO6-QA-G8C">
+                                <rect key="frame" x="315" y="104" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlU-rq-rlY">
+                                <rect key="frame" x="301" y="187" width="166" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fXr-nh-Zww">
+                                <rect key="frame" x="360" y="216" width="51" height="31"/>
+                                <connections>
+                                    <action selector="updatePreferences:" destination="g3i-UY-jVs" eventType="valueChanged" id="Mu4-I9-MQq"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="jQv-w2-6Bj" secondAttribute="centerX" id="0DQ-hb-mKH"/>
+                            <constraint firstAttribute="centerX" secondItem="RO6-QA-G8C" secondAttribute="centerX" id="46W-32-V33"/>
+                            <constraint firstAttribute="centerX" secondItem="GlU-rq-rlY" secondAttribute="centerX" id="K5Q-VX-7pF"/>
+                            <constraint firstItem="RO6-QA-G8C" firstAttribute="top" secondItem="JTz-PG-P8C" secondAttribute="bottom" constant="40" id="MWv-yO-l6g"/>
+                            <constraint firstItem="GlU-rq-rlY" firstAttribute="top" secondItem="jQv-w2-6Bj" secondAttribute="bottom" constant="26" id="gxm-sN-Exc"/>
+                            <constraint firstItem="fXr-nh-Zww" firstAttribute="top" secondItem="GlU-rq-rlY" secondAttribute="bottom" constant="8" id="rGg-tR-93T"/>
+                            <constraint firstAttribute="centerX" secondItem="fXr-nh-Zww" secondAttribute="centerX" id="t2P-i3-3JT"/>
+                            <constraint firstItem="jQv-w2-6Bj" firstAttribute="top" secondItem="RO6-QA-G8C" secondAttribute="bottom" constant="8" id="tEr-4t-286"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="WUc-N3-Gc9">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="stop" id="kt7-m1-dFE">
+                            <connections>
+                                <action selector="close:" destination="g3i-UY-jVs" id="3ff-2Z-TbB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="instructionControl" destination="jQv-w2-6Bj" id="hf0-y4-a3F"/>
+                        <outlet property="swipeControl" destination="fXr-nh-Zww" id="jMm-Ia-P45"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOC-xW-pl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="1193"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6pW-iV-SBh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vLu-YL-9nW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NWC-y2-jNR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g3i-UY-jVs" kind="relationship" relationship="rootViewController" id="Oq6-w1-gYV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g40-wP-Q4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="1193"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="1000" height="1000"/>
@@ -508,6 +610,7 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="XLz-Ky-0LB"/>
         <segue reference="XZj-AY-yOY"/>
         <segue reference="gj2-iD-ptU"/>
     </inferredMetricsTieBreakers>
