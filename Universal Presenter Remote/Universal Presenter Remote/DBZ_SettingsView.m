@@ -36,7 +36,6 @@ NSDictionary *newpreferences = nil;
 }
 
 - (IBAction)close:(id)sender {
-    //[self updatePreferences:nil];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -64,14 +63,12 @@ NSDictionary *newpreferences = nil;
     // Save Local Copy
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:newpreferences forKey:@"preferences"];
-    //[ud synchronize];
     
     // Save To iCloud
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
     
     if (store != nil) {
         [store setObject:newpreferences forKey:@"preferences"];
-        //[store synchronize];
         NSLog(@"iCloud Saved");
         NSDictionary *clouddict = [store dictionaryRepresentation];
         for(NSString *key in [clouddict allKeys]) {
@@ -98,14 +95,6 @@ NSDictionary *newpreferences = nil;
     
     
     NSUbiquitousKeyValueStore *store = [NSUbiquitousKeyValueStore defaultStore];
-    
-    
-    
-    
-    NSDictionary *clouddict = [store dictionaryRepresentation];
-    for(NSString *key in [clouddict allKeys]) {
-        NSLog(@"iCloud: %@",[clouddict objectForKey:key]);
-    }
     
     [self updateInterface:nil];
 }
