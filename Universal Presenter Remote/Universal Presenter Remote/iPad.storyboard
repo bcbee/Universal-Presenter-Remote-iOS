@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="q24-Vw-MsV">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -41,7 +42,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7ud-G5-so0" kind="push" identifier="ConnectSegue" id="CCb-os-92N"/>
+                                    <action selector="connectSession:" destination="v4o-8f-naK" eventType="touchUpInside" id="XG2-0U-mZm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM1-Ei-OQh">
@@ -114,6 +115,8 @@
                     <connections>
                         <outlet property="connectButton" destination="8nI-hc-91I" id="zN8-RY-7ys"/>
                         <outlet property="tokenLabel" destination="vM1-Ei-OQh" id="vtD-63-bxS"/>
+                        <segue destination="7ud-G5-so0" kind="push" identifier="ControlSegue" id="uBD-nl-6Q7"/>
+                        <segue destination="Zlp-KX-G3T" kind="push" identifier="SwipeControlSegue" id="1Um-Gx-wel"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkW-sW-msO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +192,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="d69-aa-P7I"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="KuN-Je-3qQ">
                             <connections>
-                                <segue destination="vLu-YL-9nW" kind="modal" id="XLz-Ky-0LB"/>
+                                <segue destination="vLu-YL-9nW" kind="modal" identifier="SettingsSegue" id="XLz-Ky-0LB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -242,7 +245,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y45-er-bY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="636" y="-1151"/>
+            <point key="canvasLocation" x="1609" y="-1117"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="GB0-FN-pCy">
@@ -329,7 +332,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1609" y="-1151"/>
+            <point key="canvasLocation" x="2603" y="-1111"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="p8U-1P-31e">
@@ -417,7 +420,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2603" y="-1151"/>
+            <point key="canvasLocation" x="3687" y="-1111"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="5Cl-lR-dma">
@@ -431,7 +434,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-s6-UZE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qaa-s6-UZE">
                                 <rect key="frame" x="0.0" y="64" width="768" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -499,7 +502,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3687" y="-1151"/>
+            <point key="canvasLocation" x="4702" y="-1111"/>
         </scene>
         <!--Settings-->
         <scene sceneID="KjU-tF-cx6">
@@ -568,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOC-xW-pl1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2473" y="1193"/>
+            <point key="canvasLocation" x="3687" y="575"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6pW-iV-SBh">
@@ -591,7 +594,66 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g40-wP-Q4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="1193"/>
+            <point key="canvasLocation" x="2603" y="575"/>
+        </scene>
+        <!--Swipe Control-->
+        <scene sceneID="Pnr-HU-boF">
+            <objects>
+                <viewController id="Zlp-KX-G3T" customClass="DBZ_ControlView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="84p-V3-2vd"/>
+                        <viewControllerLayoutGuide type="bottom" id="dZd-Do-S6T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uCR-Bq-4wz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe bellow to control presentation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-vw-DbL">
+                                <rect key="frame" x="244" y="72" width="280" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zpE-vw-DbL" firstAttribute="top" secondItem="84p-V3-2vd" secondAttribute="bottom" constant="8" id="J9P-T7-bkX"/>
+                            <constraint firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="WZE-5P-kRl"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tLT-De-X4e" appends="YES" id="eJ2-WN-nhp"/>
+                            <outletCollection property="gestureRecognizers" destination="eyP-CG-6iV" appends="YES" id="xRS-xY-f1L"/>
+                            <outletCollection property="gestureRecognizers" destination="OOS-vK-PPs" appends="YES" id="lc7-Uh-505"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swipe Control" id="H4N-8E-r6y">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="aEz-NU-ptY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="l8s-Vf-Abh">
+                            <connections>
+                                <segue destination="vLu-YL-9nW" kind="modal" identifier="SwipeSettingsSegue" id="XsH-Fy-Ham"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJF-Ca-AKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="tLT-De-X4e" userLabel="Next Swipe">
+                    <connections>
+                        <action selector="nextButton:" destination="Zlp-KX-G3T" id="HBt-xd-8ok"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="eyP-CG-6iV" userLabel="Previous Swipe">
+                    <connections>
+                        <action selector="previousButton:" destination="Zlp-KX-G3T" id="R9u-4h-2XQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="OOS-vK-PPs" userLabel="Media Swipe">
+                    <connections>
+                        <action selector="mediaButton:" destination="Zlp-KX-G3T" id="glh-Cb-xiQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1609" y="1170"/>
         </scene>
     </scenes>
     <resources>
@@ -610,9 +672,9 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="XLz-Ky-0LB"/>
-        <segue reference="XZj-AY-yOY"/>
         <segue reference="gj2-iD-ptU"/>
+        <segue reference="XZj-AY-yOY"/>
+        <segue reference="XsH-Fy-Ham"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
