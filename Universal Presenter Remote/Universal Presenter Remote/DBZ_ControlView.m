@@ -34,6 +34,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
+    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +64,6 @@
         [DBZ_ServerCommunication setupUid];
         [DBZ_ServerCommunication checkToken];
     }
-    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [super viewWillDisappear:animated];
 }
 

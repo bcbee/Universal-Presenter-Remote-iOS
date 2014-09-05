@@ -7,6 +7,8 @@
 //
 
 #import "DBZ_ServerCommunication.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 
 @implementation DBZ_ServerCommunication
 
@@ -44,6 +46,10 @@ static NSString *apns = @"";
     }
     
     NSLog(strURL);
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"upr_cloud" action:@"api_request" label:page value:nil] build]];
     
     NSURL *URL = [NSURL URLWithString:[strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLRequest *requestURL = [[NSURLRequest alloc] initWithURL:URL];

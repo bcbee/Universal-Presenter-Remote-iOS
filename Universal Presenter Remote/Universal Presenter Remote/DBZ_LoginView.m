@@ -36,8 +36,8 @@
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [DBZ_ServerCommunication setupUid];
-    //[DBZ_ServerCommunication checkStatus];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +78,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"ConnectSegue"])
+    if ([[segue identifier] isEqualToString:@"ControlSegue"] || [[segue identifier] isEqualToString:@"SwipeControlSegue"] || [[segue identifier] isEqualToString:@"SettingsSegue"])
     {
         [DBZ_ServerCommunication connectSetup];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"mplus-1c-regular" size:21],  NSFontAttributeName, nil]];
@@ -106,6 +106,26 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
+}
+
+- (void)openInstructions:(NSNotification*)notification {
+    [self performSegueWithIdentifier:@"InstructionSegue" sender:self];
+}
+
+- (IBAction)connectSession:(id)sender {
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSDictionary *preferences = [ud objectForKey:@"preferences"];
+    
+    if ([[preferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
+        [self performSegueWithIdentifier:@"SwipeControlSegue" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"ControlSegue" sender:self];
+    }
 }
 
 @end
