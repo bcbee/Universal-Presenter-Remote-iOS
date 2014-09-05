@@ -602,6 +602,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SwipeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kvY-nm-lcd">
+                                <rect key="frame" x="-26" y="185" width="372" height="198"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -649,6 +652,7 @@
         <image name="2" width="1000" height="1000"/>
         <image name="3" width="1000" height="1000"/>
         <image name="Banner" width="2048" height="273"/>
+        <image name="SwipeBackground" width="1000" height="665"/>
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

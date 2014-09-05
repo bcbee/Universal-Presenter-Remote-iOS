@@ -29,7 +29,7 @@ NSDictionary *preferences = nil;
     [GAI sharedInstance].dispatchInterval = 20;
     
     // Optional: set Logger to VERBOSE for debug information.
-    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    //[[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-50792115-1"];
