@@ -608,27 +608,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe bellow to control presentation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-vw-DbL">
-                                <rect key="frame" x="244" y="72" width="280" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oKQ-As-737">
+                                <rect key="frame" x="137" y="329" width="495" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="495" id="ZJz-uq-Ee7"/>
+                                    <constraint firstAttribute="height" constant="366" id="zRH-Gs-pgZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe below to control presentation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-vw-DbL">
+                                <rect key="frame" x="246" y="72" width="276" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="872-c3-9tn"/>
+                                    <constraint firstAttribute="width" constant="276" id="Dhl-Ph-xEh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oKQ-As-737">
-                                <rect key="frame" x="137" y="329" width="495" height="366"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="495" id="Gbx-aC-FxP"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="dZd-Do-S6T" firstAttribute="top" secondItem="oKQ-As-737" secondAttribute="bottom" constant="329" id="FSO-ur-CYd"/>
-                            <constraint firstItem="zpE-vw-DbL" firstAttribute="top" secondItem="84p-V3-2vd" secondAttribute="bottom" constant="8" id="J9P-T7-bkX"/>
-                            <constraint firstItem="oKQ-As-737" firstAttribute="centerY" secondItem="uCR-Bq-4wz" secondAttribute="centerY" id="LXi-P1-p0u"/>
-                            <constraint firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="WZE-5P-kRl"/>
-                            <constraint firstItem="oKQ-As-737" firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="zaA-TM-63X"/>
+                            <constraint firstAttribute="centerY" secondItem="oKQ-As-737" secondAttribute="centerY" id="Q5Z-BY-V9h"/>
+                            <constraint firstItem="zpE-vw-DbL" firstAttribute="top" secondItem="84p-V3-2vd" secondAttribute="bottom" constant="8" id="VEH-ev-XeL"/>
+                            <constraint firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="dUe-vY-GXO"/>
+                            <constraint firstAttribute="centerX" secondItem="oKQ-As-737" secondAttribute="centerX" id="yzl-ap-L8y"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tLT-De-X4e" appends="YES" id="eJ2-WN-nhp"/>
