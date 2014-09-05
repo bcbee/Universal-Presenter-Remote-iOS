@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="q24-Vw-MsV">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -608,17 +609,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe bellow to control presentation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpE-vw-DbL">
-                                <rect key="frame" x="244" y="72" width="280" height="20.5"/>
+                                <rect key="frame" x="244" y="72" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="oKQ-As-737">
+                                <rect key="frame" x="137" y="329" width="495" height="366"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="495" id="Gbx-aC-FxP"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="dZd-Do-S6T" firstAttribute="top" secondItem="oKQ-As-737" secondAttribute="bottom" constant="329" id="FSO-ur-CYd"/>
                             <constraint firstItem="zpE-vw-DbL" firstAttribute="top" secondItem="84p-V3-2vd" secondAttribute="bottom" constant="8" id="J9P-T7-bkX"/>
+                            <constraint firstItem="oKQ-As-737" firstAttribute="centerY" secondItem="uCR-Bq-4wz" secondAttribute="centerY" id="LXi-P1-p0u"/>
                             <constraint firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="WZE-5P-kRl"/>
+                            <constraint firstItem="oKQ-As-737" firstAttribute="centerX" secondItem="zpE-vw-DbL" secondAttribute="centerX" id="zaA-TM-63X"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="tLT-De-X4e" appends="YES" id="eJ2-WN-nhp"/>
@@ -660,6 +670,7 @@
         <image name="2" width="1000" height="1000"/>
         <image name="3" width="1000" height="1000"/>
         <image name="Banner" width="2048" height="273"/>
+        <image name="SwipeBackground" width="1000" height="665"/>
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
