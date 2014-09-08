@@ -12,7 +12,7 @@
 
 @implementation DBZ_ServerCommunication
 
-static NSString *serverAddress = @"http://universalpresenterremote.azurewebsites.net";
+static NSString *serverAddress = @"http://universalpresenterremote.com";
 static int uid = 10;
 static int temptoken = 10;
 static int controlmode = 0;

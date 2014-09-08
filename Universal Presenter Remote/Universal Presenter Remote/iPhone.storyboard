@@ -323,9 +323,10 @@
                                     <constraint firstAttribute="height" constant="183" id="bQ4-wW-hDi"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Download the Universal Presenter Remote App on the presenting computer. This can be found at http://upr.dbztech.com." translatesAutoresizingMaskIntoConstraints="NO" id="E6Z-it-bhq">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6Z-it-bhq">
                                 <rect key="frame" x="20" y="255" width="280" height="214"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Download the Universal Presenter Remote App on the presenting computer. This can be found at http://universalpresenterremote.com.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>

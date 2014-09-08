@@ -266,9 +266,10 @@
                                     <constraint firstAttribute="height" constant="183" id="yhx-pG-Fg0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="Download the Universal Presenter Remote App on the presenting computer. This can be found at http://upr.dbztech.com." translatesAutoresizingMaskIntoConstraints="NO" id="VqO-eV-G01">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqO-eV-G01">
                                 <rect key="frame" x="20" y="255" width="728" height="214"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Download the Universal Presenter Remote App on the presenting computer. This can be found at http://universalpresenterremote.com.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -686,9 +687,9 @@
         </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gj2-iD-ptU"/>
         <segue reference="XZj-AY-yOY"/>
-        <segue reference="XsH-Fy-Ham"/>
+        <segue reference="KxH-4i-FcU"/>
+        <segue reference="gj2-iD-ptU"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
