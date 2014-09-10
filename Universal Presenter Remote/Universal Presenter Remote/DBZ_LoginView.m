@@ -38,6 +38,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [DBZ_ServerCommunication setupUid];
+    UIDevice *currentDevice = [UIDevice currentDevice];
+    if ([currentDevice.model rangeOfString:@"Simulator"].location != NSNotFound) {
+        // running in Simulator
+        [DBZ_ServerCommunication setupUid];
+        [DBZ_ServerCommunication checkToken];
+    }
 }
 
 - (void)didReceiveMemoryWarning
