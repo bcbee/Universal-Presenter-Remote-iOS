@@ -87,8 +87,15 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    [DBZ_ServerCommunication setupUid];
-    [DBZ_ServerCommunication checkToken];
+    UIDevice *currentDevice = [UIDevice currentDevice];
+    if ([currentDevice.model rangeOfString:@"Simulator"].location == NSNotFound) {
+        //running on device
+        [DBZ_ServerCommunication setupUid];
+        [DBZ_ServerCommunication checkToken];
+    } else {
+        // running in Simulator
+        [self connectSession:nil];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated

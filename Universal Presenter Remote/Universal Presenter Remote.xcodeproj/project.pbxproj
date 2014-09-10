@@ -532,7 +532,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b9d5dd32-4fba-4f04-b436-9b6a5a7c2c48";
+				PROVISIONING_PROFILE = "11ad21e0-0724-493f-909f-455058310b53";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -554,7 +554,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4ec604bc-49b9-4414-b876-a26eb1c9424e";
+				PROVISIONING_PROFILE = "9c71e109-dbe9-4621-9060-1f1ab128a1bd";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
