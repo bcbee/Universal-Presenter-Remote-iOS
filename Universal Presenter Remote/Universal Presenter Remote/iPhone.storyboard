@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="hX9-3X-RoD">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -671,9 +670,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sel-dk-VFX"/>
-        <segue reference="LzK-FC-fvu"/>
+        <segue reference="uoP-ob-4sK"/>
         <segue reference="jY9-kc-Fjz"/>
+        <segue reference="rPb-6J-sS0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
