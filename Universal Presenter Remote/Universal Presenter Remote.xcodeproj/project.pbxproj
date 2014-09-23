@@ -13,6 +13,7 @@
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
+		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BD750519C2635D0095C461 /* Unified.storyboard */; };
 		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
 		B3EAFE2C19BE53AD002E1F29 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3EAFE1D19BE53AD002E1F29 /* Changelog.txt */; };
@@ -57,6 +58,7 @@
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
+		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3BD750519C2635D0095C461 /* Unified.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unified.storyboard; sourceTree = "<group>"; };
 		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
 		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				ED70D61818FF180E007B4C18 /* iPhone.storyboard */,
 				ED70D61A18FF1826007B4C18 /* iPad.storyboard */,
 				B3BD750519C2635D0095C461 /* Unified.storyboard */,
+				B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */,
 			);
 			name = Interface;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */,
 				ED70D61B18FF1826007B4C18 /* iPad.storyboard in Resources */,
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
@@ -536,7 +540,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "11ad21e0-0724-493f-909f-455058310b53";
+				PROVISIONING_PROFILE = "73d8d28a-859e-4f2e-a08f-d14747763ad8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -558,7 +562,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9c71e109-dbe9-4621-9060-1f1ab128a1bd";
+				PROVISIONING_PROFILE = "45a3943d-0387-475a-b97b-6f32290be43a";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
