@@ -34,7 +34,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Unified</string>
 	<key>UIMainStoryboardFile~ipad</key>
-	<string>iPad</string>
+	<string>Unified</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
