@@ -1,7 +1,132 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7A6-QH-dTO">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
-    <scenes/>
+    <customFonts key="customFonts">
+        <mutableArray key="Batman.ttf">
+            <string>BatmanForeverAlternate</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--UPR-->
+        <scene sceneID="v6W-TA-T9b">
+            <objects>
+                <viewController id="QGr-Vl-IfP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5mz-3y-tbM"/>
+                        <viewControllerLayoutGuide type="bottom" id="WFt-2y-ZgZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNt-Gn-K2B">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter token on presenting device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mN-2b-K5K">
+                                <rect key="frame" x="174" y="526" width="253" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QdP-yd-ggh"/>
+                                    <constraint firstAttribute="width" constant="253" id="dDa-Pu-ZL6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="qYO-l4-0RB">
+                                <rect key="frame" x="202" y="66" width="197" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="9Ak-EM-qJU"/>
+                                    <constraint firstAttribute="height" constant="197" id="lge-w9-VOV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzt-2Y-3An">
+                                <rect key="frame" x="174" y="545" width="253" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="GUm-Qw-rNq"/>
+                                    <constraint firstAttribute="width" constant="253" id="YQ2-cK-mWy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Connecting...">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="fI8-jK-p3Z">
+                                <rect key="frame" x="106" y="257" width="389" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Kql-oC-Gf9"/>
+                                    <constraint firstAttribute="width" constant="389" id="YNl-8f-EuR"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ch-8K-eKR">
+                                <rect key="frame" x="169" y="479" width="263" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="1EL-vb-p7M"/>
+                                    <constraint firstAttribute="height" constant="48" id="vSV-UJ-BU3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BatmanForeverAlternate" family="BatmanForeverAlternate" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="fI8-jK-p3Z" secondAttribute="centerX" id="4qt-oR-oUf"/>
+                            <constraint firstItem="fI8-jK-p3Z" firstAttribute="top" secondItem="5mz-3y-tbM" secondAttribute="bottom" constant="193" id="AIh-n8-ugB"/>
+                            <constraint firstAttribute="centerX" secondItem="Pzt-2Y-3An" secondAttribute="centerX" id="D32-DB-yVS"/>
+                            <constraint firstItem="Pzt-2Y-3An" firstAttribute="top" secondItem="8ch-8K-eKR" secondAttribute="bottom" constant="18" id="GFp-bn-6qc"/>
+                            <constraint firstItem="WFt-2y-ZgZ" firstAttribute="top" secondItem="9mN-2b-K5K" secondAttribute="bottom" constant="53" id="PI4-pd-iPr"/>
+                            <constraint firstAttribute="centerX" secondItem="qYO-l4-0RB" secondAttribute="centerX" id="VAS-mE-ayh"/>
+                            <constraint firstItem="qYO-l4-0RB" firstAttribute="top" secondItem="5mz-3y-tbM" secondAttribute="bottom" constant="2" id="ZLU-cJ-Rdm"/>
+                            <constraint firstAttribute="centerX" secondItem="9mN-2b-K5K" secondAttribute="centerX" id="l1b-MK-IkE"/>
+                            <constraint firstAttribute="centerX" secondItem="8ch-8K-eKR" secondAttribute="centerX" id="lfr-zG-xs6"/>
+                            <constraint firstItem="WFt-2y-ZgZ" firstAttribute="top" secondItem="Pzt-2Y-3An" secondAttribute="bottom" constant="17" id="vOc-jj-E7k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="UPR" id="miP-Wf-GYt">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lo3-MH-fkz"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="Jqk-Ua-wef"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="6Xd-NC-wfG">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="DOO-Vw-THc">
+                                <rect key="frame" x="282" y="11" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9MV-dx-mGJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="68"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rP1-Ly-67y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7A6-QH-dTO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yIe-5h-KaD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QGr-Vl-IfP" kind="relationship" relationship="rootViewController" id="Hbv-Ou-5n5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbn-rR-MuE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="68"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Banner" width="2048" height="273"/>
+        <image name="UPR" width="2000" height="2000"/>
+    </resources>
+    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
