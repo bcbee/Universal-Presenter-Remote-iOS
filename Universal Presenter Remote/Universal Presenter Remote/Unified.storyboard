@@ -34,8 +34,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UPR" translatesAutoresizingMaskIntoConstraints="NO" id="PGD-YY-SOZ">
                                 <rect key="frame" x="202" y="66" width="197" height="197"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="197" id="0j0-C1-Dr8"/>
-                                    <constraint firstAttribute="height" constant="197" id="LNe-Cw-WGN"/>
+                                    <constraint firstAttribute="width" constant="197" id="0j0-C1-Dr8">
+                                        <variation key="widthClass=regular" constant="314"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="375"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="197" id="LNe-Cw-WGN">
+                                        <variation key="widthClass=regular" constant="314"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="375"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IU0-Hn-Sno">
@@ -52,13 +58,6 @@
                                     <action selector="connectSession:" destination="7sc-om-VbS" eventType="touchUpInside" id="1Wi-nf-tYv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-5x-7XF">
-                                <rect key="frame" x="106" y="257" width="389" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="1Kq-fe-m2G"/>
-                                    <constraint firstAttribute="width" constant="389" id="pJO-fo-TpH"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orP-yK-NZr">
                                 <rect key="frame" x="169" y="479" width="263" height="48"/>
                                 <constraints>
@@ -69,6 +68,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-5x-7XF">
+                                <rect key="frame" x="106" y="257" width="389" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="1Kq-fe-m2G">
+                                        <variation key="widthClass=regular" constant="72"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="389" id="pJO-fo-TpH">
+                                        <variation key="widthClass=regular" constant="595"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -77,10 +87,15 @@
                             <constraint firstAttribute="centerX" secondItem="PGD-YY-SOZ" secondAttribute="centerX" id="3lN-Sj-NnK"/>
                             <constraint firstAttribute="centerX" secondItem="orP-yK-NZr" secondAttribute="centerX" id="419-ZW-VgF"/>
                             <constraint firstItem="IU0-Hn-Sno" firstAttribute="top" secondItem="orP-yK-NZr" secondAttribute="bottom" constant="18" id="JI4-pp-odX"/>
-                            <constraint firstItem="PGD-YY-SOZ" firstAttribute="top" secondItem="bGa-CH-nVX" secondAttribute="bottom" constant="2" id="T5Z-NQ-Z5A"/>
+                            <constraint firstItem="PGD-YY-SOZ" firstAttribute="top" secondItem="bGa-CH-nVX" secondAttribute="bottom" constant="2" id="T5Z-NQ-Z5A">
+                                <variation key="widthClass=regular" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="BOR-5x-7XF" secondAttribute="centerX" id="W2D-vK-QxY"/>
                             <constraint firstAttribute="centerX" secondItem="IU0-Hn-Sno" secondAttribute="centerX" id="fG1-0S-z6I"/>
-                            <constraint firstItem="BOR-5x-7XF" firstAttribute="top" secondItem="bGa-CH-nVX" secondAttribute="bottom" constant="193" id="gh6-Nj-Kef"/>
+                            <constraint firstItem="BOR-5x-7XF" firstAttribute="top" secondItem="bGa-CH-nVX" secondAttribute="bottom" constant="193" id="gh6-Nj-Kef">
+                                <variation key="widthClass=regular" constant="327"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="377"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="noH-s5-T4p" secondAttribute="centerX" id="z3F-6e-HmO"/>
                         </constraints>
                     </view>
@@ -114,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxI-S6-yd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="68"/>
+            <point key="canvasLocation" x="867.75" y="67.5"/>
         </scene>
         <!--Control-->
         <scene sceneID="VjQ-A5-cvE">
@@ -134,7 +149,7 @@
                                     <constraint firstAttribute="width" constant="320" id="Muv-Dn-Ul7"/>
                                     <constraint firstAttribute="height" constant="100" id="pNV-ig-ZtO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="Previous">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -148,7 +163,7 @@
                                     <constraint firstAttribute="width" constant="320" id="rxj-yM-QDE"/>
                                     <constraint firstAttribute="height" constant="100" id="s5i-oq-HeY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="Media">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -162,7 +177,7 @@
                                     <constraint firstAttribute="height" constant="100" id="YV5-JE-dJt"/>
                                     <constraint firstAttribute="width" constant="320" id="sJm-Yq-ntt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -174,9 +189,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="d1R-Wu-8zX" secondAttribute="centerX" id="6MZ-Ou-ifa"/>
-                            <constraint firstItem="3tQ-iz-4MY" firstAttribute="top" secondItem="IeA-OW-kgV" secondAttribute="bottom" constant="8" id="IEW-HM-8yk"/>
+                            <constraint firstItem="3tQ-iz-4MY" firstAttribute="top" secondItem="IeA-OW-kgV" secondAttribute="bottom" constant="8" id="IEW-HM-8yk">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="IeA-OW-kgV" secondAttribute="centerX" id="XPl-Lz-YGS"/>
-                            <constraint firstItem="Fpr-A8-DIf" firstAttribute="top" secondItem="GLr-Yb-Kn5" secondAttribute="bottom" constant="8" id="ldX-fr-Cfd"/>
+                            <constraint firstItem="Fpr-A8-DIf" firstAttribute="top" secondItem="GLr-Yb-Kn5" secondAttribute="bottom" constant="8" id="ldX-fr-Cfd">
+                                <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                            </constraint>
                             <constraint firstAttribute="centerY" secondItem="d1R-Wu-8zX" secondAttribute="centerY" constant="-30" id="rgn-Qi-55X"/>
                             <constraint firstAttribute="centerX" secondItem="Fpr-A8-DIf" secondAttribute="centerX" id="xWn-48-TVb"/>
                         </constraints>
@@ -325,7 +344,9 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="uVW-eI-rNX"/>
+                                    <constraint firstAttribute="height" constant="183" id="uVW-eI-rNX">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-gW-TSU">
@@ -413,7 +434,9 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="kLm-I3-3P3"/>
+                                    <constraint firstAttribute="height" constant="183" id="kLm-I3-3P3">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-hz-LaU">
@@ -501,7 +524,9 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="Ase-iA-21E"/>
+                                    <constraint firstAttribute="height" constant="183" id="Ase-iA-21E">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
@@ -618,11 +643,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="HuQ-wY-lKJ" firstAttribute="top" secondItem="Yev-FW-yRq" secondAttribute="bottom" constant="82" id="1YQ-7R-Hbb"/>
-                            <constraint firstItem="kS2-3y-FU1" firstAttribute="top" secondItem="HuQ-wY-lKJ" secondAttribute="bottom" constant="108" id="52O-nM-LuW"/>
+                            <constraint firstItem="HuQ-wY-lKJ" firstAttribute="top" secondItem="Yev-FW-yRq" secondAttribute="bottom" constant="82" id="1YQ-7R-Hbb">
+                                <variation key="heightClass=regular-widthClass=regular" constant="111"/>
+                            </constraint>
+                            <constraint firstItem="kS2-3y-FU1" firstAttribute="top" secondItem="HuQ-wY-lKJ" secondAttribute="bottom" constant="108" id="52O-nM-LuW">
+                                <variation key="heightClass=regular-widthClass=regular" constant="237"/>
+                            </constraint>
                             <constraint firstItem="HuQ-wY-lKJ" firstAttribute="centerX" secondItem="Yev-FW-yRq" secondAttribute="centerX" id="BhF-87-f6W"/>
-                            <constraint firstItem="HuQ-wY-lKJ" firstAttribute="leading" secondItem="sBh-09-86q" secondAttribute="leadingMargin" constant="15" id="Eq3-2d-gqO"/>
+                            <constraint firstItem="HuQ-wY-lKJ" firstAttribute="leading" secondItem="sBh-09-86q" secondAttribute="leadingMargin" constant="15" id="Eq3-2d-gqO">
+                                <variation key="heightClass=regular-widthClass=regular" constant="135"/>
+                            </constraint>
                             <constraint firstItem="Yev-FW-yRq" firstAttribute="top" secondItem="MaP-d6-Cin" secondAttribute="bottom" constant="8" symbolic="YES" id="NE6-SE-y9h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HuQ-wY-lKJ" secondAttribute="trailing" constant="15" id="mGm-Gc-7dA"/>
                             <constraint firstItem="HuQ-wY-lKJ" firstAttribute="centerX" secondItem="sBh-09-86q" secondAttribute="centerX" id="u1L-Ef-WYX"/>
                         </constraints>
                         <connections>
@@ -657,7 +689,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1663" y="816"/>
+            <point key="canvasLocation" x="1662.75" y="816"/>
         </scene>
     </scenes>
     <resources>
@@ -669,8 +701,8 @@
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b1E-oI-fbH"/>
         <segue reference="WfM-JU-7jr"/>
+        <segue reference="2zB-ka-0Bl"/>
         <segue reference="wc0-99-AQF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
