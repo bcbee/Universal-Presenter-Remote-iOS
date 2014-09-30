@@ -4,8 +4,8 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>dbztech.com</string>
-		<string>universalpresenterremote.com</string>
+		<string>webcredentials:dbztech.com</string>
+		<string>webcredentials:universalpresenterremote.com</string>
 	</array>
 	<key>com.apple.developer.icloud-container-identifiers</key>
 	<array/>
