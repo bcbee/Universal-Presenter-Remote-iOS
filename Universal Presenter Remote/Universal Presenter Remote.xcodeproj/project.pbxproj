@@ -16,6 +16,8 @@
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BD750519C2635D0095C461 /* Unified.storyboard */; };
 		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
+		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
+		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
 		B3EAFE2C19BE53AD002E1F29 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3EAFE1D19BE53AD002E1F29 /* Changelog.txt */; };
 		B3EAFE2D19BE53AD002E1F29 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EAFE2919BE53AD002E1F29 /* libAdIdAccess.a */; };
 		B3EAFE2E19BE53AD002E1F29 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3EAFE2A19BE53AD002E1F29 /* libGoogleAnalyticsServices.a */; };
@@ -60,6 +62,10 @@
 		B3BD750519C2635D0095C461 /* Unified.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unified.storyboard; sourceTree = "<group>"; };
 		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
 		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
+		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_QRVeiw.swift; sourceTree = "<group>"; };
+		B3E35D191A094D530099DCD4 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
+		B3E35D1A1A094D530099DCD4 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
 		B3EAFE1D19BE53AD002E1F29 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
 		B3EAFE1F19BE53AD002E1F29 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		B3EAFE2019BE53AD002E1F29 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		ED70D5DD18FF17E0007B4C18 = {
 			isa = PBXGroup;
 			children = (
+				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
 				ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
@@ -276,6 +283,9 @@
 				B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */,
 				B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */,
 				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */,
+				B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */,
+				B3E35D191A094D530099DCD4 /* igViewController.h */,
+				B3E35D1A1A094D530099DCD4 /* igViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -395,9 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */,
 				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
 				B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */,
 				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
+				B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
 				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
@@ -520,6 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
@@ -527,12 +540,15 @@
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "73d8d28a-859e-4f2e-a08f-d14747763ad8";
+				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -542,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
@@ -549,12 +566,14 @@
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "45a3943d-0387-475a-b97b-6f32290be43a";
+				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

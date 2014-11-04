@@ -80,6 +80,22 @@
                                     </constraint>
                                 </constraints>
                             </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-f7-xw6">
+                                <rect key="frame" x="230" y="312" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Token"/>
+                                    <segment title="QR Code"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY6-BH-0yh">
+                                <rect key="frame" x="262" y="356" width="77" height="30"/>
+                                <state key="normal" title="Manual QR">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OGo-Lh-Pxj" kind="presentation" modalPresentationStyle="formSheet" id="GCh-rv-qni"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,7 +103,10 @@
                             <constraint firstItem="oND-Yh-hPj" firstAttribute="top" secondItem="IU0-Hn-Sno" secondAttribute="bottom" constant="17" id="2o2-d6-eLc"/>
                             <constraint firstAttribute="centerX" secondItem="PGD-YY-SOZ" secondAttribute="centerX" id="3lN-Sj-NnK"/>
                             <constraint firstAttribute="centerX" secondItem="orP-yK-NZr" secondAttribute="centerX" id="419-ZW-VgF"/>
+                            <constraint firstItem="R4V-f7-xw6" firstAttribute="top" secondItem="BOR-5x-7XF" secondAttribute="bottom" constant="8" id="4WK-rW-dM2"/>
                             <constraint firstItem="IU0-Hn-Sno" firstAttribute="top" secondItem="orP-yK-NZr" secondAttribute="bottom" constant="18" id="JI4-pp-odX"/>
+                            <constraint firstAttribute="centerX" secondItem="XY6-BH-0yh" secondAttribute="centerX" id="Nc1-T7-vHX"/>
+                            <constraint firstAttribute="centerX" secondItem="R4V-f7-xw6" secondAttribute="centerX" id="Pqg-Cz-h7w"/>
                             <constraint firstItem="PGD-YY-SOZ" firstAttribute="top" secondItem="bGa-CH-nVX" secondAttribute="bottom" constant="2" id="T5Z-NQ-Z5A">
                                 <variation key="widthClass=regular" constant="0.0"/>
                             </constraint>
@@ -97,6 +116,7 @@
                                 <variation key="widthClass=regular" constant="327"/>
                                 <variation key="heightClass=regular-widthClass=regular" constant="377"/>
                             </constraint>
+                            <constraint firstItem="XY6-BH-0yh" firstAttribute="top" secondItem="R4V-f7-xw6" secondAttribute="bottom" constant="16" id="wjx-tz-TPX"/>
                             <constraint firstAttribute="centerX" secondItem="noH-s5-T4p" secondAttribute="centerX" id="z3F-6e-HmO"/>
                         </constraints>
                     </view>
@@ -131,6 +151,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NxI-S6-yd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="867.75" y="67.5"/>
+        </scene>
+        <!--QR Code Join-->
+        <scene sceneID="voR-Bz-U51">
+            <objects>
+                <viewController id="ewo-KQ-6mm" customClass="igViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1p8-hG-FLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xof-UR-C1V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vmX-cR-7gR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QR Code Join" id="F51-Df-PbV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="stop" id="QJP-Fd-EBV"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pps-aA-sby" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="886"/>
         </scene>
         <!--Control-->
         <scene sceneID="VjQ-A5-cvE">
@@ -228,7 +269,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-ZQ-9NE">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-ZQ-9NE">
                                 <rect key="frame" x="177" y="109" width="247" height="29"/>
                                 <segments>
                                     <segment title="Show Instructions"/>
@@ -238,19 +279,19 @@
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="QJV-ZS-TCg"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
                                 <rect key="frame" x="231" y="81" width="139" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
                                 <rect key="frame" x="276" y="192" width="51" height="31"/>
                                 <connections>
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="f1g-OQ-oc5"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
                                 <rect key="frame" x="217" y="163" width="165.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -283,7 +324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB9-Nh-iSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3443" y="437"/>
+            <point key="canvasLocation" x="4255" y="437"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OzY-kG-Rlu">
@@ -610,7 +651,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONb-8y-opr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2626" y="437"/>
+            <point key="canvasLocation" x="3438" y="437"/>
         </scene>
         <!--Swipe Control-->
         <scene sceneID="gpT-rN-6cY">
@@ -688,7 +729,30 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1662.75" y="816"/>
+            <point key="canvasLocation" x="2474" y="816"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KM6-SS-ZKB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OGo-Lh-Pxj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mKn-kK-LHl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20392156859999999" green="0.023529411760000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ewo-KQ-6mm" kind="relationship" relationship="rootViewController" id="KMb-uk-B7I"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="18D-Qf-ABv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="886"/>
         </scene>
     </scenes>
     <resources>
