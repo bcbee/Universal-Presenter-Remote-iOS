@@ -34,8 +34,6 @@
 		ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
 		ED70D60D18FF17E1007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */; };
 		ED70D60F18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */; };
-		ED70D61918FF180E007B4C18 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED70D61818FF180E007B4C18 /* iPhone.storyboard */; };
-		ED70D61B18FF1826007B4C18 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED70D61A18FF1826007B4C18 /* iPad.storyboard */; };
 		ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */; };
 /* End PBXBuildFile section */
 
@@ -97,8 +95,6 @@
 		ED70D60A18FF17E1007B4C18 /* Universal Presenter RemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universal Presenter RemoteTests-Info.plist"; sourceTree = "<group>"; };
 		ED70D60C18FF17E1007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universal_Presenter_RemoteTests.m; sourceTree = "<group>"; };
-		ED70D61818FF180E007B4C18 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		ED70D61A18FF1826007B4C18 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
 		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -263,8 +259,6 @@
 		ED70D61C18FF182F007B4C18 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				ED70D61818FF180E007B4C18 /* iPhone.storyboard */,
-				ED70D61A18FF1826007B4C18 /* iPad.storyboard */,
 				B3BD750519C2635D0095C461 /* Unified.storyboard */,
 				B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */,
 			);
@@ -377,11 +371,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */,
-				ED70D61B18FF1826007B4C18 /* iPad.storyboard in Resources */,
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
 				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
-				ED70D61918FF180E007B4C18 /* iPhone.storyboard in Resources */,
 				B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */,
 				B3EAFE2C19BE53AD002E1F29 /* Changelog.txt in Resources */,
 				B3EAFE2F19BE53AD002E1F29 /* Readme.txt in Resources */,
