@@ -116,7 +116,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xor-1h-6Yi" kind="modal" identifier="InstructionSegue" id="vFX-vl-pgz"/>
+                                    <segue destination="xor-1h-6Yi" kind="presentation" identifier="InstructionSegue" modalPresentationStyle="formSheet" id="vFX-vl-pgz"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -205,7 +205,9 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="eSJ-Mn-PoJ"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="iZf-aI-N39">
                             <connections>
-                                <segue destination="r2U-Wg-hJx" kind="modal" identifier="SettingsSegue" id="b1E-oI-fbH"/>
+                                <segue destination="r2U-Wg-hJx" kind="popoverPresentation" identifier="SettingsSegue" popoverAnchorBarButtonItem="iZf-aI-N39" id="b1E-oI-fbH">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -342,26 +344,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="LyG-RF-oaV">
-                                <rect key="frame" x="0.0" y="64" width="600" height="183"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="185"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="uVW-eI-rNX">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
-                                    </constraint>
+                                    <constraint firstAttribute="height" constant="185" id="mcN-ej-R39"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-gW-TSU">
-                                <rect key="frame" x="20" y="255" width="560" height="246"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Download the Universal Presenter Remote App on the presenting computer. This can be found at http://universalpresenterremote.com.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-JX-6GA">
                                 <rect key="frame" x="277" y="509" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="sf5-hz-2Ws"/>
+                                    <constraint firstAttribute="width" constant="46" id="8QZ-2b-O9M"/>
                                 </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,19 +362,27 @@
                                     <segue destination="A9F-Cv-fVB" kind="show" id="WfM-JU-7jr"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-gW-TSU">
+                                <rect key="frame" x="20" y="255" width="560" height="246"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Download the Universal Presenter Remote App on the presenting computer. This can be found at http://universalpresenterremote.com.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="WIz-gW-TSU" firstAttribute="top" secondItem="LyG-RF-oaV" secondAttribute="bottom" constant="8" symbolic="YES" id="0rE-Tw-3Km"/>
-                            <constraint firstItem="AGZ-Mt-MvF" firstAttribute="top" secondItem="AHM-JX-6GA" secondAttribute="bottom" constant="17" id="EYb-sy-AIs"/>
-                            <constraint firstItem="AHM-JX-6GA" firstAttribute="top" secondItem="WIz-gW-TSU" secondAttribute="bottom" constant="8" symbolic="YES" id="SDW-kf-vo0"/>
-                            <constraint firstItem="LyG-RF-oaV" firstAttribute="leading" secondItem="Ztf-5d-hdK" secondAttribute="leading" id="XWi-e7-98i"/>
-                            <constraint firstItem="LyG-RF-oaV" firstAttribute="centerX" secondItem="WIz-gW-TSU" secondAttribute="centerX" id="g4d-Gz-30h"/>
-                            <constraint firstAttribute="trailing" secondItem="WIz-gW-TSU" secondAttribute="trailing" constant="20" symbolic="YES" id="gbK-xR-Pls"/>
-                            <constraint firstItem="LyG-RF-oaV" firstAttribute="top" secondItem="MiA-pd-Fh0" secondAttribute="bottom" id="hGd-2L-Rhg"/>
-                            <constraint firstItem="WIz-gW-TSU" firstAttribute="leading" secondItem="Ztf-5d-hdK" secondAttribute="leading" constant="20" symbolic="YES" id="thv-ev-dCU"/>
-                            <constraint firstItem="WIz-gW-TSU" firstAttribute="centerX" secondItem="AHM-JX-6GA" secondAttribute="centerX" id="w4L-VL-Ztr"/>
+                            <constraint firstItem="LyG-RF-oaV" firstAttribute="top" secondItem="MiA-pd-Fh0" secondAttribute="bottom" id="97J-74-gUZ"/>
+                            <constraint firstItem="LyG-RF-oaV" firstAttribute="leading" secondItem="Ztf-5d-hdK" secondAttribute="leading" id="Djk-06-Oef"/>
+                            <constraint firstItem="WIz-gW-TSU" firstAttribute="centerX" secondItem="AHM-JX-6GA" secondAttribute="centerX" id="G2a-ZX-JrK"/>
+                            <constraint firstAttribute="trailing" secondItem="LyG-RF-oaV" secondAttribute="trailing" id="HkA-85-8q5"/>
+                            <constraint firstItem="WIz-gW-TSU" firstAttribute="centerX" secondItem="LyG-RF-oaV" secondAttribute="centerX" id="PeV-9W-FxR"/>
+                            <constraint firstItem="WIz-gW-TSU" firstAttribute="leading" secondItem="Ztf-5d-hdK" secondAttribute="leadingMargin" constant="4" id="c3w-Bw-ynp"/>
+                            <constraint firstItem="AGZ-Mt-MvF" firstAttribute="top" secondItem="AHM-JX-6GA" secondAttribute="bottom" constant="17" id="cbA-zq-9YB"/>
+                            <constraint firstItem="AHM-JX-6GA" firstAttribute="top" secondItem="WIz-gW-TSU" secondAttribute="bottom" constant="8" symbolic="YES" id="eiF-aG-J5v"/>
+                            <constraint firstItem="WIz-gW-TSU" firstAttribute="top" secondItem="LyG-RF-oaV" secondAttribute="bottom" constant="26" id="nHf-XI-xTJ"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="TeU-Th-4my" appends="YES" id="JgL-pO-Sva"/>
@@ -394,7 +394,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="uxE-pf-dxq"/>
                         <barButtonItem key="leftBarButtonItem" title="Settings" style="plain" id="hbE-Jc-mQQ">
                             <connections>
-                                <segue destination="r2U-Wg-hJx" kind="modal" id="6wG-lF-bMG"/>
+                                <segue destination="r2U-Wg-hJx" kind="show" id="6wG-lF-bMG"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="stop" id="AGC-v2-9R9">
@@ -431,15 +431,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-zM-Z2U">
-                                <rect key="frame" x="0.0" y="64" width="600" height="183"/>
-                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="kLm-I3-3P3">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
-                                    </constraint>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-hz-LaU">
                                 <rect key="frame" x="20" y="255" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -450,7 +441,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-rR-xbo">
                                 <rect key="frame" x="277" y="509" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="g6s-3A-xVB"/>
+                                    <constraint firstAttribute="width" constant="46" id="zj8-fG-hrj"/>
                                 </constraints>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -459,19 +450,26 @@
                                     <segue destination="2bl-ZR-3jk" kind="show" id="wc0-99-AQF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-zM-Z2U">
+                                <rect key="frame" x="0.0" y="44" width="600" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="CaF-c6-OUx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="centerX" secondItem="3I5-hz-LaU" secondAttribute="centerX" id="0zI-Qo-b1a"/>
-                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="top" secondItem="l5Z-Uk-ZCE" secondAttribute="bottom" id="CsN-s8-MnL"/>
-                            <constraint firstItem="ypQ-rR-xbo" firstAttribute="top" secondItem="3I5-hz-LaU" secondAttribute="bottom" constant="8" symbolic="YES" id="I1b-qR-Szw"/>
-                            <constraint firstAttribute="trailing" secondItem="3I5-hz-LaU" secondAttribute="trailing" constant="20" symbolic="YES" id="KRr-z0-vTI"/>
-                            <constraint firstItem="3I5-hz-LaU" firstAttribute="top" secondItem="l9F-zM-Z2U" secondAttribute="bottom" constant="8" symbolic="YES" id="fPF-Ey-ci1"/>
-                            <constraint firstItem="84U-cd-heY" firstAttribute="top" secondItem="ypQ-rR-xbo" secondAttribute="bottom" constant="17" id="nuG-Vh-LxL"/>
-                            <constraint firstItem="3I5-hz-LaU" firstAttribute="centerX" secondItem="ypQ-rR-xbo" secondAttribute="centerX" id="qcf-aw-46z"/>
-                            <constraint firstItem="3I5-hz-LaU" firstAttribute="leading" secondItem="4q6-wR-6SF" secondAttribute="leading" constant="20" symbolic="YES" id="vyd-Dz-dod"/>
-                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="leading" secondItem="4q6-wR-6SF" secondAttribute="leading" id="yAo-CC-8L3"/>
+                            <constraint firstItem="ypQ-rR-xbo" firstAttribute="centerX" secondItem="3I5-hz-LaU" secondAttribute="centerX" id="1X0-io-TxS"/>
+                            <constraint firstItem="84U-cd-heY" firstAttribute="top" secondItem="ypQ-rR-xbo" secondAttribute="bottom" constant="17" id="70X-kg-djO"/>
+                            <constraint firstItem="ypQ-rR-xbo" firstAttribute="top" secondItem="3I5-hz-LaU" secondAttribute="bottom" constant="8" symbolic="YES" id="7iH-ru-ie4"/>
+                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="top" secondItem="l5Z-Uk-ZCE" secondAttribute="bottom" id="Oek-7P-o0X"/>
+                            <constraint firstItem="3I5-hz-LaU" firstAttribute="top" secondItem="l9F-zM-Z2U" secondAttribute="bottom" constant="28" id="TP0-em-dQC"/>
+                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="leading" secondItem="4q6-wR-6SF" secondAttribute="leading" id="ZOQ-xY-h3D"/>
+                            <constraint firstItem="3I5-hz-LaU" firstAttribute="leading" secondItem="4q6-wR-6SF" secondAttribute="leadingMargin" constant="4" id="bPP-XX-sdn"/>
+                            <constraint firstItem="l9F-zM-Z2U" firstAttribute="centerX" secondItem="3I5-hz-LaU" secondAttribute="centerX" id="cYx-ac-A23"/>
+                            <constraint firstAttribute="trailing" secondItem="l9F-zM-Z2U" secondAttribute="trailing" id="cyW-Ju-1nN"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="JLO-sh-U9g" appends="YES" id="91s-iB-7Ca"/>
@@ -521,15 +519,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
-                                <rect key="frame" x="0.0" y="64" width="600" height="183"/>
-                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="183" id="Ase-iA-21E">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="250"/>
-                                    </constraint>
-                                </constraints>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
                                 <rect key="frame" x="20" y="255" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -540,7 +529,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqg-l1-TT3">
                                 <rect key="frame" x="277" y="509" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="LOU-AU-ISK"/>
+                                    <constraint firstAttribute="width" constant="46" id="xc2-30-baq"/>
                                 </constraints>
                                 <state key="normal" title="Close">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -549,19 +538,26 @@
                                     <action selector="close:" destination="2bl-ZR-3jk" eventType="touchUpInside" id="zTK-eg-af5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
+                                <rect key="frame" x="0.0" y="44" width="600" height="183"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="183" id="3BK-4m-tZY"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="EDl-4L-z0n" firstAttribute="centerX" secondItem="0a3-Zh-jeU" secondAttribute="centerX" id="0EY-9m-ZBv"/>
-                            <constraint firstItem="mqg-l1-TT3" firstAttribute="top" secondItem="0a3-Zh-jeU" secondAttribute="bottom" constant="8" symbolic="YES" id="2e3-Md-98C"/>
-                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leading" constant="20" symbolic="YES" id="78J-oM-VXo"/>
-                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="centerX" secondItem="mqg-l1-TT3" secondAttribute="centerX" id="FPd-b1-eu3"/>
-                            <constraint firstItem="3fd-7M-b07" firstAttribute="top" secondItem="mqg-l1-TT3" secondAttribute="bottom" constant="17" id="O5Q-Sr-JjE"/>
-                            <constraint firstItem="EDl-4L-z0n" firstAttribute="top" secondItem="jWr-bB-KrC" secondAttribute="bottom" id="bGy-QL-kJ1"/>
-                            <constraint firstItem="EDl-4L-z0n" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leading" id="ck1-xJ-utL"/>
-                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="top" secondItem="EDl-4L-z0n" secondAttribute="bottom" constant="8" symbolic="YES" id="m1G-4O-R34"/>
-                            <constraint firstAttribute="trailing" secondItem="0a3-Zh-jeU" secondAttribute="trailing" constant="20" symbolic="YES" id="tdK-VW-aIq"/>
+                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leadingMargin" constant="4" id="2Or-HG-USg"/>
+                            <constraint firstItem="EDl-4L-z0n" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leading" id="3gu-Jh-X7a"/>
+                            <constraint firstItem="EDl-4L-z0n" firstAttribute="top" secondItem="jWr-bB-KrC" secondAttribute="bottom" id="3m2-nf-wLq"/>
+                            <constraint firstItem="3fd-7M-b07" firstAttribute="top" secondItem="mqg-l1-TT3" secondAttribute="bottom" constant="17" id="5oO-kl-24G"/>
+                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="centerX" secondItem="EDl-4L-z0n" secondAttribute="centerX" id="HUe-6o-y4f"/>
+                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="centerX" secondItem="mqg-l1-TT3" secondAttribute="centerX" id="LDG-rZ-xq5"/>
+                            <constraint firstAttribute="trailing" secondItem="EDl-4L-z0n" secondAttribute="trailing" id="WgM-fV-Gmv"/>
+                            <constraint firstItem="mqg-l1-TT3" firstAttribute="top" secondItem="0a3-Zh-jeU" secondAttribute="bottom" constant="8" symbolic="YES" id="c5j-02-Spy"/>
+                            <constraint firstItem="0a3-Zh-jeU" firstAttribute="top" secondItem="EDl-4L-z0n" secondAttribute="bottom" constant="28" id="sg6-Dm-Tuy"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="4Ju-Uu-CQR" appends="YES" id="SZa-Xa-3QU"/>
@@ -668,7 +664,9 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="xGg-P2-CxC"/>
                         <barButtonItem key="rightBarButtonItem" title="Settings" style="plain" id="bTL-sO-Tjg">
                             <connections>
-                                <segue destination="r2U-Wg-hJx" kind="modal" identifier="SwipeSettingsSegue" id="2zB-ka-0Bl"/>
+                                <segue destination="r2U-Wg-hJx" kind="popoverPresentation" identifier="SwipeSettingsSegue" popoverAnchorBarButtonItem="bTL-sO-Tjg" id="2zB-ka-0Bl">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
