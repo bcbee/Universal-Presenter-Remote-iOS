@@ -19,6 +19,9 @@
 
     UIView *_highlightView;
     UILabel *_label;
+    
+    NSString *lastcapture;
+    
 }
 @end
 
@@ -67,8 +70,8 @@
 
     [_session startRunning];
 
-    [self.view bringSubviewToFront:_highlightView];
-    [self.view bringSubviewToFront:_label];
+    //[self.view bringSubviewToFront:_highlightView];
+    //[self.view bringSubviewToFront:_label];
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
@@ -93,7 +96,12 @@
 
         if (detectionString != nil)
         {
-            _label.text = detectionString;
+            if (![detectionString isEqualToString:lastcapture]) {
+                NSLog(@"Activate session %@", detectionString);
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            lastcapture = detectionString;
+            
             break;
         }
         else

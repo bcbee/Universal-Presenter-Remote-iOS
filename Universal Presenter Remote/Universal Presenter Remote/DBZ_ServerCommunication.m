@@ -45,7 +45,7 @@ static NSString *apns = @"";
         strURL = [NSString stringWithFormat:@"%@&apnstoken=%@", strURL, apns];
     }
     
-    NSLog(strURL);
+    NSLog(@"%@", strURL);
     
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     

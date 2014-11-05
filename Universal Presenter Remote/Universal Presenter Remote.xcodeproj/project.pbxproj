@@ -550,7 +550,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "73d8d28a-859e-4f2e-a08f-d14747763ad8";
+				PROVISIONING_PROFILE = "295760c8-e23b-48c4-8c16-6b3c9a66cc66";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -576,7 +576,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "45a3943d-0387-475a-b97b-6f32290be43a";
+				PROVISIONING_PROFILE = "f18f28ce-a26c-47f8-91f7-364eb742b091";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};

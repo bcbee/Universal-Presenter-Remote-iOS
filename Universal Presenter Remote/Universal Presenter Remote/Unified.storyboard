@@ -311,7 +311,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-ZQ-9NE">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-ZQ-9NE">
                                 <rect key="frame" x="177" y="109" width="247" height="29"/>
                                 <segments>
                                     <segment title="Show Instructions"/>
@@ -321,19 +321,19 @@
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="QJV-ZS-TCg"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
                                 <rect key="frame" x="231" y="81" width="139" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
                                 <rect key="frame" x="276" y="192" width="51" height="31"/>
                                 <connections>
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="f1g-OQ-oc5"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
                                 <rect key="frame" x="217" y="163" width="165.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -346,7 +346,7 @@
                             <constraint firstAttribute="centerX" secondItem="Mji-8j-59h" secondAttribute="centerX" id="CnU-6y-IBF"/>
                             <constraint firstItem="Mji-8j-59h" firstAttribute="top" secondItem="XGM-jg-ClN" secondAttribute="bottom" constant="8" id="JMR-ZE-k4u"/>
                             <constraint firstItem="XGM-jg-ClN" firstAttribute="top" secondItem="7Pi-ZQ-9NE" secondAttribute="bottom" constant="26" id="PNh-UI-nD0"/>
-                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="top" secondItem="bmO-9G-zGA" secondAttribute="bottom" constant="17" id="X7G-FM-aTF"/>
+                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="top" secondItem="bmO-9G-zGA" secondAttribute="bottom" constant="37" id="X7G-FM-aTF"/>
                             <constraint firstAttribute="centerX" secondItem="XGM-jg-ClN" secondAttribute="centerX" id="abg-2d-KHq"/>
                             <constraint firstAttribute="centerX" secondItem="7Pi-ZQ-9NE" secondAttribute="centerX" id="nZf-l8-Zia"/>
                             <constraint firstAttribute="centerX" secondItem="O0O-AK-yWJ" secondAttribute="centerX" id="vyZ-mX-qcD"/>
@@ -614,14 +614,14 @@
                                     <action selector="close:" destination="2bl-ZR-3jk" eventType="touchUpInside" id="zTK-eg-af5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
                                 <rect key="frame" x="0.0" y="44" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="183" id="3BK-4m-tZY"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Right before you begin start your slideshow, click Begin on the UPR computer application, this enables remote control. You can now click begin on your phone and press the Previous, Next, and Media buttons to control your presentation.</string>
@@ -634,7 +634,7 @@
                         <constraints>
                             <constraint firstItem="0a3-Zh-jeU" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leadingMargin" constant="4" id="2Or-HG-USg"/>
                             <constraint firstItem="EDl-4L-z0n" firstAttribute="leading" secondItem="8Ak-xE-OyG" secondAttribute="leading" id="3gu-Jh-X7a"/>
-                            <constraint firstItem="EDl-4L-z0n" firstAttribute="top" secondItem="jWr-bB-KrC" secondAttribute="bottom" id="3m2-nf-wLq"/>
+                            <constraint firstItem="EDl-4L-z0n" firstAttribute="top" secondItem="jWr-bB-KrC" secondAttribute="bottom" constant="24" id="3m2-nf-wLq"/>
                             <constraint firstItem="3fd-7M-b07" firstAttribute="top" secondItem="mqg-l1-TT3" secondAttribute="bottom" constant="17" id="5oO-kl-24G"/>
                             <constraint firstItem="0a3-Zh-jeU" firstAttribute="centerX" secondItem="EDl-4L-z0n" secondAttribute="centerX" id="HUe-6o-y4f"/>
                             <constraint firstItem="0a3-Zh-jeU" firstAttribute="centerX" secondItem="mqg-l1-TT3" secondAttribute="centerX" id="LDG-rZ-xq5"/>
@@ -771,7 +771,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2474" y="816"/>
+            <point key="canvasLocation" x="2448" y="886"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KM6-SS-ZKB">
@@ -825,8 +825,8 @@
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6wG-lF-bMG"/>
-        <segue reference="wc0-99-AQF"/>
+        <segue reference="2zB-ka-0Bl"/>
+        <segue reference="79b-Tf-4tp"/>
         <segue reference="tCa-8V-r6V"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
