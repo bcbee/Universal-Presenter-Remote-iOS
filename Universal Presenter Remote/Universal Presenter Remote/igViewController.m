@@ -8,6 +8,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import "igViewController.h"
+#import "DBZ_ServerCommunication.h"
 
 @interface igViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {
@@ -98,6 +99,7 @@
         {
             if (![detectionString isEqualToString:lastcapture]) {
                 NSLog(@"Activate session %@", detectionString);
+                [DBZ_ServerCommunication activateSession:detectionString];
                 [self dismissViewControllerAnimated:YES completion:nil];
             }
             lastcapture = detectionString;
