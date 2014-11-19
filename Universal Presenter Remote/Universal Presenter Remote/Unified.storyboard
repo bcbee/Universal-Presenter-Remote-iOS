@@ -157,11 +157,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTl-h9-EWD" userLabel="BackgroundView">
+                                <rect key="frame" x="16" y="119" width="568" height="461"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the QR code to begin presenting" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnW-6E-cH9">
                                 <rect key="frame" x="153" y="64" width="294" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="d9A-iR-UfK"/>
-                                    <constraint firstAttribute="width" constant="294" id="ovB-9s-dd4"/>
+                                    <constraint firstAttribute="width" constant="294" id="Jjl-z4-xoY"/>
+                                    <constraint firstAttribute="height" constant="21" id="TY1-Vz-ZWl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -170,8 +174,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR support only available on OSX (UPR Controller)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-dv-n6I">
                                 <rect key="frame" x="160" y="86" width="280" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="7vD-g6-PRp"/>
-                                    <constraint firstAttribute="width" constant="280" id="OBg-ww-68S"/>
+                                    <constraint firstAttribute="height" constant="18" id="V5x-AW-SB5"/>
+                                    <constraint firstAttribute="width" constant="280" id="lGJ-X8-ZjJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,17 +187,26 @@
                                     <segue destination="jia-yT-e80" kind="embed" id="P8K-mN-thX"/>
                                 </connections>
                             </containerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DTG-sA-5jk">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QnW-6E-cH9" firstAttribute="centerX" secondItem="BUa-dv-n6I" secondAttribute="centerX" id="1Sx-cW-Xg6"/>
-                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="top" secondItem="BUa-dv-n6I" secondAttribute="bottom" constant="15" id="ZLa-xA-IOD"/>
-                            <constraint firstItem="QnW-6E-cH9" firstAttribute="top" secondItem="1p8-hG-FLf" secondAttribute="bottom" constant="20" id="hBf-GE-hew"/>
-                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="leading" secondItem="vmX-cR-7gR" secondAttribute="leadingMargin" id="hww-m8-iiW"/>
-                            <constraint firstItem="BUa-dv-n6I" firstAttribute="top" secondItem="QnW-6E-cH9" secondAttribute="bottom" constant="1" id="oMS-f7-Ywm"/>
-                            <constraint firstAttribute="bottom" secondItem="Fr6-Ph-mei" secondAttribute="bottom" constant="20" symbolic="YES" id="srJ-DZ-hur"/>
-                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="trailing" secondItem="vmX-cR-7gR" secondAttribute="trailingMargin" id="yaD-Ka-Jev"/>
-                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="centerX" secondItem="BUa-dv-n6I" secondAttribute="centerX" id="zhL-g3-BLt"/>
+                            <constraint firstItem="BUa-dv-n6I" firstAttribute="top" secondItem="QnW-6E-cH9" secondAttribute="bottom" constant="1" id="24a-YA-Vp5"/>
+                            <constraint firstItem="QnW-6E-cH9" firstAttribute="top" secondItem="1p8-hG-FLf" secondAttribute="bottom" constant="20" id="298-8b-IcB"/>
+                            <constraint firstItem="QnW-6E-cH9" firstAttribute="centerX" secondItem="BUa-dv-n6I" secondAttribute="centerX" id="7fE-Gp-Uy2"/>
+                            <constraint firstAttribute="bottom" secondItem="Fr6-Ph-mei" secondAttribute="bottom" constant="20" symbolic="YES" id="BKH-UK-GQ5"/>
+                            <constraint firstItem="fTl-h9-EWD" firstAttribute="top" secondItem="BUa-dv-n6I" secondAttribute="bottom" constant="15" id="ECx-gX-rOW"/>
+                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="bottom" secondItem="fTl-h9-EWD" secondAttribute="bottom" id="GlC-3X-G85"/>
+                            <constraint firstItem="DTG-sA-5jk" firstAttribute="centerX" secondItem="Fr6-Ph-mei" secondAttribute="centerX" id="J71-tR-E5k"/>
+                            <constraint firstItem="fTl-h9-EWD" firstAttribute="trailing" secondItem="vmX-cR-7gR" secondAttribute="trailingMargin" id="Qw3-7e-2BI"/>
+                            <constraint firstItem="fTl-h9-EWD" firstAttribute="leading" secondItem="Fr6-Ph-mei" secondAttribute="leading" id="fR0-tx-YsT"/>
+                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="trailing" secondItem="fTl-h9-EWD" secondAttribute="trailing" id="iGb-Za-q3E"/>
+                            <constraint firstItem="Xof-UR-C1V" firstAttribute="top" secondItem="DTG-sA-5jk" secondAttribute="bottom" constant="282" id="r71-eY-qfh"/>
+                            <constraint firstItem="Fr6-Ph-mei" firstAttribute="leading" secondItem="vmX-cR-7gR" secondAttribute="leadingMargin" id="u3T-P7-AIX"/>
+                            <constraint firstItem="DTG-sA-5jk" firstAttribute="centerX" secondItem="BUa-dv-n6I" secondAttribute="centerX" id="w2y-Z4-GKG"/>
+                            <constraint firstItem="fTl-h9-EWD" firstAttribute="top" secondItem="Fr6-Ph-mei" secondAttribute="top" id="xYE-TC-Mt9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="QR Code Join" id="F51-Df-PbV">
@@ -203,6 +216,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="DTG-sA-5jk" id="nDa-Wt-GKl"/>
+                        <outlet property="scanContainer" destination="Fr6-Ph-mei" id="REt-Pd-n5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pps-aA-sby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

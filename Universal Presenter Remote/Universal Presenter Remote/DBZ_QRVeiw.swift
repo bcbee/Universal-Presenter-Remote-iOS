@@ -9,11 +9,16 @@
 import UIKit
 
 class DBZ_QRVeiw: UIViewController {
-
+    
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet var scanContainer: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionActivated:", name:"SessionActivated", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionReady:", name:"UpdateInterface", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,8 +26,18 @@ class DBZ_QRVeiw: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func sessionActivated(notification: NSNotification) {
+        loadingIndicator.startAnimating()
+        scanContainer.alpha = 0.4
+    }
+    
+    func sessionReady(notification: NSNotification) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     @IBAction func close(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
 
     /*

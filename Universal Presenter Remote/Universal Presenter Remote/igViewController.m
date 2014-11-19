@@ -100,7 +100,8 @@
             if (![detectionString isEqualToString:lastcapture]) {
                 NSLog(@"Activate session %@", detectionString);
                 [DBZ_ServerCommunication activateSession:detectionString];
-                [self dismissViewControllerAnimated:YES completion:nil];
+                NSNotification* notification = [NSNotification notificationWithName:@"SessionActivated" object:nil];
+                [[NSNotificationCenter defaultCenter] postNotification:notification];
             }
             lastcapture = detectionString;
             
