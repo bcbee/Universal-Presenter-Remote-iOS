@@ -12,6 +12,7 @@
 
 - (void)updateInterface:(NSNotification*)notification;
 - (void)refreshInterface:(NSNotification*)notification;
+- (void)resetQR:(NSNotification*)notification;
 @property (weak, nonatomic) IBOutlet UILabel *tokenLabel;
 @property (weak, nonatomic) IBOutlet UIButton *connectButton;
 - (IBAction)refresh:(id)sender;

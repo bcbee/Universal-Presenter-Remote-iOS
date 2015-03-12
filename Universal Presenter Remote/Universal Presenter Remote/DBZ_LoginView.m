@@ -37,6 +37,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
     [DBZ_ServerCommunication setupUid];
     UIDevice *currentDevice = [UIDevice currentDevice];
     if ([currentDevice.model rangeOfString:@"Simulator"].location != NSNotFound) {
@@ -121,16 +122,17 @@
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
-    _QRSelector.selectedSegmentIndex = 0;
-    
-}
-
-- (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
+    
+    [self resetQR:nil];
 }
 
 - (void)openInstructions:(NSNotification*)notification {
     [self performSegueWithIdentifier:@"InstructionSegue" sender:self];
+}
+
+- (void)resetQR:(NSNotification *)notification {
+    _QRSelector.selectedSegmentIndex = 0;
 }
 
 - (IBAction)connectSession:(id)sender {

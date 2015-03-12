@@ -32,10 +32,11 @@ class DBZ_QRVeiw: UIViewController {
     }
     
     func sessionReady(notification: NSNotification) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.close(self)
     }
     
     @IBAction func close(sender: AnyObject) {
+        NSNotificationCenter.defaultCenter().postNotificationName("ResetQR", object: nil)
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
