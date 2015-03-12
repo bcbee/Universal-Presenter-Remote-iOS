@@ -8,7 +8,7 @@
         <!--UPR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="UPR" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Universal_Presenter_Remote_WatchKit_App" customModuleProvider="target">
+                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <imageView width="85" height="85" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
                             <variation key="device=watch42mm" height="100" width="100"/>
@@ -29,7 +29,7 @@
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
             <objects>
-                <controller title="Remote" id="tyS-3Z-ljt">
+                <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH"/>
                         <button width="1" alignment="left" title="Media" id="2Jr-13-h5y"/>
@@ -49,7 +49,7 @@
                     </items>
                     <notificationCategory key="notificationCategory" identifier="presentationReady" id="JfB-70-Muf">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sashColor" red="0.39887845259357124" green="0.043981369458826115" blue="0.41676391675858582" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sashColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
@@ -59,4 +59,5 @@
             <point key="canvasLocation" x="220" y="643"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
 </document>
