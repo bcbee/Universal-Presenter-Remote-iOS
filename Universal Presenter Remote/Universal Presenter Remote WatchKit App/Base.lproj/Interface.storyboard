@@ -45,9 +45,9 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <label width="1" alignment="left" text="Alert Label" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf">
+                    <notificationCategory key="notificationCategory" identifier="presentationReady" id="JfB-70-Muf">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sashColor" red="0.39887845259357124" green="0.043981369458826115" blue="0.41676391675858582" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
