@@ -34,6 +34,11 @@ NSDictionary *preferences = nil;
     // Initialize tracker. Replace with your tracking ID.
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-50792115-1"];
     
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    
+    // Enable IDFA collection.
+    tracker.allowIDFACollection = YES;
+    
     //End Google Aanlytics
     
     

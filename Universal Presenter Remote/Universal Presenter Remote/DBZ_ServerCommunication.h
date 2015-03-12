@@ -19,7 +19,7 @@
 +(bool)serverAvailable;
 +(bool)enabled;
 
-+(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken;
++(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken;
 +(void)processResponse:(NSMutableArray*)webResponse;
 +(void)setupUid;
 +(void)checkStatus;
@@ -30,5 +30,6 @@
 +(void)updateInterface;
 +(void)connectSetup;
 +(void)setupApns:(NSString*)deviceToken;
++(void)activateSession:(NSString*)targetToken;
 
 @end

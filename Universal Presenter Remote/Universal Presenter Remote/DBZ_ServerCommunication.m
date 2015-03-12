@@ -30,7 +30,7 @@ static NSString *apns = @"";
 +(bool)serverAvailable { return  serverAvailable; }
 +(bool)enabled { return  enabled; }
 
-+(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken {
++(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken {
     __block NSString *result;
     NSString *strURL= [NSString stringWithFormat:@"%@/%@", serverAddress, page];
     if (requestToken > 99999) {
@@ -45,7 +45,11 @@ static NSString *apns = @"";
         strURL = [NSString stringWithFormat:@"%@&apnstoken=%@", strURL, apns];
     }
     
-    NSLog(strURL);
+    if ((int)targetToken > 99999) {
+        strURL = [NSString stringWithFormat:@"%@&target=%@", strURL, targetToken];
+    }
+    
+    NSLog(@"%@", strURL);
     
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
@@ -98,7 +102,7 @@ static NSString *apns = @"";
 }
 
 +(void)checkStatus {
-    [self getResponse:@"Alive" withToken:0 withHoldfor:NO withDeviceToken:NO];
+    [self getResponse:@"Alive" withToken:0 withHoldfor:NO withDeviceToken:NO withTarget:nil];
 }
 
 +(void)checkStatusCallback:(NSString *)response {
@@ -116,7 +120,7 @@ static NSString *apns = @"";
 
 +(void)checkToken {
     int sendtoken = temptoken;
-    [self getResponse:@"TempSession" withToken:sendtoken withHoldfor:YES withDeviceToken:YES];
+    [self getResponse:@"TempSession" withToken:sendtoken withHoldfor:YES withDeviceToken:YES withTarget:nil];
 }
 
 +(void)checkTokenCallback:(NSString*)response {
@@ -128,7 +132,7 @@ static NSString *apns = @"";
     }
     
     if (temptoken == 0) {
-        [self getResponse:@"NewSession" withToken:0 withHoldfor:NO withDeviceToken:NO];
+        [self getResponse:@"NewSession" withToken:0 withHoldfor:NO withDeviceToken:NO withTarget:nil];
     }
     
     [self updateInterface];
@@ -153,6 +157,10 @@ static NSString *apns = @"";
     NSString *token = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@">" withString:@""]stringByReplacingOccurrencesOfString: @" " withString: @""];
     apns = token;
     [self checkToken];
+}
+
++(void)activateSession:(NSString*)targetToken {
+    [self getResponse:@"StartQR" withToken:temptoken withHoldfor:NO withDeviceToken:NO withTarget:targetToken];
 }
 
 @end
