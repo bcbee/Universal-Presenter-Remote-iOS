@@ -16,6 +16,13 @@
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BD750519C2635D0095C461 /* Unified.storyboard */; };
+		B3C968B91AB20B44000819E0 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968B81AB20B44000819E0 /* InterfaceController.swift */; };
+		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
+		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
+		B3C968C11AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
+		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
+		B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968CA1AB20B44000819E0 /* Images.xcassets */; };
+		B3C968CE1AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
 		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
 		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
@@ -41,6 +48,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B3C968C21AB20B44000819E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3C968BF1AB20B44000819E0;
+			remoteInfo = "Universal Presenter Remote WatchKit App";
+		};
+		B3C968CC1AB20B44000819E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3C968B21AB20B44000819E0;
+			remoteInfo = "Universal Presenter Remote WatchKit Extension";
+		};
 		ED70D60618FF17E1007B4C18 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
@@ -49,6 +70,20 @@
 			remoteInfo = "Universal Presenter Remote";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B3C968D51AB20B44000819E0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B3C968CE1AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -62,6 +97,16 @@
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3BD750519C2635D0095C461 /* Unified.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unified.storyboard; sourceTree = "<group>"; };
+		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B3C968B81AB20B44000819E0 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B3C968BA1AB20B44000819E0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B3C968BC1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C968C61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C968C81AB20B44000819E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
 		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
 		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -108,6 +153,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B3C968B01AB20B44000819E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED70D5E318FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,6 +190,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B3C968B81AB20B44000819E0 /* InterfaceController.swift */,
+				B3C968BA1AB20B44000819E0 /* NotificationController.swift */,
+				B3C968BC1AB20B44000819E0 /* Images.xcassets */,
+				B3C968B51AB20B44000819E0 /* Supporting Files */,
+			);
+			path = "Universal Presenter Remote WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B3C968B51AB20B44000819E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C968B61AB20B44000819E0 /* Info.plist */,
+				B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B3C968C71AB20B44000819E0 /* Interface.storyboard */,
+				B3C968CA1AB20B44000819E0 /* Images.xcassets */,
+				B3C968C51AB20B44000819E0 /* Supporting Files */,
+			);
+			path = "Universal Presenter Remote WatchKit App";
+			sourceTree = "<group>";
+		};
+		B3C968C51AB20B44000819E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C968C61AB20B44000819E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B3EAFE1B19BE53AD002E1F29 /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +280,8 @@
 				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
 				ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */,
+				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
+				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
 				ED70D5E718FF17E0007B4C18 /* Products */,
 			);
@@ -200,6 +292,8 @@
 			children = (
 				ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */,
 				ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */,
+				B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */,
+				B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -297,6 +391,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */;
+			buildPhases = (
+				B3C968AF1AB20B44000819E0 /* Sources */,
+				B3C968B01AB20B44000819E0 /* Frameworks */,
+				B3C968B11AB20B44000819E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3C968C31AB20B44000819E0 /* PBXTargetDependency */,
+			);
+			name = "Universal Presenter Remote WatchKit Extension";
+			productName = "Universal Presenter Remote WatchKit Extension";
+			productReference = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */;
+			buildPhases = (
+				B3C968BE1AB20B44000819E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Universal Presenter Remote WatchKit App";
+			productName = "Universal Presenter Remote WatchKit App";
+			productReference = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
@@ -304,10 +431,12 @@
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
+				B3C968D51AB20B44000819E0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B3C968CD1AB20B44000819E0 /* PBXTargetDependency */,
 			);
 			name = "Universal Presenter Remote";
 			productName = "Universal Presenter Remote";
@@ -342,6 +471,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "DBZ Technology";
 				TargetAttributes = {
+					B3C968B21AB20B44000819E0 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 93C4626635;
+					};
+					B3C968BF1AB20B44000819E0 = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					ED70D5E518FF17E0007B4C18 = {
 						DevelopmentTeam = 93C4626635;
 						SystemCapabilities = {
@@ -367,6 +503,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = ED70D5DD18FF17E0007B4C18;
 			productRefGroup = ED70D5E718FF17E0007B4C18 /* Products */;
@@ -375,11 +512,31 @@
 			targets = (
 				ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */,
 				ED70D60018FF17E1007B4C18 /* Universal Presenter RemoteTests */,
+				B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
+				B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B3C968B11AB20B44000819E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B3C968C11AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3C968BE1AB20B44000819E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
+				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED70D5E418FF17E0007B4C18 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,6 +562,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B3C968AF1AB20B44000819E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
+				B3C968B91AB20B44000819E0 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ED70D5E218FF17E0007B4C18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +598,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B3C968C31AB20B44000819E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */;
+			targetProxy = B3C968C21AB20B44000819E0 /* PBXContainerItemProxy */;
+		};
+		B3C968CD1AB20B44000819E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */;
+			targetProxy = B3C968CC1AB20B44000819E0 /* PBXContainerItemProxy */;
+		};
 		ED70D60718FF17E1007B4C18 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */;
@@ -440,6 +616,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B3C968C71AB20B44000819E0 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C968C81AB20B44000819E0 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -459,6 +643,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B3C968CF1AB20B44000819E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3C968D01AB20B44000819E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B3C968D11AB20B44000819E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		B3C968D21AB20B44000819E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		ED70D61018FF17E1007B4C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +801,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
@@ -566,6 +828,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
@@ -625,6 +888,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C968D11AB20B44000819E0 /* Debug */,
+				B3C968D21AB20B44000819E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C968CF1AB20B44000819E0 /* Debug */,
+				B3C968D01AB20B44000819E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		ED70D5E118FF17E0007B4C18 /* Build configuration list for PBXProject "Universal Presenter Remote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
