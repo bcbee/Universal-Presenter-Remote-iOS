@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D87h" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -13,15 +13,19 @@
                         <imageView width="85" height="85" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
                             <variation key="device=watch42mm" height="100" width="100"/>
                         </imageView>
-                        <label width="85" alignment="center" text="123456" textAlignment="center" id="hzr-TV-eJ6">
+                        <label width="85" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <button width="1" alignment="center" title="Connecting..." id="oti-G0-QRI">
+                        <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
                             <connections>
                                 <segue destination="tyS-3Z-ljt" kind="push" id="s4g-ZA-OzU"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="connectButton" destination="oti-G0-QRI" id="9L1-i6-bE0"/>
+                        <outlet property="sessionID" destination="hzr-TV-eJ6" id="vuR-U2-XMV"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
@@ -32,9 +36,21 @@
                 <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH"/>
-                        <button width="1" alignment="left" title="Media" id="2Jr-13-h5y"/>
-                        <button width="1" alignment="left" title="Next" id="e98-60-n7t"/>
-                        <button width="1" alignment="left" title="Previous" id="DEy-WV-EVQ"/>
+                        <button width="1" alignment="left" title="Media" id="2Jr-13-h5y">
+                            <connections>
+                                <action selector="mediaPressed" destination="tyS-3Z-ljt" id="0ef-wY-FBe"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Next" id="e98-60-n7t">
+                            <connections>
+                                <action selector="nextPressed" destination="tyS-3Z-ljt" id="TUi-bu-XSF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Previous" id="DEy-WV-EVQ">
+                            <connections>
+                                <action selector="previousPressed" destination="tyS-3Z-ljt" id="tSv-sP-Obp"/>
+                            </connections>
+                        </button>
                     </items>
                 </controller>
             </objects>

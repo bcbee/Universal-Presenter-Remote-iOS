@@ -28,4 +28,11 @@ class DBZ_WKControlView: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func mediaPressed() {
+        
+    }
+    @IBAction func nextPressed() {
+    }
+    @IBAction func previousPressed() {
+    }
 }

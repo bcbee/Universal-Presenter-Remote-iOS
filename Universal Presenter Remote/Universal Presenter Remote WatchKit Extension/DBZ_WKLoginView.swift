@@ -12,6 +12,9 @@ import Foundation
 
 class DBZ_WKLoginView: WKInterfaceController {
 
+    @IBOutlet var connectButton: WKInterfaceButton!
+    @IBOutlet var sessionID: WKInterfaceLabel!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -26,6 +29,11 @@ class DBZ_WKLoginView: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    func updateInterface(notification: NSNotification) {
+        sessionID.setText("123456")
+        connectButton.setEnabled(true);
     }
 
 }
