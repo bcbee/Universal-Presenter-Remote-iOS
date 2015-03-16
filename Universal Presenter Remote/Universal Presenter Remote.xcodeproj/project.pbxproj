@@ -13,12 +13,12 @@
 		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
 		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
 		B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC619B41EA700CC471C /* libz.dylib */; };
+		B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B67151AB7950D00D2C728 /* Unified.storyboard */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
-		B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BD750519C2635D0095C461 /* Unified.storyboard */; };
 		B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
 		B3C820E81AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
@@ -100,13 +100,14 @@
 		B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B3257AC619B41EA700CC471C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		B32B67141AB7950D00D2C728 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Unified.storyboard; sourceTree = "<group>"; };
+		B32B67161AB7951800D2C728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Unified.storyboard; sourceTree = "<group>"; };
 		B34E227219AD5B4F0001127D /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B3BD750519C2635D0095C461 /* Unified.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unified.storyboard; sourceTree = "<group>"; };
 		B3C820E51AB627E000CD3438 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		B3C820E61AB627E000CD3438 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,7 +399,7 @@
 		ED70D61C18FF182F007B4C18 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				B3BD750519C2635D0095C461 /* Unified.storyboard */,
+				B32B67151AB7950D00D2C728 /* Unified.storyboard */,
 				B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */,
 			);
 			name = Interface;
@@ -589,7 +590,7 @@
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
 				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
-				B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */,
+				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
 				B3EAFE2C19BE53AD002E1F29 /* Changelog.txt in Resources */,
 				B3EAFE2F19BE53AD002E1F29 /* Readme.txt in Resources */,
 			);
@@ -663,6 +664,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B32B67151AB7950D00D2C728 /* Unified.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B32B67141AB7950D00D2C728 /* en */,
+				B32B67161AB7951800D2C728 /* Base */,
+			);
+			name = Unified.storyboard;
+			sourceTree = "<group>";
+		};
 		B3C968C71AB20B44000819E0 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -74,9 +74,9 @@ NSDictionary *preferences = nil;
     
     if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"] || firstime) {
         NSLog(@"Display Instructions");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:nil];
         // optional - add more buttons:
-        [alert addButtonWithTitle:@"No"];
+        [alert addButtonWithTitle:@"Yes"];
         [alert show];
         
     } else {
@@ -229,7 +229,7 @@ NSDictionary *preferences = nil;
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
+    if (buttonIndex == 1) {
         NSNotification* notification = [NSNotification notificationWithName:@"OpenInstructions" object:nil];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
     }
@@ -259,6 +259,14 @@ NSDictionary *preferences = nil;
         
         NSDictionary *response = @{@"response" : @"Session Connected from Watch"};
         NSNotification* notification = [NSNotification notificationWithName:@"WatchConnectSession" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"EndSession"]) {
+        
+        NSDictionary *response = @{@"response" : @"Session Ended from Watch"};
+        NSNotification* notification = [NSNotification notificationWithName:@"WatchEndSession" object:nil];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         reply(response);
     }

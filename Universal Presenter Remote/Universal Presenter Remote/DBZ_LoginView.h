@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMWormhole.h"
 
 @interface DBZ_LoginView : UIViewController
 
@@ -19,6 +20,7 @@
 - (IBAction)refresh:(id)sender;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *QRSelector;
 
+@property (nonatomic, strong) MMWormhole *wormhole;
 - (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText;
 
 @end

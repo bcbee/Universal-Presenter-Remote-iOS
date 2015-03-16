@@ -17,8 +17,6 @@
 
 @interface DBZ_LoginView ()
 
-@property (nonatomic, strong) MMWormhole *wormhole;
-
 @end
 
 @implementation DBZ_LoginView
@@ -36,8 +34,7 @@
 {
     [super viewDidLoad];
     
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole"
-                                                         optionalDirectory:@"wormhole"];
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
     self.canDisplayBannerAds = YES;
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
@@ -150,6 +147,9 @@
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSDictionary *preferences = [ud objectForKey:@"preferences"];
     
+    [DBZ_ServerCommunication startSession];
+    [self.wormhole passMessageObject:@{@"action" : @"StartSession"} identifier:@"UPRWatchAction"];
+    
     if ([[preferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
         [self performSegueWithIdentifier:@"SwipeControlSegue" sender:self];
     } else {
@@ -162,7 +162,9 @@
 }
 
 - (void)watchConnectSession:(NSNotification *)notification {
-    [self connectSession:nil];
+    if (![DBZ_ServerCommunication enabled]) {
+        [self connectSession:nil];
+    }
 }
 
 @end

@@ -14,6 +14,8 @@
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
 
+#import "MMWormhole.h"
+
 @interface DBZ_ControlView ()
 
 @end
@@ -34,6 +36,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close:) name:@"WatchEndSession" object:nil];
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
@@ -61,9 +65,11 @@
     if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
         // back button was pressed.  We know this is true because self is no longer
         // in the navigation stack.
-        [DBZ_ServerCommunication setupUid];
-        [DBZ_ServerCommunication checkToken];
+        [DBZ_ServerCommunication endSession];
     }
+    
+    [self.wormhole passMessageObject:@{@"action" : @"EndSession"} identifier:@"UPRWatchAction"];
+    
     [super viewWillDisappear:animated];
 }
 
@@ -82,6 +88,10 @@
     
     // manual screen tracking
     [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+}
+
+- (void)close:(NSNotification *)notification {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

@@ -163,4 +163,14 @@ static NSString *apns = @"";
     [self getResponse:@"StartQR" withToken:temptoken withHoldfor:NO withDeviceToken:NO withTarget:targetToken];
 }
 
++(void)startSession {
+    enabled = YES;
+}
+
++(void)endSession {
+    [self setupUid];
+    [self checkToken];
+    enabled = NO;
+}
+
 @end

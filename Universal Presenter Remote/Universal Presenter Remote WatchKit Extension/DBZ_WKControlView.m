@@ -42,12 +42,34 @@
         
     }];
     
+    // Become a listener for changes to the wormhole for the button message
+    [self.wormhole listenForMessageWithIdentifier:@"UPRWatchAction" listener:^(id messageObject) {
+        // The number is identified with the buttonNumber key in the message object
+        NSString *action = [messageObject valueForKey:@"action"];
+        if ([action  isEqual: @"EndSession"]) {
+            [self popToRootController];
+        }
+    }];
+    
     
 }
 
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+    
+    NSDictionary *requst = @{@"request":@"EndSession"};
+    
+    [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            
+            NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+        }
+        
+    }];
 }
 
 - (IBAction)mediaPressed {

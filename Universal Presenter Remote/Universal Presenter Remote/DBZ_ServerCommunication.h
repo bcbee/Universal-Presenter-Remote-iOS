@@ -31,5 +31,7 @@
 +(void)connectSetup;
 +(void)setupApns:(NSString*)deviceToken;
 +(void)activateSession:(NSString*)targetToken;
++(void)startSession;
++(void)endSession;
 
 @end

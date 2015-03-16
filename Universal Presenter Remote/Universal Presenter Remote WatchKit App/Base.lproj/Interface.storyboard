@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
@@ -22,12 +22,21 @@
                         <label width="85" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
-                        <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
-                            <connections>
-                                <action selector="connectSession" destination="AgC-eL-Hgc" id="2Zh-t8-zEc"/>
-                                <segue destination="tyS-3Z-ljt" kind="push" identifier="ConnectSegue" id="8mv-ic-ob5"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" id="G7r-3c-AOO">
+                            <items>
+                                <button width="39" alignment="left" title="Ref" id="bdK-3w-iqa">
+                                    <connections>
+                                        <action selector="refresh" destination="AgC-eL-Hgc" id="VFp-Er-I4b"/>
+                                    </connections>
+                                </button>
+                                <button width="92" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
+                                    <connections>
+                                        <action selector="connectSession" destination="AgC-eL-Hgc" id="2Zh-t8-zEc"/>
+                                        <segue destination="tyS-3Z-ljt" kind="push" identifier="ConnectSegue" id="8mv-ic-ob5"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="connectButton" destination="oti-G0-QRI" id="Fh8-f6-JiH"/>
@@ -35,7 +44,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="344"/>
+            <point key="canvasLocation" x="220" y="343"/>
         </scene>
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">

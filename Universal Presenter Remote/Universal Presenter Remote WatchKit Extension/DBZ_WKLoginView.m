@@ -58,6 +58,21 @@
     }];
 }
 
+- (IBAction)refresh {
+    NSDictionary *requst = @{@"request":@"Startup"};
+    
+    [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            
+            NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+        }
+        
+    }];
+}
+
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
