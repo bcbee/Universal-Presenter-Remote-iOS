@@ -55,21 +55,24 @@ NSDictionary *preferences = nil;
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
+    bool firstime = NO;
     
     if ([ud objectForKey:@"preferences"] != nil) {
         NSLog(@"Preferences Loaded");
         preferences = [ud objectForKey:@"preferences"];
     } else {
         NSLog(@"New Preferences Generated");
-        NSString *firsttime = @"Enabled";
-        NSString *swipe = @"Disabled";
+        NSString *instructions = @"Disabled";
+        NSString *swipe = @"Enabled";
         
-        preferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
+        preferences = [NSDictionary dictionaryWithObjectsAndKeys: instructions, @"Instructions", swipe, @"SwipeControl", nil];
         [self savePreferences];
+        
+        firstime = YES;
         
     }
     
-    if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"]) {
+    if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"] || firstime) {
         NSLog(@"Display Instructions");
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:nil];
         // optional - add more buttons:
