@@ -71,8 +71,14 @@
                         <separator alignment="left" id="I7E-6D-NZ7">
                             <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </separator>
-                        <label width="1" alignment="left" text="Session 123456 is ready to present" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
-                        <separator alignment="left" id="bQC-Y4-rLH">
+                        <label width="1" alignment="center" text="Session 123456 is ready to present" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <separator width="118" alignment="center" id="Ixc-3l-3WH">
+                            <color key="color" red="0.39887845259999999" green="0.043981369460000003" blue="0.41676391680000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label alignment="center" text="Open UPR App to beigin presenting" textAlignment="center" numberOfLines="2" id="tfT-oJ-OKl">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <separator alignment="left" id="UGE-W8-AQ3">
                             <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </separator>
                     </items>

@@ -5,5 +5,12 @@
             "title": "Optional title"
         },
         "category": "presentationReady"
-    }
+    },
+    
+    "WatchKit Simulator Actions": [
+        {
+            "title": "Begin Presenting",
+            "identifier": "beginPresenting"
+        }
+    ]
 }
