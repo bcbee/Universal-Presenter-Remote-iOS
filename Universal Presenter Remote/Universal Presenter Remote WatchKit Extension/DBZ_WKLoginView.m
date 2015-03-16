@@ -27,8 +27,20 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole"
-                                                         optionalDirectory:@"wormhole"];
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
+    
+    NSDictionary *requst = @{@"request":@"Startup"};
+    
+    [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            
+            NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+        }
+        
+    }];
     
     // Become a listener for changes to the wormhole for the button message
     [self.wormhole listenForMessageWithIdentifier:@"UPRWatchData" listener:^(id messageObject) {

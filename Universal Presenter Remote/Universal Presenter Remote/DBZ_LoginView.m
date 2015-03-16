@@ -38,19 +38,18 @@
     
     self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole"
                                                          optionalDirectory:@"wormhole"];
-    
-    
     self.canDisplayBannerAds = YES;
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
-    [DBZ_ServerCommunication setupUid];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
     UIDevice *currentDevice = [UIDevice currentDevice];
+    
+    [DBZ_ServerCommunication setupUid];
     if ([currentDevice.model rangeOfString:@"Simulator"].location != NSNotFound) {
         // running in Simulator
-        [DBZ_ServerCommunication setupUid];
         [DBZ_ServerCommunication checkToken];
     }
 }
@@ -160,6 +159,10 @@
 
 - (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText {
     [self.wormhole passMessageObject:@{@"token" : @(token), @"connectEnabled" : @(connectEnabled), @"connectTitle" : connectText} identifier:@"UPRWatchData"];
+}
+
+- (void)watchConnectSession:(NSNotification *)notification {
+    [self connectSession:nil];
 }
 
 @end

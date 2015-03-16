@@ -70,12 +70,12 @@ static NSString *apns = @"";
          
          
      }];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOn" object:nil]];
 }
 
 +(void)processResponse:(NSMutableArray*)webResponse {
     // The one we want to switch on
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOff" object:nil]];
     NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession"];
     NSInteger item = [items indexOfObject:[webResponse objectAtIndex:0]];
     switch (item) {

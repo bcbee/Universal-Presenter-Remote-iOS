@@ -8,7 +8,12 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import "MMWormhole.h"
 
 @interface DBZ_WKControlView : WKInterfaceController
+
+@property (nonatomic, strong) MMWormhole *wormhole;
+
+
 
 @end

@@ -12,8 +12,9 @@
 
 @interface DBZ_WKLoginView : WKInterfaceController
 
+@property (nonatomic, strong) MMWormhole *wormhole;
+
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *tokenLabel;
 @property (strong, nonatomic) IBOutlet WKInterfaceButton *connectButton;
-@property (nonatomic, strong) MMWormhole *wormhole;
 
 @end

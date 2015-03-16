@@ -20,8 +20,6 @@
 		B3BD750619C2635D0095C461 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3BD750519C2635D0095C461 /* Unified.storyboard */; };
 		B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
 		B3C820E81AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
-		B3C820EB1AB629CB00CD3438 /* DBZ_WKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820EA1AB629CB00CD3438 /* DBZ_WKTest.m */; };
-		B3C820EC1AB629CB00CD3438 /* DBZ_WKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820EA1AB629CB00CD3438 /* DBZ_WKTest.m */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C11AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
@@ -109,8 +107,6 @@
 		B3BD750519C2635D0095C461 /* Unified.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unified.storyboard; sourceTree = "<group>"; };
 		B3C820E51AB627E000CD3438 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		B3C820E61AB627E000CD3438 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
-		B3C820E91AB629CB00CD3438 /* DBZ_WKTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_WKTest.h; sourceTree = "<group>"; };
-		B3C820EA1AB629CB00CD3438 /* DBZ_WKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_WKTest.m; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -206,8 +202,6 @@
 		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3C820E91AB629CB00CD3438 /* DBZ_WKTest.h */,
-				B3C820EA1AB629CB00CD3438 /* DBZ_WKTest.m */,
 				B3063AE91AB655E500285BE4 /* DBZ_WKLoginView.h */,
 				B3063AEA1AB655E500285BE4 /* DBZ_WKLoginView.m */,
 				B3063AEC1AB6560300285BE4 /* DBZ_WKControlView.h */,
@@ -615,7 +609,6 @@
 				B3063AEB1AB655E500285BE4 /* DBZ_WKLoginView.m in Sources */,
 				B3C820E81AB627E000CD3438 /* MMWormhole.m in Sources */,
 				B3063AEE1AB6560300285BE4 /* DBZ_WKControlView.m in Sources */,
-				B3C820EC1AB629CB00CD3438 /* DBZ_WKTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +625,6 @@
 				B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
 				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
-				B3C820EB1AB629CB00CD3438 /* DBZ_WKTest.m in Sources */,
 				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -708,6 +700,10 @@
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalytics",
+				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";
@@ -729,6 +725,10 @@
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GoogleAnalytics",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE = "";

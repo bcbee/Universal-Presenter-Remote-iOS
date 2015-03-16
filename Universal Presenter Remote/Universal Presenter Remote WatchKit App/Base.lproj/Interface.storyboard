@@ -24,7 +24,8 @@
                         </label>
                         <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
                             <connections>
-                                <segue destination="tyS-3Z-ljt" kind="push" id="s4g-ZA-OzU"/>
+                                <action selector="connectSession" destination="AgC-eL-Hgc" id="2Zh-t8-zEc"/>
+                                <segue destination="tyS-3Z-ljt" kind="push" identifier="ConnectSegue" id="8mv-ic-ob5"/>
                             </connections>
                         </button>
                     </items>
@@ -44,17 +45,17 @@
                         <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH"/>
                         <button width="1" alignment="left" title="Media" id="2Jr-13-h5y">
                             <connections>
-                                <action selector="mediaPressed" destination="tyS-3Z-ljt" id="0ef-wY-FBe"/>
+                                <action selector="mediaPressed" destination="tyS-3Z-ljt" id="cHc-cR-nx6"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Next" id="e98-60-n7t">
                             <connections>
-                                <action selector="nextPressed" destination="tyS-3Z-ljt" id="TUi-bu-XSF"/>
+                                <action selector="nextPressed" destination="tyS-3Z-ljt" id="TUr-Xe-fHi"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Previous" id="DEy-WV-EVQ">
                             <connections>
-                                <action selector="previousPressed" destination="tyS-3Z-ljt" id="tSv-sP-Obp"/>
+                                <action selector="previousPressed" destination="tyS-3Z-ljt" id="tqi-40-O9t"/>
                             </connections>
                         </button>
                     </items>
@@ -67,11 +68,17 @@
             <objects>
                 <notificationController id="YCC-NB-fut">
                     <items>
-                        <label width="1" alignment="left" text="Alert Label" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <separator alignment="left" id="I7E-6D-NZ7">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <label width="1" alignment="left" text="Session 123456 is ready to present" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
+                        <separator alignment="left" id="bQC-Y4-rLH">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="presentationReady" id="JfB-70-Muf">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sashColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sashColor" red="0.71711276369999999" green="0.0" blue="0.59399263560000004" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
@@ -79,22 +86,6 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Test-->
-        <scene sceneID="Jgb-2W-dDV">
-            <objects>
-                <controller id="WQf-pB-wGu" customClass="DBZ_WKTest">
-                    <items>
-                        <switch width="1" alignment="left" value="YES" title="Switch" id="RBi-VG-G4l"/>
-                        <label alignment="left" text="Label" id="XAn-4r-QIX"/>
-                    </items>
-                    <connections>
-                        <outlet property="numberLabel" destination="XAn-4r-QIX" id="spu-Pn-1RY"/>
-                        <outlet property="switchTest" destination="RBi-VG-G4l" id="gyI-Ox-Mqh"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="217" y="915"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
