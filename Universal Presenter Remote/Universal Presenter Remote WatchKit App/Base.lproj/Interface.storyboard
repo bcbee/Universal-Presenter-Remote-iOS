@@ -8,11 +8,17 @@
         <!--UPR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
+                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView">
                     <items>
-                        <imageView width="85" height="85" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
-                            <variation key="device=watch42mm" height="100" width="100"/>
+                        <imageView width="75" height="75" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
+                            <variation key="device=watch42mm" height="95" width="95"/>
                         </imageView>
+                        <separator alignment="left" id="b5s-rP-Hno">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </separator>
+                        <separator width="118" alignment="center" id="TpW-jR-W8h">
+                            <color key="color" red="0.39887845259999999" green="0.043981369460000003" blue="0.41676391680000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
                         <label width="85" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
@@ -23,17 +29,17 @@
                         </button>
                     </items>
                     <connections>
-                        <outlet property="connectButton" destination="oti-G0-QRI" id="9L1-i6-bE0"/>
-                        <outlet property="sessionID" destination="hzr-TV-eJ6" id="vuR-U2-XMV"/>
+                        <outlet property="connectButton" destination="oti-G0-QRI" id="Fh8-f6-JiH"/>
+                        <outlet property="tokenLabel" destination="hzr-TV-eJ6" id="5iL-FN-Jty"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="344"/>
         </scene>
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
             <objects>
-                <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
+                <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView">
                     <items>
                         <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH"/>
                         <button width="1" alignment="left" title="Media" id="2Jr-13-h5y">
@@ -73,6 +79,22 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Test-->
+        <scene sceneID="Jgb-2W-dDV">
+            <objects>
+                <controller id="WQf-pB-wGu" customClass="DBZ_WKTest">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="RBi-VG-G4l"/>
+                        <label alignment="left" text="Label" id="XAn-4r-QIX"/>
+                    </items>
+                    <connections>
+                        <outlet property="numberLabel" destination="XAn-4r-QIX" id="spu-Pn-1RY"/>
+                        <outlet property="switchTest" destination="RBi-VG-G4l" id="gyI-Ox-Mqh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="217" y="915"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>

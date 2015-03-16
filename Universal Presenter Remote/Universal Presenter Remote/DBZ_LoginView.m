@@ -13,8 +13,11 @@
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
+#import "MMWormhole.h"
 
 @interface DBZ_LoginView ()
+
+@property (nonatomic, strong) MMWormhole *wormhole;
 
 @end
 
@@ -32,6 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole"
+                                                         optionalDirectory:@"wormhole"];
+    
+    
     self.canDisplayBannerAds = YES;
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
@@ -62,14 +70,17 @@
         case 0:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Connecting..." forState:UIControlStateDisabled];
+            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Connecting..."];
             break;
         case 1:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Waiting..." forState:UIControlStateDisabled];
+            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Waiting..."];
             break;
         case 2:
             [_connectButton setEnabled:YES];
             [_connectButton setTitle:@"Begin" forState:UIControlStateNormal];
+            [self updateWatchLogin:inttoken withConnectEnabled:YES withConnectText:@"Begin"];
             break;
             
         default:
@@ -102,7 +113,8 @@
         [DBZ_ServerCommunication checkToken];
     } else {
         // running in Simulator
-        [self connectSession:nil];
+        //[self connectSession:nil];
+        [DBZ_ServerCommunication checkToken];
     }
 }
 
@@ -144,6 +156,10 @@
     } else {
         [self performSegueWithIdentifier:@"ControlSegue" sender:self];
     }
+}
+
+- (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText {
+    [self.wormhole passMessageObject:@{@"token" : @(token), @"connectEnabled" : @(connectEnabled), @"connectTitle" : connectText} identifier:@"UPRWatchData"];
 }
 
 @end
