@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>UPR No Watch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Universal Presenter Remote WatchKit App.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
