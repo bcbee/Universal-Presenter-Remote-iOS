@@ -80,7 +80,7 @@
                                     </constraint>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-f7-xw6">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-f7-xw6">
                                 <rect key="frame" x="230" y="312" width="141" height="29"/>
                                 <segments>
                                     <segment title="Token"/>
@@ -641,7 +641,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">You can now click begin on your phone or watch and press the Previous, Next, and Media buttons to control your presentation. If you have any issues, please contact support@dbztech.com</string>
+                                <string key="text">You can now click begin on your phone, tablet, or watch to reveal the Previous, Next, and Media buttons to control your presentation. If you have any issues, please contact support@dbztech.com</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
