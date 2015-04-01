@@ -1,9 +1,15 @@
 {
     "aps": {
         "alert": {
-            "body": "Session 123456 is ready to present",
-            "title": "Optional title"
+            "body": "Session 123456 is ready to present"
         },
         "category": "presentationReady"
-    }
+    },
+    
+    "WatchKit Simulator Actions": [
+                                   {
+                                   "title": "Begin Presenting",
+                                   "identifier": "beginPresenting"
+                                   }
+                                   ]
 }

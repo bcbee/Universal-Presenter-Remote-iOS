@@ -292,6 +292,14 @@ NSDictionary *preferences = nil;
         reply(response);
     }
     
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Refresh"]) {
+        
+        NSDictionary *response = @{@"response" : @"Token Refreshed"};
+        NSNotification* notification = [NSNotification notificationWithName:@"WatchRefreshSession" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
 }
 
 @end

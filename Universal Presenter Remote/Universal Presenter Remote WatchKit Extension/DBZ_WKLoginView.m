@@ -48,7 +48,12 @@
         NSNumber *number = [messageObject valueForKey:@"token"];
         NSNumber *enabled = [messageObject valueForKey:@"connectEnabled"];
         NSString *title = [messageObject valueForKey:@"connectTitle"];
-        _tokenLabel.text = [number stringValue];
+        if (![[number stringValue] isEqualToString:@"0"]) {
+            _tokenLabel.text = [number stringValue];
+        } else {
+            _tokenLabel.text = @"...";
+        }
+        
         [_connectButton setTitle:title];
         if ([enabled isEqualToNumber:@(1)]) {
             [_connectButton setEnabled:YES];
@@ -58,8 +63,15 @@
     }];
 }
 
-- (IBAction)refresh {
-    NSDictionary *requst = @{@"request":@"Startup"};
+- (void)didDeactivate {
+    // This method is called when watch view controller is no longer visible
+    [super didDeactivate];
+}
+
+
+
+- (IBAction)refreshToken {
+    NSDictionary *requst = @{@"request":@"Refresh"};
     
     [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
@@ -73,11 +85,10 @@
     }];
 }
 
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
+- (IBAction)openInstructions {
+    NSLog(@"Open Instructions");
+    [self presentControllerWithName:@"Instructions" context: nil];
 }
-
 @end
 
 

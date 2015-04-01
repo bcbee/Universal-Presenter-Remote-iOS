@@ -17,6 +17,8 @@
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
+		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
+		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
@@ -568,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
 				B3C968C11AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app in Resources */,
 				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
 			);
@@ -577,6 +580,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */,
 				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
 				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
 			);

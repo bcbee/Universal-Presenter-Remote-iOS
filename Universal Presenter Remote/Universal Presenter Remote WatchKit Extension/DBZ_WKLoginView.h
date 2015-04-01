@@ -16,5 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *tokenLabel;
 @property (strong, nonatomic) IBOutlet WKInterfaceButton *connectButton;
+- (IBAction)refreshToken;
+- (IBAction)openInstructions;
 
 @end

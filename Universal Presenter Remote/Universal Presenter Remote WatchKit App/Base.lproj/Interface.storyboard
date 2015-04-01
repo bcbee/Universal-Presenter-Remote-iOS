@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D105g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D113c" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Batman.ttf">
+            <string>BatmanForeverAlternate</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--UPR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
                 <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView">
                     <items>
-                        <imageView width="75" height="75" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
-                            <variation key="device=watch42mm" height="95" width="95"/>
+                        <imageView width="65" height="65" alignment="center" image="WatchLogo" id="ELT-Zy-IsQ">
+                            <variation key="device=watch42mm" height="90" width="90"/>
                         </imageView>
                         <separator alignment="left" id="b5s-rP-Hno">
                             <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </separator>
                         <separator width="118" alignment="center" id="TpW-jR-W8h">
-                            <color key="color" red="0.39887845259999999" green="0.043981369460000003" blue="0.41676391680000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="calibratedRGB"/>
                         </separator>
-                        <label width="85" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        <label width="97" height="19" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
+                            <fontDescription key="font" name="BatmanForeverAlternate" family="BatmanForeverAlternate" pointSize="16"/>
                         </label>
                         <group width="1" alignment="left" id="G7r-3c-AOO">
                             <items>
-                                <button width="39" alignment="left" title="Ref" id="bdK-3w-iqa">
-                                    <connections>
-                                        <action selector="refresh" destination="AgC-eL-Hgc" id="VFp-Er-I4b"/>
-                                    </connections>
-                                </button>
-                                <button width="92" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
+                                <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
                                     <connections>
                                         <action selector="connectSession" destination="AgC-eL-Hgc" id="2Zh-t8-zEc"/>
                                         <segue destination="tyS-3Z-ljt" kind="push" identifier="ConnectSegue" id="8mv-ic-ob5"/>
@@ -38,13 +39,50 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="kkh-4b-1cs">
+                        <items>
+                            <menuItem title="Reload" icon="repeat" id="xSX-zO-dBG">
+                                <connections>
+                                    <action selector="refreshToken" destination="AgC-eL-Hgc" id="aIl-ZM-stG"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Instructions" icon="info" id="NMZ-qU-bK6">
+                                <connections>
+                                    <action selector="openInstructions" destination="AgC-eL-Hgc" id="Juv-1E-ue7"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="connectButton" destination="oti-G0-QRI" id="Fh8-f6-JiH"/>
                         <outlet property="tokenLabel" destination="hzr-TV-eJ6" id="5iL-FN-Jty"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="343"/>
+            <point key="canvasLocation" x="220" y="280"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="cgt-0j-UhQ">
+            <objects>
+                <controller identifier="Instructions" id="T1b-4Y-1Hr">
+                    <items>
+                        <label height="20.5" alignment="center" text="UPR: Remote" textAlignment="center" numberOfLines="2" id="wHX-pO-b3t">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="center" text="DBZ Technology" textAlignment="center" id="IO7-LJ-2T3">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <separator width="118" alignment="center" id="LyU-7H-Ex9">
+                            <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label width="0.90000000000000002" alignment="center" textAlignment="left" numberOfLines="14" id="G1L-ad-OJa">
+                            <string key="text">Download the UPR Controller App on the presenting computer. This can be found at universalpresenterremote.com. Enter the code generated by the watch to being. More instructions can be found in the UPR Controller app.</string>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="648" y="331"/>
         </scene>
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
@@ -70,7 +108,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="422" y="345"/>
+            <point key="canvasLocation" x="435" y="280"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -80,11 +118,16 @@
                         <separator alignment="left" id="I7E-6D-NZ7">
                             <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </separator>
-                        <label width="1" alignment="center" text="Session 123456 is ready to present" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW"/>
-                        <separator width="118" alignment="center" id="Ixc-3l-3WH">
-                            <color key="color" red="0.39887845259999999" green="0.043981369460000003" blue="0.41676391680000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView width="50" height="41" alignment="center" image="Ok" contentMode="scaleAspectFit" id="h0y-s0-nVT"/>
+                        <label width="1" height="43.5" alignment="center" text="Ready to present session 123456" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator width="0.90000000000000002" alignment="center" id="Ixc-3l-3WH">
+                            <color key="color" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                         </separator>
                         <label alignment="center" text="Open UPR App to beigin presenting" textAlignment="center" numberOfLines="2" id="tfT-oJ-OKl">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
                         <separator alignment="left" id="UGE-W8-AQ3">
@@ -95,13 +138,14 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sashColor" red="0.71711276369999999" green="0.0" blue="0.59399263560000004" alpha="1" colorSpace="calibratedRGB"/>
                     </notificationCategory>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="220" y="656"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -42,6 +42,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchRefreshSession:) name:@"WatchRefreshSession" object:nil];
     UIDevice *currentDevice = [UIDevice currentDevice];
     
     [DBZ_ServerCommunication setupUid];
@@ -165,6 +166,11 @@
     if (![DBZ_ServerCommunication enabled]) {
         [self connectSession:nil];
     }
+}
+
+- (void)watchRefreshSession:(NSNotification *)notification {
+    [DBZ_ServerCommunication setupUid];
+    [DBZ_ServerCommunication checkToken];
 }
 
 @end
