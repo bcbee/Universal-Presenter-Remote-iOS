@@ -1,7 +1,7 @@
 {
     "aps": {
         "alert": {
-            "body": "Ready to Present!"
+            "body": "Ready to Present session 1234!"
         },
         "category": "presentationReady"
     }
