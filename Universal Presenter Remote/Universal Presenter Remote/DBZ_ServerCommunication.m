@@ -12,7 +12,7 @@
 
 @implementation DBZ_ServerCommunication
 
-static NSString *serverAddress = @"http://universalpresenterremote.com";
+static NSString *serverAddress = @"https://universalpresenterremote.com";
 static int uid = 10;
 static int temptoken = 10;
 static int controlmode = 0;
@@ -70,12 +70,12 @@ static NSString *apns = @"";
          
          
      }];
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOn" object:nil]];
 }
 
 +(void)processResponse:(NSMutableArray*)webResponse {
     // The one we want to switch on
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOff" object:nil]];
     NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession"];
     NSInteger item = [items indexOfObject:[webResponse objectAtIndex:0]];
     switch (item) {
@@ -161,6 +161,16 @@ static NSString *apns = @"";
 
 +(void)activateSession:(NSString*)targetToken {
     [self getResponse:@"StartQR" withToken:temptoken withHoldfor:NO withDeviceToken:NO withTarget:targetToken];
+}
+
++(void)startSession {
+    enabled = YES;
+}
+
++(void)endSession {
+    [self setupUid];
+    [self checkToken];
+    enabled = NO;
 }
 
 @end

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="swE-Ai-7D0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="swE-Ai-7D0">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -66,7 +66,7 @@
                                     <constraint firstAttribute="height" constant="48" id="u3r-8o-1lJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BatmanForeverAlternate" family="BatmanForeverAlternate" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="BOR-5x-7XF">
@@ -80,7 +80,7 @@
                                     </constraint>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-f7-xw6">
+                            <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R4V-f7-xw6">
                                 <rect key="frame" x="230" y="312" width="141" height="29"/>
                                 <segments>
                                     <segment title="Token"/>
@@ -168,10 +168,10 @@
                                     <constraint firstAttribute="height" constant="21" id="TY1-Vz-ZWl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR support only available on OSX (UPR Controller)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-dv-n6I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR support only available on OS X (UPR Controller)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-dv-n6I">
                                 <rect key="frame" x="160" y="86" width="280" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="V5x-AW-SB5"/>
@@ -238,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeA-OW-kgV">
-                                <rect key="frame" x="140" y="492" width="320" height="100"/>
+                                <rect key="frame" x="140" y="468" width="320" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Muv-Dn-Ul7"/>
                                     <constraint firstAttribute="height" constant="100" id="pNV-ig-ZtO"/>
@@ -252,7 +252,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpr-A8-DIf">
-                                <rect key="frame" x="140" y="72" width="320" height="100"/>
+                                <rect key="frame" x="140" y="96" width="320" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="rxj-yM-QDE"/>
                                     <constraint firstAttribute="height" constant="100" id="s5i-oq-HeY"/>
@@ -283,11 +283,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="d1R-Wu-8zX" secondAttribute="centerX" id="6MZ-Ou-ifa"/>
-                            <constraint firstItem="3tQ-iz-4MY" firstAttribute="top" secondItem="IeA-OW-kgV" secondAttribute="bottom" constant="8" id="IEW-HM-8yk">
+                            <constraint firstItem="3tQ-iz-4MY" firstAttribute="top" secondItem="IeA-OW-kgV" secondAttribute="bottom" constant="32" id="IEW-HM-8yk">
                                 <variation key="heightClass=regular-widthClass=regular" constant="100"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="IeA-OW-kgV" secondAttribute="centerX" id="XPl-Lz-YGS"/>
-                            <constraint firstItem="Fpr-A8-DIf" firstAttribute="top" secondItem="GLr-Yb-Kn5" secondAttribute="bottom" constant="8" id="ldX-fr-Cfd">
+                            <constraint firstItem="Fpr-A8-DIf" firstAttribute="top" secondItem="GLr-Yb-Kn5" secondAttribute="bottom" constant="32" id="ldX-fr-Cfd">
                                 <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="d1R-Wu-8zX" secondAttribute="centerY" constant="-30" id="rgn-Qi-55X"/>
@@ -337,7 +337,7 @@
                                     <constraint firstAttribute="height" constant="21" id="KH8-FP-aq6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
@@ -353,7 +353,7 @@
                                     <constraint firstAttribute="width" constant="166" id="iH1-AK-b0K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -465,7 +465,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIz-gW-TSU">
                                 <rect key="frame" x="20" y="237" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Download the Universal Presenter Remote App on the presenting computer. This can be found at http://universalpresenterremote.com.</string>
+                                <string key="text">Download the UPR Controller App on the presenting computer. This can be found at universalpresenterremote.com. Once installed, open the application and verify that your computer is connected to the internet.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -553,7 +553,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-hz-LaU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Enter the token generated by this App into the presenting computer and click connect. Another window will open, you can now get your presentation ready.</string>
+                                <string key="text">Enter the token generated by this App into the presenting computer and click begin. If you are using a Mac, you can also scan the QR code generated by the computer to link your remote.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -641,7 +641,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Right before you begin start your slideshow, click Begin on the UPR computer application, this enables remote control. You can now click begin on your phone and press the Previous, Next, and Media buttons to control your presentation.</string>
+                                <string key="text">You can now click begin on your phone, tablet, or watch to reveal the Previous, Next, and Media buttons to control your presentation. If you have any issues, please contact support@dbztech.com</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -730,7 +730,7 @@
                                     <constraint firstAttribute="height" constant="53" id="dD1-Hf-1Ct"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SwipeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="HuQ-wY-lKJ">
@@ -842,8 +842,8 @@
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WfM-JU-7jr"/>
         <segue reference="6wG-lF-bMG"/>
+        <segue reference="WfM-JU-7jr"/>
         <segue reference="wc0-99-AQF"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>

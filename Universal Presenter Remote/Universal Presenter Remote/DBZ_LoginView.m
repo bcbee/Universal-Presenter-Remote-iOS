@@ -13,6 +13,7 @@
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
+#import "MMWormhole.h"
 
 @interface DBZ_LoginView ()
 
@@ -32,17 +33,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
     self.canDisplayBannerAds = YES;
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
-    [DBZ_ServerCommunication setupUid];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchRefreshSession:) name:@"WatchRefreshSession" object:nil];
     UIDevice *currentDevice = [UIDevice currentDevice];
+    
+    [DBZ_ServerCommunication setupUid];
     if ([currentDevice.model rangeOfString:@"Simulator"].location != NSNotFound) {
         // running in Simulator
-        [DBZ_ServerCommunication setupUid];
         [DBZ_ServerCommunication checkToken];
     }
 }
@@ -62,14 +67,17 @@
         case 0:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Connecting..." forState:UIControlStateDisabled];
+            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Connecting..."];
             break;
         case 1:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Waiting..." forState:UIControlStateDisabled];
+            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Waiting..."];
             break;
         case 2:
             [_connectButton setEnabled:YES];
             [_connectButton setTitle:@"Begin" forState:UIControlStateNormal];
+            [self updateWatchLogin:inttoken withConnectEnabled:YES withConnectText:@"Begin"];
             break;
             
         default:
@@ -102,7 +110,8 @@
         [DBZ_ServerCommunication checkToken];
     } else {
         // running in Simulator
-        [self connectSession:nil];
+        //[self connectSession:nil];
+        [DBZ_ServerCommunication checkToken];
     }
 }
 
@@ -139,11 +148,29 @@
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSDictionary *preferences = [ud objectForKey:@"preferences"];
     
+    [DBZ_ServerCommunication startSession];
+    [self.wormhole passMessageObject:@{@"action" : @"StartSession"} identifier:@"UPRWatchAction"];
+    
     if ([[preferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
         [self performSegueWithIdentifier:@"SwipeControlSegue" sender:self];
     } else {
         [self performSegueWithIdentifier:@"ControlSegue" sender:self];
     }
+}
+
+- (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText {
+    [self.wormhole passMessageObject:@{@"token" : @(token), @"connectEnabled" : @(connectEnabled), @"connectTitle" : connectText} identifier:@"UPRWatchData"];
+}
+
+- (void)watchConnectSession:(NSNotification *)notification {
+    if (![DBZ_ServerCommunication enabled]) {
+        [self connectSession:nil];
+    }
+}
+
+- (void)watchRefreshSession:(NSNotification *)notification {
+    [DBZ_ServerCommunication setupUid];
+    [DBZ_ServerCommunication checkToken];
 }
 
 @end

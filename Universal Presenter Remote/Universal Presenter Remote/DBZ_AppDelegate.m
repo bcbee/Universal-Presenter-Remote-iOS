@@ -9,6 +9,7 @@
 #import "DBZ_AppDelegate.h"
 #import "DBZ_ServerCommunication.h"
 #import "GAI.h"
+#import "MMWormhole.h"
 
 @implementation DBZ_AppDelegate
 
@@ -54,25 +55,28 @@ NSDictionary *preferences = nil;
     
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     
+    bool firstime = NO;
     
     if ([ud objectForKey:@"preferences"] != nil) {
         NSLog(@"Preferences Loaded");
         preferences = [ud objectForKey:@"preferences"];
     } else {
         NSLog(@"New Preferences Generated");
-        NSString *firsttime = @"Enabled";
-        NSString *swipe = @"Disabled";
+        NSString *instructions = @"Disabled";
+        NSString *swipe = @"Enabled";
         
-        preferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
+        preferences = [NSDictionary dictionaryWithObjectsAndKeys: instructions, @"Instructions", swipe, @"SwipeControl", nil];
         [self savePreferences];
+        
+        firstime = YES;
         
     }
     
-    if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"]) {
+    if ([[preferences objectForKey:@"Instructions"] isEqualToString:@"Enabled"] || firstime) {
         NSLog(@"Display Instructions");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome to Universal Presenter Remote" message:@"Would you like to see setup instructions?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:nil];
         // optional - add more buttons:
-        [alert addButtonWithTitle:@"No"];
+        [alert addButtonWithTitle:@"Yes"];
         [alert show];
         
     } else {
@@ -102,7 +106,12 @@ NSDictionary *preferences = nil;
     }
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(incomingNotification:) name:@"ServerResponse" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOn:) name:@"NetworkIndicatorOn" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOff:) name:@"NetworkIndicatorOff" object:nil];
+    
+    
     return YES;
     
     //End Push Notifications
@@ -220,10 +229,77 @@ NSDictionary *preferences = nil;
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
+    if (buttonIndex == 1) {
         NSNotification* notification = [NSNotification notificationWithName:@"OpenInstructions" object:nil];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
     }
+}
+
+- (void)networkIndicatorOn:(NSNotification *)notification {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
+- (void)networkIndicatorOff:(NSNotification *)notification {
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
+    
+    NSLog(@"containing app received message from watch");
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Startup"]) {
+        
+        NSDictionary *response = @{@"response" : @"Application Started from Watch"};
+        NSNotification* notification = [NSNotification notificationWithName:@"UpdateInterface" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ConnectSession"]) {
+        
+        NSDictionary *response = @{@"response" : @"Session Connected from Watch"};
+        NSNotification* notification = [NSNotification notificationWithName:@"WatchConnectSession" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"EndSession"]) {
+        
+        NSDictionary *response = @{@"response" : @"Session Ended from Watch"};
+        NSNotification* notification = [NSNotification notificationWithName:@"WatchEndSession" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideUp"]) {
+        
+        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
+        [DBZ_ServerCommunication getResponse:@"SlideUp" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideDown"]) {
+        
+        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
+        [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideMedia"]) {
+        
+        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
+        [DBZ_ServerCommunication getResponse:@"PlayMedia" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
+        reply(response);
+    }
+    
+    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Refresh"]) {
+        
+        NSDictionary *response = @{@"response" : @"Token Refreshed"};
+        NSNotification* notification = [NSNotification notificationWithName:@"WatchRefreshSession" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+        reply(response);
+    }
+    
 }
 
 @end
