@@ -9,6 +9,7 @@
 #import "DBZ_AppDelegate.h"
 #import "DBZ_ServerCommunication.h"
 #import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 #import "MMWormhole.h"
 
 @implementation DBZ_AppDelegate
@@ -94,16 +95,8 @@ NSDictionary *preferences = nil;
     
     //Push Notifications
     
-    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-    {
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
-    }
-    else
-    {
-        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
-         (UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert)];
-    }
+    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -252,6 +245,11 @@ NSDictionary *preferences = nil;
         NSDictionary *response = @{@"response" : @"Application Started from Watch"};
         NSNotification* notification = [NSNotification notificationWithName:@"UpdateInterface" object:nil];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
+        
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        
+        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"apple_watch" action:@"watch_event" label:@"wk_startup" value:nil] build]];
+        
         reply(response);
     }
     
