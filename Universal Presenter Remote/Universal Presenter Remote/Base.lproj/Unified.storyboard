@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="swE-Ai-7D0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="swE-Ai-7D0">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -322,7 +321,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Pi-ZQ-9NE">
-                                <rect key="frame" x="177" y="109" width="247" height="29"/>
+                                <rect key="frame" x="24" y="109" width="552" height="29"/>
                                 <segments>
                                     <segment title="Show Instructions"/>
                                     <segment title="Hide Instructions"/>
@@ -331,42 +330,58 @@
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="QJV-ZS-TCg"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
-                                <rect key="frame" x="231" y="81" width="139" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="KH8-FP-aq6"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When UPR Starts:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0O-AK-yWJ">
+                                <rect key="frame" x="24" y="81" width="552" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-8j-59h">
-                                <rect key="frame" x="276" y="192" width="51" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control Method (Takes effect next presentation):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
+                                <rect key="frame" x="24" y="161" width="552" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fx-dt-Vjw">
+                                <rect key="frame" x="228" y="527" width="145" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="KbF-NR-NeQ"/>
+                                    <constraint firstAttribute="height" constant="21" id="e7J-bX-4Nz"/>
+                                </constraints>
+                                <string key="text" base64-UTF8="YES">
+A8KpMjAxNSBEQlogVGVjaG5vbG9neQ
+</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S6F-iZ-nSD">
+                                <rect key="frame" x="24" y="190" width="552" height="29"/>
+                                <segments>
+                                    <segment title="Swipe"/>
+                                    <segment title="Buttons"/>
+                                </segments>
                                 <connections>
-                                    <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="f1g-OQ-oc5"/>
+                                    <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="yG6-db-O0M"/>
                                 </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Swipe Control" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGM-jg-ClN">
-                                <rect key="frame" x="217" y="163" width="166" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="2tn-rp-oOI"/>
-                                    <constraint firstAttribute="width" constant="166" id="iH1-AK-b0K"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Mji-8j-59h" firstAttribute="top" secondItem="XGM-jg-ClN" secondAttribute="bottom" constant="8" symbolic="YES" id="6oX-BV-0Ca"/>
-                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="centerX" secondItem="7Pi-ZQ-9NE" secondAttribute="centerX" id="COe-Ze-GkJ"/>
-                            <constraint firstItem="XGM-jg-ClN" firstAttribute="centerX" secondItem="v8u-AM-9SY" secondAttribute="centerX" id="DfK-Ip-pq3"/>
-                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="top" secondItem="bmO-9G-zGA" secondAttribute="bottom" constant="37" id="GYb-LK-TN8"/>
-                            <constraint firstItem="7Pi-ZQ-9NE" firstAttribute="top" secondItem="O0O-AK-yWJ" secondAttribute="bottom" constant="7" id="es9-DU-o3W"/>
-                            <constraint firstItem="XGM-jg-ClN" firstAttribute="top" secondItem="7Pi-ZQ-9NE" secondAttribute="bottom" constant="26" id="hLf-tS-kFN"/>
-                            <constraint firstItem="7Pi-ZQ-9NE" firstAttribute="centerX" secondItem="XGM-jg-ClN" secondAttribute="centerX" id="waY-0g-kNw"/>
-                            <constraint firstItem="Mji-8j-59h" firstAttribute="centerX" secondItem="XGM-jg-ClN" secondAttribute="centerX" id="zOR-Ch-kg8"/>
+                            <constraint firstItem="XGM-jg-ClN" firstAttribute="top" secondItem="7Pi-ZQ-9NE" secondAttribute="bottom" constant="24" id="0Ns-HB-vzf"/>
+                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="top" secondItem="bmO-9G-zGA" secondAttribute="bottom" constant="37" id="1js-Lt-aW7"/>
+                            <constraint firstItem="S6F-iZ-nSD" firstAttribute="leading" secondItem="v8u-AM-9SY" secondAttribute="leadingMargin" constant="8" id="9My-C8-81E"/>
+                            <constraint firstItem="S6F-iZ-nSD" firstAttribute="top" secondItem="XGM-jg-ClN" secondAttribute="bottom" constant="8" id="M6P-f7-beq"/>
+                            <constraint firstItem="XGM-jg-ClN" firstAttribute="leading" secondItem="v8u-AM-9SY" secondAttribute="leadingMargin" constant="8" id="QlT-aG-CuQ"/>
+                            <constraint firstAttribute="centerX" secondItem="XGM-jg-ClN" secondAttribute="centerX" id="Sgp-eJ-nt5"/>
+                            <constraint firstItem="7Pi-ZQ-9NE" firstAttribute="top" secondItem="O0O-AK-yWJ" secondAttribute="bottom" constant="7" id="Vzn-Fh-wp7"/>
+                            <constraint firstItem="O0O-AK-yWJ" firstAttribute="leading" secondItem="v8u-AM-9SY" secondAttribute="leadingMargin" constant="8" id="ZKV-rC-8Ns"/>
+                            <constraint firstAttribute="centerX" secondItem="9Fx-dt-Vjw" secondAttribute="centerX" id="hoa-m8-drc"/>
+                            <constraint firstItem="NOl-nI-iwv" firstAttribute="top" secondItem="9Fx-dt-Vjw" secondAttribute="bottom" constant="8" id="mnj-Fd-w8H"/>
+                            <constraint firstAttribute="centerX" secondItem="O0O-AK-yWJ" secondAttribute="centerX" id="neD-C7-Dtx"/>
+                            <constraint firstAttribute="centerX" secondItem="S6F-iZ-nSD" secondAttribute="centerX" id="rZU-YL-7sz"/>
+                            <constraint firstAttribute="centerX" secondItem="7Pi-ZQ-9NE" secondAttribute="centerX" id="uum-Jx-Iqe"/>
+                            <constraint firstItem="7Pi-ZQ-9NE" firstAttribute="leading" secondItem="v8u-AM-9SY" secondAttribute="leadingMargin" constant="8" id="yuI-81-g7M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Hko-H5-NDo">
@@ -378,7 +393,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="instructionControl" destination="7Pi-ZQ-9NE" id="0Hn-Yl-Eiw"/>
-                        <outlet property="swipeControl" destination="Mji-8j-59h" id="49r-aT-tL0"/>
+                        <outlet property="swipeControl" destination="S6F-iZ-nSD" id="FKa-zZ-3SM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB9-Nh-iSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,7 +458,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="LyG-RF-oaV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instruction-1" translatesAutoresizingMaskIntoConstraints="NO" id="LyG-RF-oaV">
                                 <rect key="frame" x="0.0" y="44" width="600" height="185"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -543,7 +558,7 @@
                                     <segue destination="2bl-ZR-3jk" kind="show" id="wc0-99-AQF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-zM-Z2U">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instruction-2" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-zM-Z2U">
                                 <rect key="frame" x="0.0" y="44" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -553,7 +568,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3I5-hz-LaU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Enter the token generated by this App into the presenting computer and click begin. If you are using a Mac, you can also scan the QR code generated by the computer to link your remote.</string>
+                                <string key="text">Enter the token generated by this App (the remote) into the control software and click begin. You should now recieve a notification on the remote, letting you know that you are ready to present.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -631,7 +646,7 @@
                                     <action selector="close:" destination="2bl-ZR-3jk" eventType="touchUpInside" id="zTK-eg-af5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instruction-3" translatesAutoresizingMaskIntoConstraints="NO" id="EDl-4L-z0n">
                                 <rect key="frame" x="0.0" y="44" width="600" height="183"/>
                                 <color key="backgroundColor" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -641,7 +656,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-Zh-jeU">
                                 <rect key="frame" x="20" y="235" width="560" height="246"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">You can now click begin on your phone, tablet, or watch to reveal the Previous, Next, and Media buttons to control your presentation. If you have any issues, please contact support@dbztech.com</string>
+                                <string key="text">Once the remote has successfully connected, open your presentation. You should now be able to control it using your iPhone, iPad, iPod Touch or Apple Watch. If you have any issues connecting or presenting, do not hesitate to contact our support team at support@dbztech.com.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -834,10 +849,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1" width="1000" height="1000"/>
-        <image name="2" width="1000" height="1000"/>
-        <image name="3" width="1000" height="1000"/>
         <image name="Banner" width="2048" height="273"/>
+        <image name="Instruction-1" width="2000" height="626"/>
+        <image name="Instruction-2" width="2000" height="626"/>
+        <image name="Instruction-3" width="2000" height="626"/>
         <image name="SwipeBackground" width="1000" height="665"/>
         <image name="UPR" width="2000" height="2000"/>
     </resources>

@@ -42,7 +42,7 @@ NSDictionary *newpreferences = nil;
 
 - (IBAction)updatePreferences:(id)sender {
     NSString *firsttime = @"Enabled";
-    NSString *swipe = @"Disabled";
+    NSString *swipe = @"Enabled";
     
     if ([self.instructionControl selectedSegmentIndex] == 0) {
         firsttime = @"Enabled";
@@ -50,7 +50,7 @@ NSDictionary *newpreferences = nil;
         firsttime = @"Disabled";
     }
     
-    if ([self.swipeControl isOn]) {
+    if ([self.swipeControl selectedSegmentIndex] == 0) {
         swipe = @"Enabled";
     } else {
         swipe = @"Disabled";
@@ -106,9 +106,9 @@ NSDictionary *newpreferences = nil;
     }
     
     if ([[oldpreferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
-        [_swipeControl setOn:YES];
+        self.swipeControl.selectedSegmentIndex = 0;
     } else {
-        [_swipeControl setOn:NO];
+        self.swipeControl.selectedSegmentIndex = 1;
     }
     NSLog(@"Local: %@",oldpreferences);
 }

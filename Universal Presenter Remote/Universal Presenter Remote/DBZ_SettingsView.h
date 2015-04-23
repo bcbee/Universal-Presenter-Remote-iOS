@@ -13,6 +13,6 @@
 - (IBAction)close:(id)sender;
 - (IBAction)updatePreferences:(id)sender;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *instructionControl;
-@property (weak, nonatomic) IBOutlet UISwitch *swipeControl;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *swipeControl;
 
 @end

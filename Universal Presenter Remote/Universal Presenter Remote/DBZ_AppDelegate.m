@@ -11,6 +11,7 @@
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import "MMWormhole.h"
+#import <AudioToolbox/AudioServices.h>
 
 @implementation DBZ_AppDelegate
 
@@ -146,11 +147,12 @@ NSDictionary *preferences = nil;
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
- {
+{
     NSLog (@"APNS: notification received: %@", userInfo);
     NSNotification* notification = [NSNotification notificationWithName:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     completionHandler(UIBackgroundFetchResultNewData);
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
