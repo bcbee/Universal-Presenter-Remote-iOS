@@ -14,8 +14,9 @@
 
 @end
 
-
 @implementation DBZ_WKLoginView
+
+NSTimer *checkInterfaceTimer;
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
@@ -61,6 +62,8 @@
             [_connectButton setEnabled:NO];
         }
     }];
+    
+    //checkInterfaceTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(checkInterface:) userInfo:nil repeats:YES];
 }
 
 - (void)didDeactivate {
@@ -68,7 +71,22 @@
     [super didDeactivate];
 }
 
-
+-(void)checkInterface:(NSTimer*)timer {
+    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
+    
+    NSDictionary *requst = @{@"request":@"Startup"};
+    
+    [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+        
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            
+            NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+        }
+        
+    }];
+}
 
 - (IBAction)refreshToken {
     NSDictionary *requst = @{@"request":@"Refresh"};
