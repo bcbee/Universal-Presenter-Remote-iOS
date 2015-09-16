@@ -484,6 +484,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DBZ_;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "DBZ Technology";
 				TargetAttributes = {
@@ -507,6 +508,9 @@
 								enabled = 1;
 							};
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
@@ -728,7 +732,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "374936aa-fb85-434b-a064-f30e76fd333f";
+				PROVISIONING_PROFILE = "d139b81d-9e50-49f2-9cb0-134febdb3a89";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 			};
@@ -854,13 +858,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,13 +887,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -896,7 +902,7 @@
 					"$(PROJECT_DIR)/GoogleAnalytics",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff5e77e7-4b6d-4b08-a30f-8868b720b896";
+				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
@@ -908,6 +914,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -933,6 +940,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -942,7 +950,7 @@
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ff5e77e7-4b6d-4b08-a30f-8868b720b896";
+				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
