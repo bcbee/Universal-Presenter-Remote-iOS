@@ -18,6 +18,8 @@
 
 NSTimer *checkInterfaceTimer;
 
+bool firstTime = true;
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
@@ -43,6 +45,24 @@ NSTimer *checkInterfaceTimer;
         
     }];
     
+    if (firstTime) {
+        requst = @{@"request":@"Refresh"};
+        
+        [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+            
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                
+                NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+            }
+            
+        }];
+        firstTime = false;
+    }
+    
+    
+    
     // Become a listener for changes to the wormhole for the button message
     [self.wormhole listenForMessageWithIdentifier:@"UPRWatchData" listener:^(id messageObject) {
         // The number is identified with the buttonNumber key in the message object
@@ -50,6 +70,20 @@ NSTimer *checkInterfaceTimer;
         NSNumber *enabled = [messageObject valueForKey:@"connectEnabled"];
         NSString *title = [messageObject valueForKey:@"connectTitle"];
         if (![[number stringValue] isEqualToString:@"0"]) {
+            if ([[number stringValue]  isEqual: @""]) {
+                NSDictionary *requst = @{@"request":@"Refresh"};
+                
+                [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
+                    
+                    if (error) {
+                        NSLog(@"%@", error);
+                    } else {
+                        
+                        NSLog(@"%@",[replyInfo objectForKey:@"response"]);
+                    }
+                    
+                }];
+            }
             _tokenLabel.text = [number stringValue];
         } else {
             _tokenLabel.text = @"...";
