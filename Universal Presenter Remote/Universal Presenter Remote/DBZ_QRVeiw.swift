@@ -17,8 +17,8 @@ class DBZ_QRVeiw: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionActivated:", name:"SessionActivated", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sessionReady:", name:"UpdateInterface", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DBZ_QRVeiw.sessionActivated(_:)), name:"SessionActivated", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DBZ_QRVeiw.sessionReady(_:)), name:"UpdateInterface", object: nil)
     }
 
     override func didReceiveMemoryWarning() {

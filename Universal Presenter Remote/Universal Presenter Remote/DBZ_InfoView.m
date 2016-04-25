@@ -74,7 +74,7 @@
            value:@"Instructions"];
     
     // manual screen tracking
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 @end
