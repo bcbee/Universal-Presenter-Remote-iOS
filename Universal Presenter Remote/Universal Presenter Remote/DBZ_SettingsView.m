@@ -92,7 +92,7 @@ NSDictionary *newpreferences = nil;
            value:@"Settings"];
     
     // manual screen tracking
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)updateInterface:(NSNotification*)notification {

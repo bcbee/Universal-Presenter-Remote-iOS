@@ -87,7 +87,7 @@
            value:@"Control"];
     
     // manual screen tracking
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)close:(NSNotification *)notification {
