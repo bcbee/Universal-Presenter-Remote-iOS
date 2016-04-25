@@ -10,7 +10,6 @@
 #import "DBZ_ServerCommunication.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
-#import "MMWormhole.h"
 #import <AudioToolbox/AudioServices.h>
 
 @implementation DBZ_AppDelegate
@@ -98,8 +97,6 @@ NSDictionary *preferences = nil;
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOn:) name:@"NetworkIndicatorOn" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOff:) name:@"NetworkIndicatorOff" object:nil];
@@ -231,71 +228,5 @@ NSDictionary *preferences = nil;
 - (void)networkIndicatorOff:(NSNotification *)notification {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
-
-/*
-- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
-    
-    NSLog(@"containing app received message from watch");
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Startup"]) {
-        
-        NSDictionary *response = @{@"response" : @"Application Started from Watch"};
-        NSNotification* notification = [NSNotification notificationWithName:@"UpdateInterface" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        
-        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-        
-        [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"apple_watch" action:@"watch_event" label:@"wk_startup" value:nil] build]];
-        
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ConnectSession"]) {
-        
-        NSDictionary *response = @{@"response" : @"Session Connected from Watch"};
-        NSNotification* notification = [NSNotification notificationWithName:@"WatchConnectSession" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"EndSession"]) {
-        
-        NSDictionary *response = @{@"response" : @"Session Ended from Watch"};
-        NSNotification* notification = [NSNotification notificationWithName:@"WatchEndSession" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideUp"]) {
-        
-        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
-        [DBZ_ServerCommunication getResponse:@"SlideUp" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideDown"]) {
-        
-        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
-        [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"ChangeSlideMedia"]) {
-        
-        NSDictionary *response = @{@"response" : @"Slide Changed from Watch"};
-        [DBZ_ServerCommunication getResponse:@"PlayMedia" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
-        reply(response);
-    }
-    
-    if ([[userInfo objectForKey:@"request"] isEqualToString:@"Refresh"]) {
-        
-        NSDictionary *response = @{@"response" : @"Token Refreshed"};
-        NSNotification* notification = [NSNotification notificationWithName:@"WatchRefreshSession" object:nil];
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-        reply(response);
-    }
-    
-}
- */
 
 @end

@@ -13,7 +13,6 @@
 #import "GAI.h"
 #import "GAIFields.h"
 #import "GAIDictionaryBuilder.h"
-#import "MMWormhole.h"
 
 @interface DBZ_LoginView ()
 
@@ -41,8 +40,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchRefreshSession:) name:@"WatchRefreshSession" object:nil];
     UIDevice *currentDevice = [UIDevice currentDevice];
     
     [DBZ_ServerCommunication setupUid];
@@ -157,23 +154,5 @@
         [self performSegueWithIdentifier:@"ControlSegue" sender:self];
     }
 }
-
-/*
-
-- (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText {
-    [self.wormhole passMessageObject:@{@"token" : @(token), @"connectEnabled" : @(connectEnabled), @"connectTitle" : connectText} identifier:@"UPRWatchData"];
-}
-
-- (void)watchConnectSession:(NSNotification *)notification {
-    if (![DBZ_ServerCommunication enabled]) {
-        [self connectSession:nil];
-    }
-}
-
-- (void)watchRefreshSession:(NSNotification *)notification {
-    [DBZ_ServerCommunication setupUid];
-    [DBZ_ServerCommunication checkToken];
-}
- */
 
 @end
