@@ -101,7 +101,6 @@ NSDictionary *preferences = nil;
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(incomingNotification:) name:@"ServerResponse" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOn:) name:@"NetworkIndicatorOn" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOff:) name:@"NetworkIndicatorOff" object:nil];
     
@@ -139,11 +138,6 @@ NSDictionary *preferences = nil;
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-- (void) incomingNotification:(NSNotification *)notification {
-    NSMutableArray *incoming = [notification object];
-    [DBZ_ServerCommunication processResponse:incoming];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
@@ -238,6 +232,7 @@ NSDictionary *preferences = nil;
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
+/*
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply{
     
     NSLog(@"containing app received message from watch");
@@ -301,5 +296,6 @@ NSDictionary *preferences = nil;
     }
     
 }
+ */
 
 @end

@@ -31,6 +31,7 @@
     
     NSDictionary *requst = @{@"request":@"ConnectSession"};
     
+    /*
     [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -39,8 +40,8 @@
             
             NSLog(@"%@",[replyInfo objectForKey:@"response"]);
         }
-        
     }];
+     */
     
     // Become a listener for changes to the wormhole for the button message
     [self.wormhole listenForMessageWithIdentifier:@"UPRWatchAction" listener:^(id messageObject) {
@@ -60,6 +61,7 @@
     
     NSDictionary *requst = @{@"request":@"EndSession"};
     
+    /*
     [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -70,12 +72,14 @@
         }
         
     }];
+     */
 }
 
 - (IBAction)mediaPressed {
     //[self.wormhole passMessageObject:@{@"token" : @(3)} identifier:@"UPRWatchAction"];
     NSDictionary *requst = @{@"request":@"ChangeSlideMedia"};
     
+    /*
     [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -86,11 +90,13 @@
         }
         
     }];
+     */
 }
 
 - (IBAction)nextPressed {
     NSDictionary *requst = @{@"request":@"ChangeSlideUp"};
     
+    /*
     [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -101,12 +107,14 @@
         }
         
     }];
+     */
     
 }
 
 - (IBAction)previousPressed {
     NSDictionary *requst = @{@"request":@"ChangeSlideDown"};
     
+    /*
     [DBZ_WKControlView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -117,6 +125,7 @@
         }
         
     }];
+     */
 }
 
 @end

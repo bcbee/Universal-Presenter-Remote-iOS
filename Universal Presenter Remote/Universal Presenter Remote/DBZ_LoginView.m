@@ -41,8 +41,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchRefreshSession:) name:@"WatchRefreshSession" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchConnectSession:) name:@"WatchConnectSession" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(watchRefreshSession:) name:@"WatchRefreshSession" object:nil];
     UIDevice *currentDevice = [UIDevice currentDevice];
     
     [DBZ_ServerCommunication setupUid];
@@ -67,17 +67,17 @@
         case 0:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Connecting..." forState:UIControlStateDisabled];
-            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Connecting..."];
+            //[self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Connecting..."];
             break;
         case 1:
             [_connectButton setEnabled:NO];
             [_connectButton setTitle:@"Waiting..." forState:UIControlStateDisabled];
-            [self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Waiting..."];
+            //[self updateWatchLogin:inttoken withConnectEnabled:NO withConnectText:@"Waiting..."];
             break;
         case 2:
             [_connectButton setEnabled:YES];
             [_connectButton setTitle:@"Begin" forState:UIControlStateNormal];
-            [self updateWatchLogin:inttoken withConnectEnabled:YES withConnectText:@"Begin"];
+            //[self updateWatchLogin:inttoken withConnectEnabled:YES withConnectText:@"Begin"];
             break;
             
         default:
@@ -129,7 +129,7 @@
            value:@"Login"];
     
     // manual screen tracking
-    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     
@@ -158,6 +158,8 @@
     }
 }
 
+/*
+
 - (void)updateWatchLogin:(int)token withConnectEnabled:(BOOL)connectEnabled withConnectText:(NSString *)connectText {
     [self.wormhole passMessageObject:@{@"token" : @(token), @"connectEnabled" : @(connectEnabled), @"connectTitle" : connectText} identifier:@"UPRWatchData"];
 }
@@ -172,5 +174,6 @@
     [DBZ_ServerCommunication setupUid];
     [DBZ_ServerCommunication checkToken];
 }
+ */
 
 @end

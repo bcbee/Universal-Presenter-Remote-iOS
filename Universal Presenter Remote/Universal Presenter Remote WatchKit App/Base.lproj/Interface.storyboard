@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="15B17c" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Batman.ttf">
@@ -13,7 +13,7 @@
         <!--UPR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView">
+                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginController" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <imageView width="65" height="65" alignment="center" image="WatchLogoOld" id="ELT-Zy-IsQ">
                             <variation key="device=watch42mm" height="90" width="90"/>
@@ -32,8 +32,7 @@
                                 <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
                                     <fontDescription key="font" type="system" pointSize="16"/>
                                     <connections>
-                                        <action selector="connectSession" destination="AgC-eL-Hgc" id="2Zh-t8-zEc"/>
-                                        <segue destination="tyS-3Z-ljt" kind="push" identifier="ConnectSegue" id="8mv-ic-ob5"/>
+                                        <segue destination="tyS-3Z-ljt" kind="push" id="lQU-KY-rpe"/>
                                     </connections>
                                 </button>
                             </items>
@@ -43,23 +42,23 @@
                         <items>
                             <menuItem title="Reload" icon="repeat" id="xSX-zO-dBG">
                                 <connections>
-                                    <action selector="refreshToken" destination="AgC-eL-Hgc" id="aIl-ZM-stG"/>
+                                    <action selector="reloadButton" destination="AgC-eL-Hgc" id="1wV-zz-klI"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Instructions" icon="info" id="NMZ-qU-bK6">
                                 <connections>
-                                    <action selector="openInstructions" destination="AgC-eL-Hgc" id="Juv-1E-ue7"/>
+                                    <action selector="instructionsButton" destination="AgC-eL-Hgc" id="yNq-Jo-dfI"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="connectButton" destination="oti-G0-QRI" id="Fh8-f6-JiH"/>
-                        <outlet property="tokenLabel" destination="hzr-TV-eJ6" id="5iL-FN-Jty"/>
+                        <outlet property="connectButton" destination="oti-G0-QRI" id="OpM-5z-Bsh"/>
+                        <outlet property="tokenLabel" destination="hzr-TV-eJ6" id="177-bj-XVv"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="280"/>
+            <point key="canvasLocation" x="127" y="280"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="cgt-0j-UhQ">

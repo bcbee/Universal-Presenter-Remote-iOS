@@ -7,8 +7,8 @@
 //
 
 #import "DBZ_ServerCommunication.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
+#import "UPR-Swift.h"
+
 
 @implementation DBZ_ServerCommunication
 
@@ -51,31 +51,19 @@ static NSString *apns = @"";
     
     NSLog(@"%@", strURL);
     
+    /*
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     
     [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"upr_cloud" action:@"api_request" label:page value:nil] build]];
+    */
     
-    NSURL *URL = [NSURL URLWithString:[strURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    NSURLRequest *requestURL = [[NSURLRequest alloc] initWithURL:URL];
-    [NSURLConnection sendAsynchronousRequest:requestURL
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
-     {
-         //When Json request complite then call this block
-         result = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-         
-         NSMutableArray *notify = [NSMutableArray arrayWithObjects:page, result,response, nil];
-         NSNotification* notification = [NSNotification notificationWithName:@"ServerResponse" object:notify];
-         [[NSNotificationCenter defaultCenter] postNotification:notification];
-         
-         
-     }];
-    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOn" object:nil]];
+    [DBZ_UniversalNetworking makeRequest:strURL page:page callback:^(NSMutableArray *array) {
+        [self processResponse:array];
+    }];
 }
 
 +(void)processResponse:(NSMutableArray*)webResponse {
     // The one we want to switch on
-    [[NSNotificationCenter defaultCenter] postNotification: [NSNotification notificationWithName:@"NetworkIndicatorOff" object:nil]];
     NSArray *items = @[@"Alive", @"NewSession", @"TempSession", @"JoinSession"];
     NSInteger item = [items indexOfObject:[webResponse objectAtIndex:0]];
     switch (item) {

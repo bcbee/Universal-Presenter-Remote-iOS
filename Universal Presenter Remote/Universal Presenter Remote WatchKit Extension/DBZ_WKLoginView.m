@@ -8,7 +8,7 @@
 
 #import "DBZ_WKLoginView.h"
 #import "MMWormhole.h"
-
+#import "UPR-Swift.h"
 
 @interface DBZ_WKLoginView()
 
@@ -34,6 +34,7 @@ bool firstTime = true;
     
     NSDictionary *requst = @{@"request":@"Startup"};
     
+    /*
     [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -44,10 +45,12 @@ bool firstTime = true;
         }
         
     }];
+     */
     
     if (firstTime) {
         requst = @{@"request":@"Refresh"};
         
+        /*
         [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
             
             if (error) {
@@ -59,6 +62,7 @@ bool firstTime = true;
             
         }];
         firstTime = false;
+         */
     }
     
     
@@ -73,6 +77,7 @@ bool firstTime = true;
             if ([[number stringValue]  isEqual: @""]) {
                 NSDictionary *requst = @{@"request":@"Refresh"};
                 
+                /*
                 [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
                     
                     if (error) {
@@ -83,6 +88,7 @@ bool firstTime = true;
                     }
                     
                 }];
+                 */
             }
             _tokenLabel.text = [number stringValue];
         } else {
@@ -110,6 +116,7 @@ bool firstTime = true;
     
     NSDictionary *requst = @{@"request":@"Startup"};
     
+    /*
     [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -120,11 +127,13 @@ bool firstTime = true;
         }
         
     }];
+    */
 }
 
 - (IBAction)refreshToken {
     NSDictionary *requst = @{@"request":@"Refresh"};
     
+    /*
     [DBZ_WKLoginView openParentApplication:requst reply:^(NSDictionary *replyInfo, NSError *error) {
         
         if (error) {
@@ -135,6 +144,7 @@ bool firstTime = true;
         }
         
     }];
+     */
 }
 
 - (IBAction)openInstructions {

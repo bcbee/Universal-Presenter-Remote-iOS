@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void)incomingNotification:(NSNotification *)notification;
 - (void)networkIndicatorOn:(NSNotification *)notification;
 - (void)networkIndicatorOff:(NSNotification *)notification;
 
