@@ -5,6 +5,8 @@
 
 target 'Universal Presenter Remote' do
   pod 'Google/Analytics'
+  pod 'Fabric'
+  pod 'Crashlytics'
 end
 
 target 'Universal Presenter RemoteTests' do

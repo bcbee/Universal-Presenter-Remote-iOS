@@ -470,6 +470,7 @@
 				B3DAF9FD1CCE6E5200E06E2C /* Embed Watch Content */,
 				9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */,
 				F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */,
+				B384129E1CCEE2B6000419B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -736,6 +737,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B384129E1CCEE2B6000419B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7dcc047a1fe1e378ae201e5a4387ecc463fb6f0d 0a9263a6abe517d7830660774b7ebecbacf4e0d4ffa9f4368baab008c554c842";
 		};
 		EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

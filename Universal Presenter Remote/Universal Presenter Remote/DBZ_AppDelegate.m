@@ -10,6 +10,9 @@
 #import "DBZ_ServerCommunication.h"
 #import <Google/Analytics.h>
 #import <AudioToolbox/AudioServices.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @implementation DBZ_AppDelegate
 
@@ -18,6 +21,7 @@ NSDictionary *preferences = nil;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    [Fabric with:@[[Crashlytics class]]];
     
     //Google Analytics
     
