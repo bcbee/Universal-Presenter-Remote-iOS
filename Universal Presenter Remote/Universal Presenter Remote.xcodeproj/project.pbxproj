@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3063AEB1AB655E500285BE4 /* DBZ_WKLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3063AEA1AB655E500285BE4 /* DBZ_WKLoginView.m */; };
+		82A1E233AA3B2CF322F8569D /* libPods-Universal Presenter RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04069DCBBA371C05B90A8220 /* libPods-Universal Presenter RemoteTests.a */; };
 		B3063AEE1AB6560300285BE4 /* DBZ_WKControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */; };
 		B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D1521A097829002F59AB /* AdSupport.framework */; };
 		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
@@ -20,17 +20,12 @@
 		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
+		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
 		B3A523121CCE93F5005CB862 /* DBZ_WKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
-		B3B6E3251AE861700079C95D /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3B6E3171AE861700079C95D /* Changelog.txt */; };
-		B3B6E3261AE861700079C95D /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B6E3221AE861700079C95D /* libAdIdAccess.a */; };
-		B3B6E3271AE861700079C95D /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B6E3231AE861700079C95D /* libGoogleAnalyticsServices.a */; };
-		B3B6E3281AE861700079C95D /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = B3B6E3241AE861700079C95D /* Readme.txt */; };
-		B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
-		B3C820E81AB627E000CD3438 /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C820E61AB627E000CD3438 /* MMWormhole.m */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
@@ -41,6 +36,9 @@
 		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
 		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
 		B3F585461BB4FA1300BC67A2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */; };
+		BB26DCC03E22F57AFFDEBCE1 /* libPods-Universal Presenter Remote WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4271B0079B7ED9A6D19315A /* libPods-Universal Presenter Remote WatchKit Extension.a */; };
+		C5A116A075DCB196028C2F68 /* libPods-Universal Presenter Remote WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278471F90B4B9B8FEA6D5971 /* libPods-Universal Presenter Remote WatchKit App.a */; };
+		DE3C237A45022B5715EFA054 /* libPods-Universal Presenter Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDFB52417B83BCD203EAADE /* libPods-Universal Presenter Remote.a */; };
 		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
 		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
 		ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED35B95D1901BC830074B424 /* iAd.framework */; };
@@ -107,9 +105,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04069DCBBA371C05B90A8220 /* libPods-Universal Presenter RemoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Presenter RemoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.debug.xcconfig"; sourceTree = "<group>"; };
+		278471F90B4B9B8FEA6D5971 /* libPods-Universal Presenter Remote WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Presenter Remote WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EB38FA3462B33AEA9820EF7 /* Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		323E9D81231DC3FC6DC89FE4 /* Pods-Universal Presenter RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter RemoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AE70BF962D81DB66CD81D63 /* Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		5B67BE6C1C3C25F659B0C16D /* Pods-Universal Presenter RemoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter RemoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9DDFB52417B83BCD203EAADE /* libPods-Universal Presenter Remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Presenter Remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		A4271B0079B7ED9A6D19315A /* libPods-Universal Presenter Remote WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Presenter Remote WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		B3063AE91AB655E500285BE4 /* DBZ_WKLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_WKLoginView.h; sourceTree = "<group>"; };
-		B3063AEA1AB655E500285BE4 /* DBZ_WKLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_WKLoginView.m; sourceTree = "<group>"; };
 		B3063AEC1AB6560300285BE4 /* DBZ_WKControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_WKControlView.h; sourceTree = "<group>"; };
 		B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_WKControlView.m; sourceTree = "<group>"; };
 		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -123,25 +129,10 @@
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
+		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UniversalNetworking.swift; sourceTree = "<group>"; };
 		B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginController.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B3B6E3171AE861700079C95D /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
-		B3B6E3181AE861700079C95D /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		B3B6E3191AE861700079C95D /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		B3B6E31A1AE861700079C95D /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
-		B3B6E31B1AE861700079C95D /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		B3B6E31C1AE861700079C95D /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		B3B6E31D1AE861700079C95D /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		B3B6E31E1AE861700079C95D /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		B3B6E31F1AE861700079C95D /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		B3B6E3201AE861700079C95D /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		B3B6E3211AE861700079C95D /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
-		B3B6E3221AE861700079C95D /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
-		B3B6E3231AE861700079C95D /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		B3B6E3241AE861700079C95D /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
-		B3C820E51AB627E000CD3438 /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
-		B3C820E61AB627E000CD3438 /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -158,6 +149,8 @@
 		B3E35D191A094D530099DCD4 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
 		B3E35D1A1A094D530099DCD4 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
 		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C57979CFDFF59AD98982A0C0 /* Pods-Universal Presenter Remote WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.release.xcconfig"; sourceTree = "<group>"; };
 		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
 		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
@@ -183,10 +176,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		90A29AD1ABBC25EE41C2152D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5A116A075DCB196028C2F68 /* libPods-Universal Presenter Remote WatchKit App.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3C968B01AB20B44000819E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB26DCC03E22F57AFFDEBCE1 /* libPods-Universal Presenter Remote WatchKit Extension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,13 +200,12 @@
 				B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */,
 				B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */,
 				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
-				B3B6E3271AE861700079C95D /* libGoogleAnalyticsServices.a in Frameworks */,
 				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
-				B3B6E3261AE861700079C95D /* libAdIdAccess.a in Frameworks */,
 				ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */,
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
+				DE3C237A45022B5715EFA054 /* libPods-Universal Presenter Remote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,52 +215,36 @@
 			files = (
 				ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D60418FF17E1007B4C18 /* Foundation.framework in Frameworks */,
+				82A1E233AA3B2CF322F8569D /* libPods-Universal Presenter RemoteTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		478E595EF3DA780530ADB104 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */,
+				E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */,
+				A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */,
+				C57979CFDFF59AD98982A0C0 /* Pods-Universal Presenter Remote WatchKit App.release.xcconfig */,
+				2EB38FA3462B33AEA9820EF7 /* Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig */,
+				5AE70BF962D81DB66CD81D63 /* Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig */,
+				5B67BE6C1C3C25F659B0C16D /* Pods-Universal Presenter RemoteTests.debug.xcconfig */,
+				323E9D81231DC3FC6DC89FE4 /* Pods-Universal Presenter RemoteTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3063AE91AB655E500285BE4 /* DBZ_WKLoginView.h */,
-				B3063AEA1AB655E500285BE4 /* DBZ_WKLoginView.m */,
 				B3063AEC1AB6560300285BE4 /* DBZ_WKControlView.h */,
 				B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */,
 				B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */,
 			);
 			name = WatchApp;
-			sourceTree = "<group>";
-		};
-		B3B6E3161AE861700079C95D /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				B3B6E3171AE861700079C95D /* Changelog.txt */,
-				B3B6E3181AE861700079C95D /* GAI.h */,
-				B3B6E3191AE861700079C95D /* GAIDictionaryBuilder.h */,
-				B3B6E31A1AE861700079C95D /* GAIEcommerceFields.h */,
-				B3B6E31B1AE861700079C95D /* GAIEcommerceProduct.h */,
-				B3B6E31C1AE861700079C95D /* GAIEcommerceProductAction.h */,
-				B3B6E31D1AE861700079C95D /* GAIEcommercePromotion.h */,
-				B3B6E31E1AE861700079C95D /* GAIFields.h */,
-				B3B6E31F1AE861700079C95D /* GAILogger.h */,
-				B3B6E3201AE861700079C95D /* GAITrackedViewController.h */,
-				B3B6E3211AE861700079C95D /* GAITracker.h */,
-				B3B6E3221AE861700079C95D /* libAdIdAccess.a */,
-				B3B6E3231AE861700079C95D /* libGoogleAnalyticsServices.a */,
-				B3B6E3241AE861700079C95D /* Readme.txt */,
-			);
-			path = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
-		B3C820E41AB627E000CD3438 /* MMWormhole */ = {
-			isa = PBXGroup;
-			children = (
-				B3C820E51AB627E000CD3438 /* MMWormhole.h */,
-				B3C820E61AB627E000CD3438 /* MMWormhole.m */,
-			);
-			path = MMWormhole;
 			sourceTree = "<group>";
 		};
 		B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */ = {
@@ -316,14 +301,14 @@
 			isa = PBXGroup;
 			children = (
 				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
-				B3B6E3161AE861700079C95D /* GoogleAnalytics */,
+				B384129C1CCEE122000419B7 /* GoogleService-Info.plist */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
 				ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */,
 				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
 				ED70D5E718FF17E0007B4C18 /* Products */,
-				B3C820E41AB627E000CD3438 /* MMWormhole */,
+				478E595EF3DA780530ADB104 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,6 +336,10 @@
 				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
 				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
 				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
+				9DDFB52417B83BCD203EAADE /* libPods-Universal Presenter Remote.a */,
+				278471F90B4B9B8FEA6D5971 /* libPods-Universal Presenter Remote WatchKit App.a */,
+				A4271B0079B7ED9A6D19315A /* libPods-Universal Presenter Remote WatchKit Extension.a */,
+				04069DCBBA371C05B90A8220 /* libPods-Universal Presenter RemoteTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,9 +423,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */;
 			buildPhases = (
+				7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */,
 				B3C968AF1AB20B44000819E0 /* Sources */,
 				B3C968B01AB20B44000819E0 /* Frameworks */,
 				B3C968B11AB20B44000819E0 /* Resources */,
+				87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */,
+				7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,8 +443,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */;
 			buildPhases = (
+				770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */,
 				B3C968BE1AB20B44000819E0 /* Resources */,
 				B3DAF9FC1CCE6E5200E06E2C /* Embed App Extensions */,
+				90A29AD1ABBC25EE41C2152D /* Frameworks */,
+				307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -468,10 +463,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
 			buildPhases = (
+				FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */,
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
 				B3DAF9FD1CCE6E5200E06E2C /* Embed Watch Content */,
+				9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */,
+				F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -487,9 +485,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */;
 			buildPhases = (
+				72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */,
 				ED70D5FD18FF17E1007B4C18 /* Sources */,
 				ED70D5FE18FF17E1007B4C18 /* Frameworks */,
 				ED70D5FF18FF17E1007B4C18 /* Resources */,
+				7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */,
+				EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -601,8 +602,7 @@
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
 				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
 				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
-				B3B6E3251AE861700079C95D /* Changelog.txt in Resources */,
-				B3B6E3281AE861700079C95D /* Readme.txt in Resources */,
+				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +616,174 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B3C968AF1AB20B44000819E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -623,8 +791,6 @@
 			files = (
 				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */,
 				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
-				B3063AEB1AB655E500285BE4 /* DBZ_WKLoginView.m in Sources */,
-				B3C820E81AB627E000CD3438 /* MMWormhole.m in Sources */,
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginController.swift in Sources */,
 				B3063AEE1AB6560300285BE4 /* DBZ_WKControlView.m in Sources */,
@@ -642,7 +808,6 @@
 				B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */,
 				B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
-				B3C820E71AB627E000CD3438 /* MMWormhole.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
 				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
 				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
@@ -715,6 +880,7 @@
 /* Begin XCBuildConfiguration section */
 		B3C968CF1AB20B44000819E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB38FA3462B33AEA9820EF7 /* Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
@@ -749,6 +915,7 @@
 		};
 		B3C968D01AB20B44000819E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AE70BF962D81DB66CD81D63 /* Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
@@ -779,6 +946,7 @@
 		};
 		B3C968D11AB20B44000819E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconOld;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -803,6 +971,7 @@
 		};
 		B3C968D21AB20B44000819E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C57979CFDFF59AD98982A0C0 /* Pods-Universal Presenter Remote WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconOld;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -897,6 +1066,7 @@
 		};
 		ED70D61318FF17E1007B4C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -905,7 +1075,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
@@ -928,6 +1098,7 @@
 		};
 		ED70D61418FF17E1007B4C18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -936,7 +1107,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
@@ -958,6 +1129,7 @@
 		};
 		ED70D61618FF17E1007B4C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B67BE6C1C3C25F659B0C16D /* Pods-Universal Presenter RemoteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
@@ -985,6 +1157,7 @@
 		};
 		ED70D61718FF17E1007B4C18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 323E9D81231DC3FC6DC89FE4 /* Pods-Universal Presenter RemoteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";

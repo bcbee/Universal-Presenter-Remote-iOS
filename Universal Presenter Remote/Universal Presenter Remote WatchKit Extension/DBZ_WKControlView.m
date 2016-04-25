@@ -7,7 +7,6 @@
 //
 
 #import "DBZ_WKControlView.h"
-#import "MMWormhole.h"
 #import "DBZ_ServerCommunication.h"
 
 @interface DBZ_WKControlView()
@@ -27,7 +26,7 @@
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
     
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
+    //self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
     
     NSDictionary *requst = @{@"request":@"ConnectSession"};
     
@@ -41,7 +40,7 @@
             NSLog(@"%@",[replyInfo objectForKey:@"response"]);
         }
     }];
-     */
+     
     
     // Become a listener for changes to the wormhole for the button message
     [self.wormhole listenForMessageWithIdentifier:@"UPRWatchAction" listener:^(id messageObject) {
@@ -51,6 +50,7 @@
             [self popToRootController];
         }
     }];
+     */
     
     
 }

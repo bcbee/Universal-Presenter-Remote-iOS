@@ -8,8 +8,7 @@
 
 #import "DBZ_AppDelegate.h"
 #import "DBZ_ServerCommunication.h"
-#import "GAI.h"
-#import "GAIDictionaryBuilder.h"
+#import <Google/Analytics.h>
 #import <AudioToolbox/AudioServices.h>
 
 @implementation DBZ_AppDelegate
@@ -22,24 +21,15 @@ NSDictionary *preferences = nil;
     
     //Google Analytics
     
-    // Add registration for remote notifications
-    //-- Set Notification
-    // Optional: automatically send uncaught exceptions to Google Analytics.
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
     
-    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
-    [GAI sharedInstance].dispatchInterval = 20;
-    
-    // Optional: set Logger to VERBOSE for debug information.
-    //[[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
-    
-    // Initialize tracker. Replace with your tracking ID.
-    [[GAI sharedInstance] trackerWithTrackingId:@"UA-50792115-1"];
-    
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    
-    // Enable IDFA collection.
-    tracker.allowIDFACollection = YES;
+    // Optional: configure GAI options.
+    GAI *gai = [GAI sharedInstance];
+    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
     
     //End Google Aanlytics
     

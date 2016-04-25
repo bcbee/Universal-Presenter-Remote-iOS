@@ -9,9 +9,7 @@
 #import "DBZ_InfoView.h"
 #import <iAd/iAd.h>
 
-#import "GAI.h"
-#import "GAIFields.h"
-#import "GAIDictionaryBuilder.h"
+#import <Google/Analytics.h>
 
 @interface DBZ_InfoView ()
 
@@ -64,16 +62,8 @@
 {
     [super viewDidAppear:animated];
     
-    // returns the same tracker you created in your app delegate
-    // defaultTracker originally declared in AppDelegate.m
-    id tracker = [[GAI sharedInstance] defaultTracker];
-    
-    // This screen name value will remain set on the tracker and sent with
-    // hits until it is set to a new value or to nil.
-    [tracker set:kGAIScreenName
-           value:@"Instructions"];
-    
-    // manual screen tracking
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Instructions"];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 

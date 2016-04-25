@@ -10,9 +10,7 @@
 #import "DBZ_ServerCommunication.h"
 #import <iAd/iAd.h>
 
-#import "GAI.h"
-#import "GAIFields.h"
-#import "GAIDictionaryBuilder.h"
+#import <Google/Analytics.h>
 
 @interface DBZ_ControlView ()
 
@@ -34,7 +32,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.canDisplayBannerAds = YES;
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close:) name:@"WatchEndSession" object:nil];
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
@@ -66,8 +63,6 @@
         [DBZ_ServerCommunication endSession];
     }
     
-    [self.wormhole passMessageObject:@{@"action" : @"EndSession"} identifier:@"UPRWatchAction"];
-    
     [super viewWillDisappear:animated];
 }
 
@@ -75,16 +70,8 @@
 {
     [super viewDidAppear:animated];
     
-    // returns the same tracker you created in your app delegate
-    // defaultTracker originally declared in AppDelegate.m
-    id tracker = [[GAI sharedInstance] defaultTracker];
-    
-    // This screen name value will remain set on the tracker and sent with
-    // hits until it is set to a new value or to nil.
-    [tracker set:kGAIScreenName
-           value:@"Control"];
-    
-    // manual screen tracking
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Control"];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 

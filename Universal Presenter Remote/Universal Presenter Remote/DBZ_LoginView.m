@@ -10,9 +10,7 @@
 #import "DBZ_ServerCommunication.h"
 #import <iAd/iAd.h>
 
-#import "GAI.h"
-#import "GAIFields.h"
-#import "GAIDictionaryBuilder.h"
+#import <Google/Analytics.h>
 
 @interface DBZ_LoginView ()
 
@@ -32,8 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.wormhole = [[MMWormhole alloc] initWithApplicationGroupIdentifier:@"group.com.dbztech.Universal-Presenter-Remote.wormhole" optionalDirectory:@"wormhole"];
     self.canDisplayBannerAds = YES;
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"UpdateInterface" object:nil];
@@ -116,16 +112,8 @@
 {
     [super viewDidAppear:animated];
     
-    // returns the same tracker you created in your app delegate
-    // defaultTracker originally declared in AppDelegate.m
-    id tracker = [[GAI sharedInstance] defaultTracker];
-    
-    // This screen name value will remain set on the tracker and sent with
-    // hits until it is set to a new value or to nil.
-    [tracker set:kGAIScreenName
-           value:@"Login"];
-    
-    // manual screen tracking
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Login"];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
@@ -146,7 +134,6 @@
     NSDictionary *preferences = [ud objectForKey:@"preferences"];
     
     [DBZ_ServerCommunication startSession];
-    [self.wormhole passMessageObject:@{@"action" : @"StartSession"} identifier:@"UPRWatchAction"];
     
     if ([[preferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
         [self performSegueWithIdentifier:@"SwipeControlSegue" sender:self];
