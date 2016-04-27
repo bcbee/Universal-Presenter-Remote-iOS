@@ -28,7 +28,6 @@
 +(void)checkTokenCallback:(NSString*)response;
 +(void)newTokenCallback:(NSString*)response;
 +(void)updateInterface;
-+(void)connectSetup;
 +(void)setupApns:(NSString*)deviceToken;
 +(void)activateSession:(NSString*)targetToken;
 +(void)startSession;

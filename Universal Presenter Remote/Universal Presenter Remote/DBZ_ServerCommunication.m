@@ -31,7 +31,6 @@ static NSString *apns = @"";
 +(bool)enabled { return  enabled; }
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken {
-    __block NSString *result;
     NSString *strURL= [NSString stringWithFormat:@"%@/%@", serverAddress, page];
     if (requestToken > 99999) {
         strURL = [NSString stringWithFormat:@"%@?token=%d", strURL, requestToken];
@@ -137,10 +136,6 @@ static NSString *apns = @"";
     [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
-+(void)connectSetup {
-    token = temptoken;
-}
-
 +(void)setupApns:(NSString *)deviceToken {
     NSString *token = [[[[deviceToken description]stringByReplacingOccurrencesOfString:@"<"withString:@""]stringByReplacingOccurrencesOfString:@">" withString:@""]stringByReplacingOccurrencesOfString: @" " withString: @""];
     apns = token;
@@ -152,6 +147,7 @@ static NSString *apns = @"";
 }
 
 +(void)startSession {
+    token = temptoken;
     enabled = YES;
 }
 
