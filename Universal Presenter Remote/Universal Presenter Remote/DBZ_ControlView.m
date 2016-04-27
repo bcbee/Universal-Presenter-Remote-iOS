@@ -9,6 +9,8 @@
 #import "DBZ_ControlView.h"
 #import "DBZ_ServerCommunication.h"
 #import <iAd/iAd.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 #import <Google/Analytics.h>
 
@@ -36,6 +38,9 @@
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
+    
+    [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
+
 }
 
 - (void)didReceiveMemoryWarning
