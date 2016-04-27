@@ -21,6 +21,7 @@ NSDictionary *preferences = nil;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    //[[Fabric sharedSDK] setDebug: YES];
     [Fabric with:@[[Crashlytics class]]];
     
     //Google Analytics
@@ -33,7 +34,7 @@ NSDictionary *preferences = nil;
     // Optional: configure GAI options.
     GAI *gai = [GAI sharedInstance];
     gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
-    gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
+    //gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
     
     //End Google Aanlytics
     
@@ -90,7 +91,7 @@ NSDictionary *preferences = nil;
     //Push Notifications
     
     [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOn:) name:@"NetworkIndicatorOn" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkIndicatorOff:) name:@"NetworkIndicatorOff" object:nil];
@@ -99,6 +100,10 @@ NSDictionary *preferences = nil;
     return YES;
     
     //End Push Notifications
+}
+
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

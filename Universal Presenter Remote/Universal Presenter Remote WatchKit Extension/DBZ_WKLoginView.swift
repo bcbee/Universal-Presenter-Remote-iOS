@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class DBZ_WKLoginController: WKInterfaceController {
+class DBZ_WKLoginView: WKInterfaceController {
 
     @IBOutlet var tokenLabel: WKInterfaceLabel!
     @IBOutlet var connectButton: WKInterfaceButton!
@@ -52,7 +52,7 @@ class DBZ_WKLoginController: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 //refreshTimer = NSTimer(timeInterval: 2.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: true)
-                refreshTimer = NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: true)
+                refreshTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: false)
                 break
             case 2:
                 //Button Begin YES
@@ -81,5 +81,9 @@ class DBZ_WKLoginController: WKInterfaceController {
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
         DBZ_ServerCommunication.checkToken()
+    }
+    
+    @IBAction func connectButtonPressed() {
+        DBZ_ServerCommunication.startSession()
     }
 }

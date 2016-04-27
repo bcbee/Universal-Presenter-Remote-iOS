@@ -88,7 +88,6 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"ControlSegue"] || [[segue identifier] isEqualToString:@"SwipeControlSegue"] || [[segue identifier] isEqualToString:@"SettingsSegue"])
     {
-        [DBZ_ServerCommunication connectSetup];
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"mplus-1c-regular" size:21],  NSFontAttributeName, nil]];
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     }

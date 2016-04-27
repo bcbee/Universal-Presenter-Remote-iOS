@@ -3,16 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		82A1E233AA3B2CF322F8569D /* libPods-Universal Presenter RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04069DCBBA371C05B90A8220 /* libPods-Universal Presenter RemoteTests.a */; };
-		B3063AEE1AB6560300285BE4 /* DBZ_WKControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */; };
 		B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D1521A097829002F59AB /* AdSupport.framework */; };
 		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
 		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
-		B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC619B41EA700CC471C /* libz.dylib */; };
 		B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B67151AB7950D00D2C728 /* Unified.storyboard */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
@@ -21,10 +19,11 @@
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
 		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
+		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
-		B3A523121CCE93F5005CB862 /* DBZ_WKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */; };
+		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
@@ -35,7 +34,6 @@
 		B3DAF9FB1CCE6E5200E06E2C /* Universal Presenter Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
 		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
 		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
-		B3F585461BB4FA1300BC67A2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */; };
 		BB26DCC03E22F57AFFDEBCE1 /* libPods-Universal Presenter Remote WatchKit Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4271B0079B7ED9A6D19315A /* libPods-Universal Presenter Remote WatchKit Extension.a */; };
 		C5A116A075DCB196028C2F68 /* libPods-Universal Presenter Remote WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 278471F90B4B9B8FEA6D5971 /* libPods-Universal Presenter Remote WatchKit App.a */; };
 		DE3C237A45022B5715EFA054 /* libPods-Universal Presenter Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DDFB52417B83BCD203EAADE /* libPods-Universal Presenter Remote.a */; };
@@ -116,8 +114,6 @@
 		A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		A4271B0079B7ED9A6D19315A /* libPods-Universal Presenter Remote WatchKit Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Universal Presenter Remote WatchKit Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		B3063AEC1AB6560300285BE4 /* DBZ_WKControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_WKControlView.h; sourceTree = "<group>"; };
-		B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_WKControlView.m; sourceTree = "<group>"; };
 		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B3257AC219B41E8D00CC471C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -130,8 +126,10 @@
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
 		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKControlView.swift; sourceTree = "<group>"; };
+		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UniversalNetworking.swift; sourceTree = "<group>"; };
-		B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginController.swift; sourceTree = "<group>"; };
+		B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginView.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,9 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F585461BB4FA1300BC67A2 /* libsqlite3.tbd in Frameworks */,
 				B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */,
-				B3257ACA19B423CC00CC471C /* libz.dylib in Frameworks */,
 				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
 				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
 				ED35B95E1901BC830074B424 /* iAd.framework in Frameworks */,
@@ -240,9 +236,8 @@
 		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
-				B3063AEC1AB6560300285BE4 /* DBZ_WKControlView.h */,
-				B3063AED1AB6560300285BE4 /* DBZ_WKControlView.m */,
-				B3A523101CCE93F5005CB862 /* DBZ_WKLoginController.swift */,
+				B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */,
+				B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */,
 			);
 			name = WatchApp;
 			sourceTree = "<group>";
@@ -326,6 +321,7 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B38412A11CD135B6000419B7 /* libz.tbd */,
 				B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */,
 				B318D1521A097829002F59AB /* AdSupport.framework */,
 				B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */,
@@ -553,7 +549,7 @@
 				};
 			};
 			buildConfigurationList = ED70D5E118FF17E0007B4C18 /* Build configuration list for PBXProject "Universal Presenter Remote" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -806,8 +802,8 @@
 				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */,
 				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
-				B3A523121CCE93F5005CB862 /* DBZ_WKLoginController.swift in Sources */,
-				B3063AEE1AB6560300285BE4 /* DBZ_WKControlView.m in Sources */,
+				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
+				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,9 +894,8 @@
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -916,7 +911,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4cc8f258-c3f9-48d7-8abf-2986985c1caf";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
@@ -933,9 +928,8 @@
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
@@ -948,7 +942,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "cdfa52c0-7b6c-43ac-b419-a38498adff81";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
@@ -962,9 +956,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconOld;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -976,6 +970,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4a0efde5-080e-430e-b785-6685aa35a498";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -987,9 +982,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C57979CFDFF59AD98982A0C0 /* Pods-Universal Presenter Remote WatchKit App.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconOld;
+				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				COPY_PHASE_STRIP = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -998,6 +993,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9471bbd3-7eab-4980-9fa0-cff58efdfdc5";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1021,7 +1017,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1038,8 +1034,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1061,7 +1058,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1071,7 +1068,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1086,8 +1084,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1102,7 +1099,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1118,8 +1115,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1134,7 +1130,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				WRAPPER_EXTENSION = app;
@@ -1147,7 +1143,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1163,7 +1158,7 @@
 				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ca3b0ce2-9f1e-4a3f-81e6-f2b90935ce4a";
+				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1175,7 +1170,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
