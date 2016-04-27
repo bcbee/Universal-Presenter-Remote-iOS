@@ -27,6 +27,8 @@ class DBZ_WKLoginView: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        connectButton.setEnabled(false)
+        
         DBZ_ServerCommunication.setupUid()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(refreshInterface), name: "Refresh", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateInterface), name: "UpdateInterface", object: nil)
@@ -58,6 +60,7 @@ class DBZ_WKLoginView: WKInterfaceController {
                 //Button Begin YES
                 connectButton.setEnabled(true)
                 connectButton.setTitle("Begin")
+                DBZ_ServerCommunication.startSession()
                 refreshTimer.invalidate()
                 break
             default:
@@ -80,10 +83,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
+        tokenLabel.setText("...")
         DBZ_ServerCommunication.checkToken()
-    }
-    
-    @IBAction func connectButtonPressed() {
-        DBZ_ServerCommunication.startSession()
     }
 }

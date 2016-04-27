@@ -31,9 +31,18 @@ static NSString *apns = @"";
 +(bool)enabled { return  enabled; }
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken {
+    
     NSString *strURL= [NSString stringWithFormat:@"%@/%@", serverAddress, page];
+    
+    bool processRequest = true;
+    
     if (requestToken > 99999) {
         strURL = [NSString stringWithFormat:@"%@?token=%d", strURL, requestToken];
+    } else {
+        if (![page  isEqual: @"NewSession"]) {
+            [self getResponse:@"NewSession" withToken:0 withHoldfor:NO withDeviceToken:NO withTarget:nil];
+            processRequest = false;
+        }
     }
     
     if (holdfor) {
@@ -48,17 +57,13 @@ static NSString *apns = @"";
         strURL = [NSString stringWithFormat:@"%@&target=%@", strURL, targetToken];
     }
     
-    NSLog(@"%@", strURL);
+    if (processRequest) {
+        NSLog(@"%@", strURL);
+        [DBZ_UniversalNetworking makeRequest:strURL page:page callback:^(NSMutableArray *array) {
+            [self processResponse:array];
+        }];
+    }
     
-    /*
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"upr_cloud" action:@"api_request" label:page value:nil] build]];
-    */
-    
-    [DBZ_UniversalNetworking makeRequest:strURL page:page callback:^(NSMutableArray *array) {
-        [self processResponse:array];
-    }];
 }
 
 +(void)processResponse:(NSMutableArray*)webResponse {

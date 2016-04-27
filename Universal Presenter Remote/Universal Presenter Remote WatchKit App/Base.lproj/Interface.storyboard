@@ -32,7 +32,6 @@
                                 <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
                                     <fontDescription key="font" type="system" pointSize="16"/>
                                     <connections>
-                                        <action selector="connectButtonPressed" destination="AgC-eL-Hgc" id="uWm-mH-YJx"/>
                                         <segue destination="tyS-3Z-ljt" kind="push" id="lQU-KY-rpe"/>
                                     </connections>
                                 </button>
