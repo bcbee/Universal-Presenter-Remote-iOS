@@ -23,7 +23,7 @@ NSDictionary *newpreferences = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.canDisplayBannerAds = YES;
+    //self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"PreferenceUpdate" object:nil];
     [self updateInterface:nil];
     
@@ -59,11 +59,7 @@ NSDictionary *newpreferences = nil;
             controlMode = @"Buttons";
             break;
         case 2:
-            if ([self has3DTouch]) {
-                controlMode = @"3D Touch";
-            } else {
-                controlMode = @"Swipe";
-            }
+            controlMode = @"3D Touch";
             break;
         default:
             controlMode = @"Swipe";

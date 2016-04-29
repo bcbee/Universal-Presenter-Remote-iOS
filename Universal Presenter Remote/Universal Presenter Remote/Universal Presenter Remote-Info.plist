@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.1</string>
+	<string>4.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>3</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
@@ -40,31 +40,6 @@
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <!--
-	<key>UIApplicationShortcutItems</key>
-	<array>
-		<dict>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict/>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeBookmark</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Open Instructions</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenInstructions</string>
-		</dict>
-		<dict>
-			<key>UIApplicationShortcutItemUserInfo</key>
-			<dict/>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeConfirmation</string>
-			<key>UIApplicationShortcutItemTitle</key>
-			<string>Settings</string>
-			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).OpenSettings</string>
-		</dict>
-	</array>
-     -->
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
