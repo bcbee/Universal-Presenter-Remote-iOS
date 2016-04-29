@@ -8,6 +8,8 @@
 
 #import "DBZ_AppDelegate.h"
 #import "DBZ_ServerCommunication.h"
+#import "UPR-Swift.h"
+#import "DBZ_InfoView.h"
 #import <Google/Analytics.h>
 #import <AudioToolbox/AudioServices.h>
 #import <Fabric/Fabric.h>
@@ -59,9 +61,9 @@ NSDictionary *preferences = nil;
     } else {
         NSLog(@"New Preferences Generated");
         NSString *instructions = @"Disabled";
-        NSString *swipe = @"Enabled";
+        NSString *controlMode = @"Swipe";
         
-        preferences = [NSDictionary dictionaryWithObjectsAndKeys: instructions, @"Instructions", swipe, @"SwipeControl", nil];
+        preferences = [NSDictionary dictionaryWithObjectsAndKeys: instructions, @"Instructions", controlMode, @"ControlMode", nil];
         [self savePreferences];
         
         firstime = YES;
@@ -153,6 +155,11 @@ NSDictionary *preferences = nil;
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"Fail to register for remote notifications: %@", error);
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    NSLog(@"Quick Launch Action!");
+    DBZ_UPRGlobal.viewToOpen = shortcutItem.type;
 }
 
 - (void)updateKVStoreItems:(NSNotification*)notification {

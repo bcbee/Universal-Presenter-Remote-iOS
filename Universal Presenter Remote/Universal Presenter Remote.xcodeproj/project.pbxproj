@@ -24,6 +24,11 @@
 		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
 		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
+		B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */; };
+		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
+		B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
+		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
+		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
@@ -130,6 +135,11 @@
 		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UniversalNetworking.swift; sourceTree = "<group>"; };
 		B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginView.swift; sourceTree = "<group>"; };
+		B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlContainerView.swift; sourceTree = "<group>"; };
+		B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UPRGlobal.swift; sourceTree = "<group>"; };
+		B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_BaseViewController.h; sourceTree = "<group>"; };
+		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_BaseViewController.m; sourceTree = "<group>"; };
+		B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ForceTouchView.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,6 +298,7 @@
 				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
 				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
 				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
+				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -408,6 +419,10 @@
 				B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */,
 				B3E35D191A094D530099DCD4 /* igViewController.h */,
 				B3E35D1A1A094D530099DCD4 /* igViewController.m */,
+				B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */,
+				B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */,
+				B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */,
+				B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -804,6 +819,7 @@
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
 				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
+				B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,10 +831,14 @@
 				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
 				B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */,
 				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
+				B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */,
+				B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */,
 				B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */,
 				B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
+				B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */,
+				B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */,
 				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
 				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
 			);
@@ -1081,7 +1101,6 @@
 			baseConfigurationReference = 1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
@@ -1112,7 +1131,6 @@
 			baseConfigurationReference = E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";

@@ -12,6 +12,9 @@
 
 - (IBAction)close:(id)sender;
 - (IBAction)updatePreferences:(id)sender;
+
+- (bool)has3DTouch;
+
 @property (weak, nonatomic) IBOutlet UISegmentedControl *instructionControl;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *swipeControl;
 

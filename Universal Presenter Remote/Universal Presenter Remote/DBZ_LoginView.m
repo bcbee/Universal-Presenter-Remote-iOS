@@ -86,7 +86,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"ControlSegue"] || [[segue identifier] isEqualToString:@"SwipeControlSegue"] || [[segue identifier] isEqualToString:@"SettingsSegue"])
+    if ([[segue identifier] isEqualToString:@"ControlSegue"] || [[segue identifier] isEqualToString:@"SettingsSegue"])
     {
         [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"mplus-1c-regular" size:21],  NSFontAttributeName, nil]];
         [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
@@ -126,19 +126,6 @@
 
 - (void)resetQR:(NSNotification *)notification {
     _QRSelector.selectedSegmentIndex = 0;
-}
-
-- (IBAction)connectSession:(id)sender {
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSDictionary *preferences = [ud objectForKey:@"preferences"];
-    
-    [DBZ_ServerCommunication startSession];
-    
-    if ([[preferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
-        [self performSegueWithIdentifier:@"SwipeControlSegue" sender:self];
-    } else {
-        [self performSegueWithIdentifier:@"ControlSegue" sender:self];
-    }
 }
 
 @end
