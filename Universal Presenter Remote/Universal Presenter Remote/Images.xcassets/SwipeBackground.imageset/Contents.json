@@ -1,20 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "SwipeBackground.png"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "SwipeBackground.pdf"
     }
   ],
   "info" : {

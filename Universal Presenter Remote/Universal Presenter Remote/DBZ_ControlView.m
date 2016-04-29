@@ -33,11 +33,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.canDisplayBannerAds = YES;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(close:) name:@"WatchEndSession" object:nil];
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nextSlide:) name:@"NextSlide" object:nil];
     
     [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
 
@@ -61,11 +61,15 @@
     [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
 }
 
--(void) viewWillDisappear:(BOOL)animated {
-    if ([self.navigationController.viewControllers indexOfObject:self]==NSNotFound) {
+- (void)nextSlide:(NSNotification*)notification {
+    [self nextButton:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    if ([self.navigationController.viewControllers indexOfObject:self] == NSNotFound) {
         // back button was pressed.  We know this is true because self is no longer
         // in the navigation stack.
-        [DBZ_ServerCommunication endSession];
+        //[DBZ_ServerCommunication endSession];
     }
     
     [super viewWillDisappear:animated];

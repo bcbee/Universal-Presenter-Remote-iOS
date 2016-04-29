@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.canDisplayBannerAds = YES;
+    //self.canDisplayBannerAds = YES;
 }
 
 - (void)didReceiveMemoryWarning

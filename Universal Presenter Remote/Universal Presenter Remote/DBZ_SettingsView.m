@@ -23,9 +23,11 @@ NSDictionary *newpreferences = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.canDisplayBannerAds = YES;
+    //self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"PreferenceUpdate" object:nil];
     [self updateInterface:nil];
+    
+    [self.swipeControl setEnabled:[self has3DTouch] forSegmentAtIndex:2];
     
 }
 
@@ -40,7 +42,7 @@ NSDictionary *newpreferences = nil;
 
 - (IBAction)updatePreferences:(id)sender {
     NSString *firsttime = @"Enabled";
-    NSString *swipe = @"Enabled";
+    NSString *controlMode = @"Swipe";
     
     if ([self.instructionControl selectedSegmentIndex] == 0) {
         firsttime = @"Enabled";
@@ -48,14 +50,25 @@ NSDictionary *newpreferences = nil;
         firsttime = @"Disabled";
     }
     
-    if ([self.swipeControl selectedSegmentIndex] == 0) {
-        swipe = @"Enabled";
-    } else {
-        swipe = @"Disabled";
+    
+    switch ([self.swipeControl selectedSegmentIndex]) {
+        case 0:
+            controlMode = @"Swipe";
+            break;
+        case 1:
+            controlMode = @"Buttons";
+            break;
+        case 2:
+            controlMode = @"3D Touch";
+            break;
+        default:
+            controlMode = @"Swipe";
+            break;
     }
     
-    newpreferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", swipe, @"SwipeControl", nil];
+    newpreferences = [NSDictionary dictionaryWithObjectsAndKeys: firsttime, @"Instructions", controlMode, @"ControlMode", nil];
     [self savePreferences];
+    
 }
 
 - (void)savePreferences {
@@ -74,6 +87,9 @@ NSDictionary *newpreferences = nil;
             NSLog(@"iCloud: %@",[clouddict objectForKey:key]);
         }
     }
+    
+    NSNotification* notification = [NSNotification notificationWithName:@"PreferenceUpdate" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -95,12 +111,18 @@ NSDictionary *newpreferences = nil;
         self.instructionControl.selectedSegmentIndex = 1;
     }
     
-    if ([[oldpreferences objectForKey:@"SwipeControl"] isEqualToString:@"Enabled"]) {
+    if ([[oldpreferences objectForKey:@"ControlMode"] isEqualToString:@"Swipe"]) {
         self.swipeControl.selectedSegmentIndex = 0;
+    } else if ([[oldpreferences objectForKey:@"ControlMode"] isEqualToString:@"3D Touch"] && [self has3DTouch]) {
+        self.swipeControl.selectedSegmentIndex = 2;
     } else {
         self.swipeControl.selectedSegmentIndex = 1;
     }
     NSLog(@"Local: %@",oldpreferences);
+}
+
+- (bool)has3DTouch {
+    return self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable;
 }
 
 /*
