@@ -27,10 +27,10 @@ class DBZ_ForceTouchView: UIView {
         let maximumForce = touches.first?.maximumPossibleForce
         let force = touches.first?.force
         let strength = force!/maximumForce!
-        if (strength == 1.0 && (!vibrated || lowStreak > 10)) {
+        if (strength == 1.0 && (!vibrated || lowStreak > 20)) {
             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             vibrated = true
-            NSNotificationCenter.defaultCenter().postNotificationName("NextSlide", object: nil)
+            DBZ_ServerCommunication.getResponse("SlideUp", withToken: DBZ_ServerCommunication.token(), withHoldfor: true, withDeviceToken: false, withTarget: nil)
             lowStreak = 0
         } else if (strength < 1.0) {
             lowStreak += 1

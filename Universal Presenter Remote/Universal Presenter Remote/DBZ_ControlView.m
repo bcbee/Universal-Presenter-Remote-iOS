@@ -37,8 +37,6 @@
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nextSlide:) name:@"NextSlide" object:nil];
-    
     [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
 
 }
@@ -59,10 +57,6 @@
 
 - (IBAction)previousButton:(id)sender {
     [DBZ_ServerCommunication getResponse:@"SlideDown" withToken:[DBZ_ServerCommunication token] withHoldfor:YES withDeviceToken:NO withTarget:nil];
-}
-
-- (void)nextSlide:(NSNotification*)notification {
-    [self nextButton:nil];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
