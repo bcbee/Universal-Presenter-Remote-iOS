@@ -29,6 +29,7 @@ static NSString *apns = @"";
 +(int)token { return  token; }
 +(bool)serverAvailable { return  serverAvailable; }
 +(bool)enabled { return  enabled; }
++(NSString*)apns { return  apns; }
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken {
     

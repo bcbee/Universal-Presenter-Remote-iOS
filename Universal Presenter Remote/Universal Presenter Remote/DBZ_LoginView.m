@@ -18,6 +18,8 @@
 
 @implementation DBZ_LoginView
 
+NSTimer *refreshTimer;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,13 +38,10 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshInterface:) name:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(openInstructions:) name:@"OpenInstructions" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetQR:) name:@"ResetQR" object:nil];
-    UIDevice *currentDevice = [UIDevice currentDevice];
     
     [DBZ_ServerCommunication setupUid];
-    if ([currentDevice.model rangeOfString:@"Simulator"].location != NSNotFound) {
-        // running in Simulator
-        [DBZ_ServerCommunication checkToken];
-    }
+    
+    refreshTimer = [NSTimer scheduledTimerWithTimeInterval:2.5 target:self selector:@selector(localRefresh) userInfo:nil repeats:true];
 }
 
 - (void)didReceiveMemoryWarning
@@ -95,16 +94,8 @@
 }
 
 - (IBAction)refresh:(id)sender {
-    UIDevice *currentDevice = [UIDevice currentDevice];
-    if ([currentDevice.model rangeOfString:@"Simulator"].location == NSNotFound) {
-        //running on device
-        [DBZ_ServerCommunication setupUid];
-        [DBZ_ServerCommunication checkToken];
-    } else {
-        // running in Simulator
-        //[self connectSession:nil];
-        [DBZ_ServerCommunication checkToken];
-    }
+    [DBZ_ServerCommunication setupUid];
+    [DBZ_ServerCommunication checkToken];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -126,6 +117,15 @@
 
 - (void)resetQR:(NSNotification *)notification {
     _QRSelector.selectedSegmentIndex = 0;
+}
+
+- (void)localRefresh {
+    if ([DBZ_ServerCommunication.apns isEqual: @""]) {
+        // running in Simulator
+        [DBZ_ServerCommunication checkToken];
+    } else {
+        [refreshTimer invalidate];
+    }
 }
 
 @end

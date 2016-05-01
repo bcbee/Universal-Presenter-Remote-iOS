@@ -18,6 +18,7 @@
 +(int)token;
 +(bool)serverAvailable;
 +(bool)enabled;
++(NSString*)apns;
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken;
 +(void)processResponse:(NSMutableArray*)webResponse;
