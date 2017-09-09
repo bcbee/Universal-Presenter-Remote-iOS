@@ -53,8 +53,10 @@ class DBZ_WKLoginView: WKInterfaceController {
                 //Button Waiting... NO
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
-                //refreshTimer = NSTimer(timeInterval: 2.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: true)
-                refreshTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: false)
+                refreshTimer = Timer(timeInterval: 1.0, repeats: true, block: { (timer) in
+                    DBZ_ServerCommunication.checkToken()
+                })
+                refreshTimer.fire()
                 break
             case 2:
                 //Button Begin YES

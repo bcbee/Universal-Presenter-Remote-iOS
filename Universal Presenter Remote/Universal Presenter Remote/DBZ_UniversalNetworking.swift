@@ -39,11 +39,15 @@ import UIKit
                 print(error!.localizedDescription)
                 //callback("", error!.localizedDescription, page: page, response: response!)
             } else {
-                let result = String.init(data: data!, encoding: .ascii)
-                callback([page, result!, response!] as NSMutableArray)
+                if let data = data,
+                    let response = response,
+                    let result = String.init(data: data, encoding: .ascii) {
+                    callback([page, result, response] as NSMutableArray)
+                }
             }
         })
         
         task.resume()
+        session.finishTasksAndInvalidate()
     }
 }
