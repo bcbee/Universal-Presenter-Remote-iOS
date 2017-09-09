@@ -15,10 +15,10 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var tokenLabel: WKInterfaceLabel!
     @IBOutlet var connectButton: WKInterfaceButton!
     
-    var refreshTimer:NSTimer = NSTimer()
+    var refreshTimer:Timer = Timer()
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
     }
@@ -30,14 +30,14 @@ class DBZ_WKLoginView: WKInterfaceController {
         connectButton.setEnabled(false)
         
         DBZ_ServerCommunication.setupUid()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(refreshInterface), name: "Refresh", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateInterface), name: "UpdateInterface", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         DBZ_ServerCommunication.checkToken()
         
         
     }
     
-    func updateInterface(notification:NSNotification) {
+    func updateInterface(_ notification:Notification) {
         let token = DBZ_ServerCommunication.temptoken()
         if (token > 10) {
             //Set token label
@@ -54,7 +54,7 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 //refreshTimer = NSTimer(timeInterval: 2.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: true)
-                refreshTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: false)
+                refreshTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: false)
                 break
             case 2:
                 //Button Begin YES
@@ -68,7 +68,7 @@ class DBZ_WKLoginView: WKInterfaceController {
         }
     }
     
-    func refreshInterface(notification:NSNotification) {
+    func refreshInterface(_ notification:Notification) {
         DBZ_ServerCommunication.checkToken()
     }
 
@@ -78,7 +78,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     }
 
     @IBAction func instructionsButton() {
-        presentControllerWithName("Instructions", context: self)
+        presentController(withName: "Instructions", context: self)
     }
     
     @IBAction func reloadButton() {

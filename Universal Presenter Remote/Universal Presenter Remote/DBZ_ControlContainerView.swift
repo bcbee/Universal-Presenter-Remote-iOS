@@ -17,40 +17,40 @@ class DBZ_ControlContainerView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DBZ_ControlContainerView.updateControlContainer), name:"PreferenceUpdate", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DBZ_ControlContainerView.updateControlContainer), name:NSNotification.Name(rawValue: "PreferenceUpdate"), object: nil)
         
-        updateControlContainer(NSNotification(name: "", object: nil))
+        updateControlContainer(Notification(name: Notification.Name(rawValue: ""), object: nil))
         
-        navigationController?.interactivePopGestureRecognizer?.enabled = false
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
 
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         DBZ_ServerCommunication.startSession()
     }
     
-    func updateControlContainer(notification:NSNotification) {
-        swipeContainer.hidden = true
-        buttonsContainer.hidden = true
-        threeDTouchContainer.hidden = true
+    func updateControlContainer(_ notification:Notification) {
+        swipeContainer.isHidden = true
+        buttonsContainer.isHidden = true
+        threeDTouchContainer.isHidden = true
         
-        let preferences = NSUserDefaults.standardUserDefaults().objectForKey("preferences")
+        let preferences = UserDefaults.standard.object(forKey: "preferences")
         
-        switch (preferences?.objectForKey("ControlMode") as! String) {
+        switch ((preferences as AnyObject).object(forKey: "ControlMode") as! String) {
         case "Swipe":
-            swipeContainer.hidden = false
+            swipeContainer.isHidden = false
             break
         case "Buttons":
-            buttonsContainer.hidden = false
+            buttonsContainer.isHidden = false
             break
         case "3D Touch":
-            threeDTouchContainer.hidden = false
+            threeDTouchContainer.isHidden = false
             break
         default:
-            swipeContainer.hidden = false
+            swipeContainer.isHidden = false
             break
         }
     }

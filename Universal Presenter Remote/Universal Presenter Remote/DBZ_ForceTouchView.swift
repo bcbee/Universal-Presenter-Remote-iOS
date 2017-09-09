@@ -22,8 +22,8 @@ class DBZ_ForceTouchView: UIView {
     var vibrated:Bool = false
     var lowStreak:Int = 0
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         let maximumForce = touches.first?.maximumPossibleForce
         let force = touches.first?.force
         let strength = force!/maximumForce!
@@ -37,8 +37,8 @@ class DBZ_ForceTouchView: UIView {
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         vibrated = false
         lowStreak = 0
     }

@@ -528,6 +528,7 @@
 					B3C968B21AB20B44000819E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -537,9 +538,11 @@
 					B3C968BF1AB20B44000819E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0830;
 					};
 					ED70D5E518FF17E0007B4C18 = {
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -937,6 +940,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -967,6 +971,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -993,6 +998,7 @@
 				PROVISIONING_PROFILE = "4a0efde5-080e-430e-b785-6685aa35a498";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1016,6 +1022,7 @@
 				PROVISIONING_PROFILE = "9471bbd3-7eab-4980-9fa0-cff58efdfdc5";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -1122,6 +1129,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1151,6 +1159,7 @@
 				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

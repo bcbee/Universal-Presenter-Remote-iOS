@@ -9,40 +9,40 @@
 import UIKit
 
 @objc class DBZ_UniversalNetworking: NSObject {
-    static func makeRequest(url:String, page:String, callback: (NSMutableArray) -> Void) -> Void {
+    static func makeRequest(_ url:String, page:String, callback: @escaping (NSMutableArray) -> Void) -> Void {
         httpGet(url, callback: callback, page: page)
     }
     
-    static func httpCallback(result: String, error: String?, page:String, response:NSURLResponse) -> Void {
+    static func httpCallback(_ result: String, error: String?, page:String, response:URLResponse) -> Void {
         print("Response: \(result)")
-        let notify: [AnyObject] = [page, result, response]
-        let notification:NSNotification = NSNotification(name: "ServerResponse", object: notify)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
+        let notify: [AnyObject] = [page as AnyObject, result as AnyObject, response]
+        let notification:Notification = Notification(name: Notification.Name(rawValue: "ServerResponse"), object: notify)
+        NotificationCenter.default.post(notification)
     }
     
-    static func httpGet(url: String, callback: (NSMutableArray) -> Void, page:String) {
-        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: configuration, delegate: nil, delegateQueue: NSOperationQueue.mainQueue())
+    static func httpGet(_ url: String, callback: @escaping (NSMutableArray) -> Void, page:String) {
+        let request = URLRequest(url: URL(string: url)!)
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
         httpRequest(request, session: session, callback: callback, page: page)
     }
     
-    static func httpRequest(request: NSMutableURLRequest, session: NSURLSession, callback: (NSMutableArray) -> Void, page:String) {
-        NSNotificationCenter.defaultCenter().postNotificationName("NetworkIndicatorOn", object: nil)
-        NSNotificationCenter.defaultCenter().postNotificationName("ReloadingDataStart", object: nil)
-        let task = session.dataTaskWithRequest(request){
+    static func httpRequest(_ request: URLRequest, session: URLSession, callback: @escaping (NSMutableArray) -> Void, page:String) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "NetworkIndicatorOn"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ReloadingDataStart"), object: nil)
+        
+        let task = session.dataTask(with: request, completionHandler: {
             (data, response, error) -> Void in
-            NSNotificationCenter.defaultCenter().postNotificationName("NetworkIndicatorOff", object: nil)
-            NSNotificationCenter.defaultCenter().postNotificationName("ReloadingDataStop", object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "NetworkIndicatorOff"), object: nil)
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "ReloadingDataStop"), object: nil)
             if error != nil {
                 print(error!.localizedDescription)
                 //callback("", error!.localizedDescription, page: page, response: response!)
             } else {
-                let result = NSString(data: data!, encoding:
-                    NSASCIIStringEncoding)!
-                callback([page, result as String, response!] as NSMutableArray)
+                let result = String.init(data: data!, encoding: .ascii)
+                callback([page, result!, response!] as NSMutableArray)
             }
-        }
+        })
         
         task.resume()
     }

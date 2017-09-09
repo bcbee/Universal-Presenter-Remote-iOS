@@ -17,8 +17,8 @@ class DBZ_QRVeiw: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DBZ_QRVeiw.sessionActivated(_:)), name:"SessionActivated", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(DBZ_QRVeiw.sessionReady(_:)), name:"UpdateInterface", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DBZ_QRVeiw.sessionActivated(_:)), name:NSNotification.Name(rawValue: "SessionActivated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(DBZ_QRVeiw.sessionReady(_:)), name:NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,18 +26,18 @@ class DBZ_QRVeiw: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func sessionActivated(notification: NSNotification) {
+    func sessionActivated(_ notification: Notification) {
         loadingIndicator.startAnimating()
         scanContainer.alpha = 0.4
     }
     
-    func sessionReady(notification: NSNotification) {
+    func sessionReady(_ notification: Notification) {
         self.close(self)
     }
     
-    @IBAction func close(sender: AnyObject) {
-        NSNotificationCenter.defaultCenter().postNotificationName("ResetQR", object: nil)
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func close(_ sender: AnyObject) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "ResetQR"), object: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
 
