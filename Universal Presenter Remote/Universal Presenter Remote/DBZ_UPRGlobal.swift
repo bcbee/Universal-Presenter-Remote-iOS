@@ -10,6 +10,6 @@ import UIKit
 
 class DBZ_UPRGlobal: NSObject {
     
-    static var viewToOpen:String = ""
+    @objc static var viewToOpen:String = ""
 
 }

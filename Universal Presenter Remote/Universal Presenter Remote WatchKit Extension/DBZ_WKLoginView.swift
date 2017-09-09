@@ -37,7 +37,7 @@ class DBZ_WKLoginView: WKInterfaceController {
         
     }
     
-    func updateInterface(_ notification:Notification) {
+    @objc func updateInterface(_ notification:Notification) {
         let token = DBZ_ServerCommunication.temptoken()
         if (token > 10) {
             //Set token label
@@ -70,7 +70,7 @@ class DBZ_WKLoginView: WKInterfaceController {
         }
     }
     
-    func refreshInterface(_ notification:Notification) {
+    @objc func refreshInterface(_ notification:Notification) {
         DBZ_ServerCommunication.checkToken()
     }
 

@@ -9,7 +9,7 @@
 import UIKit
 
 @objc class DBZ_UniversalNetworking: NSObject {
-    static func makeRequest(_ url:String, page:String, callback: @escaping (NSMutableArray) -> Void) -> Void {
+    @objc static func makeRequest(_ url:String, page:String, callback: @escaping (NSMutableArray) -> Void) -> Void {
         httpGet(url, callback: callback, page: page)
     }
     

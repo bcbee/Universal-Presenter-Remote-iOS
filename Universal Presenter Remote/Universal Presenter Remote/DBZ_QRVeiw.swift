@@ -26,12 +26,12 @@ class DBZ_QRVeiw: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func sessionActivated(_ notification: Notification) {
+    @objc func sessionActivated(_ notification: Notification) {
         loadingIndicator.startAnimating()
         scanContainer.alpha = 0.4
     }
     
-    func sessionReady(_ notification: Notification) {
+    @objc func sessionReady(_ notification: Notification) {
         self.close(self)
     }
     

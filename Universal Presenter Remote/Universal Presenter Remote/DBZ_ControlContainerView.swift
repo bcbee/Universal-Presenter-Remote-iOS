@@ -32,7 +32,7 @@ class DBZ_ControlContainerView: UIViewController {
         DBZ_ServerCommunication.startSession()
     }
     
-    func updateControlContainer(_ notification:Notification) {
+    @objc func updateControlContainer(_ notification:Notification) {
         swipeContainer.isHidden = true
         buttonsContainer.isHidden = true
         threeDTouchContainer.isHidden = true
