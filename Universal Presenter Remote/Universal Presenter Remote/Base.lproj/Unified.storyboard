@@ -966,7 +966,7 @@ A8KpMjAxNyBEQlogVGVjaG5vbG9neSBMTEM
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3DTouchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="q7z-tB-QOM">
-                                <rect key="frame" x="31" y="163" width="258" height="233"/>
+                                <rect key="frame" x="31" y="172" width="258" height="224"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3D Touch Control" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-6q-ub0">
                                 <rect key="frame" x="16" y="40" width="288" height="34"/>
@@ -978,9 +978,9 @@ A8KpMjAxNyBEQlogVGVjaG5vbG9neSBMTEM
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press hard for next slide. Swipe for other actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-B7-uL2">
-                                <rect key="frame" x="16" y="74" width="288" height="23"/>
+                                <rect key="frame" x="16" y="74" width="288" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="dW9-ea-Zz4"/>
+                                    <constraint firstAttribute="height" constant="48" id="dW9-ea-Zz4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -999,7 +999,7 @@ A8KpMjAxNyBEQlogVGVjaG5vbG9neSBMTEM
                             <constraint firstAttribute="trailingMargin" secondItem="q7z-tB-QOM" secondAttribute="trailing" constant="15" id="Zhr-dh-XGa"/>
                             <constraint firstItem="q7z-tB-QOM" firstAttribute="leading" secondItem="shB-nQ-mlR" secondAttribute="leadingMargin" constant="15" id="bO6-2R-IXl"/>
                             <constraint firstItem="Ne4-6q-ub0" firstAttribute="leading" secondItem="shB-nQ-mlR" secondAttribute="leadingMargin" id="ito-CV-Snh"/>
-                            <constraint firstItem="q7z-tB-QOM" firstAttribute="top" secondItem="lRL-B7-uL2" secondAttribute="bottom" constant="66" id="yTX-tS-MMu"/>
+                            <constraint firstItem="q7z-tB-QOM" firstAttribute="top" secondItem="lRL-B7-uL2" secondAttribute="bottom" constant="50" id="yTX-tS-MMu"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Zb9-gx-CTu" appends="YES" id="fER-1A-MCl"/>
@@ -1023,7 +1023,7 @@ A8KpMjAxNyBEQlogVGVjaG5vbG9neSBMTEM
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2282" y="918"/>
+            <point key="canvasLocation" x="2281.875" y="917.95774647887322"/>
         </scene>
     </scenes>
     <resources>
@@ -1036,7 +1036,7 @@ A8KpMjAxNyBEQlogVGVjaG5vbG9neSBMTEM
         <image name="UPR" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b1E-oI-fbH"/>
+        <segue reference="6wG-lF-bMG"/>
         <segue reference="wc0-99-AQF"/>
         <segue reference="WfM-JU-7jr"/>
         <segue reference="W8V-2k-NEM"/>

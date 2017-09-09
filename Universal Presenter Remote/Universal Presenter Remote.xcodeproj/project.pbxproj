@@ -434,12 +434,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */;
 			buildPhases = (
-				7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */,
+				7DBCB4D2ABED93EFBDD860F1 /* [CP] Check Pods Manifest.lock */,
 				B3C968AF1AB20B44000819E0 /* Sources */,
 				B3C968B01AB20B44000819E0 /* Frameworks */,
 				B3C968B11AB20B44000819E0 /* Resources */,
-				87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */,
-				7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */,
+				87451C534AB8D5F256213F66 /* [CP] Embed Pods Frameworks */,
+				7B4790E4AD350662DF6EDE6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,11 +454,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */;
 			buildPhases = (
-				770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */,
+				770968CFBD486DA4F5D63149 /* [CP] Check Pods Manifest.lock */,
 				B3C968BE1AB20B44000819E0 /* Resources */,
 				B3DAF9FC1CCE6E5200E06E2C /* Embed App Extensions */,
 				90A29AD1ABBC25EE41C2152D /* Frameworks */,
-				307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */,
+				307F0C9D4F03A340E3A7DD5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,13 +474,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
 			buildPhases = (
-				FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */,
+				FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */,
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
 				B3DAF9FD1CCE6E5200E06E2C /* Embed Watch Content */,
-				9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */,
-				F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */,
+				9DE5410FC8590E1BFA1889B3 /* [CP] Embed Pods Frameworks */,
+				F768C50A9C1EC55FF5434381 /* [CP] Copy Pods Resources */,
 				B384129E1CCEE2B6000419B7 /* ShellScript */,
 			);
 			buildRules = (
@@ -497,12 +497,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */;
 			buildPhases = (
-				72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */,
+				72DFCEF9F54F037336FD86F5 /* [CP] Check Pods Manifest.lock */,
 				ED70D5FD18FF17E1007B4C18 /* Sources */,
 				ED70D5FE18FF17E1007B4C18 /* Frameworks */,
 				ED70D5FF18FF17E1007B4C18 /* Resources */,
-				7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */,
-				EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */,
+				7F428D6A2ED92D1A9BD01B29 /* [CP] Embed Pods Frameworks */,
+				EFA4C33C83C8462D0178BEDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -635,14 +635,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */ = {
+		307F0C9D4F03A340E3A7DD5B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,44 +650,50 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */ = {
+		72DFCEF9F54F037336FD86F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter RemoteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */ = {
+		770968CFBD486DA4F5D63149 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */ = {
+		7B4790E4AD350662DF6EDE6C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,29 +701,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */ = {
+		7DBCB4D2ABED93EFBDD860F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote WatchKit Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */ = {
+		7F428D6A2ED92D1A9BD01B29 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,14 +734,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */ = {
+		87451C534AB8D5F256213F66 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,14 +749,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */ = {
+		9DE5410FC8590E1BFA1889B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,14 +777,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7dcc047a1fe1e378ae201e5a4387ecc463fb6f0d 0a9263a6abe517d7830660774b7ebecbacf4e0d4ffa9f4368baab008c554c842";
 		};
-		EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */ = {
+		EFA4C33C83C8462D0178BEDA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,14 +792,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */ = {
+		F768C50A9C1EC55FF5434381 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -798,19 +807,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */ = {
+		FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
