@@ -144,7 +144,12 @@ NSDictionary *preferences = nil;
     NSNotification* notification = [NSNotification notificationWithName:@"Refresh" object:nil];
     [[NSNotificationCenter defaultCenter] postNotification:notification];
     completionHandler(UIBackgroundFetchResultNewData);
-    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    if ([DBZ_UPRGlobal hasTaptic]) {
+        _feedbackGenerator = [[UINotificationFeedbackGenerator alloc] init];
+        [_feedbackGenerator notificationOccurred:UINotificationFeedbackTypeSuccess];
+    } else {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    }
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {

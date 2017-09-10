@@ -11,5 +11,15 @@ import UIKit
 class DBZ_UPRGlobal: NSObject {
     
     @objc static var viewToOpen:String = ""
+    
+    @objc static func hasTaptic() -> Bool {
+        if let feedbackSupportLevel = UIDevice.current.value(forKey: "_feedbackSupportLevel") as? Int {
+            if feedbackSupportLevel > 1 {
+                return true
+            }
+        }
+        
+        return false
+    }
 
 }

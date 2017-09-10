@@ -18,6 +18,24 @@
 		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
+		B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */; };
+		B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */; };
+		B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */; };
+		B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */; };
+		B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */; };
+		B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */; };
+		B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */; };
+		B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */; };
+		B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */; };
+		B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */; };
+		B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */; };
+		B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */; };
+		B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
+		B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
+		B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
 		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
 		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
@@ -26,7 +44,6 @@
 		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
 		B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */; };
 		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
-		B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
 		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
 		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
@@ -130,6 +147,20 @@
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
+		B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
+		B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
+		B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
+		B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
+		B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
+		B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
+		B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
+		B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
+		B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
+		B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
+		B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
+		B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesRegular.ttf; sourceTree = "<group>"; };
+		B37160041F64983300AE7E03 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesBold.ttf; sourceTree = "<group>"; };
 		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKControlView.swift; sourceTree = "<group>"; };
 		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -243,6 +274,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B3715FC91F64968500AE7E03 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B37160041F64983300AE7E03 /* SugarcubesBold.ttf */,
+				B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */,
+				B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */,
+				B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */,
+				B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */,
+				B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */,
+				B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */,
+				B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */,
+				B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */,
+				B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */,
+				B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */,
+				B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */,
+				B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */,
+				B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */,
+				B34E227219AD5B4F0001127D /* Batman.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,7 +345,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ED282329190067AB0030B9C4 /* Classes */ = {
+		ED282329190067AB0030B9C4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
@@ -300,7 +353,7 @@
 				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
 				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
 			);
-			name = Classes;
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		ED70D5DD18FF17E0007B4C18 = {
@@ -357,7 +410,7 @@
 				B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */,
 				ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */,
 				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */,
-				ED282329190067AB0030B9C4 /* Classes */,
+				ED282329190067AB0030B9C4 /* Shared */,
 				ED70D61F18FF192E007B4C18 /* View Controllers */,
 				ED70D61C18FF182F007B4C18 /* Interface */,
 				ED70D5FB18FF17E0007B4C18 /* Images.xcassets */,
@@ -369,7 +422,7 @@
 		ED70D5F018FF17E0007B4C18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B34E227219AD5B4F0001127D /* Batman.ttf */,
+				B3715FC91F64968500AE7E03 /* Fonts */,
 				ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */,
 				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
 				ED70D5F518FF17E0007B4C18 /* main.m */,
@@ -532,7 +585,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -548,7 +601,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -596,7 +649,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
 				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
 			);
@@ -606,7 +661,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */,
+				B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
 				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
 			);
@@ -617,11 +674,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */,
+				B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */,
+				B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */,
+				B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */,
+				B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
+				B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */,
+				B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */,
+				B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */,
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
+				B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */,
+				B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */,
 				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
+				B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */,
+				B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */,
 				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
+				B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */,
 				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
+				B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */,
+				B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -838,7 +909,6 @@
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
 				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
-				B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -932,7 +1002,6 @@
 			baseConfigurationReference = 2EB38FA3462B33AEA9820EF7 /* Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -961,7 +1030,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -970,7 +1039,6 @@
 			baseConfigurationReference = 5AE70BF962D81DB66CD81D63 /* Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -995,7 +1063,7 @@
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1026,7 +1094,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1054,7 +1122,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1172,7 +1240,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1207,7 +1275,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
