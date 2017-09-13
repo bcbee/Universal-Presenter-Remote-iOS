@@ -47,6 +47,9 @@
 		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
 		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
+		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
+		B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
+		B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
@@ -172,6 +175,7 @@
 		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_BaseViewController.m; sourceTree = "<group>"; };
 		B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ForceTouchView.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -352,6 +356,7 @@
 				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
 				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
 				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
+				B3C7857F1F68E97F00F571C3 /* Shared.xcassets */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 			files = (
 				B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */,
 				B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
 				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
@@ -663,6 +669,7 @@
 			files = (
 				B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */,
+				B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */,
 				B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
 				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
@@ -693,6 +700,7 @@
 				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
 				B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */,
 				B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */,
+				B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

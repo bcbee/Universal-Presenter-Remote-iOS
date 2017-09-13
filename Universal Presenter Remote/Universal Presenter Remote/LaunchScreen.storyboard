@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6dU-GU-ENs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6dU-GU-ENs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="112" y="68"/>
         </scene>
-        <!--UPR-->
+        <!--Login View-->
         <scene sceneID="AzV-HM-Ael">
             <objects>
                 <viewController id="qC8-DQ-0Ar" customClass="DBZ_LoginView" sceneMemberID="viewController">
@@ -74,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="50" id="vOe-6q-dUL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SugarcubesBold" family="Sugarcubes" pointSize="17"/>
-                                <state key="normal" title="Connecting...">
+                                <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -100,7 +99,7 @@
                                     <segment title="QR Code" enabled="NO"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter token on presenting device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89y-bb-60Y">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89y-bb-60Y">
                                 <rect key="frame" x="24" y="572" width="327" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="cbv-Kd-3EQ"/>
@@ -140,7 +139,7 @@
                             <constraint firstItem="w6K-a9-q8t" firstAttribute="top" secondItem="BK7-nd-Kz8" secondAttribute="bottom" constant="8" id="wa9-4C-TXT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="UPR" id="Qch-Pu-065">
+                    <navigationItem key="navigationItem" id="Qch-Pu-065">
                         <barButtonItem key="backBarButtonItem" title="Back" id="J0e-OG-2PN"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="gr2-fN-rZa"/>
                         <barButtonItem key="rightBarButtonItem" id="2xe-Jg-0s1">

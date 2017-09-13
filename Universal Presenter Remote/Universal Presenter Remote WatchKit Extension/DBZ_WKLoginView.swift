@@ -48,13 +48,16 @@ class DBZ_WKLoginView: WKInterfaceController {
                 //Button Connecting... NO
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Connecting...")
+                connectButton.setBackgroundColor(nil)
                 break
             case 1:
                 //Button Waiting... NO
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
+                connectButton.setBackgroundColor(nil)
                 refreshTimer = Timer(timeInterval: 1.0, repeats: true, block: { (timer) in
                     DBZ_ServerCommunication.checkToken()
+                    self.tokenLabel.setText(String(DBZ_ServerCommunication.temptoken()))
                 })
                 refreshTimer.fire()
                 break
@@ -62,6 +65,7 @@ class DBZ_WKLoginView: WKInterfaceController {
                 //Button Begin YES
                 connectButton.setEnabled(true)
                 connectButton.setTitle("Begin")
+                connectButton.setBackgroundColor(UIColor(named: "Primary"))
                 DBZ_ServerCommunication.startSession()
                 refreshTimer.invalidate()
                 break
@@ -86,6 +90,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
         tokenLabel.setText("...")
+        connectButton.setEnabled(false)
         DBZ_ServerCommunication.checkToken()
     }
 }
