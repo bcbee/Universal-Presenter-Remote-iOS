@@ -11,8 +11,8 @@
 @interface DBZ_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UINotificationFeedbackGenerator *feedbackGenerator;
 
 - (void)networkIndicatorOn:(NSNotification *)notification;
 - (void)networkIndicatorOff:(NSNotification *)notification;
-
 @end

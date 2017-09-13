@@ -15,10 +15,10 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var tokenLabel: WKInterfaceLabel!
     @IBOutlet var connectButton: WKInterfaceButton!
     
-    var refreshTimer:NSTimer = NSTimer()
+    var refreshTimer:Timer = Timer()
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
     }
@@ -29,37 +29,45 @@ class DBZ_WKLoginView: WKInterfaceController {
         
         connectButton.setEnabled(false)
         
-        DBZ_ServerCommunication.setupUid()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(refreshInterface), name: "Refresh", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(updateInterface), name: "UpdateInterface", object: nil)
+        if (!DBZ_ServerCommunication.setup()) {
+            DBZ_ServerCommunication.setupUid()
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         DBZ_ServerCommunication.checkToken()
         
         
     }
     
-    func updateInterface(notification:NSNotification) {
-        let token = DBZ_ServerCommunication.temptoken()
-        if (token > 10) {
-            //Set token label
-            tokenLabel.setText(String(token))
-        }
+    @objc func updateInterface(_ notification:Notification) {
+        updateTokenLabel()
         switch (DBZ_ServerCommunication.controlmode()) {
             case 0:
                 //Button Connecting... NO
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Connecting...")
+                connectButton.setBackgroundColor(nil)
                 break
             case 1:
                 //Button Waiting... NO
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
-                //refreshTimer = NSTimer(timeInterval: 2.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: true)
-                refreshTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(refreshInterface), userInfo: nil, repeats: false)
+                connectButton.setBackgroundColor(nil)
+                DispatchQueue.global().async {
+                    Thread.sleep(forTimeInterval: 1.0)
+                    
+                    DispatchQueue.main.async {
+                        DBZ_ServerCommunication.checkToken()
+                        self.updateTokenLabel()
+                    }
+                }
                 break
             case 2:
                 //Button Begin YES
                 connectButton.setEnabled(true)
                 connectButton.setTitle("Begin")
+                connectButton.setBackgroundColor(UIColor(named: "Primary"))
                 DBZ_ServerCommunication.startSession()
                 refreshTimer.invalidate()
                 break
@@ -68,7 +76,17 @@ class DBZ_WKLoginView: WKInterfaceController {
         }
     }
     
-    func refreshInterface(notification:NSNotification) {
+    func updateTokenLabel() {
+        let token = DBZ_ServerCommunication.temptoken()
+        if (token > 10) {
+            //Set token label
+            tokenLabel.setText(String(token))
+        } else {
+            tokenLabel.setText("...")
+        }
+    }
+    
+    @objc func refreshInterface(_ notification:Notification) {
         DBZ_ServerCommunication.checkToken()
     }
 
@@ -78,12 +96,13 @@ class DBZ_WKLoginView: WKInterfaceController {
     }
 
     @IBAction func instructionsButton() {
-        presentControllerWithName("Instructions", context: self)
+        presentController(withName: "Instructions", context: self)
     }
     
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
-        tokenLabel.setText("...")
+        updateTokenLabel()
+        connectButton.setEnabled(false)
         DBZ_ServerCommunication.checkToken()
     }
 }

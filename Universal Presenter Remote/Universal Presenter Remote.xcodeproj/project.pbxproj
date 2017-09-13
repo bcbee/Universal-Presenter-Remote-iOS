@@ -18,6 +18,24 @@
 		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
+		B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */; };
+		B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */; };
+		B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */; };
+		B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */; };
+		B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */; };
+		B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */; };
+		B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */; };
+		B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */; };
+		B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */; };
+		B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */; };
+		B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */; };
+		B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */; };
+		B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
+		B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
+		B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
+		B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
 		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
 		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
@@ -26,10 +44,12 @@
 		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
 		B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */; };
 		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
-		B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
 		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
 		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
+		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
+		B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
+		B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
@@ -130,6 +150,20 @@
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
+		B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
+		B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
+		B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
+		B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
+		B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
+		B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
+		B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
+		B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
+		B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
+		B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
+		B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
+		B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesRegular.ttf; sourceTree = "<group>"; };
+		B37160041F64983300AE7E03 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesBold.ttf; sourceTree = "<group>"; };
 		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKControlView.swift; sourceTree = "<group>"; };
 		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -141,6 +175,7 @@
 		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_BaseViewController.m; sourceTree = "<group>"; };
 		B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ForceTouchView.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -243,6 +278,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B3715FC91F64968500AE7E03 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B37160041F64983300AE7E03 /* SugarcubesBold.ttf */,
+				B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */,
+				B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */,
+				B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */,
+				B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */,
+				B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */,
+				B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */,
+				B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */,
+				B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */,
+				B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */,
+				B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */,
+				B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */,
+				B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */,
+				B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */,
+				B34E227219AD5B4F0001127D /* Batman.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,15 +349,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ED282329190067AB0030B9C4 /* Classes */ = {
+		ED282329190067AB0030B9C4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
 				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
 				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
 				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
+				B3C7857F1F68E97F00F571C3 /* Shared.xcassets */,
 			);
-			name = Classes;
+			name = Shared;
 			sourceTree = "<group>";
 		};
 		ED70D5DD18FF17E0007B4C18 = {
@@ -357,7 +415,7 @@
 				B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */,
 				ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */,
 				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */,
-				ED282329190067AB0030B9C4 /* Classes */,
+				ED282329190067AB0030B9C4 /* Shared */,
 				ED70D61F18FF192E007B4C18 /* View Controllers */,
 				ED70D61C18FF182F007B4C18 /* Interface */,
 				ED70D5FB18FF17E0007B4C18 /* Images.xcassets */,
@@ -369,7 +427,7 @@
 		ED70D5F018FF17E0007B4C18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B34E227219AD5B4F0001127D /* Batman.ttf */,
+				B3715FC91F64968500AE7E03 /* Fonts */,
 				ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */,
 				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
 				ED70D5F518FF17E0007B4C18 /* main.m */,
@@ -434,12 +492,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */;
 			buildPhases = (
-				7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */,
+				7DBCB4D2ABED93EFBDD860F1 /* [CP] Check Pods Manifest.lock */,
 				B3C968AF1AB20B44000819E0 /* Sources */,
 				B3C968B01AB20B44000819E0 /* Frameworks */,
 				B3C968B11AB20B44000819E0 /* Resources */,
-				87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */,
-				7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */,
+				87451C534AB8D5F256213F66 /* [CP] Embed Pods Frameworks */,
+				7B4790E4AD350662DF6EDE6C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -454,11 +512,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */;
 			buildPhases = (
-				770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */,
+				770968CFBD486DA4F5D63149 /* [CP] Check Pods Manifest.lock */,
 				B3C968BE1AB20B44000819E0 /* Resources */,
 				B3DAF9FC1CCE6E5200E06E2C /* Embed App Extensions */,
 				90A29AD1ABBC25EE41C2152D /* Frameworks */,
-				307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */,
+				307F0C9D4F03A340E3A7DD5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,13 +532,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
 			buildPhases = (
-				FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */,
+				FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */,
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
 				B3DAF9FD1CCE6E5200E06E2C /* Embed Watch Content */,
-				9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */,
-				F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */,
+				9DE5410FC8590E1BFA1889B3 /* [CP] Embed Pods Frameworks */,
+				F768C50A9C1EC55FF5434381 /* [CP] Copy Pods Resources */,
 				B384129E1CCEE2B6000419B7 /* ShellScript */,
 			);
 			buildRules = (
@@ -497,12 +555,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */;
 			buildPhases = (
-				72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */,
+				72DFCEF9F54F037336FD86F5 /* [CP] Check Pods Manifest.lock */,
 				ED70D5FD18FF17E1007B4C18 /* Sources */,
 				ED70D5FE18FF17E1007B4C18 /* Frameworks */,
 				ED70D5FF18FF17E1007B4C18 /* Resources */,
-				7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */,
-				EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */,
+				7F428D6A2ED92D1A9BD01B29 /* [CP] Embed Pods Frameworks */,
+				EFA4C33C83C8462D0178BEDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -522,27 +580,33 @@
 			attributes = {
 				CLASSPREFIX = DBZ_;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "DBZ Technology";
 				TargetAttributes = {
 					B3C968B21AB20B44000819E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
 					B3C968BF1AB20B44000819E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 					ED70D5E518FF17E0007B4C18 = {
 						DevelopmentTeam = 93C4626635;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -559,6 +623,7 @@
 						};
 					};
 					ED70D60018FF17E1007B4C18 = {
+						ProvisioningStyle = Automatic;
 						TestTargetID = ED70D5E518FF17E0007B4C18;
 					};
 				};
@@ -589,7 +654,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */,
+				B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
 				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
 			);
@@ -599,7 +667,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */,
 				B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */,
+				B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */,
+				B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
 				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
 			);
@@ -610,11 +681,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */,
+				B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */,
+				B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */,
+				B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */,
+				B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
+				B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */,
+				B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */,
+				B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */,
 				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
+				B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */,
+				B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */,
 				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
+				B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */,
+				B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */,
 				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
+				B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */,
 				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
+				B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */,
+				B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */,
+				B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,14 +715,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		307F0C9D4F03A340E3A7DD5B /* 📦 Copy Pods Resources */ = {
+		307F0C9D4F03A340E3A7DD5B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,44 +730,50 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit App/Pods-Universal Presenter Remote WatchKit App-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		72DFCEF9F54F037336FD86F5 /* 📦 Check Pods Manifest.lock */ = {
+		72DFCEF9F54F037336FD86F5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter RemoteTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		770968CFBD486DA4F5D63149 /* 📦 Check Pods Manifest.lock */ = {
+		770968CFBD486DA4F5D63149 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote WatchKit App-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B4790E4AD350662DF6EDE6C /* 📦 Copy Pods Resources */ = {
+		7B4790E4AD350662DF6EDE6C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,29 +781,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DBCB4D2ABED93EFBDD860F1 /* 📦 Check Pods Manifest.lock */ = {
+		7DBCB4D2ABED93EFBDD860F1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote WatchKit Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F428D6A2ED92D1A9BD01B29 /* 📦 Embed Pods Frameworks */ = {
+		7F428D6A2ED92D1A9BD01B29 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,14 +814,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87451C534AB8D5F256213F66 /* 📦 Embed Pods Frameworks */ = {
+		87451C534AB8D5F256213F66 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,14 +829,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote WatchKit Extension/Pods-Universal Presenter Remote WatchKit Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9DE5410FC8590E1BFA1889B3 /* 📦 Embed Pods Frameworks */ = {
+		9DE5410FC8590E1BFA1889B3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -762,14 +857,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 7dcc047a1fe1e378ae201e5a4387ecc463fb6f0d 0a9263a6abe517d7830660774b7ebecbacf4e0d4ffa9f4368baab008c554c842";
 		};
-		EFA4C33C83C8462D0178BEDA /* 📦 Copy Pods Resources */ = {
+		EFA4C33C83C8462D0178BEDA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -777,14 +872,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter RemoteTests/Pods-Universal Presenter RemoteTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F768C50A9C1EC55FF5434381 /* 📦 Copy Pods Resources */ = {
+		F768C50A9C1EC55FF5434381 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,19 +887,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF879E0D7B3A176D2B64DC5C /* 📦 Check Pods Manifest.lock */ = {
+		FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -819,7 +917,6 @@
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
 				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
-				B3A5FB4A1CD3361300F72655 /* DBZ_UPRGlobal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -913,16 +1010,16 @@
 			baseConfigurationReference = 2EB38FA3462B33AEA9820EF7 /* Pods-Universal Presenter Remote WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -931,14 +1028,16 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "4cc8f258-c3f9-48d7-8abf-2986985c1caf";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -947,13 +1046,13 @@
 			baseConfigurationReference = 5AE70BF962D81DB66CD81D63 /* Pods-Universal Presenter Remote WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote WatchKit Extension/Universal Presenter Remote WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -962,13 +1061,15 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "cdfa52c0-7b6c-43ac-b419-a38498adff81";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -976,10 +1077,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A33A14B6EBCEFCF613CF41B6 /* Pods-Universal Presenter Remote WatchKit App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -990,11 +1094,13 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4a0efde5-080e-430e-b785-6685aa35a498";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1002,22 +1108,27 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C57979CFDFF59AD98982A0C0 /* Pods-Universal Presenter Remote WatchKit App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9471bbd3-7eab-4980-9fa0-cff58efdfdc5";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1029,19 +1140,30 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1054,7 +1176,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
 				SDKROOT = iphoneos;
@@ -1070,27 +1192,39 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1100,16 +1234,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1118,10 +1255,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1130,16 +1269,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1148,9 +1290,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1161,6 +1305,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1176,7 +1323,8 @@
 				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -1188,6 +1336,9 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -1199,7 +1350,8 @@
 				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "992c1f57-b876-4a51-8b97-b59a7cba46af";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

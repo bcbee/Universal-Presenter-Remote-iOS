@@ -19,16 +19,25 @@ class DBZ_ForceTouchView: UIView {
     }
     */
     
+    var feedbackGenerator: UINotificationFeedbackGenerator? = UINotificationFeedbackGenerator()
+    
     var vibrated:Bool = false
     var lowStreak:Int = 0
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesMoved(touches, withEvent: event)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         let maximumForce = touches.first?.maximumPossibleForce
         let force = touches.first?.force
         let strength = force!/maximumForce!
-        if (strength == 1.0 && (!vibrated || lowStreak > 20)) {
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        if (strength >= 0.8 && (!vibrated || lowStreak > 20)) {
+            
+            if DBZ_UPRGlobal.hasTaptic() {
+                feedbackGenerator?.notificationOccurred(.success)
+                feedbackGenerator?.prepare()
+            } else {
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+            }
+            
             vibrated = true
             DBZ_ServerCommunication.getResponse("SlideUp", withToken: DBZ_ServerCommunication.token(), withHoldfor: true, withDeviceToken: false, withTarget: nil)
             lowStreak = 0
@@ -37,10 +46,14 @@ class DBZ_ForceTouchView: UIView {
         }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesEnded(touches, withEvent: event)
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
         vibrated = false
         lowStreak = 0
+    }
+    
+    deinit {
+        feedbackGenerator = nil
     }
 
 }

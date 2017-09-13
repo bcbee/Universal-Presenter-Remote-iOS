@@ -1,13 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Batman.ttf">
+        <array key="Batman.ttf">
             <string>BatmanForeverAlternate</string>
-        </mutableArray>
+        </array>
+        <array key="SugarcubesBold.ttf">
+            <string>SugarcubesBold</string>
+        </array>
+        <array key="SugarcubesRegular.ttf">
+            <string>SugarcubesRegular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--UPR-->
@@ -19,10 +30,10 @@
                             <variation key="device=watch42mm" height="90" width="90"/>
                         </imageView>
                         <separator alignment="left" id="b5s-rP-Hno">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                         <separator width="118" alignment="center" id="TpW-jR-W8h">
-                            <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                         <label width="97" height="19" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
                             <fontDescription key="font" name="BatmanForeverAlternate" family="BatmanForeverAlternate" pointSize="16"/>
@@ -30,7 +41,7 @@
                         <group width="1" alignment="left" id="G7r-3c-AOO">
                             <items>
                                 <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
-                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                    <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
                                     <connections>
                                         <segue destination="tyS-3Z-ljt" kind="push" id="lQU-KY-rpe"/>
                                     </connections>
@@ -66,40 +77,48 @@
                 <controller identifier="Instructions" id="T1b-4Y-1Hr">
                     <items>
                         <label height="20.5" alignment="center" text="UPR: Remote" textAlignment="center" numberOfLines="2" id="wHX-pO-b3t">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                            <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="19"/>
                         </label>
                         <label alignment="center" text="DBZ Technology" textAlignment="center" id="IO7-LJ-2T3">
-                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="14"/>
                         </label>
                         <separator width="118" alignment="center" id="LyU-7H-Ex9">
-                            <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="color" name="Primary"/>
                         </separator>
-                        <label width="0.90000000000000002" alignment="center" textAlignment="left" numberOfLines="14" id="G1L-ad-OJa">
+                        <label width="0.90000000000000002" alignment="center" textAlignment="left" numberOfLines="20" id="G1L-ad-OJa">
                             <string key="text">Download the UPR Controller App on the presenting computer. This can be found at universalpresenterremote.com. Enter the code generated by the watch to being. More instructions can be found in the UPR Controller app.</string>
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="12"/>
                         </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="648" y="331"/>
+            <point key="canvasLocation" x="665" y="323"/>
         </scene>
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
             <objects>
                 <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH"/>
+                        <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH">
+                            <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
+                        </label>
                         <button width="1" alignment="left" title="Media" id="2Jr-13-h5y">
+                            <color key="backgroundColor" name="Primary"/>
+                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                             <connections>
                                 <action selector="mediaPressed" destination="tyS-3Z-ljt" id="u8i-cz-lo1"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Next" id="e98-60-n7t">
+                            <color key="backgroundColor" name="Primary"/>
+                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                             <connections>
                                 <action selector="nextPressed" destination="tyS-3Z-ljt" id="uyZ-wG-dKG"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Previous" id="DEy-WV-EVQ">
+                            <color key="backgroundColor" name="Primary"/>
+                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                             <connections>
                                 <action selector="previousPressed" destination="tyS-3Z-ljt" id="hot-mg-LGh"/>
                             </connections>
@@ -115,29 +134,29 @@
                 <notificationController id="YCC-NB-fut">
                     <items>
                         <separator alignment="left" id="I7E-6D-NZ7">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                         <imageView width="50" height="41" alignment="center" image="OkOld" contentMode="scaleAspectFit" id="h0y-s0-nVT"/>
                         <label width="1" height="43.5" alignment="center" text="Ready to present session 123456" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <separator width="0.90000000000000002" alignment="center" id="Ixc-3l-3WH">
-                            <color key="color" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="color" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                         <label alignment="center" text="Open UPR App to beigin presenting" textAlignment="center" numberOfLines="2" id="tfT-oJ-OKl">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
                         </label>
                         <separator alignment="left" id="UGE-W8-AQ3">
-                            <color key="color" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                     </items>
                     <notificationCategory key="notificationCategory" identifier="presentationReady" id="JfB-70-Muf">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sashColor" red="0.71711276369999999" green="0.0" blue="0.59399263560000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sashColor" red="0.71711276369999999" green="0.0" blue="0.59399263560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </notificationCategory>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
                         <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
                     </connections>
@@ -146,5 +165,10 @@
             <point key="canvasLocation" x="220" y="656"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.70200002193450928" green="0.0080000003799796104" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
