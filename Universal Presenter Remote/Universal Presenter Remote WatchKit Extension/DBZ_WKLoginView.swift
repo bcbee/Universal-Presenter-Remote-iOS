@@ -29,7 +29,10 @@ class DBZ_WKLoginView: WKInterfaceController {
         
         connectButton.setEnabled(false)
         
-        DBZ_ServerCommunication.setupUid()
+        if (!DBZ_ServerCommunication.setup()) {
+            DBZ_ServerCommunication.setupUid()
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         DBZ_ServerCommunication.checkToken()
@@ -38,11 +41,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     }
     
     @objc func updateInterface(_ notification:Notification) {
-        let token = DBZ_ServerCommunication.temptoken()
-        if (token > 10) {
-            //Set token label
-            tokenLabel.setText(String(token))
-        }
+        updateTokenLabel()
         switch (DBZ_ServerCommunication.controlmode()) {
             case 0:
                 //Button Connecting... NO
@@ -55,11 +54,14 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 connectButton.setBackgroundColor(nil)
-                refreshTimer = Timer(timeInterval: 1.0, repeats: true, block: { (timer) in
-                    DBZ_ServerCommunication.checkToken()
-                    self.tokenLabel.setText(String(DBZ_ServerCommunication.temptoken()))
-                })
-                refreshTimer.fire()
+                DispatchQueue.global().async {
+                    Thread.sleep(forTimeInterval: 1.0)
+                    
+                    DispatchQueue.main.async {
+                        DBZ_ServerCommunication.checkToken()
+                        self.updateTokenLabel()
+                    }
+                }
                 break
             case 2:
                 //Button Begin YES
@@ -71,6 +73,16 @@ class DBZ_WKLoginView: WKInterfaceController {
                 break
             default:
                 break
+        }
+    }
+    
+    func updateTokenLabel() {
+        let token = DBZ_ServerCommunication.temptoken()
+        if (token > 10) {
+            //Set token label
+            tokenLabel.setText(String(token))
+        } else {
+            tokenLabel.setText("...")
         }
     }
     
@@ -89,7 +101,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
-        tokenLabel.setText("...")
+        updateTokenLabel()
         connectButton.setEnabled(false)
         DBZ_ServerCommunication.checkToken()
     }

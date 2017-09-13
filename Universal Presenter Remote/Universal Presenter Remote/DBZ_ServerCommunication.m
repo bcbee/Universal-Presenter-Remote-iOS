@@ -19,17 +19,19 @@ static int controlmode = 0;
 static int token = 0;
 static bool serverAvailable = NO;
 static bool enabled = NO;
+static bool setup = NO;
 
 static NSString *apns = @"";
 
-+(NSString*)serverAddress { return  serverAddress; }
-+(int)uid { return  uid; }
-+(int)temptoken { return  temptoken; }
-+(int)controlmode { return  controlmode; }
-+(int)token { return  token; }
-+(bool)serverAvailable { return  serverAvailable; }
-+(bool)enabled { return  enabled; }
-+(NSString*)apns { return  apns; }
++(NSString*)serverAddress { return serverAddress; }
++(int)uid { return uid; }
++(int)temptoken { return temptoken; }
++(int)controlmode { return controlmode; }
++(int)token { return token; }
++(bool)serverAvailable { return serverAvailable; }
++(bool)enabled { return enabled; }
++(bool)setup { return setup; }
++(NSString*)apns { return apns; }
 
 +(void)getResponse:(NSString*)page withToken:(int)requestToken withHoldfor:(bool)holdfor withDeviceToken:(bool)devicetoken withTarget:(NSString*)targetToken {
     
@@ -92,6 +94,8 @@ static NSString *apns = @"";
 +(void)setupUid {
     NSUInteger r = arc4random_uniform(999999);
     uid = (int)r;
+    temptoken = 10;
+    setup = YES;
 }
 
 +(void)checkStatus {
