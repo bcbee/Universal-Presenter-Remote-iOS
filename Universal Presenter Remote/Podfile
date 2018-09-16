@@ -7,16 +7,3 @@ target 'Universal Presenter Remote' do
   pod 'Fabric'
   pod 'Crashlytics'
 end
-
-target 'Universal Presenter RemoteTests' do
-
-end
-
-target 'Universal Presenter Remote WatchKit Extension' do
-
-end
-
-target 'Universal Presenter Remote WatchKit App' do
-
-end
-
