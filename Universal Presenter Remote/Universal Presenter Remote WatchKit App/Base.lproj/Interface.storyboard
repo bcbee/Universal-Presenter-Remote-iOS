@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13196" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -24,7 +23,7 @@
         <!--UPR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="UPR" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
+                <controller title="UPR" fullBounds="YES" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <imageView width="65" height="65" alignment="center" image="WatchLogoOld" id="ELT-Zy-IsQ">
                             <variation key="device=watch42mm" height="90" width="90"/>
@@ -97,7 +96,7 @@
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
             <objects>
-                <controller title="Remote" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
+                <controller title="Remote" fullBounds="YES" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH">
                             <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>

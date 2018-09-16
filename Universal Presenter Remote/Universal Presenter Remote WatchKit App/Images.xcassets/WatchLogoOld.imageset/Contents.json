@@ -2,18 +2,23 @@
   "images" : [
     {
       "idiom" : "watch",
-      "filename" : "196x196.png",
-      "scale" : "2x"
+      "filename" : "196x196.png"
     },
     {
       "idiom" : "watch",
-      "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
       "idiom" : "watch",
-      "scale" : "2x",
+      "screen-width" : ">161"
+    },
+    {
+      "idiom" : "watch",
       "screen-width" : ">145"
+    },
+    {
+      "idiom" : "watch",
+      "screen-width" : ">183"
     }
   ],
   "info" : {
@@ -21,6 +26,7 @@
     "author" : "xcode"
   },
   "properties" : {
-    "preserves-vector-representation" : true
+    "preserves-vector-representation" : true,
+    "auto-scaling" : "auto"
   }
 }

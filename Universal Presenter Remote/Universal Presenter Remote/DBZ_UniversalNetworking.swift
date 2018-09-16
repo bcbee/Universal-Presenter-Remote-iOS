@@ -13,13 +13,6 @@ import UIKit
         httpGet(url, callback: callback, page: page)
     }
     
-    static func httpCallback(_ result: String, error: String?, page:String, response:URLResponse) -> Void {
-        print("Response: \(result)")
-        let notify: [AnyObject] = [page as AnyObject, result as AnyObject, response]
-        let notification:Notification = Notification(name: Notification.Name(rawValue: "ServerResponse"), object: notify)
-        NotificationCenter.default.post(notification)
-    }
-    
     static func httpGet(_ url: String, callback: @escaping (NSMutableArray) -> Void, page:String) {
         let request = URLRequest(url: URL(string: url)!)
         let configuration = URLSessionConfiguration.default

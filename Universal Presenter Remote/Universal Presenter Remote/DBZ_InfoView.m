@@ -7,9 +7,6 @@
 //
 
 #import "DBZ_InfoView.h"
-#import <iAd/iAd.h>
-
-#import <Google/Analytics.h>
 
 @interface DBZ_InfoView ()
 
@@ -61,10 +58,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"Instructions"];
-    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 @end

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6189C18200E41548FD04B01DEECEA44D"
-               BuildableName = "libPods-Universal Presenter Remote.a"
+               BlueprintIdentifier = "0EA7A7F37D3D286A6550FD444D84335A"
+               BuildableName = "Pods_Universal_Presenter_Remote.framework"
                BlueprintName = "Pods-Universal Presenter Remote"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6189C18200E41548FD04B01DEECEA44D"
-            BuildableName = "libPods-Universal Presenter Remote.a"
+            BlueprintIdentifier = "0EA7A7F37D3D286A6550FD444D84335A"
+            BuildableName = "Pods_Universal_Presenter_Remote.framework"
             BlueprintName = "Pods-Universal Presenter Remote"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
