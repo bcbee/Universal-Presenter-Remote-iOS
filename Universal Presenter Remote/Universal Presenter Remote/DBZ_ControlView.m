@@ -8,11 +8,8 @@
 
 #import "DBZ_ControlView.h"
 #import "DBZ_ServerCommunication.h"
-#import <iAd/iAd.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
-
-#import <Google/Analytics.h>
 
 @interface DBZ_ControlView ()
 
@@ -72,10 +69,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"Control"];
-    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (void)close:(NSNotification *)notification {

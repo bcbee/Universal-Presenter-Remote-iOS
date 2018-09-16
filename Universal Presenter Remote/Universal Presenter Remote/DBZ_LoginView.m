@@ -8,9 +8,6 @@
 
 #import "DBZ_LoginView.h"
 #import "DBZ_ServerCommunication.h"
-#import <iAd/iAd.h>
-
-#import <Google/Analytics.h>
 
 @interface DBZ_LoginView ()
 
@@ -105,10 +102,6 @@ NSTimer *refreshTimer;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"Login"];
-    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
     
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName: [UIColor whiteColor], NSFontAttributeName: [UIFont fontWithName:@"BatmanForeverAlternate" size:35.0f]}];
     

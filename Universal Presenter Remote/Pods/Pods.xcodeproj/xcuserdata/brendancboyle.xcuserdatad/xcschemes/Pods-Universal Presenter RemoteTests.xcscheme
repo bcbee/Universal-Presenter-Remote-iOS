@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "75E3E84F0B72613DE8BEDB6F5C17ACEE"
-               BuildableName = "libPods-Universal Presenter RemoteTests.a"
+               BlueprintIdentifier = "9828E68A5D8E083F5CF8E9EBD340C95B"
+               BuildableName = "Pods_Universal_Presenter_RemoteTests.framework"
                BlueprintName = "Pods-Universal Presenter RemoteTests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "75E3E84F0B72613DE8BEDB6F5C17ACEE"
-            BuildableName = "libPods-Universal Presenter RemoteTests.a"
+            BlueprintIdentifier = "9828E68A5D8E083F5CF8E9EBD340C95B"
+            BuildableName = "Pods_Universal_Presenter_RemoteTests.framework"
             BlueprintName = "Pods-Universal Presenter RemoteTests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1F9590A487EDCA916C052C609DA07C84"
-               BuildableName = "libPods-Universal Presenter Remote WatchKit Extension.a"
+               BlueprintIdentifier = "BF741BB4DD4B9B493EA12282F302CD06"
+               BuildableName = "Pods_Universal_Presenter_Remote_WatchKit_Extension.framework"
                BlueprintName = "Pods-Universal Presenter Remote WatchKit Extension"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1F9590A487EDCA916C052C609DA07C84"
-            BuildableName = "libPods-Universal Presenter Remote WatchKit Extension.a"
+            BlueprintIdentifier = "BF741BB4DD4B9B493EA12282F302CD06"
+            BuildableName = "Pods_Universal_Presenter_Remote_WatchKit_Extension.framework"
             BlueprintName = "Pods-Universal Presenter Remote WatchKit Extension"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

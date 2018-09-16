@@ -1,0 +1,6 @@
+framework module Pods_Universal_Presenter_Remote_WatchKit_Extension {
+  umbrella header "Pods-Universal Presenter Remote WatchKit Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

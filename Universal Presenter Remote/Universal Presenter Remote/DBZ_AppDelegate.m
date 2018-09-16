@@ -10,7 +10,6 @@
 #import "DBZ_ServerCommunication.h"
 #import "UPR-Swift.h"
 #import "DBZ_InfoView.h"
-#import <Google/Analytics.h>
 #import <AudioToolbox/AudioServices.h>
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
@@ -29,13 +28,13 @@ NSDictionary *preferences = nil;
     //Google Analytics
     
     // Configure tracker from GoogleService-Info.plist.
-    NSError *configureError;
-    [[GGLContext sharedInstance] configureWithError:&configureError];
-    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    //NSError *configureError;
+    //[[GGLContext sharedInstance] configureWithError:&configureError];
+    //NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
     
     // Optional: configure GAI options.
-    GAI *gai = [GAI sharedInstance];
-    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    //GAI *gai = [GAI sharedInstance];
+    //gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
     //gai.logger.logLevel = kGAILogLevelVerbose;  // remove before app release
     
     //End Google Aanlytics
