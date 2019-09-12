@@ -15,4 +15,5 @@
 
 - (void)networkIndicatorOn:(NSNotification *)notification;
 - (void)networkIndicatorOff:(NSNotification *)notification;
+- (NSString *)hexadecimalStringFromData:(NSData *)data;
 @end

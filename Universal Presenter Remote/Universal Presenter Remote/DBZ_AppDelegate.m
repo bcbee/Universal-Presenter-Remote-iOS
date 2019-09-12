@@ -153,8 +153,9 @@ NSDictionary *preferences = nil;
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // You can send here, for example, an asynchronous HTTP request to your web-server to store this deviceToken remotely.
-    NSLog(@"Did register for remote notifications: %@", deviceToken);
-    [DBZ_ServerCommunication setupApns:deviceToken];
+    NSString* token = [self hexadecimalStringFromData:deviceToken];
+    NSLog(@"Did register for remote notifications: %@", token);
+    [DBZ_ServerCommunication setupApns:token];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
@@ -237,6 +238,21 @@ NSDictionary *preferences = nil;
 
 - (void)networkIndicatorOff:(NSNotification *)notification {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+- (NSString *)hexadecimalStringFromData:(NSData *)data
+{
+  NSUInteger dataLength = data.length;
+  if (dataLength == 0) {
+    return nil;
+  }
+
+  const unsigned char *dataBuffer = (const unsigned char *)data.bytes;
+  NSMutableString *hexString  = [NSMutableString stringWithCapacity:(dataLength * 2)];
+  for (int i = 0; i < dataLength; ++i) {
+    [hexString appendFormat:@"%02x", dataBuffer[i]];
+  }
+  return [hexString copy];
 }
 
 @end
