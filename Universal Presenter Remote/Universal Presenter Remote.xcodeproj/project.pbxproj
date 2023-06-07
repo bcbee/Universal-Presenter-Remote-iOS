@@ -67,10 +67,6 @@
 		ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */; };
 		ED70D5F618FF17E0007B4C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F518FF17E0007B4C18 /* main.m */; };
 		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */; };
-		ED70D60418FF17E1007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
-		ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
-		ED70D60D18FF17E1007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */; };
-		ED70D60F18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */; };
 		ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */; };
 /* End PBXBuildFile section */
 
@@ -88,13 +84,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = B3C968BF1AB20B44000819E0;
 			remoteInfo = "Universal Presenter Remote WatchKit App";
-		};
-		ED70D60618FF17E1007B4C18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED70D5E518FF17E0007B4C18;
-			remoteInfo = "Universal Presenter Remote";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -199,10 +188,6 @@
 		ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBZ_AppDelegate.h; sourceTree = "<group>"; };
 		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBZ_AppDelegate.m; sourceTree = "<group>"; };
 		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Universal Presenter RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED70D60A18FF17E1007B4C18 /* Universal Presenter RemoteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universal Presenter RemoteTests-Info.plist"; sourceTree = "<group>"; };
-		ED70D60C18FF17E1007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Universal_Presenter_RemoteTests.m; sourceTree = "<group>"; };
 		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
 		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
 		F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,15 +219,6 @@
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
 				350FA20CEE96EACEB21AC351 /* Pods_Universal_Presenter_Remote.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED70D5FE18FF17E1007B4C18 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED70D60518FF17E1007B4C18 /* UIKit.framework in Frameworks */,
-				ED70D60418FF17E1007B4C18 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +323,6 @@
 				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
 				B384129C1CCEE122000419B7 /* GoogleService-Info.plist */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
-				ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */,
 				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
@@ -360,7 +335,6 @@
 			isa = PBXGroup;
 			children = (
 				ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */,
-				ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */,
 				B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */,
 				B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */,
 			);
@@ -412,24 +386,6 @@
 				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
 				ED70D5F518FF17E0007B4C18 /* main.m */,
 				ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ED70D60818FF17E1007B4C18 /* Universal Presenter RemoteTests */ = {
-			isa = PBXGroup;
-			children = (
-				ED70D60E18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m */,
-				ED70D60918FF17E1007B4C18 /* Supporting Files */,
-			);
-			path = "Universal Presenter RemoteTests";
-			sourceTree = "<group>";
-		};
-		ED70D60918FF17E1007B4C18 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ED70D60A18FF17E1007B4C18 /* Universal Presenter RemoteTests-Info.plist */,
-				ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -523,24 +479,6 @@
 			productReference = ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ED70D60018FF17E1007B4C18 /* Universal Presenter RemoteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */;
-			buildPhases = (
-				ED70D5FD18FF17E1007B4C18 /* Sources */,
-				ED70D5FE18FF17E1007B4C18 /* Frameworks */,
-				ED70D5FF18FF17E1007B4C18 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED70D60718FF17E1007B4C18 /* PBXTargetDependency */,
-			);
-			name = "Universal Presenter RemoteTests";
-			productName = "Universal Presenter RemoteTests";
-			productReference = ED70D60118FF17E1007B4C18 /* Universal Presenter RemoteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -591,10 +529,6 @@
 							};
 						};
 					};
-					ED70D60018FF17E1007B4C18 = {
-						ProvisioningStyle = Automatic;
-						TestTargetID = ED70D5E518FF17E0007B4C18;
-					};
 				};
 			};
 			buildConfigurationList = ED70D5E118FF17E0007B4C18 /* Build configuration list for PBXProject "Universal Presenter Remote" */;
@@ -611,7 +545,6 @@
 			projectRoot = "";
 			targets = (
 				ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */,
-				ED70D60018FF17E1007B4C18 /* Universal Presenter RemoteTests */,
 				B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 			);
@@ -673,14 +606,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED70D5FF18FF17E1007B4C18 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED70D60D18FF17E1007B4C18 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -738,14 +663,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED70D5FD18FF17E1007B4C18 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED70D60F18FF17E1007B4C18 /* Universal_Presenter_RemoteTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -758,11 +675,6 @@
 			isa = PBXTargetDependency;
 			target = B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */;
 			targetProxy = B3DAF9F91CCE6E5200E06E2C /* PBXContainerItemProxy */;
-		};
-		ED70D60718FF17E1007B4C18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */;
-			targetProxy = ED70D60618FF17E1007B4C18 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,14 +699,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED70D5F318FF17E0007B4C18 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		ED70D60B18FF17E1007B4C18 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED70D60C18FF17E1007B4C18 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1100,62 +1004,6 @@
 			};
 			name = Release;
 		};
-		ED70D61618FF17E1007B4C18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		ED70D61718FF17E1007B4C18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Universal Presenter Remote.app/Universal Presenter Remote";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_BITCODE = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
-				INFOPLIST_FILE = "Universal Presenter RemoteTests/Universal Presenter RemoteTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1191,15 +1039,6 @@
 			buildConfigurations = (
 				ED70D61318FF17E1007B4C18 /* Debug */,
 				ED70D61418FF17E1007B4C18 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED70D61518FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter RemoteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED70D61618FF17E1007B4C18 /* Debug */,
-				ED70D61718FF17E1007B4C18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
