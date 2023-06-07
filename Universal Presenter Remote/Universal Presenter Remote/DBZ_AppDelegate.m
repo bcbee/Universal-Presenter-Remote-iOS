@@ -11,8 +11,6 @@
 #import "UPR-Swift.h"
 #import "DBZ_InfoView.h"
 #import <AudioToolbox/AudioServices.h>
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
 
 
 @implementation DBZ_AppDelegate
@@ -23,7 +21,7 @@ NSDictionary *preferences = nil;
 {
     
     //[[Fabric sharedSDK] setDebug: YES];
-    [Fabric with:@[[Crashlytics class]]];
+    // [Fabric with:@[[Crashlytics class]]];
     
     //Google Analytics
     
