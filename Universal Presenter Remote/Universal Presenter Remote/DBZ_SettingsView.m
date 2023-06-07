@@ -23,9 +23,6 @@ NSDictionary *newpreferences = nil;
     //self.canDisplayBannerAds = YES;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateInterface:) name:@"PreferenceUpdate" object:nil];
     [self updateInterface:nil];
-    
-    [self.swipeControl setEnabled:[self has3DTouch] forSegmentAtIndex:2];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,9 +51,6 @@ NSDictionary *newpreferences = nil;
             break;
         case 1:
             controlMode = @"Buttons";
-            break;
-        case 2:
-            controlMode = @"3D Touch";
             break;
         default:
             controlMode = @"Swipe";
@@ -106,8 +100,6 @@ NSDictionary *newpreferences = nil;
     
     if ([[oldpreferences objectForKey:@"ControlMode"] isEqualToString:@"Swipe"]) {
         self.swipeControl.selectedSegmentIndex = 0;
-    } else if ([[oldpreferences objectForKey:@"ControlMode"] isEqualToString:@"3D Touch"] && [self has3DTouch]) {
-        self.swipeControl.selectedSegmentIndex = 2;
     } else {
         self.swipeControl.selectedSegmentIndex = 1;
     }

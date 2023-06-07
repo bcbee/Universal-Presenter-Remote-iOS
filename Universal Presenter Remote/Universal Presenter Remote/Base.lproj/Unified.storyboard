@@ -323,6 +323,7 @@
                                     <segment title="Show Instructions"/>
                                     <segment title="Hide Instructions"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" name="Primary"/>
                                 <connections>
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="QJV-ZS-TCg"/>
                                 </connections>
@@ -345,7 +346,7 @@
                                     <constraint firstAttribute="height" constant="21" id="e7J-bX-4Nz"/>
                                 </constraints>
                                 <string key="text" base64-UTF8="YES">
-A8KpMjAxOSBEQlogVGVjaG5vbG9neSBMTEM
+A8KpMjAyMyBEQlogVGVjaG5vbG9neSBMTEM
 </string>
                                 <fontDescription key="fontDescription" name="SugarcubesRegular" family="Sugarcubes" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -356,8 +357,8 @@ A8KpMjAxOSBEQlogVGVjaG5vbG9neSBMTEM
                                 <segments>
                                     <segment title="Swipe"/>
                                     <segment title="Buttons"/>
-                                    <segment title="3D Touch" enabled="NO"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" name="Primary"/>
                                 <connections>
                                     <action selector="updatePreferences:" destination="jYj-Wg-eFx" eventType="valueChanged" id="yG6-db-O0M"/>
                                 </connections>
