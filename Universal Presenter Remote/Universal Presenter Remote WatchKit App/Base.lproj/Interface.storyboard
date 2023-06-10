@@ -35,6 +35,9 @@
                                                     </imageView>
                                                 </items>
                                             </group>
+                                            <connections>
+                                                <action selector="reloadButton" destination="AgC-eL-Hgc" id="w5y-t3-uDf"/>
+                                            </connections>
                                         </button>
                                     </items>
                                 </group>

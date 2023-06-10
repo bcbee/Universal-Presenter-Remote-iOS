@@ -37,7 +37,7 @@ class DBZ_WKLoginView: WKInterfaceController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         DBZ_ServerCommunication.checkToken()
         
-        
+        refreshTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshLocal), userInfo: nil, repeats: true)
     }
     
     @objc func updateInterface(_ notification:Notification) {
@@ -54,14 +54,14 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 connectButton.setBackgroundColor(nil)
-                DispatchQueue.global().async {
-                    Thread.sleep(forTimeInterval: 1.0)
-                    
-                    DispatchQueue.main.async {
-                        DBZ_ServerCommunication.checkToken()
-                        self.updateTokenLabel()
-                    }
-                }
+//                DispatchQueue.global().async {
+//                    Thread.sleep(forTimeInterval: 1.0)
+//
+//                    DispatchQueue.main.async {
+//                        DBZ_ServerCommunication.checkToken()
+//                        self.updateTokenLabel()
+//                    }
+//                }
                 break
             case 2:
                 //Button Begin YES
@@ -88,6 +88,11 @@ class DBZ_WKLoginView: WKInterfaceController {
     
     @objc func refreshInterface(_ notification:Notification) {
         DBZ_ServerCommunication.checkToken()
+    }
+    
+    @objc func refreshLocal() {
+        DBZ_ServerCommunication.checkToken()
+        self.updateTokenLabel()
     }
 
     override func didDeactivate() {
