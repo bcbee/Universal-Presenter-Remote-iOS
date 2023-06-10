@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38"/>
+    <device id="watch49"/>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21615"/>
@@ -124,7 +124,6 @@
                                     <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
                                 </label>
                                 <separator alignment="left" verticalAlignment="center" alpha="0.0" id="w4r-V0-IgF"/>
-                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="Vpy-Sq-aeZ"/>
                                 <button width="1" alignment="left" verticalAlignment="center" title="Media" id="2Jr-13-h5y">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
@@ -132,7 +131,6 @@
                                         <action selector="mediaPressed" destination="tyS-3Z-ljt" id="u8i-cz-lo1"/>
                                     </connections>
                                 </button>
-                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="2nd-v0-xYt"/>
                                 <button width="1" alignment="left" verticalAlignment="center" title="Previous" id="DEy-WV-EVQ">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
@@ -140,7 +138,6 @@
                                         <action selector="previousPressed" destination="tyS-3Z-ljt" id="hot-mg-LGh"/>
                                     </connections>
                                 </button>
-                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="KcG-8L-kwQ"/>
                                 <button width="1" alignment="left" verticalAlignment="center" title="Next" id="e98-60-n7t">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
