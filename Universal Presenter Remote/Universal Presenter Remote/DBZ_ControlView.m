@@ -8,8 +8,8 @@
 
 #import "DBZ_ControlView.h"
 #import "DBZ_ServerCommunication.h"
-#import <Fabric/Fabric.h>
-#import <Crashlytics/Crashlytics.h>
+// #import <Fabric/Fabric.h>
+// #import <Crashlytics/Crashlytics.h>
 
 @interface DBZ_ControlView ()
 
@@ -34,7 +34,7 @@
         self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     }
     
-    [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
+    // [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
 
 }
 
