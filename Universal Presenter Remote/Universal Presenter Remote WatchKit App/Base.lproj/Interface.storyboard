@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="21701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="21615"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,6 +23,39 @@
             <objects>
                 <controller title="UPR" fullBounds="YES" id="AgC-eL-Hgc" customClass="DBZ_WKLoginView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
+                        <group width="1" alignment="left" id="Iqn-53-leK">
+                            <items>
+                                <group width="0.5" alignment="left" id="xym-VI-JJh">
+                                    <items>
+                                        <button alignment="left" id="yDc-mb-oUa">
+                                            <group key="contentGroup" alignment="left" id="b9d-s7-4Pj">
+                                                <items>
+                                                    <imageView width="25" height="25" alignment="left" image="arrow.counterclockwise.circle.fill" catalog="system" id="d57-jt-aLG">
+                                                        <color key="tintColor" name="Primary"/>
+                                                    </imageView>
+                                                </items>
+                                            </group>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group width="0.5" alignment="left" id="iH7-NV-n0l">
+                                    <items>
+                                        <button alignment="right" id="nFy-Ed-KUC">
+                                            <group key="contentGroup" alignment="left" id="1WU-fj-0aV">
+                                                <items>
+                                                    <imageView width="25" height="25" alignment="left" image="info.circle.fill" catalog="system" id="vHb-yO-vT9">
+                                                        <color key="tintColor" name="Primary"/>
+                                                    </imageView>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <segue destination="T1b-4Y-1Hr" kind="modal" id="AoF-24-Vuu"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                         <imageView width="65" height="65" alignment="center" image="WatchLogoOld" id="ELT-Zy-IsQ">
                             <variation key="device=watch42mm" height="90" width="90"/>
                         </imageView>
@@ -48,27 +79,13 @@
                             </items>
                         </group>
                     </items>
-                    <menu key="menu" id="kkh-4b-1cs">
-                        <items>
-                            <menuItem title="Reload" icon="repeat" id="xSX-zO-dBG">
-                                <connections>
-                                    <action selector="reloadButton" destination="AgC-eL-Hgc" id="1wV-zz-klI"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Instructions" icon="info" id="NMZ-qU-bK6">
-                                <connections>
-                                    <action selector="instructionsButton" destination="AgC-eL-Hgc" id="yNq-Jo-dfI"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
                     <connections>
                         <outlet property="connectButton" destination="oti-G0-QRI" id="OpM-5z-Bsh"/>
                         <outlet property="tokenLabel" destination="hzr-TV-eJ6" id="177-bj-XVv"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="127" y="280"/>
+            <point key="canvasLocation" x="15" y="279"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="cgt-0j-UhQ">
@@ -91,41 +108,49 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="665" y="323"/>
+            <point key="canvasLocation" x="435" y="-169"/>
         </scene>
         <!--Remote-->
         <scene sceneID="VMh-wy-pk3">
             <objects>
                 <controller title="Remote" fullBounds="YES" id="tyS-3Z-ljt" customClass="DBZ_WKControlView" customModule="Universal_Presenter_Remote_WatchKit_Extension">
                     <items>
-                        <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH">
-                            <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
-                        </label>
-                        <button width="1" alignment="left" title="Media" id="2Jr-13-h5y">
-                            <color key="backgroundColor" name="Primary"/>
-                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
-                            <connections>
-                                <action selector="mediaPressed" destination="tyS-3Z-ljt" id="u8i-cz-lo1"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Next" id="e98-60-n7t">
-                            <color key="backgroundColor" name="Primary"/>
-                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
-                            <connections>
-                                <action selector="nextPressed" destination="tyS-3Z-ljt" id="uyZ-wG-dKG"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Previous" id="DEy-WV-EVQ">
-                            <color key="backgroundColor" name="Primary"/>
-                            <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
-                            <connections>
-                                <action selector="previousPressed" destination="tyS-3Z-ljt" id="hot-mg-LGh"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="pEL-Qt-aBn">
+                            <items>
+                                <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH">
+                                    <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
+                                </label>
+                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="w4r-V0-IgF"/>
+                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="Vpy-Sq-aeZ"/>
+                                <button width="1" alignment="left" verticalAlignment="center" title="Media" id="2Jr-13-h5y">
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
+                                    <connections>
+                                        <action selector="mediaPressed" destination="tyS-3Z-ljt" id="u8i-cz-lo1"/>
+                                    </connections>
+                                </button>
+                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="2nd-v0-xYt"/>
+                                <button width="1" alignment="left" verticalAlignment="center" title="Previous" id="DEy-WV-EVQ">
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
+                                    <connections>
+                                        <action selector="previousPressed" destination="tyS-3Z-ljt" id="hot-mg-LGh"/>
+                                    </connections>
+                                </button>
+                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="KcG-8L-kwQ"/>
+                                <button width="1" alignment="left" verticalAlignment="center" title="Next" id="e98-60-n7t">
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
+                                    <connections>
+                                        <action selector="nextPressed" destination="tyS-3Z-ljt" id="uyZ-wG-dKG"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="435" y="280"/>
+            <point key="canvasLocation" x="435" y="279"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -161,13 +186,17 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="656"/>
+            <point key="canvasLocation" x="435" y="718"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="OkOld" width="74" height="74"/>
+        <image name="WatchLogoOld" width="196" height="196"/>
+        <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="Primary">
             <color red="0.70200002193450928" green="0.0080000003799796104" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
-    <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -94,10 +94,6 @@ class DBZ_WKLoginView: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
-    @IBAction func instructionsButton() {
-        presentController(withName: "Instructions", context: self)
-    }
     
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
