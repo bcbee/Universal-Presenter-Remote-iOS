@@ -16,12 +16,6 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var connectButton: WKInterfaceButton!
     
     var refreshTimer: Timer?
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        // Configure interface objects here.
-    }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -56,14 +50,6 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 connectButton.setBackgroundColor(nil)
-//                DispatchQueue.global().async {
-//                    Thread.sleep(forTimeInterval: 1.0)
-//
-//                    DispatchQueue.main.async {
-//                        DBZ_ServerCommunication.checkToken()
-//                        self.updateTokenLabel()
-//                    }
-//                }
                 break
             case 2:
                 //Button Begin YES
