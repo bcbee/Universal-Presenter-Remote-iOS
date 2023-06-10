@@ -15,7 +15,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var tokenLabel: WKInterfaceLabel!
     @IBOutlet var connectButton: WKInterfaceButton!
     
-    var refreshTimer:Timer = Timer()
+    var refreshTimer: Timer?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -37,7 +37,9 @@ class DBZ_WKLoginView: WKInterfaceController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
         DBZ_ServerCommunication.checkToken()
         
-        refreshTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshLocal), userInfo: nil, repeats: true)
+        if refreshTimer == nil {
+            refreshTimer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(refreshLocal), userInfo: nil, repeats: true)
+        }
     }
     
     @objc func updateInterface(_ notification:Notification) {
@@ -69,7 +71,9 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setTitle("Begin")
                 connectButton.setBackgroundColor(UIColor(named: "Primary"))
                 DBZ_ServerCommunication.startSession()
-                refreshTimer.invalidate()
+                if refreshTimer != nil {
+                    refreshTimer?.invalidate()
+                }
                 break
             default:
                 break
