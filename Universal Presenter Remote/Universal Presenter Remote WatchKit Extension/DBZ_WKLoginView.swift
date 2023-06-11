@@ -57,9 +57,7 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setTitle("Begin")
                 connectButton.setBackgroundColor(UIColor(named: "Primary"))
                 DBZ_ServerCommunication.startSession()
-                if refreshTimer != nil {
-                    refreshTimer?.invalidate()
-                }
+                refreshTimer?.invalidate()
                 break
             default:
                 break

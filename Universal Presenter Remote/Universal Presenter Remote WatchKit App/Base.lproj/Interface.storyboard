@@ -152,9 +152,46 @@
             </objects>
             <point key="canvasLocation" x="435" y="279"/>
         </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <separator alignment="left" id="I7E-6D-NZ7">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <imageView width="50" height="41" alignment="center" image="OkOld" contentMode="scaleAspectFit" id="h0y-s0-nVT"/>
+                        <label width="1" height="43.5" alignment="center" text="Ready to present session 123456" textAlignment="center" numberOfLines="2" id="IdU-wH-bcW">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator width="0.90000000000000002" alignment="center" id="Ixc-3l-3WH">
+                            <color key="color" red="0.70196078429999997" green="0.0078431372550000003" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="center" text="Open UPR App to beigin presenting" textAlignment="center" numberOfLines="2" id="tfT-oJ-OKl">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <separator alignment="left" id="UGE-W8-AQ3">
+                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="presentationReady" id="JfB-70-Muf">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sashColor" red="0.71711276369999999" green="0.0" blue="0.59399263560000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="435" y="718"/>
+        </scene>
     </scenes>
     <color key="tintColor" red="0.92219065656565657" green="0.0062362460292872627" blue="0.77797319241974316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
+        <image name="OkOld" width="74" height="74"/>
         <image name="WatchLogoOld" width="196" height="196"/>
         <image name="arrow.counterclockwise.circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>

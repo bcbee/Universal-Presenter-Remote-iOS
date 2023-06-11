@@ -1,0 +1,8 @@
+{
+    "aps": {
+        "alert": {
+            "body": "Ready to present session 123456"
+        },
+        "category": "presentationReady"
+    }
+}

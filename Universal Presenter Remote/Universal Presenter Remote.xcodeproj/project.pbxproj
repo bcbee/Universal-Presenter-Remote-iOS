@@ -17,6 +17,7 @@
 		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
 		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
+		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
 		B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */; };
 		B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */; };
 		B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */; };
@@ -49,6 +50,7 @@
 		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
+		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
 		B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968CA1AB20B44000819E0 /* Images.xcassets */; };
@@ -125,6 +127,7 @@
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
 		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
 		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
+		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
 		B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
 		B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B3C968BA1AB20B44000819E0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		B3C968BC1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968C61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,6 +270,7 @@
 			children = (
 				B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */,
 				B3A5D5241AB221C20071A5A3 /* WatchApp */,
+				B3C968BA1AB20B44000819E0 /* NotificationController.swift */,
 				B3C968BC1AB20B44000819E0 /* Images.xcassets */,
 				B3C968B51AB20B44000819E0 /* Supporting Files */,
 			);
@@ -275,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				B3C968B61AB20B44000819E0 /* Info.plist */,
+				B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */,
+				B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -554,6 +562,7 @@
 				B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */,
 				B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
 				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
+				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +636,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */,
+				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
 				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
