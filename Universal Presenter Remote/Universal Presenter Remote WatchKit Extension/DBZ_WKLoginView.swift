@@ -16,6 +16,7 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var connectButton: WKInterfaceButton!
     
     var refreshTimer: Timer?
+    var needsSetup: Bool = true
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -27,11 +28,18 @@ class DBZ_WKLoginView: WKInterfaceController {
             DBZ_ServerCommunication.setupUid()
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
-        DBZ_ServerCommunication.checkToken()
+        if needsSetup {
+            NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
+            needsSetup = false
+        }
         
-        if refreshTimer == nil {
+        DBZ_ServerCommunication.checkToken()
+        ensureTimer()
+    }
+    
+    func ensureTimer() {
+        if refreshTimer == nil || !refreshTimer!.isValid {
             refreshTimer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(refreshLocal), userInfo: nil, repeats: true)
         }
     }
@@ -83,15 +91,11 @@ class DBZ_WKLoginView: WKInterfaceController {
         self.updateTokenLabel()
     }
 
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-    
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
         updateTokenLabel()
         connectButton.setEnabled(false)
         DBZ_ServerCommunication.checkToken()
+        ensureTimer()
     }
 }
