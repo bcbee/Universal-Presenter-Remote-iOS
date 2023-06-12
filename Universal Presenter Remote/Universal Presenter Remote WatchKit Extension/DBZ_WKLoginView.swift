@@ -15,13 +15,8 @@ class DBZ_WKLoginView: WKInterfaceController {
     @IBOutlet var tokenLabel: WKInterfaceLabel!
     @IBOutlet var connectButton: WKInterfaceButton!
     
-    var refreshTimer:Timer = Timer()
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        // Configure interface objects here.
-    }
+    var refreshTimer: Timer?
+    var needsSetup: Bool = true
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -33,11 +28,20 @@ class DBZ_WKLoginView: WKInterfaceController {
             DBZ_ServerCommunication.setupUid()
         }
         
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
+        if needsSetup {
+            NotificationCenter.default.addObserver(self, selector: #selector(refreshInterface), name: NSNotification.Name(rawValue: "Refresh"), object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(updateInterface), name: NSNotification.Name(rawValue: "UpdateInterface"), object: nil)
+            needsSetup = false
+        }
+        
         DBZ_ServerCommunication.checkToken()
-        
-        
+        ensureTimer()
+    }
+    
+    func ensureTimer() {
+        if refreshTimer == nil || !refreshTimer!.isValid {
+            refreshTimer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(refreshLocal), userInfo: nil, repeats: true)
+        }
     }
     
     @objc func updateInterface(_ notification:Notification) {
@@ -54,14 +58,6 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setEnabled(false)
                 connectButton.setTitle("Waiting...")
                 connectButton.setBackgroundColor(nil)
-                DispatchQueue.global().async {
-                    Thread.sleep(forTimeInterval: 1.0)
-                    
-                    DispatchQueue.main.async {
-                        DBZ_ServerCommunication.checkToken()
-                        self.updateTokenLabel()
-                    }
-                }
                 break
             case 2:
                 //Button Begin YES
@@ -69,7 +65,7 @@ class DBZ_WKLoginView: WKInterfaceController {
                 connectButton.setTitle("Begin")
                 connectButton.setBackgroundColor(UIColor(named: "Primary"))
                 DBZ_ServerCommunication.startSession()
-                refreshTimer.invalidate()
+                refreshTimer?.invalidate()
                 break
             default:
                 break
@@ -89,20 +85,17 @@ class DBZ_WKLoginView: WKInterfaceController {
     @objc func refreshInterface(_ notification:Notification) {
         DBZ_ServerCommunication.checkToken()
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
-    @IBAction func instructionsButton() {
-        presentController(withName: "Instructions", context: self)
-    }
     
+    @objc func refreshLocal() {
+        DBZ_ServerCommunication.checkToken()
+        self.updateTokenLabel()
+    }
+
     @IBAction func reloadButton() {
         DBZ_ServerCommunication.setupUid()
         updateTokenLabel()
         connectButton.setEnabled(false)
         DBZ_ServerCommunication.checkToken()
+        ensureTimer()
     }
 }
