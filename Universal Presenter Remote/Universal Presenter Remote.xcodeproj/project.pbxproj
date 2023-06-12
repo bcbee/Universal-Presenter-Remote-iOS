@@ -155,12 +155,10 @@
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C968B61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		B3C968BA1AB20B44000819E0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		B3C968BC1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C968C61AB20B44000819E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3C968C81AB20B44000819E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ED70D5ED18FF17E0007B4C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Universal Presenter Remote-Info.plist"; sourceTree = "<group>"; };
 		ED70D5F318FF17E0007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ED70D5F518FF17E0007B4C18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universal Presenter Remote-Prefix.pch"; sourceTree = "<group>"; };
@@ -280,7 +277,6 @@
 		B3C968B51AB20B44000819E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3C968B61AB20B44000819E0 /* Info.plist */,
 				B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */,
 				B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */,
 			);
@@ -300,7 +296,6 @@
 		B3C968C51AB20B44000819E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3C968C61AB20B44000819E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -382,7 +377,6 @@
 			isa = PBXGroup;
 			children = (
 				B3715FC91F64968500AE7E03 /* Fonts */,
-				ED70D5F118FF17E0007B4C18 /* Universal Presenter Remote-Info.plist */,
 				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
 				ED70D5F518FF17E0007B4C18 /* main.m */,
 				ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */,
@@ -721,6 +715,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -755,6 +750,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 93C4626635;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -793,6 +789,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
 				MARKETING_VERSION = 4.4.1;
@@ -821,6 +818,7 @@
 				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 93C4626635;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
 				MARKETING_VERSION = 4.4.1;
@@ -963,6 +961,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -1003,6 +1002,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
+				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
