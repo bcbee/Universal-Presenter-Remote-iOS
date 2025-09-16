@@ -30,9 +30,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
+    self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     
     // [Answers logCustomEventWithName:@"iOS session started" customAttributes:@{}];
 
