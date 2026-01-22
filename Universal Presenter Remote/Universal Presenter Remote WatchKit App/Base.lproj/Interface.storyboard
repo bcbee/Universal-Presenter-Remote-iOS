@@ -64,15 +64,15 @@
                         <separator alignment="left" id="b5s-rP-Hno">
                             <color key="color" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
-                        <separator width="118" alignment="center" id="TpW-jR-W8h">
+                        <separator width="0.80000000000000004" alignment="center" id="TpW-jR-W8h">
                             <color key="color" red="0.92219065659999999" green="0.0062362460290000003" blue="0.77797319239999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </separator>
                         <label width="97" height="19" alignment="center" text="..." textAlignment="center" id="hzr-TV-eJ6">
                             <fontDescription key="font" name="BatmanForeverAlternate" family="BatmanForeverAlternate" pointSize="16"/>
                         </label>
-                        <group width="1" alignment="left" id="G7r-3c-AOO">
+                        <group width="1" alignment="center" id="G7r-3c-AOO">
                             <items>
-                                <button width="1" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
+                                <button width="0.90000000000000002" alignment="center" title="Connecting..." enabled="NO" id="oti-G0-QRI">
                                     <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
                                     <connections>
                                         <segue destination="tyS-3Z-ljt" kind="push" id="lQU-KY-rpe"/>
@@ -119,25 +119,21 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="pEL-Qt-aBn">
                             <items>
-                                <label alignment="center" text="Presenter Remote" textAlignment="center" id="0G2-Gj-BoH">
-                                    <fontDescription key="font" name="SugarcubesBold" family="Sugarcubes" pointSize="14"/>
-                                </label>
-                                <separator alignment="left" verticalAlignment="center" alpha="0.0" id="w4r-V0-IgF"/>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Media" id="2Jr-13-h5y">
+                                <button width="0.90000000000000002" height="0.29999999999999999" alignment="center" verticalAlignment="center" title="Media" id="2Jr-13-h5y">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                                     <connections>
                                         <action selector="mediaPressed" destination="tyS-3Z-ljt" id="u8i-cz-lo1"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Previous" id="DEy-WV-EVQ">
+                                <button width="0.90000000000000002" height="0.29999999999999999" alignment="center" verticalAlignment="center" title="Previous" id="DEy-WV-EVQ">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                                     <connections>
                                         <action selector="previousPressed" destination="tyS-3Z-ljt" id="hot-mg-LGh"/>
                                     </connections>
                                 </button>
-                                <button width="1" alignment="left" verticalAlignment="center" title="Next" id="e98-60-n7t">
+                                <button width="0.90000000000000002" height="0.29999999999999999" alignment="center" verticalAlignment="center" title="Next" id="e98-60-n7t">
                                     <color key="backgroundColor" name="Primary"/>
                                     <fontDescription key="font" name="SugarcubesRegular" family="Sugarcubes" pointSize="15"/>
                                     <connections>
