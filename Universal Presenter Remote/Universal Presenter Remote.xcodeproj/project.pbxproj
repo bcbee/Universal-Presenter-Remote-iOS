@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350FA20CEE96EACEB21AC351 /* Pods_Universal_Presenter_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */; };
 		B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D1521A097829002F59AB /* AdSupport.framework */; };
 		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
 		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
@@ -36,7 +35,6 @@
 		B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
 		B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
 		B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
-		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
 		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
@@ -113,9 +111,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		066659F75E0D0A13B8AC8CBC /* Pods_Universal_Presenter_RemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_RemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.debug.xcconfig"; sourceTree = "<group>"; };
-		B144979B0BA83903230B7197 /* Pods_Universal_Presenter_Remote_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		B3257AC219B41E8D00CC471C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -142,7 +137,6 @@
 		B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
 		B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesRegular.ttf; sourceTree = "<group>"; };
 		B37160041F64983300AE7E03 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesBold.ttf; sourceTree = "<group>"; };
-		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKControlView.swift; sourceTree = "<group>"; };
 		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UniversalNetworking.swift; sourceTree = "<group>"; };
@@ -168,8 +162,6 @@
 		B3E35D191A094D530099DCD4 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
 		B3E35D1A1A094D530099DCD4 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
 		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		BD5A62AF2BC3B76563C882B8 /* Pods_Universal_Presenter_Remote_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.release.xcconfig"; sourceTree = "<group>"; };
 		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
 		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
@@ -187,7 +179,6 @@
 		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
 		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
-		F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,22 +206,12 @@
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
-				350FA20CEE96EACEB21AC351 /* Pods_Universal_Presenter_Remote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		478E595EF3DA780530ADB104 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */,
-				E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		B3715FC91F64968500AE7E03 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,13 +297,11 @@
 			isa = PBXGroup;
 			children = (
 				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
-				B384129C1CCEE122000419B7 /* GoogleService-Info.plist */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
 				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
 				ED70D5E718FF17E0007B4C18 /* Products */,
-				478E595EF3DA780530ADB104 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,10 +329,6 @@
 				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
 				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
 				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
-				F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */,
-				B144979B0BA83903230B7197 /* Pods_Universal_Presenter_Remote_WatchKit_App.framework */,
-				BD5A62AF2BC3B76563C882B8 /* Pods_Universal_Presenter_Remote_WatchKit_Extension.framework */,
-				066659F75E0D0A13B8AC8CBC /* Pods_Universal_Presenter_RemoteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -457,7 +432,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
 			buildPhases = (
-				FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */,
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
@@ -594,7 +568,6 @@
 				B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */,
 				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
 				B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */,
-				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
 				B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */,
 				B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */,
 				B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */,
@@ -602,27 +575,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3C968AF1AB20B44000819E0 /* Sources */ = {
@@ -953,7 +905,6 @@
 		};
 		ED70D61318FF17E1007B4C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -992,7 +943,6 @@
 		};
 		ED70D61418FF17E1007B4C18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
