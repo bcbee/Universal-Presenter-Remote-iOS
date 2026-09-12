@@ -153,10 +153,6 @@ final class DBZ_ServerCommunication {
         checkToken()
     }
 
-    static func activateSession(_ targetToken: String) {
-        getResponse("StartQR", withToken: temptokenValue, withHoldfor: false, withDeviceToken: false, withTarget: targetToken)
-    }
-
     static func startSession() {
         tokenValue = temptokenValue
         enabledValue = true

@@ -13,7 +13,6 @@ class DBZ_LoginView: UIViewController {
 
     @IBOutlet weak var tokenLabel: UILabel!
     @IBOutlet weak var connectButton: UIButton!
-    @IBOutlet var QRSelector: UISegmentedControl!
 
     private var refreshTimer: Timer?
 
@@ -26,7 +25,6 @@ class DBZ_LoginView: UIViewController {
         center.addObserver(self, selector: #selector(updateInterface(_:)), name: Notification.Name("UpdateInterface"), object: nil)
         center.addObserver(self, selector: #selector(refreshInterface(_:)), name: Notification.Name("Refresh"), object: nil)
         center.addObserver(self, selector: #selector(openInstructions(_:)), name: Notification.Name("OpenInstructions"), object: nil)
-        center.addObserver(self, selector: #selector(resetQR(_:)), name: Notification.Name("ResetQR"), object: nil)
 
         DBZ_ServerCommunication.setupUid()
 
@@ -36,7 +34,6 @@ class DBZ_LoginView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         applyTitleFont()
-        resetQR(nil)
     }
 
     private func applyTitleFont() {
@@ -92,10 +89,6 @@ class DBZ_LoginView: UIViewController {
 
     @objc func openInstructions(_ notification: Notification) {
         performSegue(withIdentifier: "InstructionSegue", sender: self)
-    }
-
-    @objc func resetQR(_ notification: Notification?) {
-        QRSelector.selectedSegmentIndex = 0
     }
 
     @objc func localRefresh() {

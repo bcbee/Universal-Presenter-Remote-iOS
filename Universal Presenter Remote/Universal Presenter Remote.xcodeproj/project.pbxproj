@@ -55,8 +55,6 @@
 		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */; };
 		B3DAF9F81CCE6E5200E06E2C /* Universal Presenter Remote WatchKit Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3DAF9FB1CCE6E5200E06E2C /* Universal Presenter Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
-		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
-		B3E35D1B1A094D530099DCD4 /* igViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.swift */; };
 		ED282332190068010030B9C4 /* DBZ_ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.swift */; };
 		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */; };
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
@@ -154,8 +152,6 @@
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_SettingsView.swift; sourceTree = "<group>"; };
 		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
-		B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_QRVeiw.swift; sourceTree = "<group>"; };
-		B3E35D1A1A094D530099DCD4 /* igViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = igViewController.swift; sourceTree = "<group>"; };
 		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlView.swift; sourceTree = "<group>"; };
 		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ServerCommunication.swift; sourceTree = "<group>"; };
@@ -362,8 +358,6 @@
 				ED282331190068010030B9C4 /* DBZ_ControlView.swift */,
 				B357A5DC190453D500CCECB6 /* DBZ_InfoView.swift */,
 				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */,
-				B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */,
-				B3E35D1A1A094D530099DCD4 /* igViewController.swift */,
 				B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */,
 				B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.swift */,
 				B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */,
@@ -574,12 +568,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */,
 				B357A5DD190453D500CCECB6 /* DBZ_InfoView.swift in Sources */,
 				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.swift in Sources */,
 				B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */,
 				B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */,
-				B3E35D1B1A094D530099DCD4 /* igViewController.swift in Sources */,
 				B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				ED70D62218FF1979007B4C18 /* DBZ_LoginView.swift in Sources */,
 				ED282332190068010030B9C4 /* DBZ_ControlView.swift in Sources */,
@@ -899,7 +891,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Unified;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -937,7 +936,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Unified;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
