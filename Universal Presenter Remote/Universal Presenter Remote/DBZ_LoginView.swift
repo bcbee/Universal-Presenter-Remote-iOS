@@ -24,7 +24,6 @@ class DBZ_LoginView: UIViewController {
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(updateInterface(_:)), name: Notification.Name("UpdateInterface"), object: nil)
         center.addObserver(self, selector: #selector(refreshInterface(_:)), name: Notification.Name("Refresh"), object: nil)
-        center.addObserver(self, selector: #selector(openInstructions(_:)), name: Notification.Name("OpenInstructions"), object: nil)
 
         DBZ_ServerCommunication.setupUid()
 
@@ -73,7 +72,7 @@ class DBZ_LoginView: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ControlSegue" || segue.identifier == "SettingsSegue" {
+        if segue.identifier == "ControlSegue" {
             var attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.white]
             if let font = UIFont(name: "mplus-1c-regular", size: 21) {
                 attributes[.font] = font
@@ -85,10 +84,6 @@ class DBZ_LoginView: UIViewController {
     @IBAction func refresh(_ sender: Any) {
         DBZ_ServerCommunication.setupUid()
         DBZ_ServerCommunication.checkToken()
-    }
-
-    @objc func openInstructions(_ notification: Notification) {
-        performSegue(withIdentifier: "InstructionSegue", sender: self)
     }
 
     @objc func localRefresh() {
