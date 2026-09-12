@@ -9,8 +9,11 @@
 		<string>fetch</string>
 		<string>remote-notification</string>
 	</array>
-	<key>UIMainStoryboardFile~ipad</key>
-	<string>Unified</string>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LaunchBackground</string>
+	</dict>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

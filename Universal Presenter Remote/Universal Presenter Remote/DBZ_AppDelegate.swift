@@ -10,10 +10,8 @@ import UIKit
 import UserNotifications
 import AudioToolbox
 
-@main
 class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
     var feedbackGenerator: UINotificationFeedbackGenerator?
 
     func application(_ application: UIApplication,
@@ -44,7 +42,7 @@ class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         print("APNS: notification received: \(userInfo)")
-        NotificationCenter.default.post(name: Notification.Name("Refresh"), object: nil)
+        Task { await PresenterSession.shared.refresh() }
         completionHandler(.newData)
 
         if DBZ_UPRGlobal.hasTaptic() {
@@ -59,7 +57,7 @@ class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map { String(format: "%02x", $0) }.joined()
         print("Did register for remote notifications: \(token)")
-        DBZ_ServerCommunication.setupApns(token)
+        Task { @MainActor in PresenterSession.shared.setAPNS(token) }
     }
 
     func application(_ application: UIApplication,
@@ -78,6 +76,6 @@ class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Lifecycle
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        DBZ_ServerCommunication.checkToken()
+        Task { await PresenterSession.shared.refresh() }
     }
 }
