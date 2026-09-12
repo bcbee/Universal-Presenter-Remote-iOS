@@ -13,7 +13,7 @@
 		B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B67151AB7950D00D2C728 /* Unified.storyboard */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
 		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
-		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
+		B357A5DD190453D500CCECB6 /* DBZ_InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.swift */; };
 		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
 		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
@@ -38,11 +38,11 @@
 		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
 		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
 		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
-		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
+		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */; };
 		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
 		B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */; };
 		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
-		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
+		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.swift */; };
 		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
 		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
 		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
@@ -52,20 +52,19 @@
 		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
 		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
 		B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968CA1AB20B44000819E0 /* Images.xcassets */; };
-		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
+		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */; };
 		B3DAF9F81CCE6E5200E06E2C /* Universal Presenter Remote WatchKit Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3DAF9FB1CCE6E5200E06E2C /* Universal Presenter Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
 		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
-		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
-		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
-		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
+		B3E35D1B1A094D530099DCD4 /* igViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.swift */; };
+		ED282332190068010030B9C4 /* DBZ_ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.swift */; };
+		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */; };
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
 		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
 		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
 		ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */; };
-		ED70D5F618FF17E0007B4C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F518FF17E0007B4C18 /* main.m */; };
-		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */; };
-		ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */; };
+		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */; };
+		ED70D62218FF1979007B4C18 /* DBZ_LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,8 +119,7 @@
 		B32B67161AB7951800D2C728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Unified.storyboard; sourceTree = "<group>"; };
 		B34E227219AD5B4F0001127D /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
-		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
-		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
+		B357A5DC190453D500CCECB6 /* DBZ_InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_InfoView.swift; sourceTree = "<group>"; };
 		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
 		B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
 		B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -143,8 +141,7 @@
 		B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginView.swift; sourceTree = "<group>"; };
 		B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlContainerView.swift; sourceTree = "<group>"; };
 		B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UPRGlobal.swift; sourceTree = "<group>"; };
-		B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_BaseViewController.h; sourceTree = "<group>"; };
-		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_BaseViewController.m; sourceTree = "<group>"; };
+		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_BaseViewController.swift; sourceTree = "<group>"; };
 		B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ForceTouchView.swift; sourceTree = "<group>"; };
 		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
@@ -155,30 +152,23 @@
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968C81AB20B44000819E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
-		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
+		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_SettingsView.swift; sourceTree = "<group>"; };
 		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
 		B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_QRVeiw.swift; sourceTree = "<group>"; };
-		B3E35D191A094D530099DCD4 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
-		B3E35D1A1A094D530099DCD4 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
+		B3E35D1A1A094D530099DCD4 /* igViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = igViewController.swift; sourceTree = "<group>"; };
 		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
-		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
-		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
-		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
+		ED282331190068010030B9C4 /* DBZ_ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlView.swift; sourceTree = "<group>"; };
+		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ServerCommunication.swift; sourceTree = "<group>"; };
 		ED35B95D1901BC830074B424 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ED70D5ED18FF17E0007B4C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		ED70D5F318FF17E0007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ED70D5F518FF17E0007B4C18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universal Presenter Remote-Prefix.pch"; sourceTree = "<group>"; };
-		ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBZ_AppDelegate.h; sourceTree = "<group>"; };
-		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBZ_AppDelegate.m; sourceTree = "<group>"; };
+		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBZ_AppDelegate.swift; sourceTree = "<group>"; };
 		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
-		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
+		ED70D62118FF1979007B4C18 /* DBZ_LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,8 +274,7 @@
 		ED282329190067AB0030B9C4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
-				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
+				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */,
 				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
 				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
 				B3C7857F1F68E97F00F571C3 /* Shared.xcassets */,
@@ -337,8 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */,
-				ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */,
-				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */,
+				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */,
 				ED282329190067AB0030B9C4 /* Shared */,
 				ED70D61F18FF192E007B4C18 /* View Controllers */,
 				ED70D61C18FF182F007B4C18 /* Interface */,
@@ -353,7 +341,6 @@
 			children = (
 				B3715FC91F64968500AE7E03 /* Fonts */,
 				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
-				ED70D5F518FF17E0007B4C18 /* main.m */,
 				ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -371,20 +358,14 @@
 		ED70D61F18FF192E007B4C18 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */,
-				ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */,
-				ED282330190068010030B9C4 /* DBZ_ControlView.h */,
-				ED282331190068010030B9C4 /* DBZ_ControlView.m */,
-				B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */,
-				B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */,
-				B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */,
-				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */,
+				ED70D62118FF1979007B4C18 /* DBZ_LoginView.swift */,
+				ED282331190068010030B9C4 /* DBZ_ControlView.swift */,
+				B357A5DC190453D500CCECB6 /* DBZ_InfoView.swift */,
+				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.swift */,
 				B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */,
-				B3E35D191A094D530099DCD4 /* igViewController.h */,
-				B3E35D1A1A094D530099DCD4 /* igViewController.m */,
+				B3E35D1A1A094D530099DCD4 /* igViewController.swift */,
 				B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */,
-				B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */,
-				B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */,
+				B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.swift */,
 				B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */,
 			);
 			name = "View Controllers";
@@ -581,7 +562,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */,
+				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.swift in Sources */,
 				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
 				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
 				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
@@ -594,19 +575,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */,
-				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
-				B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */,
-				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
+				B357A5DD190453D500CCECB6 /* DBZ_InfoView.swift in Sources */,
+				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.swift in Sources */,
 				B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */,
 				B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */,
-				B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */,
+				B3E35D1B1A094D530099DCD4 /* igViewController.swift in Sources */,
 				B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
-				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
-				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
-				B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */,
+				ED70D62218FF1979007B4C18 /* DBZ_LoginView.swift in Sources */,
+				ED282332190068010030B9C4 /* DBZ_ControlView.swift in Sources */,
+				B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.swift in Sources */,
 				B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */,
-				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
-				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
+				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.swift in Sources */,
+				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
