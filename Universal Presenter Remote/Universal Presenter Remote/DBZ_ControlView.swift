@@ -28,8 +28,4 @@ class DBZ_ControlView: UIViewController {
     @IBAction func previousButton(_ sender: Any) {
         DBZ_ServerCommunication.getResponse("SlideDown", withToken: DBZ_ServerCommunication.token(), withHoldfor: true, withDeviceToken: false, withTarget: nil)
     }
-
-    @objc func close(_ notification: Notification) {
-        navigationController?.popViewController(animated: true)
-    }
 }
