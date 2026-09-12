@@ -63,8 +63,8 @@ struct WatchPairView: View {
         .sheet(isPresented: $showingInstructions) {
             WatchInstructionsView()
         }
-        .task {
-            guard session.shouldAutoRefresh else { return }
+        .task(id: session.phase) {
+            guard session.phase == .pairing, session.shouldAutoRefresh else { return }
             await session.setupSession()
             while !Task.isCancelled && session.phase == .pairing {
                 try? await Task.sleep(for: .seconds(2.5))

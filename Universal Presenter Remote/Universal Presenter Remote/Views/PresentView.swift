@@ -41,17 +41,6 @@ struct PresentView: View {
                     .foregroundStyle(.white)
             }
             Spacer()
-            Button("End session") {
-                session.endSession()
-            }
-            .font(.system(size: 15, weight: .medium))
-            .foregroundStyle(.white)
-            .padding(.horizontal, 16)
-            .padding(.vertical, 10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.white.opacity(0.25), lineWidth: 1)
-            )
         }
     }
 

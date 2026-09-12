@@ -2,7 +2,8 @@
 //  WatchRootView.swift
 //  Universal Presenter Remote WatchKit App
 //
-//  Switches between pairing and presenting on the watch.
+//  Hosts the pairing screen and pushes the presenting screen so a native
+//  back button appears. Popping (back) ends the session.
 //
 
 import SwiftUI
@@ -12,13 +13,22 @@ struct WatchRootView: View {
 
     var body: some View {
         NavigationStack {
-            switch session.phase {
-            case .pairing:
-                WatchPairView()
-            case .presenting:
-                WatchPresentView()
-            }
+            WatchPairView()
+                .navigationDestination(isPresented: presentingBinding) {
+                    WatchPresentView()
+                }
         }
+    }
+
+    /// Drives the push: `true` while presenting. Setting it back to `false`
+    /// (via the native back button) ends the session.
+    private var presentingBinding: Binding<Bool> {
+        Binding(
+            get: { session.phase == .presenting },
+            set: { isPresenting in
+                if !isPresenting { session.endSession() }
+            }
+        )
     }
 }
 
