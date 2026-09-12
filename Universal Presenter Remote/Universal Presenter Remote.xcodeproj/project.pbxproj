@@ -145,7 +145,6 @@
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968C81AB20B44000819E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
 		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		ED282331190068010030B9C4 /* DBZ_ControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlView.swift; sourceTree = "<group>"; };
 		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ServerCommunication.swift; sourceTree = "<group>"; };
@@ -275,7 +274,6 @@
 		ED70D5DD18FF17E0007B4C18 = {
 			isa = PBXGroup;
 			children = (
-				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
 				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
@@ -644,7 +642,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
@@ -680,7 +677,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 10.6;
@@ -901,7 +897,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -946,7 +941,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				WRAPPER_EXTENSION = app;
 			};
