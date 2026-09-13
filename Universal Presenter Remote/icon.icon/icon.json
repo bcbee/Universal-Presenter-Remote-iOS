@@ -1,0 +1,53 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.60693,0.19153,0.63818,1.00000",
+      "display-p3:0.29419,0.17651,0.34912,1.00000"
+    ],
+    "orientation" : {
+      "start" : {
+        "x" : 0.5,
+        "y" : 0
+      },
+      "stop" : {
+        "x" : 0.5,
+        "y" : 0.7
+      }
+    }
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "upr_ring_only.png",
+          "name" : "upr_ring_only"
+        },
+        {
+          "image-name" : "Text-Only.png",
+          "name" : "Text-Only",
+          "position" : {
+            "scale" : 0.45,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}
