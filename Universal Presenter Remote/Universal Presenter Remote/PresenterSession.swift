@@ -43,9 +43,6 @@ final class PresenterSession {
     /// Whether the control software has connected and presenting can begin.
     var isConnected: Bool { controlMode == 2 }
 
-    /// Whether a push token has been registered (always false in the Simulator).
-    var hasPushToken: Bool { !apnsToken.isEmpty }
-
     /// The six token digits for display, or `nil` while a token is pending.
     var tokenDigits: [Character]? {
         guard tempToken > 10 else { return nil }
