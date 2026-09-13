@@ -7,77 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		350FA20CEE96EACEB21AC351 /* Pods_Universal_Presenter_Remote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */; };
-		B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D1521A097829002F59AB /* AdSupport.framework */; };
-		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
-		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
-		B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B32B67151AB7950D00D2C728 /* Unified.storyboard */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
-		B34E227319AD5B4F0001127D /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
-		B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */; };
-		B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
-		B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34E227219AD5B4F0001127D /* Batman.ttf */; };
-		B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */ = {isa = PBXBuildFile; fileRef = B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */; };
-		B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */; };
-		B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */; };
-		B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */; };
-		B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */; };
-		B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */; };
-		B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */; };
-		B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */; };
-		B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */; };
-		B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */; };
-		B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */; };
-		B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */; };
-		B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */; };
-		B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
-		B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
-		B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160041F64983300AE7E03 /* SugarcubesBold.ttf */; };
-		B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
-		B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
-		B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */; };
-		B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B384129C1CCEE122000419B7 /* GoogleService-Info.plist */; };
-		B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */; };
-		B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
-		B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */; };
-		B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
-		B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */; };
-		B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */; };
-		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
-		B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */; };
-		B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */; };
-		B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */; };
+		B3542E51305648490062FE77 /* icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B3542E50305648490062FE77 /* icon.icon */; };
+		B3542E52305648490062FE77 /* icon.icon in Resources */ = {isa = PBXBuildFile; fileRef = B3542E50305648490062FE77 /* icon.icon */; };
 		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
-		B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
-		B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C968BA1AB20B44000819E0 /* NotificationController.swift */; };
-		B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968BC1AB20B44000819E0 /* Images.xcassets */; };
-		B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C968C71AB20B44000819E0 /* Interface.storyboard */; };
 		B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968CA1AB20B44000819E0 /* Images.xcassets */; };
-		B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */; };
-		B3DAF9F81CCE6E5200E06E2C /* Universal Presenter Remote WatchKit Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B3DAF9FB1CCE6E5200E06E2C /* Universal Presenter Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */; };
-		B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */; };
-		B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E35D1A1A094D530099DCD4 /* igViewController.m */; };
-		ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED282331190068010030B9C4 /* DBZ_ControlView.m */; };
-		ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */; };
+		B3FDD4323055EACA00E2BE9A /* PresenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4313055EACA00E2BE9A /* PresenterService.swift */; };
+		B3FDD4333055EACA00E2BE9A /* PresenterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4313055EACA00E2BE9A /* PresenterService.swift */; };
+		B3FDD4353055EAF800E2BE9A /* ActivityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */; };
+		B3FDD4363055EAF800E2BE9A /* ActivityEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */; };
+		B3FDD4383055EB0B00E2BE9A /* PresenterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4373055EB0B00E2BE9A /* PresenterSession.swift */; };
+		B3FDD4393055EB0B00E2BE9A /* PresenterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4373055EB0B00E2BE9A /* PresenterSession.swift */; };
+		B3FDD43C3055EB2F00E2BE9A /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD43B3055EB2F00E2BE9A /* DesignSystem.swift */; };
+		B3FDD43E3055EB3400E2BE9A /* TokenBoxesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD43D3055EB3400E2BE9A /* TokenBoxesView.swift */; };
+		B3FDD4403055EB7E00E2BE9A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD43F3055EB7E00E2BE9A /* RootView.swift */; };
+		B3FDD4423055EB8E00E2BE9A /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4413055EB8E00E2BE9A /* PairView.swift */; };
+		B3FDD4443055EB9D00E2BE9A /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4433055EB9D00E2BE9A /* PresentView.swift */; };
+		B3FDD4463055EBAA00E2BE9A /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4453055EBAA00E2BE9A /* InstructionsView.swift */; };
+		B3FDD4483055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4473055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift */; };
+		B3FDD44A3055EDE300E2BE9A /* UPRColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4493055EDE300E2BE9A /* UPRColors.swift */; };
+		B3FDD44B3055EDE300E2BE9A /* UPRColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4493055EDE300E2BE9A /* UPRColors.swift */; };
+		B3FDD44D3055EDF500E2BE9A /* WatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD44C3055EDF500E2BE9A /* WatchApp.swift */; };
+		B3FDD44F3055EDF700E2BE9A /* WatchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD44E3055EDF700E2BE9A /* WatchRootView.swift */; };
+		B3FDD4513055EDFE00E2BE9A /* WatchPairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4503055EDFE00E2BE9A /* WatchPairView.swift */; };
+		B3FDD4533055EE0200E2BE9A /* WatchPresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4523055EE0200E2BE9A /* WatchPresentView.swift */; };
+		B3FDD4553055F0DC00E2BE9A /* WatchInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDD4543055F0DC00E2BE9A /* WatchInstructionsView.swift */; };
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
 		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
 		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
-		ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */; };
-		ED70D5F618FF17E0007B4C18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F518FF17E0007B4C18 /* main.m */; };
-		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */; };
-		ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */; };
+		ED70D5FA18FF17E0007B4C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B3DAF9F61CCE6E5200E06E2C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B3C968B21AB20B44000819E0;
-			remoteInfo = "Universal Presenter Remote WatchKit Extension";
-		};
 		B3DAF9F91CCE6E5200E06E2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED70D5DE18FF17E0007B4C18 /* Project object */;
@@ -88,17 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B3DAF9FC1CCE6E5200E06E2C /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B3DAF9F81CCE6E5200E06E2C /* Universal Presenter Remote WatchKit Extension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3DAF9FD1CCE6E5200E06E2C /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,81 +65,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		066659F75E0D0A13B8AC8CBC /* Pods_Universal_Presenter_RemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_RemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.debug.xcconfig"; sourceTree = "<group>"; };
-		B144979B0BA83903230B7197 /* Pods_Universal_Presenter_Remote_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		B3257AC219B41E8D00CC471C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B3257AC619B41EA700CC471C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		B32B67161AB7951800D2C728 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Unified.storyboard; sourceTree = "<group>"; };
-		B34E227219AD5B4F0001127D /* Batman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Batman.ttf; sourceTree = "<group>"; };
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
-		B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_InfoView.h; sourceTree = "<group>"; };
-		B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_InfoView.m; sourceTree = "<group>"; };
-		B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayloadOld.apns; sourceTree = "<group>"; };
-		B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-MediumItalic.otf"; sourceTree = "<group>"; };
-		B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Medium.otf"; sourceTree = "<group>"; };
-		B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-LightItalic.otf"; sourceTree = "<group>"; };
-		B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-HeavyItalic.otf"; sourceTree = "<group>"; };
-		B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Semibold.otf"; sourceTree = "<group>"; };
-		B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Heavy.otf"; sourceTree = "<group>"; };
-		B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Regular.otf"; sourceTree = "<group>"; };
-		B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Bold.otf"; sourceTree = "<group>"; };
-		B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-Light.otf"; sourceTree = "<group>"; };
-		B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-RegularItalic.otf"; sourceTree = "<group>"; };
-		B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SanFranciscoText-BoldItalic.otf"; sourceTree = "<group>"; };
-		B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesRegular.ttf; sourceTree = "<group>"; };
-		B37160041F64983300AE7E03 /* SugarcubesBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesBold.ttf; sourceTree = "<group>"; };
-		B384129C1CCEE122000419B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKControlView.swift; sourceTree = "<group>"; };
-		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UniversalNetworking.swift; sourceTree = "<group>"; };
-		B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_WKLoginView.swift; sourceTree = "<group>"; };
-		B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ControlContainerView.swift; sourceTree = "<group>"; };
-		B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UPRGlobal.swift; sourceTree = "<group>"; };
-		B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_BaseViewController.h; sourceTree = "<group>"; };
-		B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_BaseViewController.m; sourceTree = "<group>"; };
-		B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_ForceTouchView.swift; sourceTree = "<group>"; };
-		B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3542E50305648490062FE77 /* icon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = icon.icon; sourceTree = "<group>"; };
 		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
-		B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Universal Presenter Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		B3C968BA1AB20B44000819E0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		B3C968BC1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3C968C81AB20B44000819E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_SettingsView.h; sourceTree = "<group>"; };
-		B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_SettingsView.m; sourceTree = "<group>"; };
-		B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Universal Presenter Remote-Bridging-Header.h"; path = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h"; sourceTree = "<group>"; };
-		B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_QRVeiw.swift; sourceTree = "<group>"; };
-		B3E35D191A094D530099DCD4 /* igViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igViewController.h; sourceTree = "<group>"; };
-		B3E35D1A1A094D530099DCD4 /* igViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igViewController.m; sourceTree = "<group>"; };
-		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		BD5A62AF2BC3B76563C882B8 /* Pods_Universal_Presenter_Remote_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Universal Presenter Remote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Universal Presenter Remote/Pods-Universal Presenter Remote.release.xcconfig"; sourceTree = "<group>"; };
-		ED282330190068010030B9C4 /* DBZ_ControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ControlView.h; sourceTree = "<group>"; };
-		ED282331190068010030B9C4 /* DBZ_ControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ControlView.m; sourceTree = "<group>"; };
-		ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_ServerCommunication.h; sourceTree = "<group>"; };
-		ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_ServerCommunication.m; sourceTree = "<group>"; };
-		ED35B95D1901BC830074B424 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		B3FDD4313055EACA00E2BE9A /* PresenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterService.swift; sourceTree = "<group>"; };
+		B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntry.swift; sourceTree = "<group>"; };
+		B3FDD4373055EB0B00E2BE9A /* PresenterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterSession.swift; sourceTree = "<group>"; };
+		B3FDD43B3055EB2F00E2BE9A /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		B3FDD43D3055EB3400E2BE9A /* TokenBoxesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenBoxesView.swift; sourceTree = "<group>"; };
+		B3FDD43F3055EB7E00E2BE9A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B3FDD4413055EB8E00E2BE9A /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
+		B3FDD4433055EB9D00E2BE9A /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
+		B3FDD4453055EBAA00E2BE9A /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		B3FDD4473055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalPresenterRemoteApp.swift; sourceTree = "<group>"; };
+		B3FDD4493055EDE300E2BE9A /* UPRColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPRColors.swift; sourceTree = "<group>"; };
+		B3FDD44C3055EDF500E2BE9A /* WatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchApp.swift; sourceTree = "<group>"; };
+		B3FDD44E3055EDF700E2BE9A /* WatchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchRootView.swift; sourceTree = "<group>"; };
+		B3FDD4503055EDFE00E2BE9A /* WatchPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPairView.swift; sourceTree = "<group>"; };
+		B3FDD4523055EE0200E2BE9A /* WatchPresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPresentView.swift; sourceTree = "<group>"; };
+		B3FDD4543055F0DC00E2BE9A /* WatchInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchInstructionsView.swift; sourceTree = "<group>"; };
 		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ED70D5ED18FF17E0007B4C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		ED70D5F318FF17E0007B4C18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		ED70D5F518FF17E0007B4C18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Universal Presenter Remote-Prefix.pch"; sourceTree = "<group>"; };
-		ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBZ_AppDelegate.h; sourceTree = "<group>"; };
-		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBZ_AppDelegate.m; sourceTree = "<group>"; };
+		ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBZ_LoginView.h; sourceTree = "<group>"; };
-		ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBZ_LoginView.m; sourceTree = "<group>"; };
-		F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Universal_Presenter_Remote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,116 +102,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3C968B01AB20B44000819E0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ED70D5E318FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */,
-				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
-				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
-				350FA20CEE96EACEB21AC351 /* Pods_Universal_Presenter_Remote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		478E595EF3DA780530ADB104 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */,
-				E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B3715FC91F64968500AE7E03 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B37160041F64983300AE7E03 /* SugarcubesBold.ttf */,
-				B37160031F64983200AE7E03 /* SugarcubesRegular.ttf */,
-				B3715FDA1F6496A700AE7E03 /* SanFranciscoText-Bold.otf */,
-				B3715FDE1F6496AC00AE7E03 /* SanFranciscoText-BoldItalic.otf */,
-				B3715FD81F6496A400AE7E03 /* SanFranciscoText-Heavy.otf */,
-				B3715FD51F6496A100AE7E03 /* SanFranciscoText-HeavyItalic.otf */,
-				B3715FDB1F6496A800AE7E03 /* SanFranciscoText-Light.otf */,
-				B3715FD11F64969C00AE7E03 /* SanFranciscoText-LightItalic.otf */,
-				B3715FCF1F64969900AE7E03 /* SanFranciscoText-Medium.otf */,
-				B3715FCC1F64969600AE7E03 /* SanFranciscoText-MediumItalic.otf */,
-				B3715FD91F6496A600AE7E03 /* SanFranciscoText-Regular.otf */,
-				B3715FDD1F6496AC00AE7E03 /* SanFranciscoText-RegularItalic.otf */,
-				B3715FD61F6496A200AE7E03 /* SanFranciscoText-Semibold.otf */,
-				B3715FCD1F64969700AE7E03 /* SanFranciscoText-SemiboldItalic.otf */,
-				B34E227219AD5B4F0001127D /* Batman.ttf */,
-			);
-			name = Fonts;
-			sourceTree = "<group>";
-		};
-		B3A5D5241AB221C20071A5A3 /* WatchApp */ = {
-			isa = PBXGroup;
-			children = (
-				B3A523101CCE93F5005CB862 /* DBZ_WKLoginView.swift */,
-				B384129F1CD125B3000419B7 /* DBZ_WKControlView.swift */,
-			);
-			name = WatchApp;
-			sourceTree = "<group>";
-		};
-		B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B3063AE81AB635B100285BE4 /* Universal Presenter Remote WatchKit Extension.entitlements */,
-				B3A5D5241AB221C20071A5A3 /* WatchApp */,
-				B3C968BA1AB20B44000819E0 /* NotificationController.swift */,
-				B3C968BC1AB20B44000819E0 /* Images.xcassets */,
-				B3C968B51AB20B44000819E0 /* Supporting Files */,
-			);
-			path = "Universal Presenter Remote WatchKit Extension";
-			sourceTree = "<group>";
-		};
-		B3C968B51AB20B44000819E0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B3C968B71AB20B44000819E0 /* PushNotificationPayload.apns */,
-				B36A1DE21AB7672B00A6A956 /* PushNotificationPayloadOld.apns */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				B3C968C71AB20B44000819E0 /* Interface.storyboard */,
 				B3C968CA1AB20B44000819E0 /* Images.xcassets */,
-				B3C968C51AB20B44000819E0 /* Supporting Files */,
+				B3FDD44C3055EDF500E2BE9A /* WatchApp.swift */,
+				B3FDD44E3055EDF700E2BE9A /* WatchRootView.swift */,
+				B3FDD4503055EDFE00E2BE9A /* WatchPairView.swift */,
+				B3FDD4523055EE0200E2BE9A /* WatchPresentView.swift */,
+				B3FDD4543055F0DC00E2BE9A /* WatchInstructionsView.swift */,
 			);
 			path = "Universal Presenter Remote WatchKit App";
 			sourceTree = "<group>";
 		};
-		B3C968C51AB20B44000819E0 /* Supporting Files */ = {
+		B3FDD43A3055EB2F00E2BE9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B3FDD43B3055EB2F00E2BE9A /* DesignSystem.swift */,
+				B3FDD43D3055EB3400E2BE9A /* TokenBoxesView.swift */,
+				B3FDD43F3055EB7E00E2BE9A /* RootView.swift */,
+				B3FDD4413055EB8E00E2BE9A /* PairView.swift */,
+				B3FDD4433055EB9D00E2BE9A /* PresentView.swift */,
+				B3FDD4453055EBAA00E2BE9A /* InstructionsView.swift */,
 			);
-			name = "Supporting Files";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ED282329190067AB0030B9C4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				ED28233319006BF50030B9C4 /* DBZ_ServerCommunication.h */,
-				ED28233419006BF50030B9C4 /* DBZ_ServerCommunication.m */,
-				B3A5230B1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift */,
-				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
 				B3C7857F1F68E97F00F571C3 /* Shared.xcassets */,
+				B3FDD4313055EACA00E2BE9A /* PresenterService.swift */,
+				B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */,
+				B3FDD4373055EB0B00E2BE9A /* PresenterSession.swift */,
+				B3FDD4493055EDE300E2BE9A /* UPRColors.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -315,14 +156,11 @@
 		ED70D5DD18FF17E0007B4C18 = {
 			isa = PBXGroup;
 			children = (
-				B3E35D141A094ABA0099DCD4 /* Universal Presenter Remote-Bridging-Header.h */,
-				B384129C1CCEE122000419B7 /* GoogleService-Info.plist */,
 				ED70D5EF18FF17E0007B4C18 /* Universal Presenter Remote */,
-				B3C968B41AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968C41AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 				ED70D5E818FF17E0007B4C18 /* Frameworks */,
 				ED70D5E718FF17E0007B4C18 /* Products */,
-				478E595EF3DA780530ADB104 /* Pods */,
+				B3542E50305648490062FE77 /* icon.icon */,
 			);
 			sourceTree = "<group>";
 		};
@@ -330,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */,
-				B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */,
 				B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */,
 			);
 			name = Products;
@@ -339,21 +176,9 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B38412A11CD135B6000419B7 /* libz.tbd */,
-				B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */,
-				B318D1521A097829002F59AB /* AdSupport.framework */,
-				B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */,
-				B3257AC619B41EA700CC471C /* libz.dylib */,
-				B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */,
-				B3257AC219B41E8D00CC471C /* CoreData.framework */,
-				ED35B95D1901BC830074B424 /* iAd.framework */,
 				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
 				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
 				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
-				F313F806AB19F1BF68441CD3 /* Pods_Universal_Presenter_Remote.framework */,
-				B144979B0BA83903230B7197 /* Pods_Universal_Presenter_Remote_WatchKit_App.framework */,
-				BD5A62AF2BC3B76563C882B8 /* Pods_Universal_Presenter_Remote_WatchKit_Extension.framework */,
-				066659F75E0D0A13B8AC8CBC /* Pods_Universal_Presenter_RemoteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -362,102 +187,39 @@
 			isa = PBXGroup;
 			children = (
 				B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */,
-				ED70D5F818FF17E0007B4C18 /* DBZ_AppDelegate.h */,
-				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.m */,
+				ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */,
 				ED282329190067AB0030B9C4 /* Shared */,
-				ED70D61F18FF192E007B4C18 /* View Controllers */,
-				ED70D61C18FF182F007B4C18 /* Interface */,
 				ED70D5FB18FF17E0007B4C18 /* Images.xcassets */,
-				ED70D5F018FF17E0007B4C18 /* Supporting Files */,
+				B3FDD43A3055EB2F00E2BE9A /* Views */,
+				B3FDD4473055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift */,
 			);
 			path = "Universal Presenter Remote";
-			sourceTree = "<group>";
-		};
-		ED70D5F018FF17E0007B4C18 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B3715FC91F64968500AE7E03 /* Fonts */,
-				ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */,
-				ED70D5F518FF17E0007B4C18 /* main.m */,
-				ED70D5F718FF17E0007B4C18 /* Universal Presenter Remote-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		ED70D61C18FF182F007B4C18 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				B32B67151AB7950D00D2C728 /* Unified.storyboard */,
-				B3A99A2919D203E9002BBBA5 /* LaunchScreen.storyboard */,
-			);
-			name = Interface;
-			sourceTree = "<group>";
-		};
-		ED70D61F18FF192E007B4C18 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				ED70D62018FF1979007B4C18 /* DBZ_LoginView.h */,
-				ED70D62118FF1979007B4C18 /* DBZ_LoginView.m */,
-				ED282330190068010030B9C4 /* DBZ_ControlView.h */,
-				ED282331190068010030B9C4 /* DBZ_ControlView.m */,
-				B357A5DB190453D500CCECB6 /* DBZ_InfoView.h */,
-				B357A5DC190453D500CCECB6 /* DBZ_InfoView.m */,
-				B3CBFA4E19B80AD100FF6837 /* DBZ_SettingsView.h */,
-				B3CBFA4F19B80AD100FF6837 /* DBZ_SettingsView.m */,
-				B3E35D171A094B1D0099DCD4 /* DBZ_QRVeiw.swift */,
-				B3E35D191A094D530099DCD4 /* igViewController.h */,
-				B3E35D1A1A094D530099DCD4 /* igViewController.m */,
-				B3A5FB461CD31D9300F72655 /* DBZ_ControlContainerView.swift */,
-				B3A5FB4D1CD3388C00F72655 /* DBZ_BaseViewController.h */,
-				B3A5FB4E1CD3388C00F72655 /* DBZ_BaseViewController.m */,
-				B3A5FB501CD33C7100F72655 /* DBZ_ForceTouchView.swift */,
-			);
-			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */;
-			buildPhases = (
-				B3C968AF1AB20B44000819E0 /* Sources */,
-				B3C968B01AB20B44000819E0 /* Frameworks */,
-				B3C968B11AB20B44000819E0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Universal Presenter Remote WatchKit Extension";
-			productName = "Universal Presenter Remote WatchKit Extension";
-			productReference = B3C968B31AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 		B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3C968D31AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit App" */;
 			buildPhases = (
 				B3C968BE1AB20B44000819E0 /* Resources */,
-				B3DAF9FC1CCE6E5200E06E2C /* Embed Foundation Extensions */,
 				90A29AD1ABBC25EE41C2152D /* Frameworks */,
+				B3C968AF1AB20B44000819E0 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B3DAF9F71CCE6E5200E06E2C /* PBXTargetDependency */,
 			);
 			name = "Universal Presenter Remote WatchKit App";
 			productName = "Universal Presenter Remote WatchKit App";
 			productReference = B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
+			productType = "com.apple.product-type.application";
 		};
 		ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED70D61218FF17E1007B4C18 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote" */;
 			buildPhases = (
-				FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */,
 				ED70D5E218FF17E0007B4C18 /* Sources */,
 				ED70D5E318FF17E0007B4C18 /* Frameworks */,
 				ED70D5E418FF17E0007B4C18 /* Resources */,
@@ -482,20 +244,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				CLASSPREFIX = DBZ_;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2660;
 				ORGANIZATIONNAME = "DBZ Technology";
 				TargetAttributes = {
-					B3C968B21AB20B44000819E0 = {
-						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 93C4626635;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
 					B3C968BF1AB20B44000819E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 93C4626635;
@@ -540,36 +291,19 @@
 			projectRoot = "";
 			targets = (
 				ED70D5E518FF17E0007B4C18 /* Universal Presenter Remote */,
-				B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */,
 				B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B3C968B11AB20B44000819E0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B37160061F649A2F00AE7E03 /* SugarcubesBold.ttf in Resources */,
-				B3C968BD1AB20B44000819E0 /* Images.xcassets in Resources */,
-				B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */,
-				B37160091F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
-				B362B6131AC5E25C00F2BBAE /* Batman.ttf in Resources */,
-				B36A1DE31AB7672B00A6A956 /* PushNotificationPayloadOld.apns in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B3C968BE1AB20B44000819E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B37160071F649A3000AE7E03 /* SugarcubesBold.ttf in Resources */,
-				B362B6141AC5E26700F2BBAE /* Batman.ttf in Resources */,
-				B3C785821F68E9A500F571C3 /* Shared.xcassets in Resources */,
-				B371600A1F649A3300AE7E03 /* SugarcubesRegular.ttf in Resources */,
-				B3C968C91AB20B44000819E0 /* Interface.storyboard in Resources */,
+				B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */,
 				B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */,
+				B3542E51305648490062FE77 /* icon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,63 +311,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A99A2A19D203E9002BBBA5 /* LaunchScreen.storyboard in Resources */,
-				B37160051F649A2E00AE7E03 /* SugarcubesBold.ttf in Resources */,
-				B3715FEC1F6496F900AE7E03 /* SanFranciscoText-SemiboldItalic.otf in Resources */,
-				B3715FEA1F6496F900AE7E03 /* SanFranciscoText-RegularItalic.otf in Resources */,
-				B3715FE21F6496F900AE7E03 /* SanFranciscoText-BoldItalic.otf in Resources */,
 				B34E227119AD41290001127D /* Images.xcassets in Resources */,
-				B3715FEB1F6496F900AE7E03 /* SanFranciscoText-Semibold.otf in Resources */,
-				B37160081F649A3200AE7E03 /* SugarcubesRegular.ttf in Resources */,
-				B3715FDF1F6496D800AE7E03 /* SanFranciscoText-Bold.otf in Resources */,
-				B34E227319AD5B4F0001127D /* Batman.ttf in Resources */,
-				B3715FE91F6496F900AE7E03 /* SanFranciscoText-Regular.otf in Resources */,
-				B3715FE81F6496F900AE7E03 /* SanFranciscoText-MediumItalic.otf in Resources */,
-				ED70D5F418FF17E0007B4C18 /* InfoPlist.strings in Resources */,
-				B3715FE71F6496F900AE7E03 /* SanFranciscoText-Medium.otf in Resources */,
-				B3715FE31F6496F900AE7E03 /* SanFranciscoText-Heavy.otf in Resources */,
-				B32B67131AB7950D00D2C728 /* Unified.storyboard in Resources */,
-				B3715FE41F6496F900AE7E03 /* SanFranciscoText-HeavyItalic.otf in Resources */,
-				B384129D1CCEE122000419B7 /* GoogleService-Info.plist in Resources */,
-				B3715FE61F6496F900AE7E03 /* SanFranciscoText-LightItalic.otf in Resources */,
-				B3715FE51F6496F900AE7E03 /* SanFranciscoText-Light.otf in Resources */,
 				B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */,
+				B3542E52305648490062FE77 /* icon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FF879E0D7B3A176D2B64DC5C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Universal Presenter Remote-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3C968AF1AB20B44000819E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3A5230F1CCE8333005CB862 /* DBZ_ServerCommunication.m in Sources */,
-				B3C968BB1AB20B44000819E0 /* NotificationController.swift in Sources */,
-				B3A5230D1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
-				B3A523121CCE93F5005CB862 /* DBZ_WKLoginView.swift in Sources */,
-				B38412A01CD125B3000419B7 /* DBZ_WKControlView.swift in Sources */,
+				B3FDD4553055F0DC00E2BE9A /* WatchInstructionsView.swift in Sources */,
+				B3FDD4353055EAF800E2BE9A /* ActivityEntry.swift in Sources */,
+				B3FDD4323055EACA00E2BE9A /* PresenterService.swift in Sources */,
+				B3FDD44D3055EDF500E2BE9A /* WatchApp.swift in Sources */,
+				B3FDD4513055EDFE00E2BE9A /* WatchPairView.swift in Sources */,
+				B3FDD4533055EE0200E2BE9A /* WatchPresentView.swift in Sources */,
+				B3FDD44B3055EDE300E2BE9A /* UPRColors.swift in Sources */,
+				B3FDD4383055EB0B00E2BE9A /* PresenterSession.swift in Sources */,
+				B3FDD44F3055EDF700E2BE9A /* WatchRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,31 +340,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E35D181A094B1D0099DCD4 /* DBZ_QRVeiw.swift in Sources */,
-				ED70D5F618FF17E0007B4C18 /* main.m in Sources */,
-				B357A5DD190453D500CCECB6 /* DBZ_InfoView.m in Sources */,
-				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.m in Sources */,
-				B3A5FB471CD31D9300F72655 /* DBZ_ControlContainerView.swift in Sources */,
-				B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */,
-				B3E35D1B1A094D530099DCD4 /* igViewController.m in Sources */,
-				B3A5230C1CCE7FAB005CB862 /* DBZ_UniversalNetworking.swift in Sources */,
-				ED70D62218FF1979007B4C18 /* DBZ_LoginView.m in Sources */,
-				ED282332190068010030B9C4 /* DBZ_ControlView.m in Sources */,
-				B3A5FB4F1CD3388C00F72655 /* DBZ_BaseViewController.m in Sources */,
-				B3A5FB511CD33C7100F72655 /* DBZ_ForceTouchView.swift in Sources */,
-				B3CBFA5019B80AD100FF6837 /* DBZ_SettingsView.m in Sources */,
-				ED28233519006BF50030B9C4 /* DBZ_ServerCommunication.m in Sources */,
+				B3FDD4423055EB8E00E2BE9A /* PairView.swift in Sources */,
+				B3FDD43C3055EB2F00E2BE9A /* DesignSystem.swift in Sources */,
+				B3FDD4363055EAF800E2BE9A /* ActivityEntry.swift in Sources */,
+				B3FDD4483055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift in Sources */,
+				ED70D5FA18FF17E0007B4C18 /* AppDelegate.swift in Sources */,
+				B3FDD4403055EB7E00E2BE9A /* RootView.swift in Sources */,
+				B3FDD44A3055EDE300E2BE9A /* UPRColors.swift in Sources */,
+				B3FDD4333055EACA00E2BE9A /* PresenterService.swift in Sources */,
+				B3FDD4443055EB9D00E2BE9A /* PresentView.swift in Sources */,
+				B3FDD4463055EBAA00E2BE9A /* InstructionsView.swift in Sources */,
+				B3FDD4393055EB0B00E2BE9A /* PresenterSession.swift in Sources */,
+				B3FDD43E3055EB3400E2BE9A /* TokenBoxesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B3DAF9F71CCE6E5200E06E2C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B3C968B21AB20B44000819E0 /* Universal Presenter Remote WatchKit Extension */;
-			targetProxy = B3DAF9F61CCE6E5200E06E2C /* PBXContainerItemProxy */;
-		};
 		B3DAF9FA1CCE6E5200E06E2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B3C968BF1AB20B44000819E0 /* Universal Presenter Remote WatchKit App */;
@@ -673,126 +365,32 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		B32B67151AB7950D00D2C728 /* Unified.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B32B67161AB7951800D2C728 /* Base */,
-			);
-			name = Unified.storyboard;
-			sourceTree = "<group>";
-		};
-		B3C968C71AB20B44000819E0 /* Interface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3C968C81AB20B44000819E0 /* Base */,
-			);
-			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		ED70D5F218FF17E0007B4C18 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED70D5F318FF17E0007B4C18 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		B3C968CF1AB20B44000819E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Universal Presenter Remote WatchKit Extension";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.5.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.6;
-			};
-			name = Debug;
-		};
-		B3C968D01AB20B44000819E0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 21;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Universal Presenter Remote WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Universal Presenter Remote WatchKit Extension";
-				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = 4.5.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp.watchkitextension";
-				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
-				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.6;
-			};
-			name = Release;
-		};
 		B3C968D11AB20B44000819E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 28;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
-				MARKETING_VERSION = 4.5.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dbztech.Universal-Presenter-Remote";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 5.0.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -800,26 +398,34 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
 			};
 			name = Debug;
 		};
 		B3C968D21AB20B44000819E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WKAppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 28;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IBSC_MODULE = Universal_Presenter_Remote_WatchKit_Extension;
 				INFOPLIST_FILE = "Universal Presenter Remote WatchKit App/Info.plist";
-				MARKETING_VERSION = 4.5.0;
+				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.dbztech.Universal-Presenter-Remote";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 5.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.Universal-Presenter-Remote.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -828,7 +434,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
 			};
 			name = Release;
 		};
@@ -888,6 +494,7 @@
 				PROVISIONING_PROFILE = "15d1af70-cae4-4c4f-b272-2d2450a24ecb";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WATCHOS_DEPLOYMENT_TARGET = 8.7;
@@ -943,7 +550,6 @@
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -953,23 +559,27 @@
 		};
 		ED70D61318FF17E1007B4C18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1407E9BA5231E921A963084B /* Pods-Universal Presenter Remote.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Brendan Boyle (6EM5FFNW2D)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 28;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -978,12 +588,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -992,23 +601,27 @@
 		};
 		ED70D61418FF17E1007B4C18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6E5F90BB03605C5998369FD /* Pods-Universal Presenter Remote.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = icon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Universal Presenter Remote/Universal Presenter Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Brendan Boyle (93C4626635)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 28;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Prefix.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Universal Presenter Remote/Universal Presenter Remote-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "UPR: Remote";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1017,12 +630,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 4.5.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbztech.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Universal Presenter Remote/Universal Presenter Remote-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "UPR-Swift.h";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1036,15 +648,6 @@
 			buildConfigurations = (
 				B3C968D11AB20B44000819E0 /* Debug */,
 				B3C968D21AB20B44000819E0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B3C968D41AB20B44000819E0 /* Build configuration list for PBXNativeTarget "Universal Presenter Remote WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3C968CF1AB20B44000819E0 /* Debug */,
-				B3C968D01AB20B44000819E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
