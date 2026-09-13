@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WatchKit
 
 struct WatchPairView: View {
     @Environment(PresenterSession.self) private var session
@@ -62,6 +63,12 @@ struct WatchPairView: View {
         }
         .sheet(isPresented: $showingInstructions) {
             WatchInstructionsView()
+        }
+        .onChange(of: session.isConnected) { _, isConnected in
+            // Mirror the iOS success haptic when the control software connects.
+            if isConnected {
+                WKInterfaceDevice.current().play(.success)
+            }
         }
         .task(id: session.phase) {
             guard session.phase == .pairing, session.shouldAutoRefresh else { return }

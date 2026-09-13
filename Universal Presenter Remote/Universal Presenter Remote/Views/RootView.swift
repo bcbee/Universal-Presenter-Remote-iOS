@@ -91,3 +91,7 @@ extension View {
     RootView()
         .environment(PresenterSession.previewPresenting)
 }
+
+#Preview("Splash") {
+    SplashView()
+}
