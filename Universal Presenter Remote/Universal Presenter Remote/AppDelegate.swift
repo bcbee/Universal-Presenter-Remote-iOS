@@ -1,5 +1,5 @@
 //
-//  DBZ_AppDelegate.swift
+//  AppDelegate.swift
 //  Universal Presenter Remote
 //
 //  Created by Brendan Boyle on 4/16/14.
@@ -8,18 +8,25 @@
 
 import UIKit
 import UserNotifications
-import AudioToolbox
+import os
 
-class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
+/// Handles push-notification registration and delivery for the iOS app.
+///
+/// Incoming pushes signal that the server state changed, so each one refreshes
+/// the shared ``PresenterSession`` and plays a success haptic.
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var feedbackGenerator: UINotificationFeedbackGenerator?
+    private let logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier ?? "com.dbztech.UniversalPresenterRemote",
+        category: "AppDelegate"
+    )
+
+    /// Retained across the async haptic so it isn't deallocated before firing.
+    private let feedbackGenerator = UINotificationFeedbackGenerator()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        // Push notifications.
         registerForPushNotifications()
-
         return true
     }
 
@@ -27,12 +34,12 @@ class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func registerForPushNotifications() {
         let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { [logger] granted, error in
             if let error {
-                print("Notification authorization error: \(error)")
+                logger.error("Notification authorization error: \(error.localizedDescription, privacy: .public)")
             }
             guard granted else { return }
-            DispatchQueue.main.async {
+            Task { @MainActor in
                 UIApplication.shared.registerForRemoteNotifications()
             }
         }
@@ -41,36 +48,22 @@ class DBZ_AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("APNS: notification received: \(userInfo)")
+        logger.debug("Remote notification received")
         Task { await PresenterSession.shared.refresh() }
+        feedbackGenerator.notificationOccurred(.success)
         completionHandler(.newData)
-
-        if DBZ_UPRGlobal.hasTaptic() {
-            feedbackGenerator = UINotificationFeedbackGenerator()
-            feedbackGenerator?.notificationOccurred(.success)
-        } else {
-            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        }
     }
 
     func application(_ application: UIApplication,
                      didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let token = deviceToken.map { String(format: "%02x", $0) }.joined()
-        print("Did register for remote notifications: \(token)")
+        logger.debug("Registered for remote notifications")
         Task { @MainActor in PresenterSession.shared.setAPNS(token) }
     }
 
     func application(_ application: UIApplication,
                      didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("Fail to register for remote notifications: \(error)")
-    }
-
-    func application(_ application: UIApplication,
-                     performActionFor shortcutItem: UIApplicationShortcutItem,
-                     completionHandler: @escaping (Bool) -> Void) {
-        print("Quick Launch Action!")
-        DBZ_UPRGlobal.viewToOpen = shortcutItem.type
-        completionHandler(true)
+        logger.error("Failed to register for remote notifications: \(error.localizedDescription, privacy: .public)")
     }
 
     // MARK: - Lifecycle

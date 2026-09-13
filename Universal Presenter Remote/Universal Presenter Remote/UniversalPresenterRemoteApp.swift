@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct UniversalPresenterRemoteApp: App {
-    @UIApplicationDelegateAdaptor(DBZ_AppDelegate.self) private var appDelegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var session = PresenterSession.shared
 
     var body: some Scene {

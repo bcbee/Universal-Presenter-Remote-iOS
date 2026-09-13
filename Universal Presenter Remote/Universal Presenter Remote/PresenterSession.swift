@@ -72,13 +72,13 @@ final class PresenterSession {
             return
         }
 
-        let response = await PresenterService.send("TempSession",
-                                                   token: tempToken,
-                                                   holdFor: true,
-                                                   uid: uid,
-                                                   deviceToken: true,
-                                                   apns: apnsToken,
-                                                   target: nil)
+        let response = try? await PresenterService.send("TempSession",
+                                                        token: tempToken,
+                                                        holdFor: true,
+                                                        uid: uid,
+                                                        deviceToken: true,
+                                                        apns: apnsToken,
+                                                        target: nil)
         controlMode = Int(response ?? "") ?? 0
 
         if controlMode == 0 {
@@ -89,25 +89,25 @@ final class PresenterSession {
 
     /// Requests a new temp token, then checks its control mode once.
     private func requestNewToken() async {
-        if let response = await PresenterService.send("NewSession",
-                                                      token: 0,
-                                                      holdFor: false,
-                                                      uid: uid,
-                                                      deviceToken: false,
-                                                      apns: apnsToken,
-                                                      target: nil) {
+        if let response = try? await PresenterService.send("NewSession",
+                                                           token: 0,
+                                                           holdFor: false,
+                                                           uid: uid,
+                                                           deviceToken: false,
+                                                           apns: apnsToken,
+                                                           target: nil) {
             tempToken = Int(response) ?? 0
         }
 
         guard tempToken > 10 else { return }
 
-        let response = await PresenterService.send("TempSession",
-                                                   token: tempToken,
-                                                   holdFor: true,
-                                                   uid: uid,
-                                                   deviceToken: true,
-                                                   apns: apnsToken,
-                                                   target: nil)
+        let response = try? await PresenterService.send("TempSession",
+                                                        token: tempToken,
+                                                        holdFor: true,
+                                                        uid: uid,
+                                                        deviceToken: true,
+                                                        apns: apnsToken,
+                                                        target: nil)
         controlMode = Int(response ?? "") ?? 0
     }
 
@@ -133,13 +133,13 @@ final class PresenterSession {
 
     private func sendCommand(_ page: String, label: String) async {
         activity.insert(ActivityEntry(label: label, date: Date()), at: 0)
-        _ = await PresenterService.send(page,
-                                        token: token,
-                                        holdFor: true,
-                                        uid: uid,
-                                        deviceToken: false,
-                                        apns: apnsToken,
-                                        target: nil)
+        _ = try? await PresenterService.send(page,
+                                             token: token,
+                                             holdFor: true,
+                                             uid: uid,
+                                             deviceToken: false,
+                                             apns: apnsToken,
+                                             target: nil)
     }
 
     // MARK: - Push

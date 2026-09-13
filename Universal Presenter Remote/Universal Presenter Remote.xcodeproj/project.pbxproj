@@ -7,11 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B318D1521A097829002F59AB /* AdSupport.framework */; };
-		B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC219B41E8D00CC471C /* CoreData.framework */; };
-		B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */; };
 		B34E227119AD41290001127D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED70D5FB18FF17E0007B4C18 /* Images.xcassets */; };
-		B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */; };
 		B3C785801F68E97F00F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C785811F68E9A400F571C3 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C7857F1F68E97F00F571C3 /* Shared.xcassets */; };
 		B3C968CB1AB20B44000819E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C968CA1AB20B44000819E0 /* Images.xcassets */; };
@@ -39,7 +35,7 @@
 		ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5E918FF17E0007B4C18 /* Foundation.framework */; };
 		ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */; };
 		ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70D5ED18FF17E0007B4C18 /* UIKit.framework */; };
-		ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */; };
+		ED70D5FA18FF17E0007B4C18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,18 +63,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B318D1521A097829002F59AB /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		B3257AC219B41E8D00CC471C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		B3257AC619B41EA700CC471C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Universal Presenter Remote.entitlements"; sourceTree = "<group>"; };
-		B38412A11CD135B6000419B7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBZ_UPRGlobal.swift; sourceTree = "<group>"; };
 		B3C7857F1F68E97F00F571C3 /* Shared.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shared.xcassets; sourceTree = "<group>"; };
 		B3C968C01AB20B44000819E0 /* Universal Presenter Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C968CA1AB20B44000819E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B3FDD4313055EACA00E2BE9A /* PresenterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterService.swift; sourceTree = "<group>"; };
 		B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEntry.swift; sourceTree = "<group>"; };
 		B3FDD4373055EB0B00E2BE9A /* PresenterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterSession.swift; sourceTree = "<group>"; };
@@ -95,12 +83,11 @@
 		B3FDD4503055EDFE00E2BE9A /* WatchPairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPairView.swift; sourceTree = "<group>"; };
 		B3FDD4523055EE0200E2BE9A /* WatchPresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPresentView.swift; sourceTree = "<group>"; };
 		B3FDD4543055F0DC00E2BE9A /* WatchInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchInstructionsView.swift; sourceTree = "<group>"; };
-		ED35B95D1901BC830074B424 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		ED70D5E618FF17E0007B4C18 /* Universal Presenter Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Presenter Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70D5E918FF17E0007B4C18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		ED70D5ED18FF17E0007B4C18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBZ_AppDelegate.swift; sourceTree = "<group>"; };
+		ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED70D5FB18FF17E0007B4C18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,9 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B318D1531A097829002F59AB /* AdSupport.framework in Frameworks */,
-				B3257AC519B41E9B00CC471C /* SystemConfiguration.framework in Frameworks */,
-				B3257AC319B41E8D00CC471C /* CoreData.framework in Frameworks */,
 				ED70D5EC18FF17E0007B4C18 /* CoreGraphics.framework in Frameworks */,
 				ED70D5EE18FF17E0007B4C18 /* UIKit.framework in Frameworks */,
 				ED70D5EA18FF17E0007B4C18 /* Foundation.framework in Frameworks */,
@@ -157,7 +141,6 @@
 		ED282329190067AB0030B9C4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				B3A5FB481CD3361000F72655 /* DBZ_UPRGlobal.swift */,
 				B3C7857F1F68E97F00F571C3 /* Shared.xcassets */,
 				B3FDD4313055EACA00E2BE9A /* PresenterService.swift */,
 				B3FDD4343055EAF800E2BE9A /* ActivityEntry.swift */,
@@ -189,14 +172,6 @@
 		ED70D5E818FF17E0007B4C18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B38412A11CD135B6000419B7 /* libz.tbd */,
-				B3F585451BB4FA1300BC67A2 /* libsqlite3.tbd */,
-				B318D1521A097829002F59AB /* AdSupport.framework */,
-				B3257ACD19B424C200CC471C /* libsqlite3.0.dylib */,
-				B3257AC619B41EA700CC471C /* libz.dylib */,
-				B3257AC419B41E9B00CC471C /* SystemConfiguration.framework */,
-				B3257AC219B41E8D00CC471C /* CoreData.framework */,
-				ED35B95D1901BC830074B424 /* iAd.framework */,
 				ED70D5E918FF17E0007B4C18 /* Foundation.framework */,
 				ED70D5EB18FF17E0007B4C18 /* CoreGraphics.framework */,
 				ED70D5ED18FF17E0007B4C18 /* UIKit.framework */,
@@ -208,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				B34E227419AD629D0001127D /* Universal Presenter Remote.entitlements */,
-				ED70D5F918FF17E0007B4C18 /* DBZ_AppDelegate.swift */,
+				ED70D5F918FF17E0007B4C18 /* AppDelegate.swift */,
 				ED282329190067AB0030B9C4 /* Shared */,
 				ED70D5FB18FF17E0007B4C18 /* Images.xcassets */,
 				B3FDD43A3055EB2F00E2BE9A /* Views */,
@@ -363,13 +338,12 @@
 				B3FDD43C3055EB2F00E2BE9A /* DesignSystem.swift in Sources */,
 				B3FDD4363055EAF800E2BE9A /* ActivityEntry.swift in Sources */,
 				B3FDD4483055EBB100E2BE9A /* UniversalPresenterRemoteApp.swift in Sources */,
-				ED70D5FA18FF17E0007B4C18 /* DBZ_AppDelegate.swift in Sources */,
+				ED70D5FA18FF17E0007B4C18 /* AppDelegate.swift in Sources */,
 				B3FDD4403055EB7E00E2BE9A /* RootView.swift in Sources */,
 				B3FDD44A3055EDE300E2BE9A /* UPRColors.swift in Sources */,
 				B3FDD4333055EACA00E2BE9A /* PresenterService.swift in Sources */,
 				B3FDD4443055EB9D00E2BE9A /* PresentView.swift in Sources */,
 				B3FDD4463055EBAA00E2BE9A /* InstructionsView.swift in Sources */,
-				B3A5FB491CD3361000F72655 /* DBZ_UPRGlobal.swift in Sources */,
 				B3FDD4393055EB0B00E2BE9A /* PresenterSession.swift in Sources */,
 				B3FDD43E3055EB3400E2BE9A /* TokenBoxesView.swift in Sources */,
 			);

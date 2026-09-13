@@ -6,61 +6,85 @@
 //
 
 import Foundation
+import os
+
+/// Errors thrown by ``PresenterService``.
+enum PresenterServiceError: Error {
+    /// The endpoint and parameters could not be assembled into a valid URL.
+    case invalidURL
+    /// The server responded, but the body could not be decoded as text.
+    case undecodableResponse
+}
 
 /// Talks to the Universal Presenter Remote server.
 ///
-/// The URL construction here intentionally mirrors the historical client so the
-/// existing UPR control software keeps working unchanged: endpoints are path
-/// segments and the query string is built as
-/// `/{page}?token=…&holdfor={uid}&apnstoken={apns}&target={target}`.
+/// The query format intentionally mirrors the historical client so the existing
+/// UPR control software keeps working unchanged: the endpoint is a path segment
+/// and the query is `?token=…&holdfor={uid}&apnstoken={apns}&target={target}`.
+/// `URLComponents` assembles the query, which correctly inserts the leading `?`
+/// and percent-encodes values regardless of which parameters are present.
 enum PresenterService {
 
     static let serverAddress = "https://universalpresenterremote.com"
 
-    /// Sends a request for `page` and returns the response body, or `nil` on failure.
+    private static let logger = Logger(
+        subsystem: Bundle.main.bundleIdentifier ?? "com.dbztech.UniversalPresenterRemote",
+        category: "PresenterService"
+    )
+
+    /// Sends a request for `page` and returns the response body as text.
     ///
     /// - Parameters:
     ///   - page: The endpoint path segment (e.g. `"TempSession"`, `"SlideUp"`).
-    ///   - token: Session/temp token. Sent as `?token=` only when greater than `99999`.
-    ///   - holdFor: When `true`, appends `&holdfor={uid}` (the long-poll identifier).
+    ///   - token: Session/temp token. Sent as `token=` only when greater than `99999`.
+    ///   - holdFor: When `true`, sends `holdfor={uid}` (the long-poll identifier).
     ///   - uid: Per-client long-poll identifier.
-    ///   - deviceToken: When `true`, appends `&apnstoken={apns}`.
+    ///   - deviceToken: When `true`, sends `apnstoken={apns}`.
     ///   - apns: APNS device token.
-    ///   - target: Optional `&target=` value.
+    ///   - target: Optional `target=` value.
+    /// - Returns: The response body decoded as text.
+    /// - Throws: ``PresenterServiceError`` or any `URLSession` transport error.
     static func send(_ page: String,
                      token: Int,
                      holdFor: Bool,
                      uid: Int,
                      deviceToken: Bool,
                      apns: String,
-                     target: String?) async -> String? {
+                     target: String?) async throws -> String {
 
-        var urlString = "\(serverAddress)/\(page)"
+        guard var components = URLComponents(string: serverAddress) else {
+            throw PresenterServiceError.invalidURL
+        }
+        components.path = "/\(page)"
 
+        var queryItems: [URLQueryItem] = []
         if token > 99999 {
-            urlString += "?token=\(token)"
+            queryItems.append(URLQueryItem(name: "token", value: String(token)))
         }
-
         if holdFor {
-            urlString += "&holdfor=\(uid)"
+            queryItems.append(URLQueryItem(name: "holdfor", value: String(uid)))
         }
-
         if deviceToken {
-            urlString += "&apnstoken=\(apns)"
+            queryItems.append(URLQueryItem(name: "apnstoken", value: apns))
         }
-
         if let target {
-            urlString += "&target=\(target)"
+            queryItems.append(URLQueryItem(name: "target", value: target))
         }
+        components.queryItems = queryItems.isEmpty ? nil : queryItems
 
-        guard let url = URL(string: urlString) else { return nil }
+        guard let url = components.url else {
+            throw PresenterServiceError.invalidURL
+        }
 
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            return String(data: data, encoding: .ascii)
+            guard let body = String(data: data, encoding: .utf8) else {
+                throw PresenterServiceError.undecodableResponse
+            }
+            return body
         } catch {
-            print("Request to \(page) failed: \(error.localizedDescription)")
-            return nil
+            logger.error("Request to \(page, privacy: .public) failed: \(error.localizedDescription, privacy: .public)")
+            throw error
         }
     }
 }
