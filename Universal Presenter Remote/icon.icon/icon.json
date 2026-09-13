@@ -20,13 +20,20 @@
       "layers" : [
         {
           "image-name" : "upr_ring_only.png",
-          "name" : "upr_ring_only"
+          "name" : "upr_ring_only",
+          "position" : {
+            "scale" : 0.9,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
         },
         {
           "image-name" : "Text-Only.png",
           "name" : "Text-Only",
           "position" : {
-            "scale" : 0.45,
+            "scale" : 0.4,
             "translation-in-points" : [
               0,
               0
