@@ -37,6 +37,9 @@ final class PresenterSession {
     private var uid = 0
     private var apnsToken = ""
     private var usesPreviewData = false
+    /// Bumps whenever pairing identity changes so in-flight polls cannot
+    /// overwrite a newer token or uid.
+    private var pairingEpoch = 0
 
     // MARK: - Derived
 
@@ -55,6 +58,7 @@ final class PresenterSession {
 
     /// Begins a fresh pairing session: new long-poll id and a new server token.
     func setupSession() async {
+        pairingEpoch += 1
         uid = Int.random(in: 0..<999999)
         tempToken = 10
         controlMode = 0
@@ -69,15 +73,20 @@ final class PresenterSession {
             return
         }
 
-        let response = try? await PresenterService.send("TempSession",
-                                                        token: tempToken,
-                                                        holdFor: true,
-                                                        uid: uid,
-                                                        deviceToken: true,
-                                                        apns: apnsToken,
-                                                        target: nil)
-        controlMode = Int(response ?? "") ?? 0
+        let epoch = pairingEpoch
+        guard let response = try? await PresenterService.send("TempSession",
+                                                              token: tempToken,
+                                                              holdFor: true,
+                                                              uid: uid,
+                                                              deviceToken: true,
+                                                              apns: apnsToken,
+                                                              target: nil),
+              pairingEpoch == epoch,
+              let mode = parseServerInt(response) else {
+            return
+        }
 
+        controlMode = mode
         if controlMode == 0 {
             tempToken = 0
             await requestNewToken()
@@ -86,26 +95,41 @@ final class PresenterSession {
 
     /// Requests a new temp token, then checks its control mode once.
     private func requestNewToken() async {
-        if let response = try? await PresenterService.send("NewSession",
-                                                           token: 0,
-                                                           holdFor: false,
-                                                           uid: uid,
-                                                           deviceToken: false,
-                                                           apns: apnsToken,
-                                                           target: nil) {
-            tempToken = Int(response) ?? 0
+        pairingEpoch += 1
+        let epoch = pairingEpoch
+
+        guard let response = try? await PresenterService.send("NewSession",
+                                                              token: 0,
+                                                              holdFor: false,
+                                                              uid: uid,
+                                                              deviceToken: false,
+                                                              apns: apnsToken,
+                                                              target: nil),
+              pairingEpoch == epoch,
+              let newToken = parseServerInt(response) else {
+            return
         }
+        tempToken = newToken
 
         guard tempToken > 10 else { return }
 
-        let response = try? await PresenterService.send("TempSession",
-                                                        token: tempToken,
-                                                        holdFor: true,
-                                                        uid: uid,
-                                                        deviceToken: true,
-                                                        apns: apnsToken,
-                                                        target: nil)
-        controlMode = Int(response ?? "") ?? 0
+        guard let modeResponse = try? await PresenterService.send("TempSession",
+                                                                  token: tempToken,
+                                                                  holdFor: true,
+                                                                  uid: uid,
+                                                                  deviceToken: true,
+                                                                  apns: apnsToken,
+                                                                  target: nil),
+              pairingEpoch == epoch,
+              let mode = parseServerInt(modeResponse) else {
+            return
+        }
+        controlMode = mode
+    }
+
+    /// Parses a server integer, accepting the trailing whitespace common in HTTP bodies.
+    private func parseServerInt(_ raw: String) -> Int? {
+        Int(raw.trimmingCharacters(in: .whitespacesAndNewlines))
     }
 
     // MARK: - Presenting

@@ -49,9 +49,11 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
                      didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         logger.debug("Remote notification received")
-        Task { await PresenterSession.shared.refresh() }
-        feedbackGenerator.notificationOccurred(.success)
-        completionHandler(.newData)
+        Task { @MainActor in
+            await PresenterSession.shared.refresh()
+            feedbackGenerator.notificationOccurred(.success)
+            completionHandler(.newData)
+        }
     }
 
     func application(_ application: UIApplication,
