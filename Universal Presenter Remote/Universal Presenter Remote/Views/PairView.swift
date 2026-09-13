@@ -12,6 +12,15 @@ struct PairView: View {
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var showingInstructions = false
 
+    /// Minimum available width required to lay the logo/text and token
+    /// columns side by side. Chosen to sit between 11" iPad portrait
+    /// (stacked) and 13" iPad portrait (side by side).
+    private static let sideBySideMinWidth: CGFloat = 950
+
+    /// Max width shared by the logo/text column and the token card so
+    /// they stay visually aligned.
+    private static let contentMaxWidth: CGFloat = 400
+
     var body: some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -54,26 +63,29 @@ struct PairView: View {
 
     @ViewBuilder
     private var content: some View {
-        if horizontalSizeClass == .regular {
-            HStack(spacing: 60) {
-                logoAndText
-                VStack(spacing: 28) {
-                    tokenCard
-                    statusAndBegin
-                }
-                .frame(maxWidth: 420)
-            }
-            .padding(40)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-        } else {
-            ScrollView {
-                VStack(spacing: 28) {
+        GeometryReader { proxy in
+            if horizontalSizeClass == .regular && proxy.size.width >= Self.sideBySideMinWidth {
+                HStack(spacing: 60) {
                     logoAndText
-                    tokenCard
-                    statusAndBegin
+                    VStack(spacing: 28) {
+                        tokenCard
+                        statusAndBegin
+                    }
+                    .frame(maxWidth: 420)
                 }
-                .padding(24)
-                .frame(maxWidth: .infinity)
+                .padding(40)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            } else {
+                ScrollView {
+                    VStack(spacing: 28) {
+                        logoAndText
+                        tokenCard
+                        statusAndBegin
+                    }
+                    .padding(24)
+                    .frame(maxWidth: .infinity, minHeight: proxy.size.height)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
     }
@@ -99,6 +111,7 @@ struct PairView: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
         }
+        .frame(maxWidth: Self.contentMaxWidth)
     }
 
     private var tokenCard: some View {
@@ -110,9 +123,12 @@ struct PairView: View {
             TokenBoxesView(digits: session.tokenDigits)
         }
         .padding(24)
-        .frame(maxWidth: .infinity)
-        .background(Color(.secondarySystemGroupedBackground),
-                    in: RoundedRectangle(cornerRadius: 20))
+        .frame(maxWidth: Self.contentMaxWidth)
+        .background {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color(.secondarySystemGroupedBackground))
+                .shadow(color: Color.black.opacity(0.12), radius: 12, x: 0, y: 6)
+        }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color(.separator).opacity(0.4), lineWidth: 1)
@@ -135,6 +151,7 @@ struct PairView: View {
             .buttonStyle(PrimaryButtonStyle(enabled: session.isConnected))
             .disabled(!session.isConnected)
         }
+        .frame(maxWidth: Self.contentMaxWidth)
     }
 }
 #Preview("Loading") {
