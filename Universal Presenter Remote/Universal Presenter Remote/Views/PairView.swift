@@ -21,6 +21,13 @@ struct PairView: View {
     /// they stay visually aligned.
     private static let contentMaxWidth: CGFloat = 400
 
+    /// Logo size on a short screen, where the token card and Begin button
+    /// need most of the height.
+    private static let minLogoSize: CGFloat = 115
+
+    /// Logo size used when there is plenty of vertical room.
+    private static let maxLogoSize: CGFloat = 220
+
     var body: some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -66,7 +73,7 @@ struct PairView: View {
         GeometryReader { proxy in
             if horizontalSizeClass == .regular && proxy.size.width >= Self.sideBySideMinWidth {
                 HStack(spacing: 60) {
-                    logoAndText
+                    logoAndText(logoSize: Self.maxLogoSize)
                     VStack(spacing: 28) {
                         tokenCard
                         statusAndBegin
@@ -76,40 +83,59 @@ struct PairView: View {
                 .padding(40)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                ScrollView {
-                    VStack(spacing: 28) {
-                        logoAndText
-                        tokenCard
-                        statusAndBegin
-                    }
-                    .padding(24)
-                    .frame(maxWidth: .infinity, minHeight: proxy.size.height)
+                // Single fixed page: the pieces shrink to fit the available
+                // height rather than scrolling.
+                VStack(spacing: Self.stackSpacing(forHeight: proxy.size.height)) {
+                    logoAndText(logoSize: Self.logoSize(forHeight: proxy.size.height))
+                    tokenCard
+                    statusAndBegin
                 }
+                .padding(24)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
     }
 
+    /// Grows the logo with the space available: `minLogoSize` on a short
+    /// screen, easing up to `maxLogoSize` once there is a tall iPhone's
+    /// worth of height to spend.
+    private static func logoSize(forHeight height: CGFloat) -> CGFloat {
+        let shortScreen: CGFloat = 600
+        let tallScreen: CGFloat = 850
+        let progress = min(1, max(0, (height - shortScreen) / (tallScreen - shortScreen)))
+        return minLogoSize + (maxLogoSize - minLogoSize) * progress
+    }
+
+    /// Tightens vertical rhythm on shorter screens.
+    private static func stackSpacing(forHeight height: CGFloat) -> CGFloat {
+        height < 700 ? 16 : 28
+    }
+
     // MARK: - Sections
 
-    private var logoAndText: some View {
+    private func logoAndText(logoSize: CGFloat) -> some View {
         VStack(spacing: 16) {
             Image("UPR")
                 .resizable()
                 .interpolation(.high)
                 .antialiased(true)
                 .scaledToFit()
-                .frame(width: 170, height: 170)
+                .frame(width: logoSize, height: logoSize)
             Text("UNIVERSAL PRESENTER REMOTE")
                 .font(.system(size: 13, weight: .bold))
                 .tracking(1.5)
                 .foregroundStyle(Color.uprPrimary)
+                .minimumScaleFactor(0.8)
+                .lineLimit(1)
             Text("Pair your remote")
                 .font(.uprTitle(34))
+                .minimumScaleFactor(0.7)
+                .lineLimit(1)
             Text("Enter the token below into the UPR control software on your presenting computer. As soon as it connects, you can begin.")
                 .font(.system(size: 16))
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: Self.contentMaxWidth)
     }
@@ -144,6 +170,8 @@ struct PairView: View {
                 Text(session.isConnected ? "Control software connected" : "Waiting for control software…")
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(session.isConnected ? Color.uprConnected : Color.secondary)
+                    .minimumScaleFactor(0.8)
+                    .lineLimit(1)
             }
             Button("Begin") {
                 session.startSession()

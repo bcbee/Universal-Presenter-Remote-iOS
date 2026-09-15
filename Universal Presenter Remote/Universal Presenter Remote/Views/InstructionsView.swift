@@ -18,6 +18,9 @@ struct InstructionsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var index = 0
 
+    /// Illustration height when there is plenty of vertical room.
+    private static let maxImageHeight: CGFloat = 240
+
     private let steps: [InstructionStep] = [
         InstructionStep(
             id: 1,
@@ -83,14 +86,16 @@ struct InstructionsView: View {
         }
     }
 
+    /// Each step is a single fixed page: the illustration gives up height to
+    /// the text rather than the page scrolling.
     private func stepView(_ step: InstructionStep) -> some View {
-        ScrollView {
+        GeometryReader { proxy in
             VStack(alignment: .leading, spacing: 24) {
                 Image(step.image)
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                    .frame(maxHeight: 240)
+                    .frame(maxHeight: min(Self.maxImageHeight, proxy.size.height * 0.35))
                     .padding(24)
                     .background(Color.uprPresentBackground,
                                 in: RoundedRectangle(cornerRadius: 20))
@@ -103,6 +108,7 @@ struct InstructionsView: View {
                         .background(Color.uprPrimary, in: Circle())
                     Text(step.title)
                         .font(.uprTitle(24))
+                        .minimumScaleFactor(0.7)
                 }
 
                 Text(step.body)
@@ -110,8 +116,10 @@ struct InstructionsView: View {
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .minimumScaleFactor(0.8)
             }
             .padding(24)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
     }
 }
