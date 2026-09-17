@@ -5,12 +5,34 @@
 //  The light "Pair your remote" screen shown while connecting.
 //
 
+import StoreKit
 import SwiftUI
 
 struct PairView: View {
     @Environment(PresenterSession.self) private var session
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @Environment(\.requestReview) private var requestReview
     @State private var showingInstructions = false
+
+    /// The build number we last asked for a review on. Zero until we've asked,
+    /// which reads as "never asked" against any reset build.
+    @AppStorage("lastReviewRequestBuild") private var lastReviewRequestBuild = 0
+
+    /// The build that shipped our most recent App Store rating reset. Anyone
+    /// last asked before this build is eligible again, so bump this to the
+    /// build carrying the reset whenever we clear the rating.
+    private static let ratingsResetBuild = 30
+
+    /// This build's number, from `CFBundleVersion`. Falls back to
+    /// ``ratingsResetBuild`` so an unreadable build number still records the
+    /// ask as having happened since the reset, rather than asking every time.
+    private static let currentBuild = Int(
+        Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? ""
+    ) ?? ratingsResetBuild
+
+    /// Breathing room after the presenting screen pops, so the prompt reads as
+    /// part of the home screen rather than landing mid-animation.
+    private static let reviewPromptDelay: Duration = .seconds(1)
 
     /// Minimum available width required to lay the logo/text and token
     /// columns side by side. Chosen to sit between 11" iPad portrait
@@ -64,6 +86,29 @@ struct PairView: View {
                     await session.refresh()
                 }
             }
+            .task(id: session.hasEarnedReviewPrompt) {
+                await requestReviewAfterSuccessfulPresentation()
+            }
+    }
+
+    // MARK: - Review
+
+    /// Asks for an App Store review here on the home screen once the presenter
+    /// has finished a successful presentation, so the prompt never interrupts
+    /// them mid-talk. The session decides what "successful" means.
+    private func requestReviewAfterSuccessfulPresentation() async {
+        guard session.hasEarnedReviewPrompt else { return }
+        guard lastReviewRequestBuild < Self.ratingsResetBuild else {
+            session.clearReviewPrompt()
+            return
+        }
+
+        try? await Task.sleep(for: Self.reviewPromptDelay)
+        guard !Task.isCancelled else { return }
+
+        session.clearReviewPrompt()
+        lastReviewRequestBuild = Self.currentBuild
+        requestReview()
     }
 
     // MARK: - Adaptive content

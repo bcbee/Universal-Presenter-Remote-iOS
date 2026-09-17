@@ -34,12 +34,26 @@ final class PresenterSession {
     private(set) var phase: Phase = .pairing
     private(set) var activity: [ActivityEntry] = []
 
+    /// Set when a presentation ends having met both review thresholds. The
+    /// pairing screen consumes this to ask for an App Store review, so the
+    /// prompt lands once the presenter is back on the home screen rather
+    /// than interrupting the talk.
+    private(set) var hasEarnedReviewPrompt = false
+
     private var uid = 0
     private var apnsToken = ""
     private var usesPreviewData = false
     /// Bumps whenever pairing identity changes so in-flight polls cannot
     /// overwrite a newer token or uid.
     private var pairingEpoch = 0
+    /// When the current presentation began, used to measure whether it ran
+    /// long enough to count as successful.
+    private var presentingStartedAt: Date?
+
+    /// How long a presentation must run to count as successful.
+    private static let successfulPresentationDuration: TimeInterval = 180
+    /// How many commands a presentation must carry to count as successful.
+    private static let successfulPresentationCommands = 10
 
     // MARK: - Derived
 
@@ -137,15 +151,38 @@ final class PresenterSession {
     /// Promotes the pending temp token to the live session token and begins presenting.
     func startSession() {
         token = tempToken
+        presentingStartedAt = Date()
         phase = .presenting
     }
 
     /// Ends the presenting session and returns to pairing. The pairing view's
     /// task restarts polling and mints a fresh token.
     func endSession() {
+        noteReviewEligibility()
         phase = .pairing
         activity.removeAll()
         controlMode = 0
+    }
+
+    /// Records whether the presentation just ended was a successful one — long
+    /// enough and busy enough to be worth asking about. Each activity entry is
+    /// one command sent, so the log doubles as the command count; this must run
+    /// before ``endSession()`` clears it.
+    private func noteReviewEligibility() {
+        guard let startedAt = presentingStartedAt else { return }
+        presentingStartedAt = nil
+
+        let duration = Date().timeIntervalSince(startedAt)
+        if duration > Self.successfulPresentationDuration,
+           activity.count > Self.successfulPresentationCommands {
+            hasEarnedReviewPrompt = true
+        }
+    }
+
+    /// Clears the earned prompt so a review is only asked for once per
+    /// qualifying presentation.
+    func clearReviewPrompt() {
+        hasEarnedReviewPrompt = false
     }
 
     func next() async { await sendCommand("SlideUp", label: "Next") }
