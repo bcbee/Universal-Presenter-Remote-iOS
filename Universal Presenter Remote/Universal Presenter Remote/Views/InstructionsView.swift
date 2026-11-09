@@ -21,6 +21,11 @@ struct InstructionsView: View {
     /// Illustration height when there is plenty of vertical room.
     private static let maxImageHeight: CGFloat = 240
 
+    /// The room each pane needs before a step's illustration and text are
+    /// split either side of the iPhone Duo's fold. Smaller than this and the
+    /// whole step goes in the larger pane instead.
+    private static let minimumFoldPaneSize = CGSize(width: 260, height: 200)
+
     private let steps: [InstructionStep] = [
         InstructionStep(
             id: 1,
@@ -44,24 +49,30 @@ struct InstructionsView: View {
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: 0) {
-                TabView(selection: $index) {
-                    ForEach(steps.indices, id: \.self) { i in
-                        stepView(steps[i])
-                            .tag(i)
+            GeometryReader { proxy in
+                VStack(spacing: 0) {
+                    TabView(selection: $index) {
+                        ForEach(steps.indices, id: \.self) { i in
+                            // Each page starts at the sheet's top-leading
+                            // corner, so the crease measured for the sheet is
+                            // in the page's coordinate space too.
+                            stepView(steps[i], crease: FoldSplit(in: proxy)?.crease)
+                                .tag(i)
+                        }
                     }
-                }
-                .tabViewStyle(.page(indexDisplayMode: .never))
+                    .tabViewStyle(.page(indexDisplayMode: .never))
 
-                Button(index == steps.count - 1 ? "Done" : "Next") {
-                    if index == steps.count - 1 {
-                        dismiss()
-                    } else {
-                        withAnimation { index += 1 }
+                    Button(index == steps.count - 1 ? "Done" : "Next") {
+                        if index == steps.count - 1 {
+                            dismiss()
+                        } else {
+                            withAnimation { index += 1 }
+                        }
                     }
+                    .buttonStyle(PrimaryButtonStyle())
+                    .padding(20)
+                    .padding(Self.buttonInsets(avoidingFoldIn: proxy))
                 }
-                .buttonStyle(PrimaryButtonStyle())
-                .padding(20)
             }
             .navigationTitle("Instructions")
             .navigationBarTitleDisplayMode(.inline)
@@ -86,40 +97,71 @@ struct InstructionsView: View {
         }
     }
 
+    /// Keeps the full-width button clear of a crease running down the
+    /// middle of the sheet by narrowing it to the same pane as the step text.
+    /// A crease running across the sheet is already above the button.
+    private static func buttonInsets(avoidingFoldIn proxy: GeometryProxy) -> EdgeInsets {
+        guard let fold = FoldSplit(in: proxy), fold.orientation == .vertical else {
+            return EdgeInsets()
+        }
+        let fitsSplit = fold.first.width >= minimumFoldPaneSize.width
+            && fold.second.width >= minimumFoldPaneSize.width
+        let pane = fitsSplit ? fold.second : fold.largerPane
+        return EdgeInsets(top: 0, leading: pane.minX,
+                          bottom: 0, trailing: proxy.size.width - pane.maxX)
+    }
+
     /// Each step is a single fixed page: the illustration gives up height to
-    /// the text rather than the page scrolling.
-    private func stepView(_ step: InstructionStep) -> some View {
-        GeometryReader { proxy in
+    /// the text rather than the page scrolling. On the iPhone Duo's inner
+    /// display the illustration and the text sit either side of the fold.
+    private func stepView(_ step: InstructionStep, crease: CGRect?) -> some View {
+        FoldAwareLayout(crease: .given(crease), minimumPaneSize: Self.minimumFoldPaneSize) { size in
             VStack(alignment: .leading, spacing: 24) {
-                Image(step.image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .frame(maxHeight: min(Self.maxImageHeight, proxy.size.height * 0.35))
-                    .padding(24)
-                    .background(Color.uprPresentBackground,
-                                in: RoundedRectangle(cornerRadius: 20))
-
-                HStack(spacing: 12) {
-                    Text("\(step.id)")
-                        .font(.system(size: 16, weight: .bold))
-                        .foregroundStyle(.white)
-                        .frame(width: 34, height: 34)
-                        .background(Color.uprPrimary, in: Circle())
-                    Text(step.title)
-                        .font(.uprTitle(24))
-                        .minimumScaleFactor(0.7)
-                }
-
-                Text(step.body)
-                    .font(.system(size: 16))
-                    .foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .minimumScaleFactor(0.8)
+                illustration(step, maxHeight: min(Self.maxImageHeight, size.height * 0.35))
+                stepText(step)
             }
             .padding(24)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        } first: { size in
+            // Leave room for the illustration's own padding and the pane's.
+            illustration(step, maxHeight: min(Self.maxImageHeight, size.height - 96))
+                .padding(24)
+        } second: { _ in
+            stepText(step)
+                .padding(24)
+        }
+    }
+
+    private func illustration(_ step: InstructionStep, maxHeight: CGFloat) -> some View {
+        Image(step.image)
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: .infinity)
+            .frame(maxHeight: maxHeight)
+            .padding(24)
+            .background(Color.uprPresentBackground,
+                        in: RoundedRectangle(cornerRadius: 20))
+    }
+
+    private func stepText(_ step: InstructionStep) -> some View {
+        VStack(alignment: .leading, spacing: 24) {
+            HStack(spacing: 12) {
+                Text("\(step.id)")
+                    .font(.system(size: 16, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 34, height: 34)
+                    .background(Color.uprPrimary, in: Circle())
+                Text(step.title)
+                    .font(.uprTitle(24))
+                    .minimumScaleFactor(0.7)
+            }
+
+            Text(step.body)
+                .font(.system(size: 16))
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .minimumScaleFactor(0.8)
         }
     }
 }

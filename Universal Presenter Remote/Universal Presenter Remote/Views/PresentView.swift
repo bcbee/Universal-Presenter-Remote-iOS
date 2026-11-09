@@ -10,14 +10,39 @@ import SwiftUI
 struct PresentView: View {
     @Environment(PresenterSession.self) private var session
 
+    /// The room each pane needs before the activity log and the controls are
+    /// split either side of the iPhone Duo's fold. Smaller than this and the
+    /// whole page goes in the larger pane instead.
+    private static let minimumFoldPaneSize = CGSize(width: 300, height: 300)
+
+    /// Tallest the activity log grows when it shares the page with the controls.
+    private static let stackedActivityMaxHeight: CGFloat = 240
+
     var body: some View {
-        VStack(spacing: 20) {
-            header
-            activitySection
-            mediaButton
-            navButtons
+        // On the iPhone Duo's inner display the activity log and the controls
+        // sit either side of the fold, so nothing lands in the crease.
+        FoldAwareLayout(minimumPaneSize: Self.minimumFoldPaneSize) { _ in
+            VStack(spacing: 20) {
+                header
+                activitySection(maxHeight: Self.stackedActivityMaxHeight)
+                mediaButton
+                navButtons
+            }
+            .padding(20)
+        } first: { _ in
+            VStack(spacing: 20) {
+                header
+                activitySection(maxHeight: .infinity)
+            }
+            .frame(maxHeight: .infinity, alignment: .top)
+            .padding(20)
+        } second: { _ in
+            VStack(spacing: 20) {
+                mediaButton
+                navButtons
+            }
+            .padding(20)
         }
-        .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.uprPresentBackground)
         .preferredColorScheme(.dark)
@@ -46,7 +71,7 @@ struct PresentView: View {
 
     // MARK: - Activity
 
-    private var activitySection: some View {
+    private func activitySection(maxHeight: CGFloat) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("ACTIVITY")
                 .font(.system(size: 12, weight: .bold))
@@ -71,7 +96,7 @@ struct PresentView: View {
                     }
                 }
             }
-            .frame(maxHeight: 240)
+            .frame(maxHeight: maxHeight)
         }
     }
 
