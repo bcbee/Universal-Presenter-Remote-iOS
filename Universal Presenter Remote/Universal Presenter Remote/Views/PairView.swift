@@ -50,6 +50,20 @@ struct PairView: View {
     /// Logo size used when there is plenty of vertical room.
     private static let maxLogoSize: CGFloat = 220
 
+    /// Smallest logo used on one side of the iPhone Duo's fold.
+    private static let minSplitLogoSize: CGFloat = 80
+
+    /// Padding around the page content.
+    private static let pagePadding: CGFloat = 24
+
+    /// Padding inside the token card.
+    private static let cardPadding: CGFloat = 24
+
+    /// The room each pane needs before the logo/text and token columns are
+    /// split either side of the iPhone Duo's fold. Smaller than this and the
+    /// whole stacked page goes in the larger pane instead.
+    private static let minimumFoldPaneSize = CGSize(width: 320, height: 300)
+
     var body: some View {
         content
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -113,31 +127,40 @@ struct PairView: View {
 
     // MARK: - Adaptive content
 
-    @ViewBuilder
+    /// On the iPhone Duo's inner display the logo/text and token columns sit
+    /// either side of the fold, as they do side by side on a large iPad, so
+    /// nothing lands in the crease. Everywhere else the page adapts to the
+    /// space it has.
     private var content: some View {
-        GeometryReader { proxy in
-            if horizontalSizeClass == .regular && proxy.size.width >= Self.sideBySideMinWidth {
-                HStack(spacing: 60) {
-                    logoAndText(logoSize: Self.maxLogoSize)
-                    VStack(spacing: 28) {
-                        tokenCard
-                        statusAndBegin
-                    }
-                    .frame(maxWidth: 420)
-                }
-                .padding(40)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-            } else {
-                // Single fixed page: the pieces shrink to fit the available
-                // height rather than scrolling.
-                VStack(spacing: Self.stackSpacing(forHeight: proxy.size.height)) {
-                    logoAndText(logoSize: Self.logoSize(forHeight: proxy.size.height))
-                    tokenCard
-                    statusAndBegin
-                }
-                .padding(24)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        FoldAwareLayout(minimumPaneSize: Self.minimumFoldPaneSize) { size in
+            unsplitContent(in: size)
+        } first: { size in
+            logoAndText(logoSize: Self.splitLogoSize(forHeight: size.height))
+                .padding(Self.pagePadding)
+        } second: { size in
+            connectControls(width: size.width - Self.pagePadding * 2)
+                .padding(Self.pagePadding)
+        }
+    }
+
+    @ViewBuilder
+    private func unsplitContent(in size: CGSize) -> some View {
+        if horizontalSizeClass == .regular && size.width >= Self.sideBySideMinWidth {
+            HStack(spacing: 60) {
+                logoAndText(logoSize: Self.maxLogoSize)
+                connectControls(width: Self.contentMaxWidth)
             }
+            .padding(40)
+        } else {
+            // Single fixed page: the pieces shrink to fit the available
+            // height rather than scrolling, and the token card narrows to fit
+            // smaller iPhones so the page stays centred.
+            VStack(spacing: Self.stackSpacing(forHeight: size.height)) {
+                logoAndText(logoSize: Self.logoSize(forHeight: size.height))
+                tokenCard(width: size.width - Self.pagePadding * 2)
+                statusAndBegin
+            }
+            .padding(Self.pagePadding)
         }
     }
 
@@ -149,6 +172,13 @@ struct PairView: View {
         let tallScreen: CGFloat = 850
         let progress = min(1, max(0, (height - shortScreen) / (tallScreen - shortScreen)))
         return minLogoSize + (maxLogoSize - minLogoSize) * progress
+    }
+
+    /// Logo size for one side of the fold: whatever height the text below it
+    /// leaves, between `minSplitLogoSize` and `maxLogoSize`.
+    private static func splitLogoSize(forHeight height: CGFloat) -> CGFloat {
+        let textAndPaddingHeight: CGFloat = 240
+        return min(maxLogoSize, max(minSplitLogoSize, height - textAndPaddingHeight))
     }
 
     /// Tightens vertical rhythm on shorter screens.
@@ -185,16 +215,28 @@ struct PairView: View {
         .frame(maxWidth: Self.contentMaxWidth)
     }
 
-    private var tokenCard: some View {
-        VStack(spacing: 16) {
+    /// The token card and the status/Begin controls beneath it.
+    private func connectControls(width: CGFloat) -> some View {
+        VStack(spacing: 28) {
+            tokenCard(width: width)
+            statusAndBegin
+        }
+    }
+
+    /// The token card, at most `width` wide (and never wider than
+    /// `contentMaxWidth`), with the token boxes shrinking to fit inside it.
+    private func tokenCard(width: CGFloat) -> some View {
+        let cardWidth = min(Self.contentMaxWidth, width)
+        return VStack(spacing: 16) {
             Text("YOUR CONNECTION TOKEN")
                 .font(.system(size: 12, weight: .semibold))
                 .tracking(1.5)
                 .foregroundStyle(.secondary)
-            TokenBoxesView(digits: session.tokenDigits)
+            TokenBoxesView(digits: session.tokenDigits,
+                           maxWidth: cardWidth - Self.cardPadding * 2)
         }
-        .padding(24)
-        .frame(maxWidth: Self.contentMaxWidth)
+        .padding(Self.cardPadding)
+        .frame(maxWidth: cardWidth)
         .background {
             RoundedRectangle(cornerRadius: 20)
                 .fill(Color(.secondarySystemGroupedBackground))
